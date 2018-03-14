@@ -1,0 +1,17 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+nav, footer {
+    background-color: #333;
+    width: 100%;
+    color:white;
+}
+
+nav li a {color: white; border-bottom: 3px solid transparent;}
+nav li a:hover {border-bottom: 3px solid #f32d27; color: #f32d27;}
+
+a {
+    color:white;
+}

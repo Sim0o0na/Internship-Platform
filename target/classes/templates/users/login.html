@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/style.css"
+          th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="../../static/css/forms.css"
+          th:href="@{/css/forms.css}"/>
+</head>
+<body>
+<div>
+    <nav th:include="~{fragments/navbar :: navbar}"></nav>
+    <hr class="my-3"/>
+    <div>
+        <div class="form-holder text-center">
+            <form class="form-layout" method="post">
+                <fieldset>
+                    <div class="col-md-12 col-xs-12 form-group">
+                        <img src="/png/account.png" class="image-circle"/>
+                    </div>
+                    <div class="col-md-12 col-xs-12 form-group line" align="center">
+                        <h3>
+                            If dont have an account <br/><a href="/login">REGISTER</a>
+                        </h3>
+                    </div>
+
+                    <div class="col-md-12 col-xs-12 form-group form-field">
+
+                        <div class="control">
+                            <input type="text" name="username" placeholder="Username" class="form-control"/>
+                        </div>
+
+                        <div class="control">
+                            <input type="password" name="password" placeholder="Password" class="form-control" value="123456"/>
+                        </div>
+
+                        <div align="center">
+                            <button class="btn form-btn">LOGIN</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <hr class="my-5"/>
+        <footer th:include="~{fragments/footer :: footer}"></footer>
+    </div>
+</div>
+</body>
+<script th:src="@{/jquery/jquery.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</html>

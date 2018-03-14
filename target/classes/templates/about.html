@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css"
+          th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="../static/css/forms.css">
+</head>
+<body>
+<div>
+    <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
+    <h3>Welcome</h3>
+    <p>This is the about page!</p>
+    <footer th:include="~{fragments/footer :: footer}" class="footer-div"></footer>
+</div>
+</body>
+</html>

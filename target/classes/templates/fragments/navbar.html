@@ -1,0 +1,29 @@
+<nav th:fragment="navbar-logged-in" class="navbar navbar-toggleable-md">
+    <a class="navbar-left" href="/dashboard">
+        <img width="45px" height="45px" src="https://cdn.kastatic.org/images/avatars/svg/mr-pink.svg">
+    </a>
+    <div class="collapse navbar-collapse">
+        <div class="navbar-nav">
+            <ul class="nav navbar-nav right">
+                <li class="active"><a href="/">Dashboard</a></li>
+                <li><a th:href="@{|/profile/${user}|}">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav th:fragment="navbar" class="navbar navbar-toggleable-md">
+    <a class="navbar-left" href="/dashboard">
+        <img width="45px" height="45px" src="https://cdn.kastatic.org/images/avatars/svg/mr-pink.svg">
+    </a>
+    <div class="collapse navbar-collapse">
+        <div class="navbar-nav">
+            <ul class="nav navbar-nav right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/login" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
