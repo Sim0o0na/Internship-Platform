@@ -31,9 +31,9 @@ public class HomeController {
 
     @GetMapping("/dashboard")
     public String dashboard(Principal principal, Model model) throws IOException {
-        List<TaskDto> tasks = this.taskService.fetchAllTasks();
-        model.addAttribute("user", principal.getName());
+        List<TaskDto> tasks = this.taskService.fetchNonAppliedTasks(principal.getName());
         model.addAttribute("tasks" , tasks);
+        model.addAttribute("user", principal.getName());
         return "dashboard";
     }
 

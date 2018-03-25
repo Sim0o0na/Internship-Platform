@@ -1,5 +1,7 @@
 package org.isp.services.impl;
 
+import org.isp.model.dto.UserAdminViewDto;
+import org.isp.model.dto.UserDto;
 import org.isp.model.dto.UserEditDto;
 import org.isp.model.dto.UserRegisterDto;
 import org.isp.model.entity.users.Privilege;
@@ -9,6 +11,7 @@ import org.isp.repositories.user.RoleRepository;
 import org.isp.repositories.user.UserRepository;
 import org.isp.services.api.ImageService;
 import org.isp.services.api.UserService;
+import org.isp.util.MappingUtil;
 import org.isp.util.PasswordEncoder;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +23,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl<T extends UserDto> implements UserService<T> {
     private ImageService imageService;
 
     private UserRepository userRepository;
@@ -52,9 +58,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public boolean register(UserRegisterDto userDto) {
+    public void register(UserRegisterDto userDto) {
         if (!userDto.getPassword().equals(userDto.getConfirmPassword())) {
-            return false;
+            return;
         }
         User user = this.modelMapper.map(userDto, User.class);
         String encryptedPassword = this.passwordEncoder.encodePassword(userDto.getPassword());
@@ -64,10 +70,25 @@ public class UserServiceImpl implements UserService {
         user.setEnabled(true);
         user.setCredentialsNonExpired(true);
 
-        Role role = this.roleRepository.findByName("USER");
-        user.setRoles(Arrays.asList(role));
+        Role role = this.roleRepository.findByName("ROLE_USER");
+        user.getRoles().add(role);
         this.userRepository.saveAndFlush(user);
-        return true;
+    }
+
+    @Override
+    public T findByUsername(String username, Class<T> dtoClass) throws Exception {
+        User user = this.userRepository.findByUsername(username);
+        System.out.println(dtoClass);
+        Constructor<?> constructor = Arrays.stream(dtoClass.getConstructors())
+                .filter(c -> c.getParameterCount() == 0).findFirst().get();;
+        T dto = (T) constructor.newInstance();
+        dto = MappingUtil.convert(user, dtoClass);
+//        if(user.getProfilePhotoLocation() != null && !user.getProfilePhotoLocation().isEmpty()) {
+//            dto.setProfilePhoto(this.imageService.getResource(user.getProfilePhotoLocation()));
+//        } else {
+//            dto.setProfilePhoto(this.imageService.getDefaultAccountAvatar());
+//        }
+        return dto;
     }
 
     @Override
@@ -77,19 +98,6 @@ public class UserServiceImpl implements UserService {
             throw new UsernameNotFoundException(username);
         }
         return user;
-    }
-
-    @Override
-    public UserEditDto findByUsername(String username) throws IOException {
-        User user = this.userRepository.findByUsername(username);
-        UserEditDto dto = new UserEditDto();
-        dto = this.modelMapper.map(user, UserEditDto.class);
-        if(user.getProfilePhotoLocation() != null && !user.getProfilePhotoLocation().isEmpty()) {
-            dto.setProfilePhoto(this.imageService.getResource(user.getProfilePhotoLocation()));
-        } else {
-            dto.setProfilePhoto(this.imageService.getDefaultAccountAvatar());
-        }
-        return dto;
     }
 
     @Override
@@ -124,5 +132,12 @@ public class UserServiceImpl implements UserService {
             authorities.add(new SimpleGrantedAuthority(privilege));
         }
         return authorities;
+    }
+
+    @Override
+    public List<UserAdminViewDto> fetchAllUsers() {
+        List<User> allUsers = this.userRepository.findAll();
+        List<UserAdminViewDto> dtos = MappingUtil.convert(allUsers, UserAdminViewDto.class);
+        return dtos;
     }
 }

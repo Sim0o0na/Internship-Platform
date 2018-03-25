@@ -1,0 +1,44 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<nav class="navbar-light">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav navbar-center">
+                <li class="active" data-toggle="collapse">
+                    <a id="allTasks" onclick="loadAllTasksInPanel()"><i class="fa fa-th-list"></i>See all tasks</a>
+                </li>
+                <li class="active" data-toggle="collapse">
+                    <a id="createTask" onclick="loadCreateTaskForm()"><i class="fa fa-plus"></i>Create a task</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div id="taskPanel" class="col-md-12 center">
+        <div class="row" th:object="${tasks}">
+            <div class="col-md-12">
+                <table class="table table-hover" th:object="${tasks}">
+                    <thead>
+                    <tr class="row">
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row" th:each="task: ${tasks}">
+                        <td class="col-md-3 block" th:text="${task.title}"></td>
+                        <td class="col-md-3 block" th:text="${task.description}"></td>
+                        <td class="col-md-3 block" th:text="${task.dueDate}"></td>
+                        <td>
+                            <a class="btn form-btn btn-edit" th:href="@{'/admin/tasks/edit/' + ${task.id}}">Edit</a>
+                            <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/delete/${task.id}}">Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

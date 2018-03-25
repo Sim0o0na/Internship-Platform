@@ -4,8 +4,6 @@ import org.isp.model.entity.users.Privilege;
 import org.isp.model.entity.users.Role;
 import org.isp.repositories.user.PrivilegeRepository;
 import org.isp.repositories.user.RoleRepository;
-import org.isp.repositories.user.UserRepository;
-import org.isp.util.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;

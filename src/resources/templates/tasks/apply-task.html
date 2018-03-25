@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css"
+          th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="../static/css/forms.css">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+<div>
+    <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
+    <h3>Welcome</h3>
+    <p>These are all tasks!</p>
+    <div class="row">
+        <h1>Do you want to apply for this task?</h1>
+        <form class="modal-form" method="post" enctype="multipart/form-data" th:object="${task}"
+              th:action="@{'/tasks/apply/' + ${task.id}}">
+            <fieldset>
+                <div class="row" align="center">
+                    <div class="col-md-12 col-xs-12">
+                        <img src="https://www.odoo.com/apps/modules/8.0/project_task_repetition/task_scheduling.png" class="image-circle"/>
+                    </div>
+                    <div>
+                        <input type="hidden" name="id" th:value="${task.id}">
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="card-title" th:text="${task.title}"></h4>
+                        <p class="card-text" th:text="${task.description}"></p>
+                    </div>
+                    <div class="col-md-12 col-xs-12">
+                        <button class="btn form-btn" type="submit">Apply</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <footer th:include="~{fragments/footer :: footer}" class="footer-div"></footer>
+</div>
+</body>
+</html>

@@ -5,17 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../static/css/style.css"
-          th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" href="../../static/css/forms.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/forms.css}">
+    <link rel="stylesheet" th:href="@{/css/tables.css}"/>
+    <script th:src="@{/js/admin.js}"></script>
 </head>
 <body>
-<div>
     <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
-        <h3>Welcome</h3>
-        <p>This is admin to be!</p>
-        <a href="/admin/tasks/create">Create a task</a>
+    <nav class="navbar-light">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav navbar-center">
+                    <li class="active" data-toggle="collapse">
+                        <a id="users" onclick="loadAllUsers()"><i class="fa fa-user"></i>Users</a>
+                    </li>
+                    <li class="active" data-toggle="collapse">
+                        <a id="tasks" onclick="loadAllTasks()"><i class="fa fa-tasks"></i>Tasks</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="dynamic"></div>
     <footer th:include="~{fragments/footer :: footer}" class="footer-div"></footer>
-</div>
 </body>
 </html>

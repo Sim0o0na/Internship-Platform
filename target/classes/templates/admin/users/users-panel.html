@@ -1,0 +1,47 @@
+<nav class="navbar-light">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a id="allUsers"><i class="fa fa-users"></i>See all users</a>
+                    </li>
+                </ul>
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-search" id="searchUserInput" placeholder="Username...">
+                    <span class="input-group-btn">
+                        <button onclick="searchUser()" type="submit" class="btn btn-search"><i class="fa fa-search"></i>Search</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div id="usersPanel" class="col-md-12 center">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover" th:object="${users}">
+                    <thead>
+                    <tr class="row">
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row" th:each="user: ${users}">
+                        <td class="block" th:text="${user.getFullName()}"></td>
+                        <td class="block" th:text="${user.email}"></td>
+                        <td>
+                            <a class="btn form-btn btn-edit" th:href="@{'/admin/users/edit/' + ${user.username}}">Edit</a>
+                            <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/delete/${user.username}}">Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

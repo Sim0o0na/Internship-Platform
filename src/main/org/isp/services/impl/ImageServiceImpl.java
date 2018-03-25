@@ -10,7 +10,7 @@ import java.io.IOException;
 @Service
 public class ImageServiceImpl extends StorageServiceImpl implements ImageService {
     public MultipartFile getDefaultAccountAvatar() throws IOException {
-        File file = new File(this.staticResourcesLocation + "account.png");
+        File file = new File(this.staticResourcesLocation + "profile-pictures/account.png");
         return this.convertToMultipartFile(file);
     }
 }

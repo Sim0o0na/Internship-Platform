@@ -5,6 +5,7 @@ import org.isp.model.entity.users.User;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "tasks")
@@ -24,10 +25,13 @@ public class Task {
     @Column(name = "due_date")
     private Date dueDate;
 
-    @ManyToOne
+    private boolean isCompleted;
+
+    @ManyToOne(targetEntity = User.class)
     private User assignee;
 
-    private boolean isCompleted;
+    @OneToMany(mappedBy = "task")
+    private Set<TaskApplication> taskApplications;
 
     public Task() {
         this.isCompleted = false;
@@ -79,5 +83,13 @@ public class Task {
 
     public void setCompleted(boolean completed) {
         isCompleted = completed;
+    }
+
+    public Set<TaskApplication> getTaskApplications() {
+        return taskApplications;
+    }
+
+    public void setTaskApplications(Set<TaskApplication> taskApplications) {
+        this.taskApplications = taskApplications;
     }
 }

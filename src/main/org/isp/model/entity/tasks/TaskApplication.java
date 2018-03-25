@@ -14,10 +14,10 @@ public class TaskApplication {
     @Column(name = "uuid", unique = true)
     private String id;
 
-    @OneToOne
+    @ManyToOne(targetEntity = User.class)
     private User user;
 
-    @OneToOne
+    @ManyToOne(targetEntity = Task.class)
     private Task task;
 
     public TaskApplication() {

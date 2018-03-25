@@ -1,13 +1,15 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
 <nav th:fragment="navbar-logged-in" class="navbar navbar-toggleable-md">
     <a class="navbar-left" href="/dashboard">
-        <img width="45px" height="45px" src="https://cdn.kastatic.org/images/avatars/svg/mr-pink.svg">
+        <img class="nav-img" src="/png/softunilogo.png">
     </a>
     <div class="collapse navbar-collapse">
         <div class="navbar-nav">
             <ul class="nav navbar-nav right">
-                <li class="active"><a href="/">Dashboard</a></li>
-                <li><a th:href="@{|/profile/${user}|}">Profile</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li class="active"><a href="/dashboard">Dashboard</a></li>
+                <li><a class=".navbar-a" th:href="@{'/profile/' + ${user}}">Profile</a></li>
+                <li><a class=".navbar-a" th:href="@{/admin}">Admin</a></li>
+                <li><a class=".navbar-a navbar-center" href="/logout">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -15,14 +17,14 @@
 
 <nav th:fragment="navbar" class="navbar navbar-toggleable-md">
     <a class="navbar-left" href="/dashboard">
-        <img width="45px" height="45px" src="https://cdn.kastatic.org/images/avatars/svg/mr-pink.svg">
+        <img class="nav-img" src="/png/softunilogo.png">
     </a>
     <div class="collapse navbar-collapse">
         <div class="navbar-nav">
-            <ul class="nav navbar-nav right">
+            <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="/login" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a class=".navbar-a" href="/login" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                <li><a class=".navbar-a"href="/register">Register</a></li>
             </ul>
         </div>
     </div>

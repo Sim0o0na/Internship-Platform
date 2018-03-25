@@ -1,17 +1,52 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 *{
     font-family: 'Raleway', sans-serif;
 }
 
-
 nav, footer {
-    background-color: #333;
+    background-color: #ffffff;
     width: 100%;
     color:white;
 }
 
-nav li a {color: white; border-bottom: 3px solid transparent;}
+nav li a {color: #000000; border-bottom: 3px solid transparent;}
 nav li a:hover {border-bottom: 3px solid #f32d27; color: #f32d27;}
 
-a {
+.navbar-a {
     color:white;
+}
+
+.navbar-light {
+    background-color: #ffffff;
+    width: 100%;
+    color:black;
+    border-bottom: 2px solid #f32d27;
+    border-top: 2px solid #f32d27;
+}
+
+.navbar-light a {
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-light .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+.navbar-inner {
+    text-align:center;
+}
+
+.fa {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-img {
+    width: 200px;
+    height: 50px;
 }

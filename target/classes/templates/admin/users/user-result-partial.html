@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div id="userResult" class="col-md-12 center">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover" th:object="${result}">
+                    <thead>
+                        <tr class="row">
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row">
+                        <!--<td class="block" th:text="${foundUser.username}"></td>-->
+                        <td class="block" th:text="${result.email}"></td>
+                        <td class="block" th:text="${result.getUsername()}"></td>
+                        <td>
+                            <a class="btn form-btn btn-edit" th:href="@{'/admin/users/edit/' + ${result.getUsername()}}">Edit</a>
+                            <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/delete/${result.getUsername()}}">Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

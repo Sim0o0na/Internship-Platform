@@ -1,9 +1,9 @@
 package org.isp.controllers;
 
+import org.isp.model.dto.UserDto;
 import org.isp.model.dto.UserEditDto;
 import org.isp.model.dto.UserRegisterDto;
 import org.isp.services.api.ImageService;
-import org.isp.services.api.StorageService;
 import org.isp.services.api.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.security.Principal;
 import java.util.UUID;
 
@@ -47,12 +48,12 @@ public class UserController {
 
     @GetMapping("/profile/{username}")
     public String profile(@PathVariable(name = "username") String username, Model model, Principal principal)
-            throws IOException {
+            throws Exception {
 
         if(!username.equals(principal.getName())) {
-            return "dashboard";
+            return "redirect:/dashboard";
         }
-        UserEditDto userDto = this.userService.findByUsername(principal.getName());
+        UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserDto.class);
         model.addAttribute("userDto", userDto);
         model.addAttribute("user", principal.getName());
         return "users/profile";
@@ -61,8 +62,7 @@ public class UserController {
     @PostMapping("/edit/{username}")
     public String editProfile(UserEditDto userEditDto,
                               @PathVariable(value="username") String username,
-                              BindingResult bindingResult,
-                              Principal principal) {
+                              BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
             return "users/register";
         }

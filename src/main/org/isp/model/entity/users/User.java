@@ -1,12 +1,11 @@
 package org.isp.model.entity.users;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.isp.model.entity.tasks.Task;
+import org.isp.model.entity.tasks.TaskApplication;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import java.util.Collection;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -20,7 +19,6 @@ public class User implements UserDetails {
     @Column(nullable = false, unique = true)
     private String username;
 
-    @Email
     @Column(nullable = false, unique = true)
     private String email;
 
@@ -47,14 +45,14 @@ public class User implements UserDetails {
 
     private boolean isEnabled;
 
-    @OneToMany(mappedBy = "assignee")
-    private List<Task> completedTasks;
+    @OneToMany(mappedBy = "user")
+    private Set<TaskApplication> taskApplications;
 
     @ManyToMany(targetEntity = Role.class, fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Collection<Role> roles;
+    private Set<Role> roles;
 
     public String getId() {
         return id;
@@ -174,15 +172,7 @@ public class User implements UserDetails {
         isEnabled = enabled;
     }
 
-    public List<Task> getCompletedTasks() {
-        return completedTasks;
-    }
-
-    public void setCompletedTasks(List<Task> completedTasks) {
-        this.completedTasks = completedTasks;
-    }
-
-    public Collection<Role> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
@@ -191,7 +181,15 @@ public class User implements UserDetails {
         return roles;
     }
 
-    public void setRoles(Collection<Role> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<TaskApplication> getTaskApplications() {
+        return taskApplications;
+    }
+
+    public void setTaskApplications(Set<TaskApplication> taskApplications) {
+        this.taskApplications = taskApplications;
     }
 }
