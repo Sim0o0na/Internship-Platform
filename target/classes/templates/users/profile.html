@@ -25,7 +25,6 @@
                 </div>
                 <div class="row user-detail">
                     <div class="col-lg-6 col-sm-6 col-6" id="profile">
-                        <img th:src="@{'/profile-pictures/' + ${userDto.getProfilePhotoLocation()}}" class="rounded-circle"/>
                         <h5 th:text="${userDto.firstName} + ' ' + ${userDto.lastName}"></h5>
                         <h3 th:text="${userDto.email}"></h3>
 

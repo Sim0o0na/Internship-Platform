@@ -45,7 +45,6 @@ function loadAllUsers() {
 $("searchUser").click(searchUser);
 function searchUser() {
     var username = $("#searchUserInput").val();
-    console.log(username);
     $.ajax({
         type: 'POST',
         url: '/admin/users/search/' + username,

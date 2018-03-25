@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.IOException;
@@ -25,6 +26,12 @@ public class UserController {
     @Autowired
     private ImageService imageService;
 
+    @GetMapping("/login")
+    public String getLoginPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
+        model.addAttribute("userDto" , new UserRegisterDto());
+        return "users/login";
+    }
+
     @GetMapping("/register")
     public String getRegisterPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
         model.addAttribute("userDto" , new UserRegisterDto());
@@ -39,11 +46,6 @@ public class UserController {
 
         this.userService.register(userRegisterDto);
         return "redirect:/login";
-    }
-
-    @GetMapping("/login")
-    public String getLoginPage(){
-        return "/users/login";
     }
 
     @GetMapping("/profile/{username}")
@@ -76,5 +78,9 @@ public class UserController {
         }
         this.userService.edit(username, userEditDto);
         return "redirect:/profile/" + username;
+    }
+
+    public MultipartFile getProfilePhoto() {
+        
     }
 }
