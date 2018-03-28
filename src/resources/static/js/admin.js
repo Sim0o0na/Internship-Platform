@@ -31,6 +31,17 @@ function loadAllTasksInPanel() {
     });
 }
 
+$("#allTaskApplications").click(loadAllTaskApplications());
+function loadAllTaskApplications() {
+    $.ajax({
+        type: 'GET',
+        url: '/admin/tasks/applications',
+        success: function (data) {
+            $("#taskPanel").html("").append(data);
+        }
+    });
+}
+
 $("#users").click(loadAllUsers());
 function loadAllUsers() {
     $.ajax({

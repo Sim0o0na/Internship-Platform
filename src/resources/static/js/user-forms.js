@@ -20,21 +20,11 @@ function loadLoginForm() {
     });
 }
 
-$('#username').on('input', function() {
-    $.ajax({
-        url: 'clmcontrol_livematchupdate',
-        type: 'post',
-        dataType: 'json',
-
-        success: function (data) {
-
-            $('#mstatus').html(data.matchstatus);
-            $("#myimage").attr('src','img url');
-
-        },
-        complete: function () {
-            // Schedule the next request when the current one has been completed
-            setTimeout(ajaxInterval, 4000);
-        }
-    });
+$(document).ready(function(){
+    $("#usernameFld").bind("onchange", loadPicture);
 });
+
+function loadPicture(username) {
+    alert("input change!");
+    $("#profilePicture").attr('src','https://c.s-microsoft.com/en-cy/CMSImages/account-OverviewPage_Avatar_325x300.img?version=cc2955f0-bb2c-5dcb-5751-af95a01391f0');
+}

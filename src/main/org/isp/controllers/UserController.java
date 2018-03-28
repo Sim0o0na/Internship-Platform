@@ -80,7 +80,7 @@ public class UserController {
         return "redirect:/profile/" + username;
     }
 
-    public MultipartFile getProfilePhoto() {
-        
-    }
+//    public MultipartFile getProfilePhoto() {
+//
+//    }
 }

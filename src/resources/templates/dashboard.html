@@ -12,30 +12,27 @@
     <link rel="stylesheet" href="../static/css/dashboard.css">
 </head>
 <body>
-    <div>
-        <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
-        <h3>Welcome</h3>
-        <p>These are all tasks!</p>
-        <div class="row" th:object="${tasks}">
-            <div th:each="t: ${tasks}" class="col col-md-3">
-                <div class="card">
-                    <div class="view overlay">
-                        <img src="https://www.odoo.com/apps/modules/8.0/project_task_repetition/task_scheduling.png" class="img-thumbnail" alt="">
-                        <a href="#">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title" th:text="${t.title}"></h4>
-                        <p class="card-text" th:text="${t.description}"></p>
-                        <a class="btn form-btn" th:href="@{'/tasks/apply/' + ${t.id}}">Apply</a>
+    <div class="bg">
+        <div class="background-image-container">
+            <div class="background-image"></div>
+                <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
+                <div class="container container-dashboard">
+                    <div class="dashboard-row row">
+                        <div class="col-sm-4 dashboard-col">
+                            <img class="img-responsive" src="/img/task.png">
+                            <h1>My Tasks</h1>
+                        </div>
+                        <div class="col-sm-4 dashboard-col">
+                            <img class="img-responsive" src="/img/person.png">
+                            <h1>New Tasks</h1>
+                        </div>
+                        <div class="col-sm-4 dashboard-col">
+                            <img class="img-responsive" src="/img/idea.png">
+                            <h1>Dunno m8te</h1>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
         </div>
-
-        <footer th:include="~{fragments/footer :: footer}" class="footer-div"></footer>
     </div>
 </body>
 </html>

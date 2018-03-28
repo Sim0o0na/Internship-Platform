@@ -3,6 +3,7 @@ package org.isp.controllers;
 import org.isp.model.dto.TaskDto;
 import org.isp.model.dto.UserAdminViewDto;
 import org.isp.model.dto.UserDto;
+import org.isp.model.entity.tasks.TaskApplication;
 import org.isp.services.api.TaskService;
 import org.isp.services.api.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,13 @@ public class AdminController {
         model.addAttribute("tasks", allTasks);
         return "admin/tasks/all-tasks-partial";
     }
+
+//    @RequestMapping(value = "/tasks/applications", method = RequestMethod.GET)
+//    private String allTaskApplications(Model model){
+//        List<TaskApplication> allTaskApplications = this.taskService.fetchAllTasks();
+//        model.addAttribute("tasks", allTasks);
+//        return "admin/tasks/all-tasks-partial";
+//    }
 
     @RequestMapping(value = "/tasks/create", method = RequestMethod.GET)
     private String createPanel(Model model) {

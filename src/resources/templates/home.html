@@ -14,7 +14,8 @@
     <script th:src="@{/js/user-forms.js}"></script>
 </head>
 <body>
-    <div>
+    <div class="background-image-container">
+        <div class="background-image"></div>
         <nav th:include="~{fragments/navbar :: navbar}"></nav>
         <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -23,7 +24,6 @@
                 </div>
             </div>
         </div>
-        <footer th:include="~{fragments/footer :: footer}"></footer>
     </div>
 </body>
 </html>
