@@ -14,14 +14,80 @@
     <script th:src="@{/js/user-forms.js}"></script>
 </head>
 <body>
-    <div class="background-image-container">
-        <div class="background-image"></div>
+    <div id="home-nav" class="container-fluid">
         <nav th:include="~{fragments/navbar :: navbar}"></nav>
-        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-con" id="modalContent">
-                    <a id="register" onclick="loadRegisterForm()">REGISTER</a>
-                </div>
+        <img id="home-softuni-logo" class="img-responsive" src="/img/softunilogo-color.png">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="home-title text-center"><b>Какво представлява стажантската програма на СофтУни?</b></h1>
+            </div>
+            <div class="col-md-12">
+                <p class="home-description text-center">
+                    Стажантската програма е план за <b>кариерно</b> развитие на студентите в Софтуерен Университет.
+                    В нея те могат да допълнят своите умения и да поемат по желания от тях професионален път.
+                    Тя цели да уголеми <b>потенциала им</b>, предоставяйки им възможността да участват пряко в изпълнението на
+                    различни задачи, които развиват както техните <b>технически знания</b>, така и <b>личностни качества и умения</b>.
+                    Могат да надникнат в един различен свят на програмирането,
+                    <b>прилагайки</b> и <b>развивайки</b> знанията си.
+                </p>
+            </div>
+            <img id="internship-flow-img" class="img-responsive" src="/img/internship-flow.png">
+            <div class="col-md-8">
+                <h1 class="home-title text-right">Какво целим да изградим в студентите?</h1>
+                <p class="home-description text-left"><b>Основните качества и умения, които желаем да развием са:</b></p>
+                <ul id="skills" class="text-left">
+                    <li>Организираност и отговорност</li>
+                    <li>Работа в екип</li>
+                    <li>Комуникативност и инициативност</li>
+                    <li>Презентационни умения</li>
+                    <li>Справяне с проблеми и изграждане на концепции</li>
+                    <li>Подобряване и обогатяване на уменията по програмиране</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <img id="wizard" class="img-responsive" src="/img/wizard-coding.png">
+            </div>
+            <div class="col-md-2">
+                <img src="/img/questions.png" width="420em" height="300em">
+            </div>
+            <div class="col-md-10">
+                <h1 class="home-title text-right">За кого е предназначена програмата?</h1>
+                <p class="home-description text-right">Всеки студент, преминал успешно курса <b>Programming Basics</b>
+                    с резултат <b>6.00</b> може да участва в стажантската програма.
+                    Важни качества за бъдещите стажанти са <b>мотивацията за развитие</b>, <b>желанието да помагат</b> на
+                    другите и да работят в <b>екип.</b></p>
+            </div>
+            <div class="col-md-12">
+                <h1 class="home-title text-center"><b>Как мога да кандидатствам?</b></h1>
+                <p class="home-description text-center">Периодът за кандидатстване стартира <b>след всеки прием на
+                    курса Programming Basics</b>. Можете да подадете кандидатурата си чрез имейл на
+                    <b>internship@softuni.bg</b>, в който да приложите <b>мотивационно писмо</b> и <b>автобиография</b>.
+                    Вашата кандидатура ще бъде разгледана и ще получите обратна връзка когато бъдете одобрени,
+                    след срока упоменат в имейла.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row row-md-12">
+        <div class="col-md-4">
+            <img class="img-responsive" src="https://static-images.talentegg.ca/Public%20Outreach/APPLICATION.png" width="500em" height="500em">
+            <p class="home-title text-center home-action">Кандидатствай!</p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-responsive" src="http://www.horizzon.com/img/contact.png" width="500em" height="500em">
+            <p class="home-title text-center home-action" >Свържи се с нас</p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-responsive" src="https://safety.smart911.com/wp-content/uploads/2016/07/Accenture-Arrow.png" width="100em" height="500em">
+            <p class="home-title text-center home-action">Научи повече</p>
+        </div>
+    </div>
+    <footer th:include="~{fragments/footer :: footer}"></footer>
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-con" id="modalContent">
+                <a id="register" onclick="loadRegisterForm()">REGISTER</a>
             </div>
         </div>
     </div>
