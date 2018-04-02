@@ -4,6 +4,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+button {
+    border:none;
+}
+
 #home-nav{
     background:url(/img/softuni-students.jpg);
     background-size: cover;
@@ -74,15 +78,12 @@ nav {
     margin: 0 auto;
     top: 20px;
     text-align:center;
+    background: transparent;
 }
 
 .modal-form {
     margin: auto;
     width: 80%;
-}
-
-.modal-con {
-    background: white;
 }
 
 .container-dashboard {
@@ -96,17 +97,6 @@ nav {
 .img-responsive {
     width: 400px;
     height: 300px;
-}
-
-.dashboard-col {
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-.dashboard-col:hover {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
 }
 
 .home-action:hover {
