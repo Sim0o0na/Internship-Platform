@@ -2,8 +2,8 @@ package org.isp.controllers;
 
 import org.isp.model.dto.TaskDto;
 import org.isp.model.dto.UserAdminViewDto;
-import org.isp.model.dto.UserDto;
 import org.isp.model.entity.tasks.TaskApplication;
+import org.isp.services.api.TaskApplicationService;
 import org.isp.services.api.TaskService;
 import org.isp.services.api.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.util.List;
 
@@ -25,6 +23,9 @@ public class AdminController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private TaskApplicationService taskApplicationService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     private String admin(Model model){
@@ -47,12 +48,12 @@ public class AdminController {
         return "admin/tasks/all-tasks-partial";
     }
 
-//    @RequestMapping(value = "/tasks/applications", method = RequestMethod.GET)
-//    private String allTaskApplications(Model model){
-//        List<TaskApplication> allTaskApplications = this.taskService.fetchAllTasks();
-//        model.addAttribute("tasks", allTasks);
-//        return "admin/tasks/all-tasks-partial";
-//    }
+    @RequestMapping(value = "/tasks/applications", method = RequestMethod.GET)
+    private String allTaskApplications(Model model){
+        List<TaskApplication> allTaskApplications = this.taskApplicationService.fetchAllNonAssigned();
+        model.addAttribute("taskApplications", allTaskApplications);
+        return "admin/tasks/all-task-applications-partial";
+    }
 
     @RequestMapping(value = "/tasks/create", method = RequestMethod.GET)
     private String createPanel(Model model) {
@@ -64,6 +65,13 @@ public class AdminController {
     private String createTask(@ModelAttribute TaskDto taskCreateDto,
                               BindingResult bindingResult) throws ParseException {
         this.taskService.create(taskCreateDto);
+        return "redirect:/admin";
+    }
+
+    @RequestMapping(value = "/tasks/approve", method = RequestMethod.GET)
+    private String approveTaskApplication(@RequestParam(value="taskId", required=false) String taskId,
+                                          @RequestParam(value="user", required=false) String username) throws Exception {
+        this.taskService.assignTaskToUser(taskId, username);
         return "redirect:/admin";
     }
 

@@ -6,6 +6,7 @@ import org.isp.model.entity.tasks.TaskApplication;
 import org.isp.model.entity.users.User;
 import org.isp.repositories.tasks.TaskApplicationRepository;
 import org.isp.repositories.tasks.TaskRepository;
+import org.isp.repositories.user.UserRepository;
 import org.isp.services.api.TaskService;
 import org.isp.services.api.UserService;
 import org.isp.util.MappingUtil;
@@ -22,16 +23,16 @@ public class TaskServiceImpl implements TaskService {
 
     private TaskRepository taskRepository;
     private TaskApplicationRepository taskApplicationRepository;
-    private UserService userService;
+    private UserRepository userRepository;
     private final SimpleDateFormat dtf;
 
     @Autowired
     public TaskServiceImpl(TaskRepository taskRepository,
                            TaskApplicationRepository taskApplicationRepository,
-                           UserService userService) {
+                           UserRepository userRepository) {
         this.taskRepository = taskRepository;
         this.taskApplicationRepository = taskApplicationRepository;
-        this.userService = userService;
+        this.userRepository = userRepository;
         this.dtf = new SimpleDateFormat("YYYY-MM-dd");
     }
 
@@ -82,12 +83,11 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public void applyUserToTask(String username, TaskDto taskDto) throws IOException {
-        User user = (User) this.userService.loadUserByUsername(username);
-        Task task = this.taskRepository.getOne(taskDto.getId());
-        TaskApplication taskApplication = new TaskApplication();
-        taskApplication.setUser(user);
-        taskApplication.setTask(task);
-        this.taskApplicationRepository.saveAndFlush(taskApplication);
+    public void assignTaskToUser(String taskId, String username) throws Exception {
+        Task task = this.taskRepository.getOne(taskId);
+        User user = this.userRepository.findByUsername(username);
+        task.setAssignee(user);
+        task.setCompleted(false);
+        this.taskRepository.saveAndFlush(task);
     }
 }

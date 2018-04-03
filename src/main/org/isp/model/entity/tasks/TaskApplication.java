@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.isp.model.entity.users.User;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "task_applications")
@@ -20,7 +21,14 @@ public class TaskApplication {
     @ManyToOne(targetEntity = Task.class)
     private Task task;
 
+    @Column(name = "applied_on")
+    private Date appliedOn;
+
+    @Column(name = "is_approved")
+    private boolean isApproved;
+
     public TaskApplication() {
+        this.isApproved = false;
     }
 
     public String getId() {
@@ -45,5 +53,21 @@ public class TaskApplication {
 
     public void setTask(Task task) {
         this.task = task;
+    }
+
+    public Date getAppliedOn() {
+        return appliedOn;
+    }
+
+    public void setAppliedOn(Date appliedOn) {
+        this.appliedOn = appliedOn;
+    }
+
+    public boolean isApproved() {
+        return isApproved;
+    }
+
+    public void setApproved(boolean approved) {
+        isApproved = approved;
     }
 }

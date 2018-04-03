@@ -19,5 +19,5 @@ public interface TaskService {
 
     TaskDto findById(String taskId);
 
-    void applyUserToTask(String username, TaskDto taskDto) throws IOException;
+    void assignTaskToUser(String taskId, String username) throws Exception;
 }

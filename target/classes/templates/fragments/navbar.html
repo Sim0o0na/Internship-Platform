@@ -7,3 +7,23 @@
         </ul>
     </div>
 </nav>
+
+<nav th:fragment="navbar-logged-in" class="navbar navbar-default">
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Smth</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-flag"></i>Notifications</a></li>
+            <li class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

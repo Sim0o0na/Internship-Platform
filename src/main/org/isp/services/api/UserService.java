@@ -4,11 +4,8 @@ import org.isp.model.dto.UserAdminViewDto;
 import org.isp.model.dto.UserDto;
 import org.isp.model.dto.UserEditDto;
 import org.isp.model.dto.UserRegisterDto;
-import org.isp.model.entity.users.Role;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public interface UserService<T extends UserDto> extends UserDetailsService {

@@ -1,6 +1,7 @@
 package org.isp.controllers;
 
 import org.isp.model.dto.TaskDto;
+import org.isp.services.api.TaskApplicationService;
 import org.isp.services.api.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,9 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
+    @Autowired
+    private TaskApplicationService taskApplicationService;
+
     @GetMapping("/tasks/apply/{taskId}")
     private String applyTask(@PathVariable(value = "taskId") String taskId, Model model) {
         TaskDto dto = this.taskService.findById(taskId);
@@ -32,11 +36,9 @@ public class TaskController {
         if (taskDto == null) {
             return "redirect:/dashboard";
         }
-        this.taskService.applyUserToTask(principal.getName(), taskDto);
+        this.taskApplicationService.applyUserToTask(principal.getName(), taskDto);
         return "redirect:/dashboard";
     };
-
-
 
     @PostMapping("/admin/tasks/edit/{taskId}")
     private String edit(TaskDto taskEditDto,
