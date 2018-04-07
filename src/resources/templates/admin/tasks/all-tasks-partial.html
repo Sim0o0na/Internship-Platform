@@ -17,6 +17,7 @@
                 <td class="block" th:text="${task.dueDate}"></td>
                 <td>
                     <a class="btn form-btn btn-edit" th:href="@{'/admin/tasks/edit/' + ${task.id}}">Edit</a>
+                    <a class="btn form-btn btn-green" th:href="@{'/admin/payments/activate/' + ${task.id}}">Pay</a>
                     <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/delete/${task.id}}">Delete</a>
                 </td>
             </tr>

@@ -1,6 +1,6 @@
 package org.isp.repositories.user;
 
-import org.isp.model.entity.users.Role;
+import org.isp.users.models.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

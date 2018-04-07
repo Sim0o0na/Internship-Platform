@@ -105,6 +105,14 @@ form > a:hover {
     background-color: #d92525;
 }
 
+.btn-green {
+    background-color: #47d16a;
+}
+
+.btn-green:hover {
+    background-color: #45bc5e;
+}
+
 .btn-delete:hover {
     background-color: #af2121;
 }

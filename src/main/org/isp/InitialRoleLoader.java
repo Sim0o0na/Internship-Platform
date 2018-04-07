@@ -1,7 +1,7 @@
 package org.isp;
 
-import org.isp.model.entity.users.Privilege;
-import org.isp.model.entity.users.Role;
+import org.isp.users.models.entities.Privilege;
+import org.isp.users.models.entities.Role;
 import org.isp.repositories.user.PrivilegeRepository;
 import org.isp.repositories.user.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;

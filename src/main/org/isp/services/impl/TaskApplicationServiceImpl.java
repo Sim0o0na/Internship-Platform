@@ -1,13 +1,13 @@
 package org.isp.services.impl;
 
-import org.isp.model.dto.TaskDto;
-import org.isp.model.entity.tasks.Task;
-import org.isp.model.entity.tasks.TaskApplication;
-import org.isp.model.entity.users.User;
+import org.isp.tasks.models.dtos.TaskDto;
+import org.isp.tasks.models.entities.Task;
+import org.isp.tasks.models.entities.TaskApplication;
+import org.isp.users.models.entities.User;
 import org.isp.repositories.tasks.TaskApplicationRepository;
 import org.isp.repositories.tasks.TaskRepository;
 import org.isp.services.api.TaskApplicationService;
-import org.isp.services.api.UserService;
+import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

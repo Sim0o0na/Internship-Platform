@@ -1,6 +1,6 @@
 package org.isp.repositories.tasks;
 
-import org.isp.model.entity.tasks.TaskApplication;
+import org.isp.tasks.models.entities.TaskApplication;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

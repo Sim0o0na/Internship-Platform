@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.w3.org/1999/xhtml">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <title>Dashboard</title>
     <meta charset="utf-8">
@@ -13,42 +13,64 @@
 </head>
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-default">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#">Smth</a></li>
-                    <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-flag"></i>Notifications</a></li>
-                    <li class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="/logout">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <nav class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#">Smth</a></li>
+                <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-flag"></i>Notifications</a></li>
+                <li class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
         <div class="wrapper">
-            <div class="row-md-12">
-                <div class="col-md-6">
+            <div class="row-12">
+                <div class="col-md-6 d-main-element">
                     <h3>Most recent task</h3>
-                    <div class="dashboard-important">
-                        <img class="img-responsive" src="/img/questions.png">
-                        <div class="task-info">
-                            <h3>Assignment</h3><p>Quaestor Exam PF</p>
-                            <h4>Due Date</h4><p>04.04.2018</p>
+                    <div class="row-6 " th:if="${mostRecentTask}">
+                        <img src="/img/task.png" class="col-md-3 img-responsive d-icon">
+                        <div class="col-md-3 task-info">
+                            <h3>Assignment</h3><p th:text="${mostRecentTask.title}"></p>
+                            <h4>Due Date</h4><p th:text="${mostRecentTask.dueDate}"></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-main-element">
                     <h3>My payments</h3>
-                    <div class="dashboard-important">
-                        <img class="img-responsive" src="/img/softuni-logo-hat.png">
+                    <div class="row-md-6 d-main-element">
+                        <img src="/img/money-flat.png" class="col-md-3 img-responsive d-icon">
                     </div>
+                </div>
+            </div>
+            <div class="row" th:object="${tasks}">
+                <div class="col-md-12">
+                    <table class="table table-hover" th:object="${tasks}">
+                        <thead>
+                        <tr class="row">
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Due Date</th>
+                            <th scope="col">Payment</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="row" th:each="task: ${tasks}">
+                            <td class="col-md-3 block" th:text="${task.title}"></td>
+                            <td class="col-md-3 block" th:text="${task.description}"></td>
+                            <td class="col-md-3 block" th:text="${task.dueDate}"></td>
+                            <td class="col-md-3 block" th:text="${task.cost}"></td>
+                            <!--<td>-->
+                                <!--<a th:href="@{'/admin/tasks/edit/' + ${task.id}}" class="btn edit-btn form-btn btn-edit">Edit</a>-->
+                            <!--</td>-->
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <hr>

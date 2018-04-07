@@ -64,3 +64,16 @@ function searchUser() {
         }
     });
 }
+
+$(".edit-btn").click(loadEditTaskForm);
+function loadEditTaskForm(taskId) {
+    console.log("kur");
+    $.ajax({
+        type: 'GET',
+        url: '/admin/tasks/edit/' + taskId,
+        success: function (data) {
+            console.log(data);
+            $("#modalContent").html("").append(data);
+        }
+    });
+}

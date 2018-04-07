@@ -24,18 +24,16 @@
                             <div class="control">
                                 <input type="text" name="title" placeholder="Title" th:field="*{title}" class="form-control"/>
                             </div>
-
                             <div class="control">
                                 <textarea type="text" name="firstName" placeholder="Description" th:field="*{description}" class="form-control"/>
                             </div>
-
                             <div class="control">
                                 <input type="date" name="dueDate" placeholder="Due Date" th:field="*{dueDate}"
                                        th:value="${task.dueDate}" class="form-control"/>
                             </div>
                         </div>
                         <div class="col-md-12 col-xs-12">
-                            <button class="btn form-btn btn-edit"  type="submit">Edit Task</button>
+                            <button class="btn form-btn btn-edit" type="submit">Edit Task</button>
                         </div>
                     </div>
                 </fieldset>

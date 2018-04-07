@@ -13,6 +13,16 @@
 </head>
 <body>
     <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
+    <div th:if="${successMsg}" class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Success</h4>
+        <p>You have successfully activated the payment for this task.</p>
+        <hr>
+        <p class="mb-0">Users will be notified for the changes.</p>
+    </div>
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Error!</h4>
+        <p th:text="${error}"></p>
+    </div>
     <nav class="navbar-light">
         <div class="navbar-inner">
             <div class="container">
@@ -30,4 +40,11 @@
     <div id="dynamic"></div>
     <footer th:include="~{fragments/footer :: footer}" class="footer-div"></footer>
 </body>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove();
+        });
+    }, 4000);
+</script>
 </html>
