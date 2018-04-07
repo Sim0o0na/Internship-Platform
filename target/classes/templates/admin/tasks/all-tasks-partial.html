@@ -7,17 +7,23 @@
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
                 <th scope="col">Due Date</th>
+                <th scope="col">Assignment Status</th>
+                <th scope="col">Payment Status</th>
                 <th scope="col">Actions</th>
             </tr>
             </thead>
             <tbody>
-            <tr class="row" th:each="task: ${tasks}">
-                <td class="block" th:text="${task.title}"></td>
-                <td class="block" th:text="${task.description}"></td>
-                <td class="block" th:text="${task.dueDate}"></td>
-                <td>
-                    <a class="btn form-btn btn-edit" th:href="@{'/admin/tasks/edit/' + ${task.id}}">Edit</a>
-                    <a class="btn form-btn btn-green" th:href="@{'/admin/payments/activate/' + ${task.id}}">Pay</a>
+            <tr class="row" th:style="${task.isAssigned() ? 'color: forestgreen' : 'red'}" th:each="task: ${tasks}">
+                <td class="col-md-2 block" th:text="${task.title}"></td>
+                <td class="col-md-2 block" th:text="${task.description}"></td>
+                <td class="col-md-2 block" th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></td>
+                <td class="col-md-2 block" th:text="${task.isAssigned() ? 'ASSIGNED' : 'NON-ASSIGNED'}"
+                    th:style="${task.isAssigned() ? 'color: forestgreen' : 'red'}" ></td>
+                <td class="col-md-2 block" th:text="${task.isPaymentActive() ? 'ACTIVE' : 'INACTIVE'}"
+                    th:style="${task.isPaymentActive() ? 'color: forestgreen' : 'red'}" ></td>
+                <td class="col-md-2 block" >
+                    <a th:href="@{'/admin/tasks/edit/' + ${task.id}}" class="btn edit-btn form-btn btn-edit">Edit</a>
+                    <a th:if="${!task.isPaymentActive()}" class="btn form-btn btn-green" th:href="@{'/admin/payments/activate/' + ${task.id}}">Pay</a>
                     <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/delete/${task.id}}">Delete</a>
                 </td>
             </tr>

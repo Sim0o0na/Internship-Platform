@@ -3,9 +3,9 @@ package org.isp.tasks.services;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
 import org.isp.users.models.entities.User;
-import org.isp.repositories.tasks.TaskApplicationRepository;
-import org.isp.repositories.tasks.TaskRepository;
-import org.isp.repositories.user.UserRepository;
+import org.isp.tasks.repositories.TaskApplicationRepository;
+import org.isp.tasks.repositories.TaskRepository;
+import org.isp.users.repositories.UserRepository;
 import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +36,7 @@ public class TaskServiceImpl implements TaskService {
     public void create(TaskDto taskDto) throws ParseException {
         Task task = new Task();
         task.setTitle(taskDto.getTitle());
-        task.setDueDate(dtf.parse(taskDto.getDueDate()));
+        task.setDueDate(taskDto.getDueDate());
         task.setDescription(taskDto.getDescription());
         task.getPayment().setCost(taskDto.getCost());
         this.taskRepository.saveAndFlush(task);
@@ -67,7 +67,7 @@ public class TaskServiceImpl implements TaskService {
     public void edit(String taskId, TaskDto taskDto) throws IllegalAccessException, ParseException {
         Task task = this.taskRepository.getOne(taskId);
         task.setTitle(taskDto.getTitle());
-        task.setDueDate(dtf.parse(taskDto.getDueDate()));
+        task.setDueDate(taskDto.getDueDate());
         task.setDescription(taskDto.getDescription());
         this.taskRepository.saveAndFlush(task);
     }

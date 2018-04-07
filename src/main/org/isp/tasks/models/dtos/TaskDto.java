@@ -1,5 +1,7 @@
 package org.isp.tasks.models.dtos;
 
+import java.util.Date;
+
 public class TaskDto {
     private String id;
 
@@ -7,12 +9,13 @@ public class TaskDto {
 
     private String description;
 
-    private String dueDate;
+    private Date dueDate;
 
     private double cost;
 
     private boolean isPaymentActive;
 
+    private boolean isAssigned;
 
     public TaskDto() {
     }
@@ -33,11 +36,11 @@ public class TaskDto {
         this.description = description;
     }
 
-    public String getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {
+    public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 
@@ -63,5 +66,13 @@ public class TaskDto {
 
     public void setPaymentActive(boolean paymentActive) {
         isPaymentActive = paymentActive;
+    }
+
+    public boolean isAssigned() {
+        return isAssigned;
+    }
+
+    public void setAssigned(boolean assigned) {
+        isAssigned = assigned;
     }
 }

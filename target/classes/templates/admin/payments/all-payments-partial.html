@@ -1,0 +1,29 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover" th:object="${payments}">
+            <thead>
+            <tr class="row">
+                <th scope="col">Cost</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Is Active?</th>
+                <th scope="col">Is Paid?</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr class="row" th:each="p: ${payments}">
+                    <td class="block" th:text="${p.cost}"></td>
+                    <td class="block" th:text="${#dates.format(p.dueDate, 'dd-MM-yyyy')}"></td>
+                    <td class="col-md-2 block" th:text="${p.isActive() ? 'YES' : 'NO'}"
+                        th:style="${p.isActive() ? 'color: forestgreen' : ''}"></td>
+                    <td class="col-md-2 block" th:text="${p.isPaid() ? 'YES' : 'NO'}"
+                        th:style="${p.isPaid() ? 'color: forestgreen' : 'color: red'}"></td>
+                    <!--<td>-->
+                        <!--<a class="btn form-btn btn-edit"-->
+                           <!--th:href="@{/admin/tasks/approve(taskId=${ta.task.id},user=${ta.user.username})}">Approve</a>-->
+                    <!--</td>-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

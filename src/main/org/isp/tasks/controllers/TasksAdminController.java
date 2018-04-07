@@ -28,7 +28,7 @@ public class TasksAdminController {
     private String admin(Model model, RedirectAttributes redirectAttributes){
         List<TaskDto> allTasks = this.taskService.fetchAllTasks();
         model.addAttribute("tasks", allTasks);
-        return "admin/admin";
+        return "admin/admin-base";
     }
 
     @RequestMapping(value = "/tasks", method = RequestMethod.GET)

@@ -15,7 +15,6 @@ public class Payment {
     @Column(name = "uuid", unique = true)
     private String id;
 
-
     @Column(nullable = false, precision = 2)
     private double cost;
 

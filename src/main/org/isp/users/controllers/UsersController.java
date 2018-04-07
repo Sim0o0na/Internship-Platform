@@ -3,7 +3,7 @@ package org.isp.users.controllers;
 import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.dtos.UserEditDto;
 import org.isp.users.models.dtos.UserRegisterDto;
-import org.isp.services.api.ImageService;
+import org.isp.base.services.api.ImageService;
 import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

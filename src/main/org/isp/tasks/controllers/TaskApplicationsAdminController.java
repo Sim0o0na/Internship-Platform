@@ -1,7 +1,7 @@
 package org.isp.tasks.controllers;
 
 import org.isp.tasks.models.entities.TaskApplication;
-import org.isp.services.api.TaskApplicationService;
+import org.isp.base.services.api.TaskApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

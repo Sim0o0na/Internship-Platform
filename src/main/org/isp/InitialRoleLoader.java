@@ -2,8 +2,8 @@ package org.isp;
 
 import org.isp.users.models.entities.Privilege;
 import org.isp.users.models.entities.Role;
-import org.isp.repositories.user.PrivilegeRepository;
-import org.isp.repositories.user.RoleRepository;
+import org.isp.users.repositories.PrivilegeRepository;
+import org.isp.users.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;

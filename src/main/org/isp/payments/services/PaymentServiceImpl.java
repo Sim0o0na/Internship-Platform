@@ -1,10 +1,12 @@
 package org.isp.payments.services;
 
 import org.isp.payments.models.Payment;
-import org.isp.repositories.PaymentRepository;
+import org.isp.payments.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -28,5 +30,11 @@ public class PaymentServiceImpl implements PaymentService {
         }
         payment.setActive(true);
         this.paymentRepository.save(payment);
+    }
+
+    @Override
+    public List<Payment> fetchAll() {
+        List<Payment> allPayments = this.paymentRepository.findAll();
+        return allPayments;
     }
 }
