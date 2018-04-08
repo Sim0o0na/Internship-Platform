@@ -8,8 +8,10 @@ import org.isp.tasks.repositories.TaskRepository;
 import org.isp.users.repositories.UserRepository;
 import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import org.springframework.data.domain.Pageable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -18,18 +20,13 @@ import java.util.List;
 public class TaskServiceImpl implements TaskService {
 
     private TaskRepository taskRepository;
-    private TaskApplicationRepository taskApplicationRepository;
     private UserRepository userRepository;
-    private final SimpleDateFormat dtf;
 
     @Autowired
     public TaskServiceImpl(TaskRepository taskRepository,
-                           TaskApplicationRepository taskApplicationRepository,
                            UserRepository userRepository) {
         this.taskRepository = taskRepository;
-        this.taskApplicationRepository = taskApplicationRepository;
         this.userRepository = userRepository;
-        this.dtf = new SimpleDateFormat("yyyy-MM-dd");
     }
 
     @Override
@@ -43,9 +40,9 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public List<TaskDto> fetchAllTasks() {
-        List<Task> allTasks = this.taskRepository.findAll();
-        List<TaskDto> dtos = MappingUtil.convert(allTasks, TaskDto.class);
+    public Page<TaskDto> fetchAllTasks(Pageable pageable) {
+        Page<Task> allTasks = this.taskRepository.findAll(pageable);
+        Page<TaskDto> dtos = MappingUtil.convert(allTasks, TaskDto.class);
         return dtos;
     }
 

@@ -5,6 +5,9 @@ import org.isp.payments.services.PaymentService;
 import org.isp.tasks.services.TaskService;
 import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,22 +29,22 @@ public class TasksAdminController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     private String admin(Model model, RedirectAttributes redirectAttributes){
-        List<TaskDto> allTasks = this.taskService.fetchAllTasks();
-        model.addAttribute("tasks", allTasks);
         return "admin/admin-base";
     }
 
     @RequestMapping(value = "/tasks", method = RequestMethod.GET)
-    private String allTasksPanel(Model model) {
-        List<TaskDto> allTasks = this.taskService.fetchAllTasks();
-        model.addAttribute("tasks", allTasks);
+    private String allTasksPanel(@PageableDefault(size = 4) Pageable pageable, Model model) {
+        Page<TaskDto> allTasks = this.taskService.fetchAllTasks(pageable);
+        model.addAttribute("tasks", allTasks.getContent());
+        model.addAttribute("pagesCount", allTasks.getTotalPages());
         return "admin/tasks/tasks-panel";
     }
 
     @RequestMapping(value = "/tasks/all", method = RequestMethod.GET)
-    private String allTasksPanelPartial(Model model){
-        List<TaskDto> allTasks = this.taskService.fetchAllTasks();
-        model.addAttribute("tasks", allTasks);
+    private String allTasksPanelPartial(Model model, @PageableDefault(size = 4) Pageable pageable){
+        Page<TaskDto> allTasks = this.taskService.fetchAllTasks(pageable);
+        model.addAttribute("tasks", allTasks.getContent());
+        model.addAttribute("pagesCount", allTasks.getTotalPages());
         return "admin/tasks/all-tasks-partial";
     }
 

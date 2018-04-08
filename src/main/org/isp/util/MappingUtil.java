@@ -1,6 +1,9 @@
 package org.isp.util;
 
+import org.isp.tasks.models.entities.Task;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -34,5 +37,11 @@ public final class MappingUtil {
             resultList.add(mappedObject);
         }
         return resultList;
+    }
+
+    public static <S, D> Page<D> convert(Page<S> sourcePage, Class<D> destinationPageClass) {
+        ModelMapper mapper = new ModelMapper();
+        Page<D> targetPage = sourcePage.map(t -> mapper.map(t, destinationPageClass));
+        return targetPage;
     }
 }

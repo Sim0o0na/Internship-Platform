@@ -31,6 +31,18 @@ function loadAllTasksInPanel() {
     });
 }
 
+$(".taskPageBtn").click(loadTasksByPage(page));
+function loadTasksByPage(page) {
+    console.log(page);
+    $.ajax({
+        type: 'GET',
+        url: '/admin/tasks/all?page=' + page + '&size=4',
+        success: function (data) {
+            $("#taskPanel").html("").append(data);
+        }
+    });
+}
+
 $("#allTaskApplications").click(loadAllTaskApplications());
 function loadAllTaskApplications() {
     $.ajax({

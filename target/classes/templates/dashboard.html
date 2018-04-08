@@ -37,7 +37,7 @@
                         <img src="/img/task.png" class="col-md-3 img-responsive d-icon">
                         <div class="col-md-3 task-info">
                             <h3>Assignment</h3><p th:text="${mostRecentTask.title}"></p>
-                            <h4>Due Date</h4><p th:text="${mostRecentTask.dueDate}"></p>
+                            <h4>Due Date</h4><p th:text="${#dates.format(mostRecentTask.dueDate, 'dd-MM-yyyy')}"></p>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         <tr class="row" th:each="task: ${tasks}">
                             <td class="col-md-3 block" th:text="${task.title}"></td>
                             <td class="col-md-3 block" th:text="${task.description}"></td>
-                            <td class="col-md-3 block" th:text="${task.dueDate}"></td>
+                            <td class="col-md-3 block" th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></td>
                             <td class="col-md-3 block" th:text="${task.cost}"></td>
                             <!--<td>-->
                                 <!--<a th:href="@{'/admin/tasks/edit/' + ${task.id}}" class="btn edit-btn form-btn btn-edit">Edit</a>-->
