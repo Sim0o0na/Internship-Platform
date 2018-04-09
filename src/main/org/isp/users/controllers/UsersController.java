@@ -51,7 +51,7 @@ public class UsersController {
         if(!username.equals(principal.getName())) {
             return "redirect:/dashboard";
         }
-        UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserDto.class);
+        UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserEditDto.class);
         model.addAttribute("userDto", userDto);
         model.addAttribute("user", principal.getName());
         return "users/profile";

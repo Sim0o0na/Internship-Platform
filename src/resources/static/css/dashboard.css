@@ -58,3 +58,16 @@
     width: 230px;
     height: 200px;
 }
+
+.task-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+.task-panel {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 45%;
+    box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+}

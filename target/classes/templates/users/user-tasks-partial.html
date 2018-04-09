@@ -1,0 +1,24 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<div class="dynamicPanel col-md-12">
+    <table class="table table-hover" th:object="${tasks}">
+        <thead>
+        <tr class="row">
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Payment Status</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="row" th:each="task: ${tasks}" th:style="${#dates.createNow() > task.dueDate} ? 'background: lightyellow'">
+            <td class="col-md-2 block" th:text="${task.title}"></td>
+            <td class="col-md-2 block" th:text="${task.description}"></td>
+            <td class="col-md-2 block" th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></td>
+            <td class="col-md-2 block" th:text="${task.isPaymentActive() ? 'ACTIVE' : 'INACTIVE'}"
+                th:style="${task.isPaymentActive() ? 'color: forestgreen' : 'red'}" ></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

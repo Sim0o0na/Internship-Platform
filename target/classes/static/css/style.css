@@ -4,14 +4,13 @@
     font-family: 'Lato', sans-serif;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-}
-
 .error {
     background: tomato;
     height: 50px;
+}
+
+.center {
+    margin: 0 auto;
 }
 
 button {

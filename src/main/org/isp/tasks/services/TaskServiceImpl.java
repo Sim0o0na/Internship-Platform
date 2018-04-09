@@ -3,7 +3,6 @@ package org.isp.tasks.services;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
 import org.isp.users.models.entities.User;
-import org.isp.tasks.repositories.TaskApplicationRepository;
 import org.isp.tasks.repositories.TaskRepository;
 import org.isp.users.repositories.UserRepository;
 import org.isp.util.MappingUtil;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.data.domain.Pageable;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service
@@ -41,15 +39,15 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Page<TaskDto> fetchAllTasks(Pageable pageable) {
-        Page<Task> allTasks = this.taskRepository.findAll(pageable);
+        Page<Task> allTasks = this.taskRepository.findAllByOrderByDueDateAsc(pageable);
         Page<TaskDto> dtos = MappingUtil.convert(allTasks, TaskDto.class);
         return dtos;
     }
 
     @Override
-    public List<TaskDto> fetchTasksForUser(String username) {
-        List<Task> allTasksByAssignee = this.taskRepository.findByAssigneeUsernameOrderByDueDateDesc(username);
-        List<TaskDto> dtos = MappingUtil.convert(allTasksByAssignee, TaskDto.class);
+    public Page<TaskDto> fetchTasksForUser(Pageable pageable, String username) {
+        Page<Task> allTasksByAssignee = this.taskRepository.findByAssigneeUsernameOrderByDueDateAsc(pageable, username);
+        Page<TaskDto> dtos = MappingUtil.convert(allTasksByAssignee, TaskDto.class);
         return dtos;
     }
 
@@ -58,6 +56,16 @@ public class TaskServiceImpl implements TaskService {
         List<Task> nonAppliedTasks = this.taskRepository.findAllByAssigneeUsernameNotLike(username);
         List<TaskDto> dtos = MappingUtil.convert(nonAppliedTasks, TaskDto.class);
         return dtos;
+    }
+
+    @Override
+    public TaskDto getMostRecentTaskByUser(String username) {
+        Task mostRecentTask = this.taskRepository.findFirstByAssigneeUsernameOrderByDueDateAsc(username);
+        if (mostRecentTask == null) {
+            throw new IllegalArgumentException("There are currently no assigned tasks!");
+        }
+        TaskDto dto = MappingUtil.convert(mostRecentTask, TaskDto.class);
+        return dto;
     }
 
     @Override

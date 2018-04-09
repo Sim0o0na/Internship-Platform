@@ -17,6 +17,8 @@ public class TaskDto {
 
     private boolean isAssigned;
 
+    private String type;
+
     public TaskDto() {
     }
 
@@ -74,5 +76,13 @@ public class TaskDto {
 
     public void setAssigned(boolean assigned) {
         isAssigned = assigned;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

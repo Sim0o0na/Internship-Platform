@@ -37,6 +37,8 @@ public class Task {
     @OneToOne(cascade = CascadeType.PERSIST)
     private Payment payment;
 
+    private String type;
+
     public Task() {
         this.isCompleted = false;
         this.payment = new Payment();
@@ -105,5 +107,13 @@ public class Task {
 
     public void setPayment(Payment payment) {
         this.payment = payment;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

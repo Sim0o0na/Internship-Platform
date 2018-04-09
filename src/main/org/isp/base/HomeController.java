@@ -3,13 +3,13 @@ package org.isp.base;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.IOException;
 import java.security.Principal;
-import java.util.List;
 
 @Controller
 public class HomeController {
@@ -30,12 +30,13 @@ public class HomeController {
 
     @GetMapping("/dashboard")
     public String dashboard(Principal principal, Model model) throws IOException {
-        List<TaskDto> tasks = this.taskService.fetchTasksForUser(principal.getName());
-        if (tasks.size() > 0){
-            model.addAttribute("mostRecentTask", tasks.get(0));
+        try {
+            TaskDto mostRecentTaskByUser = this.taskService.getMostRecentTaskByUser(principal.getName());
+            model.addAttribute("mostRecentTask", mostRecentTaskByUser);
+            model.addAttribute("user", principal.getName());
+        } catch (IllegalArgumentException iae) {
+            model.addAttribute("error", iae.getMessage());
         }
-        model.addAttribute("tasks" , tasks);
-        model.addAttribute("user", principal.getName());
         return "dashboard";
     }
 

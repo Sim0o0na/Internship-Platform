@@ -12,9 +12,11 @@ public interface TaskService {
 
     Page<TaskDto> fetchAllTasks(Pageable pageable);
 
-    List<TaskDto> fetchTasksForUser(String username);
+    Page<TaskDto> fetchTasksForUser(Pageable pageable, String username);
 
     List<TaskDto> fetchNonAppliedTasks(String username);
+
+    TaskDto getMostRecentTaskByUser(String username);
 
     void edit(String taskId, TaskDto taskEditDto) throws IllegalAccessException, ParseException;
 

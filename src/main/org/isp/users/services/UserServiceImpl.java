@@ -76,14 +76,14 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
         User user = this.userRepository.findByUsername(username);
         System.out.println(dtoClass);
         Constructor<?> constructor = Arrays.stream(dtoClass.getConstructors())
-                .filter(c -> c.getParameterCount() == 0).findFirst().get();;
+                .filter(c -> c.getParameterCount() == 0).findFirst().get();
         T dto = (T) constructor.newInstance();
         dto = MappingUtil.convert(user, dtoClass);
-//        if(user.getProfilePhotoLocation() != null && !user.getProfilePhotoLocation().isEmpty()) {
-//            dtos.setProfilePhoto(this.imageService.getResource(user.getProfilePhotoLocation()));
-//        } else {
-//            dtos.setProfilePhoto(this.imageService.getDefaultAccountAvatar());
-//        }
+        if(user.getProfilePhotoLocation() != null && !user.getProfilePhotoLocation().isEmpty()) {
+            dto.setProfilePhoto(this.imageService.getResource(user.getProfilePhotoLocation()));
+        } else {
+            dto.setProfilePhoto(this.imageService.getDefaultAccountAvatar());
+        }
         return dto;
     }
 

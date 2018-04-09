@@ -4,6 +4,9 @@ import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.base.services.api.TaskApplicationService;
 import org.isp.tasks.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.security.Principal;
 import java.text.ParseException;
+import java.util.List;
 
 @Controller
 public class TasksController {
@@ -49,5 +53,34 @@ public class TasksController {
         }
         this.taskService.edit(taskId, taskEditDto);
         return "redirect:/admin/tasks/all";
+    }
+
+    @RequestMapping(value = "/tasks/all/", method = RequestMethod.GET)
+    private String allTasksByUser(@RequestParam(value = "user") String username,
+                                  @RequestParam(value = "partial") boolean isPartial,
+                                  Model model,
+                                  Principal principal,
+                                  @PageableDefault(size = 4) Pageable pageable) {
+        Page<TaskDto> tasks = this.taskService.fetchTasksForUser(pageable, principal.getName());
+        model.addAttribute("pagesCount", tasks.getTotalPages());
+        model.addAttribute("tasks", tasks.getContent());
+        model.addAttribute("user", principal.getName());
+        if(isPartial) {
+            return "/users/user-tasks-partial";
+        }
+        return "/users/user-tasks";
+    }
+
+    @RequestMapping(value = "/tasks/all", method = RequestMethod.GET)
+    private String allTasks(Model model,
+                                  @RequestParam(value = "partial") boolean isPartial,
+                                  @PageableDefault(size = 4) Pageable pageable) {
+        Page<TaskDto> tasks = this.taskService.fetchAllTasks(pageable);
+        model.addAttribute("pagesCount", tasks.getTotalPages());
+        model.addAttribute("tasks", tasks.getContent());
+        if(isPartial) {
+            return "/tasks/all-tasks-partial";
+        }
+        return "/tasks/all-tasks";
     }
 }

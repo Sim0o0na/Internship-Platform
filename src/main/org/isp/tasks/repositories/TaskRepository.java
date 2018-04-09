@@ -1,6 +1,7 @@
 package org.isp.tasks.repositories;
 
 import org.isp.tasks.models.entities.Task;
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -11,9 +12,11 @@ import java.util.List;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, String> {
-    List<Task> findByAssigneeUsernameOrderByDueDateDesc(String assigneeUsername);
+    Page<Task> findByAssigneeUsernameOrderByDueDateAsc(Pageable pageable, String assigneeUsername);
 
-     //TaskRepository(Pageable pageable);
+    Page<Task> findAllByOrderByDueDateAsc(Pageable pageable);
+
+    Task findFirstByAssigneeUsernameOrderByDueDateAsc(String assigneeUsername);
 
     @Query("select t from Task t where t.id not in " +
             "(select task.id from TaskApplication ta where ta.user.username = :assigneeUsername) order by t.dueDate desc")

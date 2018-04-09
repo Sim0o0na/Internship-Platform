@@ -9,21 +9,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../static/css/style.css"
           th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" href="../../static/css/forms.css"
-          th:href="@{/css/forms.css}"/>
-    <link rel="stylesheet" href="../../static/css/profile.css"
-          th:href="@{/css/profile.css}"/>
+    <link rel="stylesheet" href="../../static/css/forms.css" th:href="@{/css/forms.css}"/>
+    <link rel="stylesheet" href="../../static/css/profile.css" th:href="@{/css/profile.css}"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
 </head>
 <body>
 <div>
     <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
     <div class="container" th:object="${userDto}">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
                 </div>
-                <div class="row user-detail">
+                <div class="row user-detail justify-content-center">
                     <div class="col-lg-6 col-sm-6 col-6" id="profile">
                         <h5 th:text="${userDto.firstName} + ' ' + ${userDto.lastName}"></h5>
                         <h3 th:text="${userDto.email}"></h3>
@@ -34,11 +33,11 @@
                         <span>User description</span>
                     </div>
                 </div>
-                <div class="row user-social-detail">
+                <div class="row user-social-detail justify-content-center">
                     <div class="col-lg-12 col-sm-12 col-12">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -52,9 +51,6 @@
                     <div class="row" align="center">
                         <div class="col-md-12 col-xs-12">
                             <img th:src="@{'/profile-pictures/' + ${userDto.getProfilePhotoLocation()}}" class="image-circle"/>
-                        </div>
-                        <div class="col-md-12 col-xs-12">
-                            <input type="file" name="profilePhoto" class="btn form-btn">UPLOAD PICTURE</input>
                         </div>
                         <div class="col-md-6 col-xs-6 form-field">
                             <p>BASIC INFO</p>

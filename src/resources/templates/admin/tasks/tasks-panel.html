@@ -17,7 +17,7 @@
     </div>
 </nav>
 <div class="container-fluid">
-    <div id="taskPanel" class="col-md-12 center">
+    <div id="taskPanel" class="dynamicPanel col-md-12 center">
         <div class="row" th:object="${tasks}">
             <div class="col-md-12">
                 <table class="table table-hover" th:object="${tasks}">
@@ -55,7 +55,9 @@
                         <a class="page-link" href="#" tabindex="-1">Previous</a>
                     </li>
                     <th:block th:each="i: ${#numbers.sequence(0, pagesCount - 1)}">
-                        <li class="page-item"><a class="taskPageBtn page-link" th:onclick="'loadTasksByPage(' + ${i} + ');'" th:text="${i + 1}"></a></li>
+                        <li class="page-item"><a class="taskPageBtn page-link" ]
+                                                 th:onclick="'loadTasksByPage(' + ${i} + ');'"
+                                                 th:text="${i + 1}"></a></li>
                     </th:block>
                     <li class="page-item">
                         <a class="page-link" href="#">Next</a>
