@@ -36,7 +36,7 @@
                     <div class="row-6" th:if="${mostRecentTask == null}">
                         <div class="col-md-12 task-info">
                             <h1>There are currently no active tasks.</h1>
-                            <a th:href="@{/tasks/all(partial=false)}" class="form-btn btn-edit pull-right">See All</a>
+                            <a th:href="@{/tasks/all(user=null, partial=false)}" class="form-btn btn-edit pull-right">See All</a>
                         </div>
                     </div>
                     <div class="row-6" th:if="${mostRecentTask}">
