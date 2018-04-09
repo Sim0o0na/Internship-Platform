@@ -7,6 +7,18 @@ function loadAllTasks() {
             $("#dynamic").html("").append(data);
         }
     });
+    loadTasksByPageForAdmin(0);
+}
+
+$(".adminTasksPageBtn").click(loadTasksByPageForAdmin(page));
+function loadTasksByPageForAdmin(page) {
+    $.ajax({
+        type: 'GET',
+        url: '/admin/tasks/all/' + '?page=' + page + '&size=4&partial=true',
+        success: function (data) {
+            $(".dynamicPanel").html("").append(data);
+        }
+    });
 }
 
 $("#createTask").click(loadAllTasks());

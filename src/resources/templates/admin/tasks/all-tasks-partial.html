@@ -30,17 +30,5 @@
             </tbody>
         </table>
     </div>
-    <nav>
-        <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <th:block th:each="i: ${#numbers.sequence(0, pagesCount - 1)}">
-                <li class="page-item"><a class="taskPageBtn page-link" th:onclick="'loadTasksByPage(' + ${i} + ');'"  th:text="${i + 1}"></a></li>
-            </th:block>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-    </nav>
+    <div th:include="~{fragments/pagination-panels :: admin-all-tasks-pagination}"></div>
 </div>

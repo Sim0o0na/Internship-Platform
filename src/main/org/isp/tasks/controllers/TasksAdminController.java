@@ -33,10 +33,7 @@ public class TasksAdminController {
     }
 
     @RequestMapping(value = "/tasks", method = RequestMethod.GET)
-    private String allTasksPanel(@PageableDefault(size = 4) Pageable pageable, Model model) {
-        Page<TaskDto> allTasks = this.taskService.fetchAllTasks(pageable);
-        model.addAttribute("tasks", allTasks.getContent());
-        model.addAttribute("pagesCount", allTasks.getTotalPages());
+    private String tasksPanel(@PageableDefault(size = 4) Pageable pageable, Model model) {
         return "admin/tasks/tasks-panel";
     }
 
