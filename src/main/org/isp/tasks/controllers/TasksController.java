@@ -70,7 +70,7 @@ public class TasksController {
                 view = "/users/user-tasks";
             }
         } else {
-            tasks = this.taskService.fetchAllTasks(pageable);
+            tasks = this.taskService.fetchNonAppliedTasks(pageable, principal.getName());
             if (isPartial) {
                 view = "/tasks/all-tasks-partial";
             } else {

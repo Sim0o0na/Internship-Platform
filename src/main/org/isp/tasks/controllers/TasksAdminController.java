@@ -1,6 +1,7 @@
 package org.isp.tasks.controllers;
 
 import org.isp.tasks.models.TaskType;
+import org.isp.tasks.models.dtos.TaskCreateDto;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.payments.services.PaymentService;
 import org.isp.tasks.services.TaskService;
@@ -50,12 +51,12 @@ public class TasksAdminController {
     @RequestMapping(value = "/tasks/create", method = RequestMethod.GET)
     private String createPanel(Model model) {
         model.addAttribute("taskTypes", TaskType.types(TaskType.class));
-        model.addAttribute("taskDto", new TaskDto());
+        model.addAttribute("taskDto", new TaskCreateDto());
         return "/admin/tasks/create-task-form";
     }
 
     @RequestMapping(value = "/tasks/create", method = RequestMethod.POST)
-    private String createTask(@Valid @ModelAttribute TaskDto taskCreateDto,
+    private String createTask(@Valid @ModelAttribute TaskCreateDto taskCreateDto,
                               BindingResult bindingResult,
                               Model model) throws ParseException {
         if (bindingResult.hasErrors()) {

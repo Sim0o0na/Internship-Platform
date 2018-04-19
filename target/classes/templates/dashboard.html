@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/dashboard.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/forms.css}">
@@ -31,6 +32,23 @@
             </ul>
         </nav>
         <div class="wrapper">
+            <nav class="navbar-light">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav navbar-center">
+                            <li class="active">
+                                <a th:href="@{/tasks/all(user=null, partial=false)}"><i class="fas fa-tasks"></i>See All</a>
+                            </li>
+                            <li class="active">
+                                <a th:href="@{/tasks/all/(user=${user}, partial=false)}"><i class="fas fa-cogs"></i>My Tasks</a>
+                            </li>
+                            <li class="active">
+                                <a th:href="@{/payments/all}"><i class="far fa-money-bill-alt"></i>My Payments</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div class="row-12">
                 <div class="col-md-6 d-main-element">
                     <div class="row-6" th:if="${mostRecentTask == null}">

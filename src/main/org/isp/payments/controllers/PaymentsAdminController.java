@@ -34,7 +34,7 @@ public class PaymentsAdminController {
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     private String allPaymentsPanel(Model model){
-        List<Payment> allPayments = this.paymentService.fetchAll();
+        List<Payment> allPayments = this.paymentService.getAll();
         model.addAttribute("payments", allPayments);
         return "admin/payments/all-payments-partial";
     }

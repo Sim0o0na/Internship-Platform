@@ -20,6 +20,6 @@ public interface TaskRepository extends JpaRepository<Task, String> {
 
     @Query("select t from Task t where t.id not in " +
             "(select task.id from TaskApplication ta where ta.user.username = :assigneeUsername) order by t.dueDate desc")
-    List<Task> findAllByAssigneeUsernameNotLike(@Param(value = "assigneeUsername")
-                                                        String assigneeUsername);
+    Page<Task> findAllByAssigneeUsernameNotLike(@Param(value = "assigneeUsername")
+                                                        String assigneeUsername, Pageable pageable);
 }

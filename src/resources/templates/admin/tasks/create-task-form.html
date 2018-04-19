@@ -1,7 +1,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div>
     <div class="form-holder text-center">
-        <form id="taskCreateForm" onsubmit="event.preventDefault(); validateCreateTaskForm();" class="form-layout" method="post" th:object="${taskDto}" modelAttribute="taskDto" action="/admin/tasks/create">
+        <form id="taskCreateForm" class="form-layout" method="post" th:object="${taskDto}" modelAttribute="taskDto" action="/admin/tasks/create">
             <fieldset>
                 <h3>Create task</h3>
 
@@ -24,10 +24,7 @@
                     </div>
 
                     <div class="control">
-                        <input type="radio" title="type"
-                               th:each="type: ${taskTypes}"
-                               th:value="${type}"
-                               th:text="${type}" checked/><br>
+                        <input type="radio" name="type" title="type" th:each="type: ${taskTypes}" th:value="${type}" th:text="${type}"/><br>
                     </div>
 
                     <div align="center">

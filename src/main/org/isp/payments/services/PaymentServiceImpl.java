@@ -3,6 +3,8 @@ package org.isp.payments.services;
 import org.isp.payments.models.Payment;
 import org.isp.payments.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,8 +35,14 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public List<Payment> fetchAll() {
+    public List<Payment> getAll() {
         List<Payment> allPayments = this.paymentRepository.findAll();
         return allPayments;
+    }
+
+    @Override
+    public Page<Payment> getAllForUser(Pageable pageable, String user) {
+        Page<Payment> paymentsForUser = this.paymentRepository.findAllByTaskAssigneeUsername(pageable, user);
+        return paymentsForUser;
     }
 }

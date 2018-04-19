@@ -1,6 +1,7 @@
 package org.isp.tasks.models.dtos;
 
 import org.isp.util.validation.TaskCreation;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotNull;
@@ -19,6 +20,7 @@ public class TaskDto {
     private String description;
 
     @NotNull(message = "Due date not valid!")
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date dueDate;
 
     @NotNull
@@ -27,6 +29,8 @@ public class TaskDto {
     private boolean isPaymentActive;
 
     private boolean isAssigned;
+
+    private boolean isAppliedByUser;
 
     @NotNull
     private List<TaskRequirementDto> taskRequirements;
@@ -108,5 +112,13 @@ public class TaskDto {
 
     public void setTaskRequirements(List<TaskRequirementDto> taskRequirements) {
         this.taskRequirements = taskRequirements;
+    }
+
+    public boolean isAppliedByUser() {
+        return isAppliedByUser;
+    }
+
+    public void setAppliedByUser(boolean appliedByUser) {
+        isAppliedByUser = appliedByUser;
     }
 }

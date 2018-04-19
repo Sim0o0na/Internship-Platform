@@ -50,8 +50,8 @@ nav {
     background-color: #ffffff;
     width: 100%;
     color:black;
-    border-bottom: 2px solid #f32d27;
-    border-top: 2px solid #f32d27;
+    border-bottom: 2px solid #014c8c;
+    border-top: 2px solid #014c8c;
 }
 
 .navbar-light a {
@@ -71,9 +71,10 @@ nav {
     text-align:center;
 }
 
-.fa {
+.fa, .fas, .far {
     margin-left: 10px;
     margin-right: 10px;
+
 }
 
 .nav-img {
