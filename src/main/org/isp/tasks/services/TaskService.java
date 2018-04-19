@@ -6,6 +6,8 @@ import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
@@ -23,6 +25,8 @@ public interface TaskService {
     void edit(String taskId, TaskDto taskEditDto) throws IllegalAccessException, ParseException;
 
     TaskDto findById(String taskId);
+
+    Task findTaskById(String taskId);
 
     void assignTaskToUser(String taskId, String username) throws Exception;
 }

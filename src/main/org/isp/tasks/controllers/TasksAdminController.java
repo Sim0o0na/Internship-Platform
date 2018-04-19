@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import java.text.ParseException;
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/admin/tasks")
 public class TasksAdminController {
     private TaskService taskService;
 
@@ -34,12 +34,12 @@ public class TasksAdminController {
         return "admin/admin-base";
     }
 
-    @RequestMapping(value = "/tasks", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     private String tasksPanel(@PageableDefault(size = 4) Pageable pageable, Model model) {
         return "admin/tasks/tasks-panel";
     }
 
-    @RequestMapping(value = "/tasks/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     private String allTasksPanelPartial(Model model, @PageableDefault(size = 4) Pageable pageable){
         Page<TaskDto> allTasks = this.taskService.fetchAllTasks(pageable);
         model.addAttribute("tasks", allTasks.getContent());
@@ -47,15 +47,33 @@ public class TasksAdminController {
         return "admin/tasks/all-tasks-partial";
     }
 
+    @RequestMapping(value = "/edit/{taskId}", method = RequestMethod.GET)
+    private String edit(@PathVariable(value = "taskId") String taskId, Model model) {
+        TaskDto dto = this.taskService.findById(taskId);
+        model.addAttribute("task", dto);
+        model.addAttribute("taskId", dto.getId());
+        return "admin/tasks/edit-task";
+    }
 
-    @RequestMapping(value = "/tasks/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/{taskId}", method = RequestMethod.POST)
+    private String edit(TaskDto taskEditDto,
+                        BindingResult bindingResult,
+                        @PathVariable(value = "taskId") String taskId) throws ParseException, IllegalAccessException {
+        if (bindingResult.hasErrors()) {
+            return "/admin/tasks/all";
+        }
+        this.taskService.edit(taskId, taskEditDto);
+        return "redirect:/admin/tasks/all";
+    }
+
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
     private String createPanel(Model model) {
         model.addAttribute("taskTypes", TaskType.types(TaskType.class));
         model.addAttribute("taskDto", new TaskCreateDto());
         return "/admin/tasks/create-task-form";
     }
 
-    @RequestMapping(value = "/tasks/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
     private String createTask(@Valid @ModelAttribute TaskCreateDto taskCreateDto,
                               BindingResult bindingResult,
                               Model model) throws ParseException {
@@ -65,20 +83,5 @@ public class TasksAdminController {
             this.taskService.create(taskCreateDto);
         }
         return "admin/admin-base";
-    }
-
-    @RequestMapping(value = "/tasks/approve", method = RequestMethod.GET)
-    private String approveTaskApplication(@RequestParam(value="taskId", required=false) String taskId,
-                                          @RequestParam(value="user", required=false) String username) throws Exception {
-        this.taskService.assignTaskToUser(taskId, username);
-        return "redirect:/admin";
-    }
-
-    @RequestMapping(value = "/tasks/edit/{taskId}", method = RequestMethod.GET)
-    private String edit(@PathVariable(value = "taskId") String taskId, Model model) {
-        TaskDto dto = this.taskService.findById(taskId);
-        model.addAttribute("task", dto);
-        model.addAttribute("taskId", dto.getId());
-        return "admin/tasks/edit-task";
     }
 }

@@ -34,9 +34,11 @@
             <div class="dynamicPanel col-md-12">
                 <div>
                     <h1>To receive:</h1>
-                    <p th:text="${sumToReceive}"></p>
+                    <h2 th:if="${sumToReceive}" th:text="${sumToReceive}"></h2>
+                    <h2 th:unless="${sumToReceive}">No money to receive. Have you tried looking at the
+                        <a th:href="@{/tasks/all(user=${user}, partial=false)}">available tasks</a>?</h2>
                 </div>
-                <h1>Payments come here</h1>
+                <h1>Your payments</h1>
                 <table class="table table-hover" th:object="${payments}">
                     <thead>
                     <tr class="row">

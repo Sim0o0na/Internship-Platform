@@ -12,7 +12,7 @@ public class TaskApplication {
     @Id
     @GeneratedValue(generator="system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
-    @Column(name = "uuid", unique = true)
+    @Column(name = "id", unique = true)
     private String id;
 
     @ManyToOne(targetEntity = User.class)
@@ -27,8 +27,15 @@ public class TaskApplication {
     @Column(name = "is_approved")
     private boolean isApproved;
 
+    @Column(name = "is_declined")
+    private boolean isDeclined;
+
     public TaskApplication() {
-        this.isApproved = false;
+    }
+
+    public TaskApplication(User user, Task task) {
+        this.user = user;
+        this.task = task;
     }
 
     public String getId() {
@@ -63,11 +70,19 @@ public class TaskApplication {
         this.appliedOn = appliedOn;
     }
 
-    public boolean isApproved() {
+    public boolean getIsApproved() {
         return isApproved;
     }
 
-    public void setApproved(boolean approved) {
+    public void setIsApproved(boolean approved) {
         isApproved = approved;
+    }
+
+    public boolean getIsDeclined() {
+        return isDeclined;
+    }
+
+    public void setIsDeclined(boolean declined) {
+        isDeclined = declined;
     }
 }

@@ -88,6 +88,14 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
     }
 
     @Override
+    public User findByUsername(String username) {
+        User user = this.userRepository.findByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        return user;
+    }
+    @Override
     public UserDetails loadUserByUsername(String username) {
         User user = userRepository.findByUsername(username);
         if (user == null) {

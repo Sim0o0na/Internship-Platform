@@ -3,9 +3,13 @@ package org.isp.tasks.services;
 import org.isp.tasks.models.dtos.TaskCreateDto;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
+import org.isp.tasks.models.entities.TaskApplication;
+import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.entities.User;
 import org.isp.tasks.repositories.TaskRepository;
 import org.isp.users.repositories.UserRepository;
+import org.isp.users.services.UserService;
+import org.isp.users.services.UserServiceImpl;
 import org.isp.util.MappingUtil;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +18,8 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 
 import org.springframework.data.domain.Pageable;
+
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,10 +28,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class TaskServiceImpl implements TaskService {
-
     private TaskRepository taskRepository;
     private UserRepository userRepository;
-    private ModelMapper modelMapper;
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
     @Autowired
@@ -33,7 +37,6 @@ public class TaskServiceImpl implements TaskService {
                            UserRepository userRepository) {
         this.taskRepository = taskRepository;
         this.userRepository = userRepository;
-        this.modelMapper = new ModelMapper();
     }
 
     @Override
@@ -103,6 +106,12 @@ public class TaskServiceImpl implements TaskService {
         Task task = this.taskRepository.getOne(taskId);
         TaskDto dto = MappingUtil.convert(task, TaskDto.class);
         return dto;
+    }
+
+    @Override
+    public Task findTaskById(String taskId) {
+        Task task = this.taskRepository.getOne(taskId);
+        return task;
     }
 
     @Override
