@@ -6,6 +6,7 @@ import org.isp.users.models.entities.User;
 import org.isp.tasks.repositories.TaskRepository;
 import org.isp.users.repositories.UserRepository;
 import org.isp.util.MappingUtil;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -19,21 +20,24 @@ public class TaskServiceImpl implements TaskService {
 
     private TaskRepository taskRepository;
     private UserRepository userRepository;
+    private ModelMapper modelMapper;
 
     @Autowired
     public TaskServiceImpl(TaskRepository taskRepository,
                            UserRepository userRepository) {
         this.taskRepository = taskRepository;
         this.userRepository = userRepository;
+        this.modelMapper = new ModelMapper();
     }
 
     @Override
     public void create(TaskDto taskDto) throws ParseException {
-        Task task = new Task();
+                Task task = MappingUtil.convert(taskDto, Task.class);
         task.setTitle(taskDto.getTitle());
         task.setDueDate(taskDto.getDueDate());
         task.setDescription(taskDto.getDescription());
-        task.getPayment().setCost(taskDto.getCost());
+        task.getPayment().setCost(taskDto.getPaymentCost());
+        task.setType(taskDto.getType());
         this.taskRepository.saveAndFlush(task);
     }
 

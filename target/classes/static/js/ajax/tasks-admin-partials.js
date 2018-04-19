@@ -1,3 +1,21 @@
+// $('#taskCreateForm').submit(function (event) {
+//     event.preventDefault();
+//     console.log("kur")
+// });
+function validateCreateTaskForm() {
+    console.log("validate form!");
+    var values = getFormFieldValues('taskCreateForm');
+    console.log(values);
+}
+
+function getFormFieldValues(formId) {
+    var values = {};
+    $.each($('#' + formId).serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+    });
+    return values;
+}
+
 $("#tasks").click(loadAllTasks());
 function loadAllTasks() {
     $.ajax({

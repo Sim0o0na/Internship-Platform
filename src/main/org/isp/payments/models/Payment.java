@@ -21,7 +21,7 @@ public class Payment {
     @Column(name = "due_date")
     private Date dueDate;
 
-    @OneToOne(mappedBy = "payment")
+    @OneToOne(mappedBy = "payment", cascade = CascadeType.PERSIST)
     private Task task;
 
     private boolean isPaid;

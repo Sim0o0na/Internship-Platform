@@ -5,20 +5,16 @@ import org.isp.base.services.api.TaskApplicationService;
 import org.isp.tasks.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 import java.security.Principal;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class TasksController {
@@ -68,14 +64,14 @@ public class TasksController {
         Page<TaskDto> tasks;
         if (!username.equals("")) {
             tasks = this.taskService.fetchTasksForUser(pageable, principal.getName());
-            if(isPartial) {
+            if (isPartial) {
                 view = "/users/user-tasks-partial";
             } else {
                 view = "/users/user-tasks";
             }
         } else {
             tasks = this.taskService.fetchAllTasks(pageable);
-            if(isPartial) {
+            if (isPartial) {
                 view = "/tasks/all-tasks-partial";
             } else {
                 view = "/tasks/all-tasks";

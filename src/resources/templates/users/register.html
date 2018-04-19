@@ -1,5 +1,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
-<form class="form-layout" action="/register" method="post" th:object="${userRegisterDto}" modelAttribute="userDto">
+<form class="form-layout" action="/register" method="post" th:object="${userRegisterDto}" modelAttribute="userDto"
+      id="userRegisterForm">
     <fieldset>
         <div class="col-md-12 col-xs-12 form-group">
             <img th:src="@{/png/softunilogo.png}" width="400px" height="120px" class="image-circle"/>
@@ -13,28 +14,28 @@
         <div class="col-md-12 col-xs-12 form-group form-field">
 
             <div class="control">
-                <input type="text" name="username" placeholder="Username" th:field="*{username}"
+                <input type="text" title="username" placeholder="Username" th:field="*{username}"
                        th:classappend="${#fields.hasErrors('username')} ? 'form-control has-danger' : 'form-control'"/>
-                <p th:if="${#fields.hasErrors('username')}">Username must be between 4 and 10 characters long!</p>
+                <!--<p th:if="${#fields.hasErrors('username')}">Username must be between 4 and 10 characters long!</p>-->
             </div>
 
             <div class="control">
-                <input type="text" name="email" placeholder="Email"
+                <input type="text" title="email" placeholder="Email"
                        th:classappend="${#fields.hasErrors('username')} ? 'has-danger'"
                        th:field="*{email}" class="form-control"/>
                 <p th:if="${#fields.hasErrors('email')}">Please enter a valid email!</p>
             </div>
 
             <div class="control">
-                <input type="text" name="firstName" placeholder="First Name" th:field="*{firstName}" class="form-control"/>
+                <input type="text" title="firstName" placeholder="First Name" th:field="*{firstName}" class="form-control"/>
             </div>
 
             <div class="control">
-                <input type="text" name="lastName" placeholder="Last Name" th:field="*{lastName}" class="form-control"/>
+                <input type="text" title="lastName" placeholder="Last Name" th:field="*{lastName}" class="form-control"/>
             </div>
 
             <div class="control">
-                <input type="password" name="password" placeholder="Password"
+                <input type="password" title="password" placeholder="Password"
                        th:classappend="${#fields.hasErrors('username')} ? 'has-danger'"
                        th:field="*{password}"
                        class="form-control" value="123456"/>
@@ -42,7 +43,7 @@
             </div>
 
             <div class="control">
-                <input type="password" name="confirmPassword" placeholder="Confirm Password"
+                <input type="password" title="confirmPassword" placeholder="Confirm Password"
                        th:classappend="${#fields.hasErrors('username')} ? 'has-danger'"
                        th:field="*{confirmPassword}" class="form-control" value="123456"/>
                 <p th:if="${#fields.hasErrors('confirmPassword')}">Passwords must match!</p>

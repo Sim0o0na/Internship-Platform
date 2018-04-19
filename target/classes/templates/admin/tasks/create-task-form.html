@@ -1,25 +1,33 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div>
     <div class="form-holder text-center">
-        <form class="form-layout" method="post" th:object="${taskDto}" modelAttribute="taskDto" action="/admin/tasks/create">
+        <form id="taskCreateForm" onsubmit="event.preventDefault(); validateCreateTaskForm();" class="form-layout" method="post" th:object="${taskDto}" modelAttribute="taskDto" action="/admin/tasks/create">
             <fieldset>
                 <h3>Create task</h3>
 
                 <div class="col-md-12 col-xs-12 form-group form-field">
 
                     <div class="control">
-                        <input type="text" name="title" placeholder="Title" th:field="*{title}" class="form-control"/>
+                        <input type="text" title="title" placeholder="Title" th:field="*{title}" class="form-control"/>
                     </div>
 
                     <div class="control">
-                        <input type="text" name="description" placeholder="Description" th:field="*{description}" class="form-control"/>
+                        <input type="text" title="description" placeholder="Description" th:field="*{description}" class="form-control"/>
                     </div>
 
                     <div class="control">
-                        <input type="date" name="dueDate" placeholder="Due Date" th:field="*{dueDate}" class="form-control"/>
+                        <input type="date" title="dueDate" placeholder="Due Date" th:field="*{dueDate}" class="form-control"/>
                     </div>
 
                     <div class="control">
-                        <input type="number" name="cost" placeholder="Payment Cost" th:field="*{cost}" class="form-control"/>
+                        <input type="number" title="paymentCost" placeholder="Payment Cost" th:field="*{paymentCost}" class="form-control"/>
+                    </div>
+
+                    <div class="control">
+                        <input type="radio" title="type"
+                               th:each="type: ${taskTypes}"
+                               th:value="${type}"
+                               th:text="${type}" checked/><br>
                     </div>
 
                     <div align="center">

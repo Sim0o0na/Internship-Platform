@@ -22,13 +22,13 @@
                         <div class="col-md-6 col-xs-6 form-field">
                             <p>Edit task</p>
                             <div class="control">
-                                <input type="text" name="title" placeholder="Title" th:field="*{title}" class="form-control"/>
+                                <input type="text" title="title" placeholder="Title" th:field="*{title}" class="form-control"/>
                             </div>
                             <div class="control">
-                                <textarea type="text" name="firstName" placeholder="Description" th:field="*{description}" class="form-control"/>
+                                <textarea type="text" title="firstName" placeholder="Description" th:field="*{description}" class="form-control"/>
                             </div>
                             <div class="control">
-                                <input type="date" name="dueDate" placeholder="Due Date" th:field="*{dueDate}"
+                                <input type="date" title="dueDate" placeholder="Due Date" th:field="*{dueDate}"
                                        th:value="${task.dueDate}" class="form-control"/>
                             </div>
                         </div>

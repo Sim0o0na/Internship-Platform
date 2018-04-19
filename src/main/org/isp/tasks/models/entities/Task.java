@@ -6,6 +6,7 @@ import org.isp.users.models.entities.User;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -39,10 +40,14 @@ public class Task {
 
     private String type;
 
+    @ManyToMany(mappedBy = "tasks")
+    private Set<TaskRequirement> taskRequirements;
+
     public Task() {
         this.isCompleted = false;
         this.payment = new Payment();
         this.payment.setTask(this);
+        this.taskRequirements = new HashSet<>();
     }
 
     public String getId() {
@@ -115,5 +120,13 @@ public class Task {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Set<TaskRequirement> getTaskRequirements() {
+        return taskRequirements;
+    }
+
+    public void setTaskRequirements(Set<TaskRequirement> taskRequirements) {
+        this.taskRequirements = taskRequirements;
     }
 }

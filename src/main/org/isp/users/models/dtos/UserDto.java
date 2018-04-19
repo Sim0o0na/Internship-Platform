@@ -1,12 +1,9 @@
 package org.isp.users.models.dtos;
 
-import org.hibernate.validator.constraints.Length;
 import org.isp.users.models.entities.Role;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
@@ -15,12 +12,9 @@ public abstract class UserDto {
 
     protected String lastName;
 
-    @Min(4)
-    @Max(10)
     @NotNull
     protected String username;
 
-    @Length(min = 6)
     @NotNull
     private String password;
 

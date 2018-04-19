@@ -1,9 +1,7 @@
 package org.isp.util;
 
-import org.isp.tasks.models.entities.Task;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 
 import java.util.ArrayList;
 import java.util.HashSet;

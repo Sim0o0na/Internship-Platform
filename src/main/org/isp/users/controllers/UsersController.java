@@ -1,6 +1,5 @@
 package org.isp.users.controllers;
 
-import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.dtos.UserEditDto;
 import org.isp.users.models.dtos.UserRegisterDto;
 import org.isp.base.services.api.ImageService;

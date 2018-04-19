@@ -12,7 +12,7 @@
             </thead>
             <tbody>
                 <tr class="row" th:each="p: ${payments}">
-                    <td class="block" th:text="${p.cost}"></td>
+                    <td class="block" th:text="${p.paymentCost}"></td>
                     <td class="block" th:text="${#dates.format(p.dueDate, 'dd-MM-yyyy')}"></td>
                     <td class="col-md-2 block" th:text="${p.isActive() ? 'YES' : 'NO'}"
                         th:style="${p.isActive() ? 'color: forestgreen' : ''}"></td>

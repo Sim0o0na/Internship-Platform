@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 @Validated(value = IsPasswordsMatching.class)
 public class UserRegisterDto extends UserDto {
 
-    @NotNull
+    @NotNull(message = "Passwords don't match!")
     private String confirmPassword;
 
     public UserRegisterDto() {

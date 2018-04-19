@@ -157,3 +157,7 @@ footer {
     background-size: cover;
     height: 20em;
 }
+
+ul {
+    list-style-type: none;
+}

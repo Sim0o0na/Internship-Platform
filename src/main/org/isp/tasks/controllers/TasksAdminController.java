@@ -1,5 +1,6 @@
 package org.isp.tasks.controllers;
 
+import org.isp.tasks.models.TaskType;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.payments.services.PaymentService;
 import org.isp.tasks.services.TaskService;
@@ -14,8 +15,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.text.ParseException;
-import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
@@ -48,15 +49,21 @@ public class TasksAdminController {
 
     @RequestMapping(value = "/tasks/create", method = RequestMethod.GET)
     private String createPanel(Model model) {
+        model.addAttribute("taskTypes", TaskType.types(TaskType.class));
         model.addAttribute("taskDto", new TaskDto());
         return "/admin/tasks/create-task-form";
     }
 
     @RequestMapping(value = "/tasks/create", method = RequestMethod.POST)
-    private String createTask(@ModelAttribute TaskDto taskCreateDto,
-                              BindingResult bindingResult) throws ParseException {
-        this.taskService.create(taskCreateDto);
-        return "redirect:/admin";
+    private String createTask(@Valid @ModelAttribute TaskDto taskCreateDto,
+                              BindingResult bindingResult,
+                              Model model) throws ParseException {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("error", "Kur tate banica");
+        } else {
+            this.taskService.create(taskCreateDto);
+        }
+        return "admin/admin-base";
     }
 
     @RequestMapping(value = "/tasks/approve", method = RequestMethod.GET)
