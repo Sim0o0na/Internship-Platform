@@ -7,15 +7,41 @@
                     <a id="allTasks" onclick="loadAllTasksInPanel()"><i class="fa fa-th-list"></i>See all tasks</a>
                 </li>
                 <li class="active" data-toggle="collapse">
-                    <a id="allTaskApplications" onclick="loadAllTaskApplications()"><i class="fa fa-th-list"></i>Tasks Applications</a>
+                    <a id="taskApplications" onclick="loadTaskApplicationsPanel()"><i class="fa fa-th-list"></i>Tasks Applications</a>
                 </li>
                 <li class="active" data-toggle="collapse">
                     <a id="createTask" onclick="loadCreateTaskForm()"><i class="fa fa-plus"></i>Create a task</a>
                 </li>
+                <li><a class="active" id="tasksSearchPanelBtn" onclick="showSearchBar()">Search Tasks</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container-fluid">
-    <div id="taskPanel" class="dynamicPanel col-md-12 center"></div>
+<div id="taskPanel">
+    <div id="tasksSearchBar" class="row">
+        <div class="row container-fluid">
+            <div class="col-md-12 col-xs-12 form-group line" align="center">
+                <div class="col-md-3 col-xs-8 form-group form-field">
+                    <label>Due Date <b>From:</b></label>
+                    <input name="date-from" type="date" class="form-control">
+                </div>
+                <div class="col-md-3 col-xs-8 form-group form-field">
+                    <label>Due Date <b>To:</b></label>
+                    <input name="date-to" type="date" class="form-control">
+                </div>
+                <div class="col-md-3 col-xs-8 form-group form-field">
+                    <label>Assignee</label>
+                    <input name="assignee" placeholder="Username" type="text" class="form-control">
+                </div>
+                <div class="col-md-3 col-xs-8">
+                    <div>
+                        <a id="searchTasksBtn" class="col-md-6 btn centered-text form-btn" onclick="searchTasks()">Search</a>
+                    </div>
+                    <div>
+                        <a id="closeSearchBarBtn" class="col-md-6 btn centered-text form-btn" onclick="closeSearchBar()">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

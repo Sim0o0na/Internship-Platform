@@ -1,5 +1,5 @@
-$("#users").click(loadAllUsers());
-function loadAllUsers() {
+$("#users").click(loadUsersPanel);
+function loadUsersPanel() {
     $.ajax({
         type: 'GET',
         url: '/admin/users/all',

@@ -8,6 +8,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import org.springframework.data.domain.Pageable;
+
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -22,4 +24,6 @@ public interface TaskRepository extends JpaRepository<Task, String> {
             "(select task.id from TaskApplication ta where ta.user.username = :assigneeUsername) order by t.dueDate desc")
     Page<Task> findAllByAssigneeUsernameNotLike(@Param(value = "assigneeUsername")
                                                         String assigneeUsername, Pageable pageable);
+
+    Page<Task> findAllByDueDateBetweenOrAssigneeUsername(Date dateFrom, Date dateTo, String assigneeUsername, Pageable pageable);
 }

@@ -7,7 +7,6 @@ import org.isp.tasks.models.entities.Task;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
@@ -29,4 +28,6 @@ public interface TaskService {
     Task findTaskById(String taskId);
 
     void assignTaskToUser(String taskId, String username) throws Exception;
+
+    Page<TaskDto> searchTasks(String dateFrom, String dateTo, String assigneeUsername, Pageable pageable) throws ParseException;
 }

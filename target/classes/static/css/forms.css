@@ -77,44 +77,6 @@ form > a:hover {
     color:#FFF !important;
 }
 
-.btn-search {
-    background-color: #fffffd;
-    color: black;
-    margin: 5px;
-    padding: 5px;
-    width: 100px;
-    font-size: 20px;
-    font-weight: inherit;
-}
-
-.btn-search:hover {
-    background-color: #fffffd;
-}
-
-.btn-edit {
-    background-color: #F3D55A;
-}
-
-.btn-edit:hover {
-    background-color: #eacb5a;
-}
-
-.btn-delete {
-    background-color: #d92525;
-}
-
-.btn-green {
-    background-color: #47d16a;
-}
-
-.btn-green:hover {
-    background-color: #45bc5e;
-}
-
-.btn-delete:hover {
-    background-color: #af2121;
-}
-
 .line{
     border-bottom : 2px solid #025aa5;
 }

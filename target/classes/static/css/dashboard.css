@@ -12,33 +12,6 @@
     transform: scale(1.1);
 }
 
-.dropdown {
-    color: darkblue;
-    font-size: 20pt;
-}
-
-.dropdown-toggle {
-    background-color: transparent;
-    color: darkblue;
-    border-radius: 0px;
-    margin: 5px;
-    padding: 5px;
-    font-size: 20pt;
-    font-weight: inherit;
-}
-
-.dropdown-toggle:hover {
-    color: orange;
-}
-
-.dropdown-menu>li>a{
-    color: darkblue;
-    font-size: 20pt;
-}
-
-.dropdown-menu>li>a:hover{
-    color: orange;
-}
 .row {
     margin: 0 auto;
 }

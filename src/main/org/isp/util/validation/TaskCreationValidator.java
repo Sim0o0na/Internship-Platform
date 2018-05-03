@@ -1,10 +1,7 @@
 package org.isp.util.validation;
 
-import org.isp.tasks.models.dtos.TaskDto;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import java.util.Calendar;
 
 public class TaskCreationValidator implements ConstraintValidator<IsPasswordsMatching, Object> {
     @Override

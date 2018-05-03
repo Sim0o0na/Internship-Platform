@@ -1,9 +1,6 @@
 package org.isp.tasks.models.dtos;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.validation.constraints.NotNull;
-import java.util.Date;
 
 public class TaskCreateDto {
     @NotNull(message = "Title cannot be empty!")

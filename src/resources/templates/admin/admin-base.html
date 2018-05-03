@@ -13,9 +13,13 @@
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" th:href="@{/css/forms.css}">
     <link rel="stylesheet" th:href="@{/css/tables.css}"/>
-    <script th:src="@{/js/ajax/users-admin-partials.js}"></script>
-    <script th:src="@{/js/ajax/tasks-admin-partials.js}"></script>
-    <script th:src="@{/js/ajax/payments-admin-partials.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/modals.css}">
+    <link rel="stylesheet" th:href="@{/css/admin-tasks.css}">
+    <script th:src="@{/js/ajax/admin/users-admin-partials.js}"></script>
+    <script th:src="@{/js/tasks-search-admin.js}"></script>
+    <script th:src="@{/js/ajax/admin/tasks-admin-partials.js}"></script>
+    <script th:src="@{/js/ajax/admin/payments-admin-partials.js}"></script>
+    <script th:src="@{/js/ajax/admin/task-applications-admin-partials.js}"></script>
 </head>
 <body>
     <nav class="collapse navbar-collapse">
@@ -40,10 +44,10 @@
             <div class="container">
                 <ul class="nav navbar-center">
                     <li class="active" data-toggle="collapse">
-                        <a id="users" onclick="loadAllUsers()"><i class="fa fa-user"></i>Users</a>
+                        <a id="users" onclick="loadUsersPanel()"><i class="fa fa-user"></i>Users</a>
                     </li>
                     <li class="active" data-toggle="collapse">
-                        <a id="tasks" onclick="loadAllTasks()"><i class="fa fa-tasks"></i>Tasks</a>
+                        <a id="tasks" onclick="loadTasksPanel()"><i class="fa fa-tasks"></i>Tasks</a>
                     </li>
                     <li class="active" data-toggle="collapse">
                         <a id="payments" onclick="loadPaymentsPanel()"><i class="far fa-money-bill-alt"></i>Payments</a>

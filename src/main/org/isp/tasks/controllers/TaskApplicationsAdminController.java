@@ -24,6 +24,11 @@ public class TaskApplicationsAdminController {
         this.taskService = taskService;
     }
 
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    private String taskApplicationsPanel(Model model){
+        return "admin/tasks/task-applications-panel-partial";
+    }
+
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     private String allTaskApplications(Model model){
         List<TaskApplication> allTaskApplications = this.taskApplicationService.fetchAllNonAssigned();

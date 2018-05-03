@@ -17,11 +17,8 @@
                     <td class="col-md-2 block" th:text="${p.isActive() ? 'YES' : 'NO'}"
                         th:style="${p.isActive() ? 'color: forestgreen' : ''}"></td>
                     <td class="col-md-2 block" th:text="${p.isPaid() ? 'YES' : 'NO'}"
-                        th:style="${p.isPaid() ? 'color: forestgreen' : 'color: red'}"></td>
-                    <!--<td>-->
-                        <!--<a class="btn form-btn btn-edit"-->
-                           <!--th:href="@{/admin/tasks/approve(taskId=${ta.task.id},user=${ta.user.username})}">Approve</a>-->
-                    <!--</td>-->
+                        th:style="${p.isPaid() ? 'color: forestgreen' : 'color: red'}">
+                    </td>
                 </tr>
             </tbody>
         </table>

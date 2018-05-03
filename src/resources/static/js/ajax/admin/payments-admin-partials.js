@@ -1,4 +1,4 @@
-$("#payments").click(loadPaymentsPanel());
+$("#payments").click(loadPaymentsPanel);
 function loadPaymentsPanel() {
     $.ajax({
         type: 'GET',

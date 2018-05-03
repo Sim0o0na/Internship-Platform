@@ -1,53 +1,56 @@
 package org.isp.tasks.controllers;
 
 import org.isp.tasks.models.dtos.TaskDto;
+import org.isp.tasks.models.entities.Task;
 import org.isp.tasks.services.TaskApplicationService;
 import org.isp.tasks.services.TaskService;
+import org.isp.users.models.entities.User;
+import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.security.Principal;
-import java.text.ParseException;
 
 @Controller
 @RequestMapping("/tasks")
 public class TasksController {
     private TaskService taskService;
+    private UserService userService;
 
     @Autowired
     private TaskApplicationService taskApplicationService;
 
     @Autowired
-    public TasksController(TaskService taskService) {
+    public TasksController(TaskService taskService, UserService userService) {
         this.taskService = taskService;
+        this.userService = userService;
     }
 
     @GetMapping("/apply/{taskId}")
     private String applyTask(@PathVariable(value = "taskId") String taskId, Model model) {
         TaskDto dto = this.taskService.findById(taskId);
-        System.out.println("apply get!");
         model.addAttribute("task", dto);
         return "/tasks/apply-task";
     }
 
     @PostMapping("/apply/{taskId}")
     private String apply(@PathVariable(value = "taskId") String taskId, Principal principal) throws IOException {
-        TaskDto taskDto = this.taskService.findById(taskId);
-        if (taskDto == null) {
+        Task task = this.taskService.findTaskById(taskId);
+        User user = this.userService.findByUsername(principal.getName());
+        if (task == null) {
             return "redirect:/dashboard";
         }
-        this.taskApplicationService.createTaskApplication();
-        return "redirect:/dashboard";
+        this.taskApplicationService.createTaskApplication(task, user);
+        return "redirect:/tasks/all?user=&partial=false";
     };
 
-    @RequestMapping(value = "/tasks/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     private String allTasks(@RequestParam(value = "user") String username,
                                   @RequestParam(value = "partial") boolean isPartial,
                                   Model model,

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<div id="tasksSearchBar" class="row">
+    <div class="row container-fluid">
+        <div class="col-md-12 col-xs-12 form-group line" align="center">
+            <div class="col-md-3 col-xs-8 form-group form-field">
+                <label>Due Date <b>From:</b></label>
+                <input name="date-from" type="date" class="form-control">
+            </div>
+            <div class="col-md-3 col-xs-8 form-group form-field">
+                <label>Due Date <b>To:</b></label>
+                <input name="date-to" type="date" class="form-control">
+            </div>
+            <div class="col-md-3 col-xs-8 form-group form-field">
+                <label>Assignee</label>
+                <input name="assignee" placeholder="Username" type="text" class="form-control">
+            </div>
+            <div class="col-md-3 col-xs-8">
+                <div>
+                    <a id="searchTasksBtn" class="col-md-6 btn centered-text form-btn" onclick="searchTasks()">Search</a>
+                </div>
+                <div>
+                    <a id="closeSearchBarBtn" class="col-md-6 btn centered-text form-btn" onclick="closeSearchBar()">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

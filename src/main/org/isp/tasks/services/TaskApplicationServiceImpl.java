@@ -5,7 +5,6 @@ import org.isp.tasks.models.entities.Task;
 import org.isp.tasks.models.entities.TaskApplication;
 import org.isp.users.models.entities.User;
 import org.isp.tasks.repositories.TaskApplicationRepository;
-import org.isp.tasks.repositories.TaskRepository;
 import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

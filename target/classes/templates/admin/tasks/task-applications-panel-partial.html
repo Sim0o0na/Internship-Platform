@@ -1,0 +1,21 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<nav class="navbar-light">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav navbar-center">
+                <li class="active" data-toggle="collapse">
+                    <a id="allTaskApplications" onclick="loadAllTaskApplications()"><i class="fa fa-th-list"></i>All</a>
+                </li>
+            </ul>
+            <div class="input-group">
+                <input type="text" class="form-control form-control-search" id="searchUserInput" placeholder="Username...">
+                <span class="input-group-btn">
+                        <button onclick="searchUser()" type="submit" class="btn btn-search"><i class="fa fa-search"></i>Search</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div id="taskApplicationsPanel" class="dynamicPanel col-md-12 center"></div>
+</div>

@@ -6,6 +6,7 @@ import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.payments.services.PaymentService;
 import org.isp.tasks.services.TaskService;
 import org.isp.users.services.UserService;
+import org.isp.util.ControllerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,10 +15,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.text.ParseException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/admin/tasks")
@@ -30,12 +31,7 @@ public class TasksAdminController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    private String admin(Model model, RedirectAttributes redirectAttributes){
-        return "admin/admin-base";
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    private String tasksPanel(@PageableDefault(size = 4) Pageable pageable, Model model) {
+    private String tasksPanel(Model model){
         return "admin/tasks/tasks-panel";
     }
 
@@ -83,5 +79,24 @@ public class TasksAdminController {
             this.taskService.create(taskCreateDto);
         }
         return "admin/admin-base";
+    }
+
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    private String searchTasks(@RequestParam(value = "dateFrom", required = false) String dateFrom,
+                               @RequestParam(value = "dateTo", required = false) String dateTo,
+                               @RequestParam(value = "assignee", required = false) String assigneeUsername,
+                               Model model,
+                               Pageable pageable) throws ParseException {
+        Page<TaskDto> foundTasks;
+        try {
+            foundTasks = this.taskService.searchTasks(dateFrom, dateTo, assigneeUsername, pageable);
+        } catch (IllegalArgumentException iae) {
+            ControllerUtil.addErrorToModel(iae.getMessage(), model);
+            return "admin/tasks/all-tasks-partial";
+        }
+
+        model.addAttribute("tasks", foundTasks);
+        model.addAttribute("pagesCount", foundTasks.getTotalPages());
+        return "admin/tasks/all-tasks-partial";
     }
 }

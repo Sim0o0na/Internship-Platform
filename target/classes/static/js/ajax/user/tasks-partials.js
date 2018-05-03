@@ -1,9 +1,4 @@
-$(document).ready(function() {
-    var page = 0;
-    loadAllTasksByPage(page);
-});
-
-$(".allTasksPageBtn").click(loadAllTasksByPage(page));
+$(".allTasksPageBtn").click(loadAllTasksByPage);
 function loadAllTasksByPage(page) {
     $.ajax({
         type: 'GET',

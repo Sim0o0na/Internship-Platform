@@ -3,15 +3,11 @@ package org.isp.tasks.services;
 import org.isp.tasks.models.dtos.TaskCreateDto;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
-import org.isp.tasks.models.entities.TaskApplication;
-import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.entities.User;
 import org.isp.tasks.repositories.TaskRepository;
 import org.isp.users.repositories.UserRepository;
-import org.isp.users.services.UserService;
-import org.isp.users.services.UserServiceImpl;
+import org.isp.util.DateFormatUtil;
 import org.isp.util.MappingUtil;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -19,10 +15,10 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.data.domain.Pageable;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +26,6 @@ import java.util.stream.Collectors;
 public class TaskServiceImpl implements TaskService {
     private TaskRepository taskRepository;
     private UserRepository userRepository;
-    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
     @Autowired
     public TaskServiceImpl(TaskRepository taskRepository,
@@ -43,7 +38,7 @@ public class TaskServiceImpl implements TaskService {
     public void create(TaskCreateDto taskDto) throws ParseException {
         Task task = new Task();
         task.setTitle(taskDto.getTitle());
-        task.setDueDate(sdf.parse(taskDto.getDueDate()));
+        task.setDueDate(DateFormatUtil.parseDate(taskDto.getDueDate()));
         task.setDescription(taskDto.getDescription());
         task.getPayment().setCost(taskDto.getPaymentCost());
         task.setType(taskDto.getType());
@@ -81,17 +76,6 @@ public class TaskServiceImpl implements TaskService {
         return dto;
     }
 
-    private Page<TaskDto> mapTasksToPageDTO(Page<Task> tasks, String username) {
-        List<TaskDto> dtos = new ArrayList<>();
-        for (Task task : tasks) {
-            TaskDto dto = MappingUtil.convert(task, TaskDto.class);
-            dto.setAppliedByUser(task.getTaskApplications().stream()
-                    .filter(t -> t.getUser().getUsername().equals(username)).collect(Collectors.toList()).size() != 0);
-            dtos.add(dto);
-        }
-        return new PageImpl<>(dtos);
-    }
-
     @Override
     public void edit(String taskId, TaskDto taskDto) throws IllegalAccessException, ParseException {
         Task task = this.taskRepository.getOne(taskId);
@@ -121,5 +105,19 @@ public class TaskServiceImpl implements TaskService {
         task.setAssignee(user);
         task.setCompleted(false);
         this.taskRepository.saveAndFlush(task);
+    }
+
+    @Override
+    public Page<TaskDto> searchTasks(String dateFrom, String dateTo, String assigneeUsername, Pageable pageable) throws ParseException {
+        Page<Task> foundTasks;
+        if(dateFrom.isEmpty() && dateTo.isEmpty()) {
+            foundTasks = this.taskRepository.findByAssigneeUsernameOrderByDueDateAsc(pageable, assigneeUsername);
+        } else {
+            Date from = DateFormatUtil.parseDate(dateFrom);
+            Date to = DateFormatUtil.parseDate(dateTo);
+            foundTasks = this.taskRepository.findAllByDueDateBetweenOrAssigneeUsername(from, to, assigneeUsername, pageable);
+        }
+
+        return MappingUtil.convert(foundTasks, TaskDto.class);
     }
 }

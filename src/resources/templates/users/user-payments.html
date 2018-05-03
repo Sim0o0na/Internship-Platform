@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link rel="stylesheet" th:href="@{/css/dashboard.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
 </head>
 <body>
 <div class="container-fluid">
@@ -30,8 +32,8 @@
         </ul>
     </nav>
     <div class="wrapper">
-        <div class="row" th:object="${payments}">
-            <div class="dynamicPanel col-md-12">
+        <div class="row-md-6" th:object="${payments}">
+            <div class="dynamicPanel col">
                 <div>
                     <h1>To receive:</h1>
                     <h2 th:if="${sumToReceive}" th:text="${sumToReceive}"></h2>
@@ -45,35 +47,89 @@
                         <th scope="col">Task Title</th>
                         <th scope="col">Sum</th>
                         <th scope="col">Payment Status</th>
+                        <th scope="col">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="row" th:each="p: ${payments}" th:style="${p.isActive()} ? 'background: lightgreen'">
+                    <tr class="row" th:each="p: ${payments}">
+                        <!-- th:style="${p.isActive()} ? 'background: lightgreen'"-->
                         <td class="col-md-2 block" th:text="${p.task.title}"></td>
                         <td class="col-md-2 block" th:text="${p.cost}"></td>
-                        <td class="col-md-2 block" th:text="${p.isActive() ? 'ACTIVE' : 'INACTIVE'}"
-                            th:style="${p.isActive() ? 'color: forestgreen' : 'red'}" ></td>
+                        <td class="col-md-2 block" th:text="${p.isActive() ? 'ACTIVE' : 'INACTIVE'}">
+                            th:style="${p.isActive() ? 'color: forestgreen' : 'lightgrey'}" ></td>
+                        <td class="col-md-2 block">
+                            <a class="btn btn-green" th:if="${!p.isPaid()}" th:href="@{'/tasks/confirm-received/' + ${p.getId()}}">Confirm Received</a>
+                            <a class="btn btn-grey" th:if="${p.isPaid()}">Received</a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-            <nav>
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                    </li>
-                    <th:block th:each="i: ${#numbers.sequence(0, pagesCount - 1)}">
-                        <li class="page-item"><a class="userTasksPageBtn page-link"
-                                                 th:onclick="'loadTasksByPageAndUser(' + ${i} + ', \'' + ${user} + '\');'"
-                                                 th:text="${i + 1}"></a></li>
-                    </th:block>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
+        </div>
+        <div class="row-md-6" id="chartContainer" style="height: 370px; width: 100%;">
+            <h1>kur chart</h1>
         </div>
     </div>
 </div>
 </body>
+<script>
+    window.onload = function() {
+
+        var dataPoints = [];
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Daily Sales Data"
+            },
+            axisY: {
+                title: "Units",
+                titleFontSize: 24
+            },
+            data: [{
+                type: "column",
+                yValueFormatString: "#,### Units",
+                dataPoints: dataPoints
+            }]
+        });
+
+        function addData(data) {
+            for (var i = 0; i < data.length; i++) {
+                dataPoints.push({
+                    x: new Date(data[i].date),
+                    y: data[i].units
+                });
+            }
+            chart.render();
+        }
+
+        addData("[\n" +
+            "  {\n" +
+            "    \"date\": 1493922600000,\n" +
+            "    \"units\": 320\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"date\": 1494009000000,\n" +
+            "    \"units\": 552\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"date\": 1494095400000,\n" +
+            "    \"units\": 342\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"date\": 1494181800000,\n" +
+            "    \"units\": 431\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"date\": 1494268200000,\n" +
+            "    \"units\": 251\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"date\": 1494354600000,\n" +
+            "    \"units\": 445\n" +
+            "  }\n" +
+            "]")
+    }
+</script>
 </html>
