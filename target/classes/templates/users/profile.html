@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../../static/css/style.css"
-          th:href="@{/css/style.css}"/>
+    <script th:src="@{/js/profile.js}"></script>
+    <link rel="stylesheet" href="../../static/css/style.css" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" href="../../static/css/forms.css" th:href="@{/css/forms.css}"/>
     <link rel="stylesheet" href="../../static/css/profile.css" th:href="@{/css/profile.css}"/>
     <link rel="stylesheet" th:href="@{/css/modals.css}">
@@ -20,11 +20,9 @@
     <div class="container" th:object="${userDto}">
         <div class="row justify-content-center">
             <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
-                </div>
-                <div class="row user-detail justify-content-center">
-                    <div class="col-lg-6 col-sm-6 col-6" id="profile">
+                <div class="row-12 user-detail justify-content-center">
+                    <div class="col-6" id="profile">
+                        <h1>Personal Information</h1>
                         <h5 th:text="${userDto.firstName} + ' ' + ${userDto.lastName}"></h5>
                         <h3 th:text="${userDto.email}"></h3>
 
@@ -32,13 +30,14 @@
                         <button type="button" class="btn form-btn" data-toggle="modal" data-target="#editModal">Edit</button>
                         <hr>
                         <span>User description</span>
+                        <div class="social">
+                            <a th:href="${userDto.facebook}"><i class="fab fa-facebook"></i></a>
+                            <a th:href="${userDto.instagram}"><i class="fab fa-instagram"></i></a>
+                            <!--<a th:href="${userDto.twitter}"><i class="fab fa-twitter"></i></a>-->
+                        </div>
                     </div>
-                </div>
-                <div class="row user-social-detail justify-content-center">
-                    <div class="col-lg-12 col-sm-12 col-12">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <div class="col-6" id="profile">
+                        <h1>Educational Information</h1>
                     </div>
                 </div>
             </div>
@@ -46,15 +45,21 @@
 
         <div class="modal fade"  id="editModal" role="dialog">
             <p>Edit your profile</p>
-            <form class="modal-form" method="post" enctype="multipart/form-data"
+            <form class="modal-form" method="post" autocomplete="off" enctype="multipart/form-data"
                   th:object="${userDto}" th:action="@{'/edit/' + ${user}}">
                 <fieldset>
-                    <div class="row" align="center">
+                    <div class="row" id="edit-modal-content" align="center">
                         <!--<div class="col-md-12 col-xs-12">-->
                             <!--<img th:src="@{'/profile-pictures/' + ${userDto.getProfilePhotoLocation()}}" class="image-circle"/>-->
                         <!--</div>-->
                         <div class="col-md-6 col-xs-6 form-field">
-                            <p>BASIC INFO</p>
+                            <h1>Personal Info</h1>
+
+                            <div class="control">
+                                <input type="file" name="file" id="file" class="input-file" />
+                                <label for="file" class="btn form-btn">Choose a file</label>
+                            </div>
+
                             <div class="control">
                                 <input type="text" title="email" placeholder="Email" th:field="*{email}" class="form-control"/>
                             </div>
@@ -68,7 +73,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-xs-6 form-field">
-                            <p>SOCIAL MEDIA INFO</p>
+                            <h1>Social Media Info</h1>
                             <div class="control">
                                 <input type="text" title="facebook" th:field="*{facebook}" placeholder="Facebook" class="form-control"/>
                             </div>

@@ -17,13 +17,6 @@ button {
     border:none;
 }
 
-#home-nav{
-    background:url(/img/softuni-students.jpg);
-    background-size: cover;
-    height: 500px;
-    z-index:-1;
-}
-
 nav {
     margin-top: 15px;
 }
@@ -76,7 +69,6 @@ nav {
     margin-right: 10px;
 
 }
-
 .nav-img {
     width: 200px;
     height: 50px;
@@ -88,55 +80,6 @@ nav {
 .dashboard-row {
     text-align: center;
     color: white;
-}
-
-.h-icon {
-    width: 400px;
-    height: 300px;
-}
-
-.home-action:hover {
-    color: #ec971f;
-}
-
-.home-title {
-    font-size: 70pt;
-    color: rgb(35, 67, 100);
-    font-weight: 300;
-    font-style: normal;
-}
-
-.home-description {
-    color: rgb(89, 39, 7);
-    font-size: 25pt;
-}
-#home-softuni-logo{
-    margin: 0 auto;
-    width: 80em;
-}
-#internship-flow-img {
-    margin: 0 auto;
-    width: 120em;
-    height: 50em;
-}
-
-#wizard {
-    width: 500px;
-    height: 600px;
-}
-.img-responsive {
-    margin: 0 auto;
-}
-
-#skills>li {
-    font-size: 25pt;
-    color: rgb(35, 67, 100);
-    height: 50px;
-    margin: 10px 0;
-    background: url(/img/softuni-logo-hat.png) no-repeat left center;
-    list-style: none;
-    padding-left: 70px;
-    line-height: 30px;
 }
 
 footer {
@@ -176,3 +119,13 @@ ul {
 .dropdown-menu>li>a:hover{
     color: orange;
 }
+
+/*input[type=text], input[type=password] {*/
+    /*text-align: center;*/
+    /*transition: ease-in-out, width .35s ease-in-out;*/
+/*}*/
+
+/*input[type=text], input[type=password]:focus {*/
+    /*text-align: left;*/
+    /*border: darkblue solid 3px;*/
+/*}*/

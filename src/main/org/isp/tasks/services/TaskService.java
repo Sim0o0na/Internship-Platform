@@ -30,4 +30,6 @@ public interface TaskService {
     void assignTaskToUser(String taskId, String username) throws Exception;
 
     Page<TaskDto> searchTasks(String dateFrom, String dateTo, String assigneeUsername, Pageable pageable) throws ParseException;
+
+    void completeTask(String taskId);
 }

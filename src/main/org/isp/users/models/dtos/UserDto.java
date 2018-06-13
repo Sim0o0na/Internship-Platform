@@ -8,29 +8,29 @@ import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 public abstract class UserDto {
-    protected String firstName;
+    public String firstName;
 
-    protected String lastName;
+    public String lastName;
 
     @NotNull
-    protected String username;
+    public String username;
 
     @NotNull
     private String password;
 
     @Email
     @NotNull
-    protected String email;
+    public String email;
 
-    protected String facebook;
+    public String facebook;
 
-    protected String instagram;
+    public String instagram;
 
-    protected String skype;
+    public String skype;
 
-    protected MultipartFile profilePhoto;
+    public MultipartFile profilePhoto;
 
-    protected String profilePhotoLocation;
+    public String profilePhotoLocation;
 
     private Set<Role> privileges;
 

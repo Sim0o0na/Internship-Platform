@@ -11,6 +11,7 @@
     <script th:src="@{/js/ajax/user/tasks-partials.js}"></script>
     <link rel="stylesheet" th:href="@{/css/dashboard.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
 </head>
 <body>
     <div class="container-fluid">
@@ -45,11 +46,14 @@
                         </thead>
                         <tbody>
                         <tr class="row" th:each="task: ${tasks}" th:style="${#dates.createNow() > task.dueDate} ? 'background: lightyellow'">
-                            <td class="col-md-2 block" th:text="${task.title}"></td>
-                            <td class="col-md-2 block" th:text="${task.description}"></td>
-                            <td class="col-md-2 block" th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></td>
-                            <td class="col-md-2 block" th:text="${task.isPaymentActive() ? 'ACTIVE' : 'INACTIVE'}"
+                            <td class="col-md-3 block" th:text="${task.title}"></td>
+                            <td class="col-md-3 block" th:text="${task.description}"></td>
+                            <td class="col-md-3 block" th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></td>
+                            <td class="col-md-3 block" th:text="${task.isPaymentActive() ? 'ACTIVE' : 'INACTIVE'}"
                                 th:style="${task.isPaymentActive() ? 'color: forestgreen' : 'red'}" ></td>
+                            <td class="col-md-3 block">
+                                <a th:if="${!task.isCompleted()}" class="btn btn-green" th:href="@{'/tasks/complete/' + ${task.id}}">Complete Task</a>
+                            </td>
                         </tr>
                         </tbody>
                     </table>

@@ -1,0 +1,77 @@
+#hideNotificationBar {
+    font-size:25pt;
+    color: rgb(35, 67, 100);
+}
+
+#hideNotificationBar:hover {
+    font-size: 25pt;
+    color: rgba(236, 151, 31, 1);
+}
+
+.notification {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.mark-read {
+    float: right;
+    color: white;
+    text-decoration:none;
+}
+
+.mark-read:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+
+.notification-icon {
+    width: 50px;
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.54);
+    height: 100%;
+}
+
+.notification-icon > .fas, .far {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.notification-info {
+     background: #014c8c;
+     color: white;
+ }
+
+.notification-info-body {
+    background: rgba(1, 76, 140, 0.7);
+    color: white;
+    height: 100%;
+    padding-top: 14px;
+}
+
+.notification-alert {
+    background: #d92525;
+    color: white;
+}
+
+.notification-alert-body {
+    background: rgba(217, 37, 37, 0.7);
+    color: white;
+    height: 100%;
+    padding-top: 14px;
+}
+
+.notification-payment {
+    background: #45bc5e;
+    color: white;
+}
+
+.notification-payment-body {
+    background: rgba(69, 188, 94, 0.7);
+    color: white;
+    height: 100%;
+    padding-top: 14px;
+}

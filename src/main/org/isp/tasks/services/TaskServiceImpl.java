@@ -1,5 +1,8 @@
 package org.isp.tasks.services;
 
+import org.isp.notifications.Notification;
+import org.isp.notifications.NotificationRepository;
+import org.isp.notifications.NotificationService;
 import org.isp.tasks.models.dtos.TaskCreateDto;
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
@@ -20,18 +23,22 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
 public class TaskServiceImpl implements TaskService {
     private TaskRepository taskRepository;
     private UserRepository userRepository;
+    private NotificationService notificationService;
 
     @Autowired
     public TaskServiceImpl(TaskRepository taskRepository,
-                           UserRepository userRepository) {
+                           UserRepository userRepository,
+                           NotificationService notificationService) {
         this.taskRepository = taskRepository;
         this.userRepository = userRepository;
+        this.notificationService = notificationService;
     }
 
     @Override
@@ -43,6 +50,7 @@ public class TaskServiceImpl implements TaskService {
         task.getPayment().setCost(taskDto.getPaymentCost());
         task.setType(taskDto.getType());
         this.taskRepository.saveAndFlush(task);
+        this.notificationService.createForAllUsers(String.format("A new task has been opened: \"%s\"!", task.getTitle()));
     }
 
     @Override
@@ -119,5 +127,15 @@ public class TaskServiceImpl implements TaskService {
         }
 
         return MappingUtil.convert(foundTasks, TaskDto.class);
+    }
+
+    @Override
+    public void completeTask(String taskId) {
+        Optional<Task> task = this.taskRepository.findById(taskId);
+        if(task.isPresent()) {
+           task.get().setCompleted(true);
+           task.get().getPayment().setActive(true);
+           this.taskRepository.saveAndFlush(task.get());
+        }
     }
 }

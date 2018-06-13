@@ -7,12 +7,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
 
 @Controller
+@RequestMapping("/payments")
 public class PaymentsController {
     private PaymentService paymentService;
 
@@ -21,7 +25,7 @@ public class PaymentsController {
         this.paymentService = paymentService;
     }
 
-    @RequestMapping(value = "/payments/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     public String getPaymentsForUser(Pageable pageable, Model model, Principal principal) {
         Page<Payment> paymentsForUser = this.paymentService.getAllForUser(pageable, principal.getName());
         model.addAttribute("sumToReceive",
@@ -32,5 +36,11 @@ public class PaymentsController {
         model.addAttribute("pagesCount", paymentsForUser.getTotalPages());
         model.addAttribute("user", principal.getName());
         return "users/user-payments";
+    }
+
+    @RequestMapping(value = "/monthly", method = RequestMethod.GET)
+    @ResponseBody
+    public HashMap<String, Double> getMonthlyPaymentsDataForUser(Principal principal){
+        return this.paymentService.getAllForTimeFrameAndUser(principal.getName());
     }
 }

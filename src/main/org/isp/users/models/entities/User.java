@@ -1,6 +1,7 @@
 package org.isp.users.models.entities;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.isp.payments.models.Payment;
 import org.isp.tasks.models.entities.TaskApplication;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
@@ -54,6 +55,9 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Payment> payments;
 
     public User() {
         this.roles = new HashSet<>();
@@ -196,5 +200,13 @@ public class User implements UserDetails {
 
     public void setTaskApplications(Set<TaskApplication> taskApplications) {
         this.taskApplications = taskApplications;
+    }
+
+    public Set<Payment> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(Set<Payment> payments) {
+        this.payments = payments;
     }
 }

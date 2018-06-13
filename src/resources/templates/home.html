@@ -4,21 +4,28 @@
     <title>Index</title>
     <meta charset="utf-8">
     <meta title="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script th:src="@{/js/ajax/user/user-forms.js}"></script>
+    <script th:src="@{/js/home.js}"></script>
+    <script th:src="@{/js/lib/float-panel.js}"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" th:href="@{/css/dashboard.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" th:href="@{/css/forms.css}">
     <link rel="stylesheet" th:href="@{/css/modals.css}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script th:src="@{/js/ajax/user/user-forms.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
 </head>
 <body>
     <div id="home-nav" class="container-fluid">
-        <nav th:include="~{fragments/navbar :: navbar}"></nav>
+        <div class="float-panel" data-top="0" data-scroll="200">
+            <div class="content-area">
+                <img src="/img/foundation.png" class="img-responsive header-image"
+                     width="200px" height="100px">
+                <nav class="header" id="header" th:include="~{fragments/navbar :: navbar}"></nav>
+            </div>
+        </div>
         <img id="home-softuni-logo" class="img-responsive" src="/img/softunilogo-color.png">
     </div>
     <div class="container-fluid">
@@ -37,30 +44,34 @@
                 </p>
             </div>
             <img id="internship-flow-img" class="img-responsive" src="/img/internship-flow.png">
-            <div class="col-md-8">
-                <h1 class="home-title text-right">Какво целим да изградим в студентите?</h1>
-                <p class="home-description text-left"><b>Основните качества и умения, които желаем да развием са:</b></p>
-                <ul id="skills" class="text-left">
-                    <li>Организираност и отговорност</li>
-                    <li>Работа в екип</li>
-                    <li>Комуникативност и инициативност</li>
-                    <li>Презентационни умения</li>
-                    <li>Справяне с проблеми и изграждане на концепции</li>
-                    <li>Подобряване и обогатяване на уменията по програмиране</li>
-                </ul>
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="home-title text-right">Какво целим да изградим в студентите?</h1>
+                    <p class="home-description text-left"><b>Основните качества и умения, които желаем да развием са:</b></p>
+                    <ul id="skills" class="text-left">
+                        <li>Организираност и отговорност</li>
+                        <li>Работа в екип</li>
+                        <li>Комуникативност и инициативност</li>
+                        <li>Презентационни умения</li>
+                        <li>Справяне с проблеми и изграждане на концепции</li>
+                        <li>Подобряване и обогатяване на уменията по програмиране</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-2">
+                    <img id="wizard" class="img-responsive" src="/img/wizard-coding.png">
+                </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-2">
-                <img id="wizard" class="img-responsive" src="/img/wizard-coding.png">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-2">
-                <img class="img-responsive" src="/img/questions.png">
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-10">
-                <h1 class="home-title text-right">За кого е предназначена програмата?</h1>
-                <p class="home-description text-right">Всеки студент, преминал успешно курса <b>Programming Basics</b>
-                    с резултат <b>6.00</b> може да участва в стажантската програма.
-                    Важни качества за бъдещите стажанти са <b>мотивацията за развитие</b>, <b>желанието да помагат</b> на
-                    другите и да работят в <b>екип.</b></p>
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-4 col-sm-2">
+                    <i class="home-icon fas fa-question"></i>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-10">
+                    <h1 class="home-title text-right">За кого е предназначена програмата?</h1>
+                    <p class="home-description text-right">Всеки студент, преминал успешно курса <b>Programming Basics</b>
+                        с резултат <b>6.00</b> може да участва в стажантската програма.
+                        Важни качества за бъдещите стажанти са <b>мотивацията за развитие</b>, <b>желанието да помагат</b> на
+                        другите и да работят в <b>екип.</b></p>
+                </div>
             </div>
             <div class="col-md-12">
                 <h1 class="home-title text-center"><b>Как мога да кандидатствам?</b></h1>
@@ -73,16 +84,16 @@
         </div>
     </div>
     <div class="row row-md-12">
-        <div class="col-md-4">
-            <img class="h-icon" src="https://static-images.talentegg.ca/Public%20Outreach/APPLICATION.png" width="500em" height="500em">
+        <div class="col-md-4 text-center">
+            <i class="home-icon fas fa-rocket"></i>
             <p class="home-title text-center home-action">Кандидатствай!</p>
         </div>
-        <div class="col-md-4">
-            <img class="h-icon" src="http://www.horizzon.com/img/contact.png" width="500em" height="500em">
+        <div class="col-md-4 text-center">
+            <i class="home-icon far fa-envelope"></i>
             <p class="home-title text-center home-action" >Свържи се с нас</p>
         </div>
-        <div class="col-md-4">
-            <img class="h-icon" src="https://safety.smart911.com/wp-content/uploads/2016/07/Accenture-Arrow.png" width="100em" height="500em">
+        <div class="col-md-4 text-center">
+            <i class="home-icon fas fa-ellipsis-h"></i>
             <p class="home-title text-center home-action">Научи повече</p>
         </div>
     </div>

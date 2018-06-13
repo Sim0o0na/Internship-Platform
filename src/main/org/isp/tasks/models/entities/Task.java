@@ -2,7 +2,9 @@ package org.isp.tasks.models.entities;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.isp.payments.models.Payment;
+import org.isp.tasks.TaskPaymentListener;
 import org.isp.users.models.entities.User;
+import org.springframework.context.event.EventListener;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,6 +13,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tasks")
+//@EntityListeners(TaskPaymentListener.class)
 public class Task {
     @Id
     @GeneratedValue(generator="system-uuid")
@@ -35,7 +38,7 @@ public class Task {
     @OneToMany(mappedBy = "task")
     private Set<TaskApplication> taskApplications;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
     private Payment payment;
 
     private String type;

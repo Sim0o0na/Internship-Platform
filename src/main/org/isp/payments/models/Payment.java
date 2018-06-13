@@ -2,6 +2,7 @@ package org.isp.payments.models;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.isp.tasks.models.entities.Task;
+import org.isp.users.models.entities.User;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -27,6 +28,9 @@ public class Payment {
     private boolean isPaid;
 
     private boolean isActive;
+
+    @ManyToOne(targetEntity = User.class)
+    private User user;
 
     public Payment() {
         this.isPaid = false;
@@ -83,5 +87,13 @@ public class Payment {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

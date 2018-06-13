@@ -32,6 +32,8 @@ public class TaskDto {
 
     private boolean isAppliedByUser;
 
+    private boolean isCompleted;
+
     @NotNull
     private List<TaskRequirementDto> taskRequirements;
 
@@ -96,6 +98,14 @@ public class TaskDto {
 
     public void setAssigned(boolean assigned) {
         isAssigned = assigned;
+    }
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
     }
 
     public String getType() {

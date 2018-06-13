@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script th:src="@{/js/chart.bundle.js}"></script>
+    <script th:src="@{/js/payment-charts.js}"></script>
     <link rel="stylesheet" th:href="@{/css/dashboard.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/buttons.css}">
@@ -32,105 +34,133 @@
         </ul>
     </nav>
     <div class="wrapper">
-        <div class="row-md-6" th:object="${payments}">
-            <div class="dynamicPanel col">
-                <div>
-                    <h1>To receive:</h1>
-                    <h2 th:if="${sumToReceive}" th:text="${sumToReceive}"></h2>
-                    <h2 th:unless="${sumToReceive}">No money to receive. Have you tried looking at the
-                        <a th:href="@{/tasks/all(user=${user}, partial=false)}">available tasks</a>?</h2>
+        <div class="row">
+            <div class="col" th:object="${payments}">
+                <div class="dynamicPanel col">
+                    <div>
+                        <h1>To receive:</h1>
+                        <h2 th:if="${sumToReceive}" th:text="${sumToReceive}"></h2>
+                        <h2 th:unless="${sumToReceive}">No money to receive. Have you tried looking at the
+                            <a th:href="@{/tasks/all(user=${user}, partial=false)}">available tasks</a>?</h2>
+                    </div>
+                    <h1>Your payments</h1>
+                    <table class="table table-hover" th:object="${payments}">
+                        <thead>
+                        <tr class="row">
+                            <th scope="col">Task Title</th>
+                            <th scope="col">Sum</th>
+                            <th scope="col">Payment Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="row" th:each="p: ${payments}">
+                            <!-- th:style="${p.isActive()} ? 'background: lightgreen'"-->
+                            <td class="col-md-2 block" th:text="${p.task.title}"></td>
+                            <td class="col-md-2 block" th:text="${p.cost}"></td>
+                            <td class="col-md-2 block" th:text="${p.isActive() ? 'ACTIVE' : 'INACTIVE'}">
+                                th:style="${p.isActive() ? 'color: forestgreen' : 'lightgrey'}" ></td>
+                            <td class="col-md-2 block">
+                                <a class="btn btn-green" th:if="${!p.isPaid()}" th:href="@{'/tasks/confirm-received/' + ${p.getId()}}">Confirm Received</a>
+                                <a class="btn btn-grey" th:if="${p.isPaid()}">Received</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <h1>Your payments</h1>
-                <table class="table table-hover" th:object="${payments}">
-                    <thead>
-                    <tr class="row">
-                        <th scope="col">Task Title</th>
-                        <th scope="col">Sum</th>
-                        <th scope="col">Payment Status</th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="row" th:each="p: ${payments}">
-                        <!-- th:style="${p.isActive()} ? 'background: lightgreen'"-->
-                        <td class="col-md-2 block" th:text="${p.task.title}"></td>
-                        <td class="col-md-2 block" th:text="${p.cost}"></td>
-                        <td class="col-md-2 block" th:text="${p.isActive() ? 'ACTIVE' : 'INACTIVE'}">
-                            th:style="${p.isActive() ? 'color: forestgreen' : 'lightgrey'}" ></td>
-                        <td class="col-md-2 block">
-                            <a class="btn btn-green" th:if="${!p.isPaid()}" th:href="@{'/tasks/confirm-received/' + ${p.getId()}}">Confirm Received</a>
-                            <a class="btn btn-grey" th:if="${p.isPaid()}">Received</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
             </div>
-        </div>
-        <div class="row-md-6" id="chartContainer" style="height: 370px; width: 100%;">
-            <h1>kur chart</h1>
+            <!--<div class="col-md-6">-->
+            <!--<canvas id="myChart" width="400" height="400"></canvas>-->
+        <!--</div>-->
         </div>
     </div>
 </div>
 </body>
-<script>
-    window.onload = function() {
+<!--<script>-->
+    <!--var ctx = document.getElementById("myChart").getContext('2d');-->
 
-        var dataPoints = [];
+    <!--var monthNames = [ "January", "February", "March", "April", "May", "June",-->
+        <!--"July", "August", "September", "October", "November", "December" ];-->
 
-        var chart = new CanvasJS.Chart("chartContainer", {
-            animationEnabled: true,
-            theme: "light2",
-            title: {
-                text: "Daily Sales Data"
-            },
-            axisY: {
-                title: "Units",
-                titleFontSize: 24
-            },
-            data: [{
-                type: "column",
-                yValueFormatString: "#,### Units",
-                dataPoints: dataPoints
-            }]
-        });
+    <!--function diff(from, to) {-->
+        <!--var arr = [];-->
+        <!--var fromYear =  from.getFullYear();-->
+        <!--var toYear =  to.getFullYear();-->
+        <!--var diffYear = (12 * (toYear - fromYear)) + from.getMonth();-->
 
-        function addData(data) {
-            for (var i = 0; i < data.length; i++) {
-                dataPoints.push({
-                    x: new Date(data[i].date),
-                    y: data[i].units
-                });
-            }
-            chart.render();
+        <!--for (var i = from.getMonth(); i <= to.getMonth(); i++) {-->
+            <!--arr.push(monthNames[(i - 1) %12]);-->
+        <!--}-->
 
-        }
+        <!--return arr;-->
+    <!--}-->
 
-        addData("[\n" +
-            "  {\n" +
-            "    \"date\": 1493922600000,\n" +
-            "    \"units\": 320\n" +
-            "  },\n" +
-            "  {\n" +
-            "    \"date\": 1494009000000,\n" +
-            "    \"units\": 552\n" +
-            "  },\n" +
-            "  {\n" +
-            "    \"date\": 1494095400000,\n" +
-            "    \"units\": 342\n" +
-            "  },\n" +
-            "  {\n" +
-            "    \"date\": 1494181800000,\n" +
-            "    \"units\": 431\n" +
-            "  },\n" +
-            "  {\n" +
-            "    \"date\": 1494268200000,\n" +
-            "    \"units\": 251\n" +
-            "  },\n" +
-            "  {\n" +
-            "    \"date\": 1494354600000,\n" +
-            "    \"units\": 445\n" +
-            "  }\n" +
-            "]")
-    }
-</script>
+    <!--function getMonthlyPaymentData() {-->
+        <!--var monthlyPaymentData = "";-->
+
+        <!--$.ajax({-->
+            <!--type: 'GET',-->
+            <!--url: '/payments/monthly',-->
+            <!--success: function (data) {-->
+                <!--monthlyPaymentData = data;-->
+                <!--console.log(monthlyPaymentData)-->
+            <!--}-->
+        <!--});-->
+
+        <!--return monthlyPaymentData;-->
+    <!--}-->
+
+    <!--function generateChartData(labels, monthlyPaymentData) {-->
+        <!--var chartData = [];-->
+        <!--for (var i = 0; i < labels.length; i++) {-->
+            <!--if (monthlyPaymentData[labels[i]] !== undefined) {-->
+                <!--chartData[i] = monthlyPaymentData[labels[i]];-->
+            <!--} else {-->
+                <!--chartData[i] = 0-->
+            <!--}-->
+        <!--}-->
+
+        <!--console.log(chartData);-->
+        <!--return chartData;-->
+    <!--}-->
+
+
+    <!--var labels = diff(new Date(2018,1,1), new Date());-->
+    <!--var data = [];-->
+    <!--var myChart = new Chart(ctx, {-->
+        <!--type: 'bar',-->
+        <!--data: {-->
+            <!--labels: labels,-->
+            <!--datasets: [{-->
+                <!--data: generateChartData(labels, getMonthlyPaymentData()),-->
+                <!--backgroundColor: [-->
+                    <!--'rgba(255, 99, 132, 0.2)',-->
+                    <!--'rgba(54, 162, 235, 0.2)',-->
+                    <!--'rgba(255, 206, 86, 0.2)',-->
+                    <!--'rgba(75, 192, 192, 0.2)',-->
+                    <!--'rgba(153, 102, 255, 0.2)',-->
+                    <!--'rgba(255, 159, 64, 0.2)'-->
+                <!--],-->
+                <!--borderColor: [-->
+                    <!--'rgba(255,99,132,1)',-->
+                    <!--'rgba(54, 162, 235, 1)',-->
+                    <!--'rgba(255, 206, 86, 1)',-->
+                    <!--'rgba(75, 192, 192, 1)',-->
+                    <!--'rgba(153, 102, 255, 1)',-->
+                    <!--'rgba(255, 159, 64, 1)'-->
+                <!--],-->
+                <!--borderWidth: 1-->
+            <!--}]-->
+        <!--},-->
+        <!--options: {-->
+            <!--scales: {-->
+                <!--yAxes: [{-->
+                    <!--ticks: {-->
+                        <!--beginAtZero:true-->
+                    <!--}-->
+                <!--}]-->
+            <!--}-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->
 </html>

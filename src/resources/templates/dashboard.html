@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/dashboard.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/dashboard.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/forms.css}">
+    <link rel="stylesheet" th:href="@{/css/notifications.css}">
 </head>
 <body>
     <div class="container-fluid">
@@ -21,9 +23,23 @@
                 <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-flag"></i></a></li>
+                <li id="showNotifications" onclick="showNotificationBar()">
+                    <div class="notification-button">
+                        <i class="fa fa-flag"></i>
+                        <span class="button__badge" th:if="${notifications.size() > 0} "th:text="${notifications.size()}"></span>
+                    </div>
+                </li>
+                <li class="active">
+                    <a th:href="@{/tasks/all(user=null, partial=false)}"><i class="fas fa-tasks"></i>Available Tasks</a>
+                </li>
+                <li class="active">
+                    <a th:href="@{/tasks/all/(user=${user}, partial=false)}"><i class="fas fa-cogs"></i>My Tasks</a>
+                </li>
+                <li class="active">
+                    <a th:href="@{/payments/all}"><i class="far fa-money-bill-alt"></i>My Payments</a>
+                </li>
                 <li class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!<span class="caret"></span></button>
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" th:text="'Hello, ' + ${user} + '!'"><span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
                         <li><a href="/logout">Logout</a></li>
@@ -31,24 +47,34 @@
                 </li>
             </ul>
         </nav>
-        <div class="wrapper">
-            <nav class="navbar-light">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <ul class="nav navbar-center">
-                            <li class="active">
-                                <a th:href="@{/tasks/all(user=null, partial=false)}"><i class="fas fa-tasks"></i>See All</a>
-                            </li>
-                            <li class="active">
-                                <a th:href="@{/tasks/all/(user=${user}, partial=false)}"><i class="fas fa-cogs"></i>My Tasks</a>
-                            </li>
-                            <li class="active">
-                                <a th:href="@{/payments/all}"><i class="far fa-money-bill-alt"></i>My Payments</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="row notifications" id="notifications" th:object="${notifications}">
+            <div class="notifications-container">
+                <div class="row notification mark-all">
+                    <div class="col-md-6 text-left" ><a href="#" class="text-right">Mark All Read</a></div>
+                    <div class="col-md-6 text-right"><i class="fas fa-times" id="hideNotificationBar" onclick="hideNotificationBar()"></i></div>
                 </div>
-            </nav>
+                <div class="row notification">
+                    <div class="col-md-2 notification-icon notification-info text-center"><i class="fas fa-info"></i></div>
+                    <div class="col-md-8 notification-info-body">This is an example info message <a href="$" class="mark-read">Mark Read</a></div>
+                </div>
+                <div class="row notification">
+                    <div class="col-md-2 notification-icon notification-alert text-center"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="col-md-8 notification-alert-body">This is an example alert message <a href="$" class="mark-read">Mark Read</a></div>
+                </div>
+                <div class="row notification">
+                    <div class="col-md-2 notification-icon notification-payment text-center"><i class="far fa-money-bill-alt"></i></div>
+                    <div class="col-md-8 notification-payment-body">This is an example payment message <a href="$" class="mark-read">Mark Read</a></div>
+                </div>
+            </div>
+            <!--<div class="row" th:each="n : ${notifications}">-->
+                <!--<div class="col-md-2">-->
+
+                <!--</div>-->
+                <!--<span th:text="${n.message}"></span>-->
+                <!--<a id="readNotification" th:href="@{'/notifications/mark-read/' + ${n.id}}">Mark as Read</a>-->
+            <!--</div>-->
+        </div>
+        <div class="wrapper">
             <div class="row-12">
                 <div class="col-md-6 d-main-element">
                     <div class="row-6" th:if="${mostRecentTask == null}">

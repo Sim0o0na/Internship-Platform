@@ -95,7 +95,6 @@
     <repositories>
         <repository>
             <id>spring-milestones</id>
-            <title>Spring Milestones</title>
             <url>https://repo.spring.io/libs-milestone</url>
             <snapshots>
                 <enabled>false</enabled>

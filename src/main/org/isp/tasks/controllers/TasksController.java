@@ -13,6 +13,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -78,5 +79,11 @@ public class TasksController {
         model.addAttribute("tasks", tasks.getContent());
         model.addAttribute("user", principal.getName());
         return view;
+    }
+
+    @RequestMapping(value = "/complete/{taskId}", method = RequestMethod.GET)
+    private ModelAndView complete(@PathVariable(name = "taskId") String taskId) {
+        this.taskService.completeTask(taskId);
+        return new ModelAndView("/users/user-tasks");
     }
 }

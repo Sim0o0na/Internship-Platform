@@ -14,6 +14,7 @@ import java.util.List;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, String> {
+
     Page<Task> findByAssigneeUsernameOrderByDueDateAsc(Pageable pageable, String assigneeUsername);
 
     Page<Task> findAllByOrderByDueDateAsc(Pageable pageable);
