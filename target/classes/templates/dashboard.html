@@ -53,26 +53,15 @@
                     <div class="col-md-6 text-left" ><a href="#" class="text-right">Mark All Read</a></div>
                     <div class="col-md-6 text-right"><i class="fas fa-times" id="hideNotificationBar" onclick="hideNotificationBar()"></i></div>
                 </div>
-                <div class="row notification">
-                    <div class="col-md-2 notification-icon notification-info text-center"><i class="fas fa-info"></i></div>
-                    <div class="col-md-8 notification-info-body">This is an example info message <a href="$" class="mark-read">Mark Read</a></div>
-                </div>
-                <div class="row notification">
-                    <div class="col-md-2 notification-icon notification-alert text-center"><i class="fas fa-exclamation-triangle"></i></div>
-                    <div class="col-md-8 notification-alert-body">This is an example alert message <a href="$" class="mark-read">Mark Read</a></div>
-                </div>
-                <div class="row notification">
-                    <div class="col-md-2 notification-icon notification-payment text-center"><i class="far fa-money-bill-alt"></i></div>
-                    <div class="col-md-8 notification-payment-body">This is an example payment message <a href="$" class="mark-read">Mark Read</a></div>
+            </div>
+            <div class="row" th:each="n : ${notifications}">
+                <div th:switch="${notifcation.getType()}">
+                    <div th:case="'NEW_TASK'" th:include="~{fragments/notifications :: new-task}"></div>
+                    <div th:case="'INFO'" th:include="~{fragments/notifications :: info}"></div>
+                    <div th:case="'ALERT'" th:include="~{fragments/notifications :: alert}"></div>
+                    <div th:case="'PAYMENT'" th:include="~{fragments/notifications :: payment}"></div>
                 </div>
             </div>
-            <!--<div class="row" th:each="n : ${notifications}">-->
-                <!--<div class="col-md-2">-->
-
-                <!--</div>-->
-                <!--<span th:text="${n.message}"></span>-->
-                <!--<a id="readNotification" th:href="@{'/notifications/mark-read/' + ${n.id}}">Mark as Read</a>-->
-            <!--</div>-->
         </div>
         <div class="wrapper">
             <div class="row-12">

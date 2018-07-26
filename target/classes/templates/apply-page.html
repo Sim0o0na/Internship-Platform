@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/forms.css}">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="float-panel" data-top="0" data-scroll="200">
+            <div class="content-area">
+                <nav class="header" id="header" th:include="~{fragments/navbar :: navbar}"></nav>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div th:include="~{fragments/information-partials :: info}"></div>
+        <div class="row">
+            <div class="col-md-6" id="wizard">
+                <img class="img-fluid" src="/img/wizard-with-wand.png"  width="600px" height="750px">
+            </div>
+            <div class="col-md-6">
+                <form class="form-layout" id="apply-form" method="post" action="/user-applications/create">
+                    <fieldset>
+                        <div class="col-md-12 col-xs-12 form-group line" align="center"></div>
+
+                        <div class="col-md-12 col-xs-12 form-group form-field">
+                            <div class="control">
+                                <input id="usernameFld" type="text" name="username" title="username" placeholder="SoftUni Username" class="form-control"/>
+                            </div>
+
+                            <div class="control">
+                                <input type="text" title="email" name="email" placeholder="Email" class="form-control"/>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 control">
+                                    <input type="text" title="first-name" name="firstName" placeholder="First Name" class="form-control"/>
+                                </div>
+
+                                <div class="col-md-6 control">
+                                    <input type="text" title="last-name" name="lastName" placeholder="Last Name" class="form-control"/>
+                                </div>
+                            </div>
+
+                            <div class="control">
+                                <textarea name="motivation" placeholder="Защо искаш да бъдеш част от програмата?" rows="5" cols="50"></textarea>
+                            </div>
+
+                            <div align="center">
+                                <button type="submit" class="form-btn">Изпрати</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -25,7 +25,7 @@ public class PaymentsAdminController {
     private String makePaymentActive(@PathVariable(value = "taskId") String taskId, Model model){
         try {
             this.paymentService.makeActivePayment(taskId);
-            model.addAttribute("successMsg");
+            model.addAttribute("info");
         } catch (IllegalArgumentException iae) {
             model.addAttribute("error", iae.getMessage());
         }

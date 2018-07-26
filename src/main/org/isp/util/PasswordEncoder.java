@@ -6,21 +6,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PasswordEncoder {
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private static BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
     public PasswordEncoder(BCryptPasswordEncoder bCryptPasswordEncoder) {
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    public String encodePassword(String pass) {
+    public static String encodePassword(String pass) {
         if(pass == null || pass.isEmpty()) {
             throw new IllegalArgumentException("Cannot encode empty password!");
         }
-        return this.bCryptPasswordEncoder.encode(pass);
+        return bCryptPasswordEncoder.encode(pass);
     }
 
     public boolean checkPassword(String pass, String encoded) {
-        return this.bCryptPasswordEncoder.matches(pass, encoded);
+        return bCryptPasswordEncoder.matches(pass, encoded);
     }
 }

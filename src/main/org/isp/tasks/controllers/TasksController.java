@@ -2,7 +2,7 @@ package org.isp.tasks.controllers;
 
 import org.isp.tasks.models.dtos.TaskDto;
 import org.isp.tasks.models.entities.Task;
-import org.isp.tasks.services.TaskApplicationService;
+import org.isp.applications.tasks.TaskApplicationService;
 import org.isp.tasks.services.TaskService;
 import org.isp.users.models.entities.User;
 import org.isp.users.services.UserService;

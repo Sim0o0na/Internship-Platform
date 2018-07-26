@@ -1,7 +1,6 @@
 package org.isp.base;
 
-import org.isp.notifications.NotificationService;
-import org.isp.tasks.models.dtos.TaskDto;
+import org.isp.notifications.api.NotificationService;
 import org.isp.tasks.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,5 +45,10 @@ public class HomeController {
     @GetMapping("/about")
     public String getAboutPage(){
         return "about";
+    }
+
+    @GetMapping("/apply")
+    public String getApplyPage(){
+        return "apply-page";
     }
 }

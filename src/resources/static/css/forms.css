@@ -93,3 +93,8 @@ form > a:hover {
     width: 200px;
     height: 200px;
 }
+
+#apply-form {
+    margin-top: 140px;
+    margin-left: 150px;
+}

@@ -2,7 +2,7 @@ package org.isp.users.models.entities;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.isp.payments.models.Payment;
-import org.isp.tasks.models.entities.TaskApplication;
+import org.isp.applications.tasks.TaskApplication;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;

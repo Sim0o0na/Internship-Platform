@@ -4,7 +4,6 @@
     height: 50em;
 }
 
-
 .h-icon {
     width: 400px;
     height: 300px;
@@ -12,6 +11,19 @@
 
 .home-action:hover {
     color: #ec971f;
+}
+
+#apply {
+    text-decoration: none;
+    color: #ec971f;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+#apply:hover {
+    text-decoration: none;
+    color: rgb(35, 67, 100);
+    font-weight: 500;
 }
 
 .home-title {
@@ -114,6 +126,6 @@
 
 .header-image {
     float: left;
-    display: none;
+    z-index: 1000;
 }
 

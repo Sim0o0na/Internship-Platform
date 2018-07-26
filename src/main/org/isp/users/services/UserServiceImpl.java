@@ -30,25 +30,17 @@ import java.util.List;
 @Service
 @Transactional
 public class UserServiceImpl<T extends UserDto> implements UserService<T> {
-    private ImageService imageService;
-
     private UserRepository userRepository;
 
     private ModelMapper modelMapper;
-
-    private PasswordEncoder passwordEncoder;
 
     private RoleRepository roleRepository;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository,
-                           ImageService imageService,
-                           PasswordEncoder passwordEncoder,
                            RoleRepository roleRepository) {
         this.modelMapper = new ModelMapper();
         this.userRepository = userRepository;
-        this.imageService = imageService;
-        this.passwordEncoder = passwordEncoder;
         this.roleRepository = roleRepository;
     }
 
@@ -59,7 +51,7 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
             return;
         }
         User user = this.modelMapper.map(userDto, User.class);
-        String encryptedPassword = this.passwordEncoder.encodePassword(userDto.getPassword());
+        String encryptedPassword = PasswordEncoder.encodePassword(userDto.getPassword());
         user.setPassword(encryptedPassword);
         user.setAccountNonExpired(true);
         user.setAccountNonLocked(true);
@@ -78,11 +70,6 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
         Constructor<?> constructor = Arrays.stream(dtoClass.getConstructors()).filter(c -> c.getParameterCount() == 0).findFirst().get();
         T dto = (T) constructor.newInstance();
         dto = MappingUtil.convert(user, dtoClass);
-//        if(user.getProfilePhotoLocation() != null && !user.getProfilePhotoLocation().isEmpty()) {
-//            dto.setProfilePhoto(this.imageService.getResource(user.getProfilePhotoLocation()));
-//        } else {
-//            dto.setProfilePhoto(this.imageService.getDefaultAccountAvatar());
-//        }
         return dto;
     }
 

@@ -9,8 +9,5 @@
         <module name="Internship-Platform" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Internship-Platform" target="1.9" />
-    </bytecodeTargetLevel>
   </component>
 </project>

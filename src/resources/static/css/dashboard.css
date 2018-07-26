@@ -68,3 +68,7 @@
 .notifications {
     display: none;
 }
+
+.notification-button:hover{
+    color: #ec971f;
+}

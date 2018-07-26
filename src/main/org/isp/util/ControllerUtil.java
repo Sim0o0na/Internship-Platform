@@ -7,4 +7,9 @@ public class ControllerUtil {
         model.addAttribute("error", errorMsg);
         return model;
     }
+
+    public static Model addInfoMessageToModel(String infoMessage, Model model) {
+        model.addAttribute("info", infoMessage);
+        return model;
+    }
 }

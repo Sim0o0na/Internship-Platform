@@ -1,10 +1,9 @@
 package org.isp.tasks.models.entities;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.isp.applications.tasks.TaskApplication;
 import org.isp.payments.models.Payment;
-import org.isp.tasks.TaskPaymentListener;
 import org.isp.users.models.entities.User;
-import org.springframework.context.event.EventListener;
 
 import javax.persistence.*;
 import java.util.Date;

@@ -10,20 +10,20 @@
     <script th:src="@{/js/home.js}"></script>
     <script th:src="@{/js/lib/float-panel.js}"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/dashboard.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" th:href="@{/css/forms.css}">
     <link rel="stylesheet" th:href="@{/css/modals.css}">
     <link rel="stylesheet" th:href="@{/css/home.css}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
+
 </head>
 <body>
     <div id="home-nav" class="container-fluid">
         <div class="float-panel" data-top="0" data-scroll="200">
             <div class="content-area">
-                <img src="/img/foundation.png" class="img-responsive header-image"
-                     width="200px" height="100px">
                 <nav class="header" id="header" th:include="~{fragments/navbar :: navbar}"></nav>
+                <div th:include="~{fragments/information-partials :: info}"></div>
             </div>
         </div>
         <img id="home-softuni-logo" class="img-responsive" src="/img/softunilogo-color.png">
@@ -98,10 +98,23 @@
         </div>
     </div>
     <footer th:include="~{fragments/footer :: footer}"></footer>
-    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-con" id="modalContent">
                 <a id="register" onclick="loadRegisterForm()">REGISTER</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-con row" id="modalContent">
+                <div class="col-md-6">
+                    <h1>Поздравления!</h1>
+                    <h3>Ти успешно кандидатства за стажантската програма на СофтУни. Съвсем скоро ще получиш отговор дали си одобрен и ще имаш възможност да изпълниш първата си задача!</h3>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="/img/wizard-waiting.png">
+                </div>
             </div>
         </div>
     </div>
