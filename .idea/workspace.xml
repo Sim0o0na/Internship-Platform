@@ -2,174 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0a0ba93-423e-4f57-91df-dafc38459f2b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_9_rc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_io_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_14_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_7_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_13_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity4_3_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Internship-Platform.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/base/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/payments/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/controllers/PaymentsAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/payments/controllers/PaymentsAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/controllers/PaymentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/payments/controllers/PaymentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/models/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/payments/models/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/services/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/payments/services/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/services/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/payments/services/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TaskApplicationsAdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/dtos/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/models/dtos/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/models/entities/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/entities/TaskApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/repositories/TaskApplicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/repositories/TaskApplicationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskApplicationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskApplicationServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/users/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/ControllerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/ControllerUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/PasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/PasswordEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/bootstrap/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/bootstrap/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/img/New Text Document.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/img/idea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/img/money-flat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/img/person.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/img/questions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/img/task.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/admin-base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/admin-base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/information-partials.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/information-partials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/user-payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/user-payments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/user-tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/user-tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/base/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/PaymentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/payments/PaymentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/controllers/PaymentsAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/payments/controllers/PaymentsAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/controllers/PaymentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/payments/controllers/PaymentsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/models/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/payments/models/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/services/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/payments/services/PaymentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/services/PaymentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/payments/services/PaymentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/controllers/TaskApplicationsAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/controllers/TasksController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/tasks/controllers/TasksController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/dtos/TaskDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/dtos/TaskDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/entities/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/entities/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/entities/TaskApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/repositories/TaskApplicationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/tasks/repositories/TaskApplicationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskApplicationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskApplicationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/users/services/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/ControllerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/util/ControllerUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/PasswordEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/util/PasswordEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/New Text Document.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/idea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/money-flat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/person.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/questions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/task.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/admin-base.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/admin-base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/information-partials.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/information-partials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users/user-payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users/user-payments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users/user-tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users/user-tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/parser/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/users/parser/UserInfoController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,15 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserApplicationStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserApplicationRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -202,7 +30,7 @@
       <file leaf-file-name="UserApplicationDto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="72">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#328#329#0" expanded="true" />
@@ -216,26 +44,17 @@
       <file leaf-file-name="UserApplicationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="359">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DispatcherServlet.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6112">
-              <caret line="432" column="106" selection-start-line="432" selection-start-column="106" selection-end-line="432" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfoController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserInfoController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="139">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,20 +62,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="32">
+              <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServletInvocableHandlerMethod.class" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInfoParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletInvocableHandlerMethod.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="323">
+              <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -270,6 +116,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getCourseInstancesIdsInEnrolledCourse</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -279,8 +130,9 @@
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/parser/HTMLInfoParser.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoParser.java" />
         <option value="$PROJECT_DIR$/src/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" />
       </list>
     </option>
   </component>
@@ -290,14 +142,21 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1620" />
-    <option name="height" value="919" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1621" />
+    <option name="height" value="920" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -306,6 +165,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -384,12 +245,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -486,14 +349,16 @@
       <updated>1532507625168</updated>
       <workItem from="1532507629993" duration="16062000" />
       <workItem from="1532627038740" duration="601000" />
+      <workItem from="1532628492473" duration="6167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16663000" />
+    <option name="totallyTimeSpent" value="22830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="10" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50062424" side_tool="true" weight="0.680104" />
@@ -505,22 +370,22 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.449935" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6957087" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32769832" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993758" weight="0.34590378" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993758" weight="0.2236671" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1803995" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16729088" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32769832" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -546,12 +411,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java</url>
-          <line>30</line>
+          <line>34</line>
           <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -560,6 +431,70 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6912">
+          <caret line="432" column="106" selection-start-line="432" selection-start-column="106" selection-end-line="432" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -624,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -649,20 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -708,9 +622,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="569" selection-start-line="569" selection-end-line="569" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="432" column="106" selection-start-line="432" selection-start-column="106" selection-end-line="432" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="72">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#328#329#0" expanded="true" />
@@ -720,48 +690,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6112">
-          <caret line="432" column="106" selection-start-line="432" selection-start-column="106" selection-end-line="432" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="569" selection-start-line="569" selection-end-line="569" />
+        <state relative-caret-position="359">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/parser/UserInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="139">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>

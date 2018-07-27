@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,16 +29,27 @@ public class UserInfoController {
 
     public void getUserInfo(String username) throws Exception {
         String userId = this.getUserId(username);
-        HashMap<String, Integer> modulesAndModulesIds = this.getTrainingModulesForUser(username);
-        HashMap<String, Integer> coursesAndCourseInstancesIds = new HashMap<>();
-        for (String module: modulesAndModulesIds.keySet()) {
-            String moduleId = modulesAndModulesIds.get(module).toString();
-            Pair courseAndEnrolledCourseInModule = this.getCourseInstancesAndIds(userId, moduleId);
-            coursesAndCourseInstancesIds.putIfAbsent(
-                    courseAndEnrolledCourseInModule.getKey().toString(),
-                    Integer.parseInt(courseAndEnrolledCourseInModule.getValue().toString()));
-        }
+        HashMap<String, Integer> modulesAndModulesIds = this.getEnrolledModulesForUser(username);
+        HashMap<String, Integer> coursesInUserEnrolledLevelIds = this.getCoursesIdsInEnrolledCourses(userId, modulesAndModulesIds);
+        HashMap<String, Integer> coursesInstancesInEnrolledCourses = this.getCoursesInstancesIdsInEnrolledCourses(userId, coursesInUserEnrolledLevelIds);
+        HashMap<String, Double> enrolledTrainingsDetails = this.getEnrolledTrainingsDetails(userId, coursesInstancesInEnrolledCourses);
     }
+
+    private HashMap<String,Double> getEnrolledTrainingsDetails(String userId, HashMap<String,Integer> coursesInstancesInEnrolledCourses) throws IOException {
+        Pattern pattern = Pattern.compile("ОЦЕНКА:\\s*<strong>(.*)[(]([0-9.]+)[)](.*)<\\/strong>");
+        HashMap<String, Double> trainingResults = new HashMap<>();
+        for (String courseInstanceName: coursesInstancesInEnrolledCourses.keySet()) {
+            String courseInstancePartialHtml = this.sendRequest(String.format("https://softuni.bg/users/trainings/getenrolledtrainingdetails?userId=%s&trainingId=%s",
+                    userId,
+                    coursesInstancesInEnrolledCourses.get(courseInstanceName)));
+            Matcher matcher = pattern.matcher(courseInstancePartialHtml);
+            if (matcher.find()) {
+                trainingResults.put(courseInstanceName, Double.parseDouble(matcher.group(2)));
+            }
+        }
+        return trainingResults;
+    }
+
 
     private String sendRequest(String urlString) throws IOException {
         URL url = new URL(urlString);
@@ -66,26 +79,64 @@ public class UserInfoController {
         return userId;
     }
 
-    private HashMap<String, Integer> getTrainingModulesForUser(String username) throws IOException {
+    private HashMap<String, Integer> getEnrolledModulesForUser(String username) throws IOException {
         String userTrainingsPageHtml = this.sendRequest("https://softuni.bg/users/profile/trainings/" + username);
         Pattern pattern = Pattern.compile("aria-controls=\"#module-([1-9]+)\">\\s*([a-zA-Z\\s(]+)");
         Matcher matcher = pattern.matcher(userTrainingsPageHtml);
         HashMap<String, Integer> result = new HashMap<>();
         while (matcher.find()){
-            result.putIfAbsent(matcher.group(2).trim(), Integer.parseInt(matcher.group(1)));
+            result.put(matcher.group(2).trim(), Integer.parseInt(matcher.group(1)));
         }
         return result;
     }
 
-    private Pair getCourseInstancesAndIds(String userId, String moduleId) throws IOException {
-        String courseInstancesPartialHtml = this.sendRequest("https://softuni.bg/users/trainings/getcoursesinenrolledlevel?userId="
+    private HashMap<String, Integer> getCoursesIdsInEnrolledCourses(String userId, HashMap<String, Integer> modulesAndModulesIds) throws IOException {
+        HashMap<String, Integer> coursesInUserEnrolledLevelIds = new HashMap<>();
+        for (String module: modulesAndModulesIds.keySet()) {
+            String moduleId = modulesAndModulesIds.get(module).toString();
+            List<Pair> coursesAndEnrolledCoursesIdsInModule = this.getCoursesIdsInEnrolledLevelByUser(userId, moduleId);
+            coursesAndEnrolledCoursesIdsInModule.stream().forEach(pair -> coursesInUserEnrolledLevelIds
+                    .put(pair.getKey().toString(),
+                            Integer.parseInt(pair.getValue().toString())));
+        }
+        return coursesInUserEnrolledLevelIds;
+    }
+
+    private List<Pair> getCoursesIdsInEnrolledLevelByUser(String userId, String moduleId) throws IOException {
+        String coursesPartialHtml = this.sendRequest("https://softuni.bg/users/trainings/getcoursesinenrolledlevel?userId="
                 + userId + "&levelId=" + moduleId);
         Pattern pattern = Pattern.compile("aria-controls=\"#course-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)");
+        Matcher matcher = pattern.matcher(coursesPartialHtml);
+        Pair pair = null;
+        List<Pair> coursesInEnrolledModule = new ArrayList<>();
+        while (matcher.find()) {
+            pair = new Pair(matcher.group(2).trim(), matcher.group(1));
+            coursesInEnrolledModule.add(pair);
+        }
+        return coursesInEnrolledModule;
+    }
+
+    private List<Pair> getCourseInstancesIdsInEnrolledCourse(String userId, String enrolledCourseId) throws IOException {
+        String courseInstancesPartialHtml = this.sendRequest(String.format("https://softuni.bg/users/trainings/getcourseinstancesincourse?userId=%s&courseId=%s", userId, enrolledCourseId));
+        Pattern pattern = Pattern.compile("aria-controls=\"#course-instance-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)");
         Matcher matcher = pattern.matcher(courseInstancesPartialHtml);
         Pair pair = null;
-        if(matcher.find()) {
-            pair = new Pair(matcher.group(2), matcher.group(1));
+        List<Pair> coursesInstancesInEnrolledCourse = new ArrayList<>();
+        while (matcher.find()) {
+            pair = new Pair(matcher.group(2).trim(), matcher.group(1));
+            coursesInstancesInEnrolledCourse.add(pair);
         }
-        return pair;
+        return coursesInstancesInEnrolledCourse;
+    }
+
+    private HashMap<String, Integer> getCoursesInstancesIdsInEnrolledCourses(String userId, HashMap<String, Integer> coursesAndCourseIds) throws IOException {
+        HashMap<String, Integer> courseInstancesInEnrolledCourse = new HashMap<>();
+        for (String course: coursesAndCourseIds.keySet()) {
+            List<Pair> courseAndEnrolledCourseInstanceInModule = this.getCourseInstancesIdsInEnrolledCourse(userId, coursesAndCourseIds.get(course).toString());
+            courseAndEnrolledCourseInstanceInModule.stream().forEach(pair -> courseInstancesInEnrolledCourse
+                    .put(pair.getKey().toString(),
+                            Integer.parseInt(pair.getValue().toString())));
+        }
+        return courseInstancesInEnrolledCourse;
     }
 }
