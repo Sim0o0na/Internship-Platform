@@ -42,9 +42,9 @@ public class UserApplicationController {
     public ModelAndView create(@Valid @ModelAttribute UserApplicationDto userApplicationDto) throws Exception {
         String view = "home";
         ModelAndView modelAndView = new ModelAndView(view, new ModelMap());
-        if (this.userApplicationService.checkIfExistsByUsername(userApplicationDto.getUsername())) {
-            modelAndView.getModel().put("error", "User application with this username already exists!");
-            modelAndView.setViewName("/apply");
+        if (this.userApplicationService.checkIfExists(userApplicationDto)) {
+            modelAndView.getModel().put("error", "User application with this username or email already exists!");
+            modelAndView.setViewName("apply");
             return modelAndView;
         }
         try {
@@ -54,7 +54,7 @@ public class UserApplicationController {
             modelAndView.getModel().put("info", "Вие успешно кандидатствахте за стажантската програма на СофтУни! Очаквайте отговор съвсем скоро!");
         } catch (Exception e) {
             modelAndView.getModel().put("error", e.getMessage());
-            view = "/apply";
+            view = "apply";
         }
         modelAndView.setViewName(view);
         return modelAndView;

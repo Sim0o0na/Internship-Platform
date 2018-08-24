@@ -49,6 +49,6 @@ public class HomeController {
 
     @GetMapping("/apply")
     public String getApplyPage(){
-        return "apply-page";
+        return "apply";
     }
 }

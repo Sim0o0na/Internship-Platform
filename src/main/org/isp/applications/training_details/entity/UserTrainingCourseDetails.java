@@ -9,11 +9,11 @@ public class UserTrainingCourseDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne(mappedBy = "userTrainingCourseDetails")
-    private TrainingCourse trainingCourse;
-
     @Column(name = "user_grade")
     private Double grade;
+
+    @ManyToOne(targetEntity = TrainingCourse.class)
+    private TrainingCourse trainingCourse;
 
     @ManyToOne(targetEntity = UserTrainingDetails.class)
     private UserTrainingDetails userTrainingDetails;

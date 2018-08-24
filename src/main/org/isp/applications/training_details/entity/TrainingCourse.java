@@ -1,6 +1,7 @@
 package org.isp.applications.training_details.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "training_courses")
@@ -12,8 +13,8 @@ public class TrainingCourse {
     @Column(name = "course_name")
     private String courseName;
 
-    @OneToOne(targetEntity = UserTrainingCourseDetails.class)
-    private UserTrainingCourseDetails userTrainingCourseDetails;
+    @OneToMany(mappedBy = "trainingCourse")
+    private List<UserTrainingCourseDetails> trainingCourseDetails;
 
     public TrainingCourse() {
     }
@@ -38,11 +39,11 @@ public class TrainingCourse {
         this.courseName = courseName;
     }
 
-    public UserTrainingCourseDetails getUserTrainingCourseDetails() {
-        return userTrainingCourseDetails;
+    public List<UserTrainingCourseDetails> getTrainingCourseDetails() {
+        return trainingCourseDetails;
     }
 
-    public void setUserTrainingCourseDetails(UserTrainingCourseDetails userTrainingCourseDetails) {
-        this.userTrainingCourseDetails = userTrainingCourseDetails;
+    public void setTrainingCourseDetails(List<UserTrainingCourseDetails> trainingCourseDetails) {
+        this.trainingCourseDetails = trainingCourseDetails;
     }
 }

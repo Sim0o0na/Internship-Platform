@@ -26,17 +26,23 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
     @Override
     public void create(UserTrainingDetails userTrainingDetails, String username) {
         // Create course instances with grades for user
-        this.createCourseDetailsForUser(userTrainingDetails.getUserCoursesDetails(), username);
+        userTrainingDetails.setUsername(username);
         this.trainingDetailsRepository.save(userTrainingDetails);
+        this.createCourseDetailsForUser(userTrainingDetails, username);
     }
 
-    public void createCourseDetailsForUser(List<UserTrainingCourseDetails> userTrainingCourseDetailsList, String username) {
+    public void createCourseDetailsForUser(UserTrainingDetails  userTrainingCourseDetails, String username) {
         // Create course instances in db
-        userTrainingCourseDetailsList.forEach(uc -> {
-            this.trainingCourseRepository.save(uc.getTrainingCourse());
+        userTrainingCourseDetails.getUserCoursesDetails().forEach(uc -> {
+            TrainingCourse currTrainingCourse = uc.getTrainingCourse();
+            if (!checkIfCourseExists(currTrainingCourse.getCourseName())) {
+                this.trainingCourseRepository.save(currTrainingCourse);
+            }
             this.courseDetailsRepository.save(uc);
         });
     }
 
-
+    private boolean checkIfCourseExists(String courseName) {
+        return this.trainingCourseRepository.findByCourseName(courseName) != null;
+    }
 }

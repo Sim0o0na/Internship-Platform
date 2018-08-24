@@ -7,5 +7,5 @@ public interface UserApplicationService {
     void approve(Long id);
     void reject(Long id);
     void create(UserApplicationDto userApplicationDto, UserTrainingDetails dto);
-    boolean checkIfExistsByUsername(String username);
+    boolean checkIfExists(UserApplicationDto userApplicationDto);
 }

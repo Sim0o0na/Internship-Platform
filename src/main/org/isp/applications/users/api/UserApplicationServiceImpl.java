@@ -43,7 +43,8 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     }
 
     @Override
-    public boolean checkIfExistsByUsername(String username) {
-        return this.userApplicationRepository.findByUsername(username) != null;
+    public boolean checkIfExists(UserApplicationDto dto) {
+        return this.userApplicationRepository.findByUsername(dto.getUsername()) != null &&
+                this.userApplicationRepository.findByEmail(dto.getEmail()) != null;
     }
 }
