@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "softuni.auth.cookie",
+      "type": "java.lang.String",
+      "description": "Description for softuni.auth.cookie."
+  }
+] }

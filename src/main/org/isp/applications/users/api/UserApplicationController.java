@@ -1,14 +1,13 @@
 package org.isp.applications.users.api;
 
+import org.isp.applications.training_details.controller.UserTrainingDetailsController;
 import org.isp.applications.users.entity.UserApplication;
 import org.isp.applications.users.entity.UserApplicationDto;
-import org.isp.applications.users.parser.UserInfoController;
+import org.isp.applications.training_details.entity.UserTrainingDetails;
 import org.isp.users.repositories.UserRepository;
-import org.isp.util.ControllerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,21 +15,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/user-applications")
 public class UserApplicationController {
     private UserRepository userRepository;
     private UserApplicationService userApplicationService;
-    private UserInfoController userInfoController;
+    private UserTrainingDetailsController userDetailsController;
 
     @Autowired
     public UserApplicationController(UserRepository userRepository,
                                      UserApplicationService userApplicationService,
-                                     UserInfoController userInfoController) {
+                                     UserTrainingDetailsController userDetailsController) {
         this.userRepository = userRepository;
         this.userApplicationService = userApplicationService;
-        this.userInfoController = userInfoController;
+        this.userDetailsController = userDetailsController;
     }
 
     @RequestMapping(value = "/approve/{id}", method = RequestMethod.POST)
@@ -41,16 +41,27 @@ public class UserApplicationController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ModelAndView create(@Valid @ModelAttribute UserApplicationDto userApplicationDto) throws Exception {
         String view = "home";
-        ModelAndView modelAndView = new ModelAndView();
+        ModelAndView modelAndView = new ModelAndView(view, new ModelMap());
+        if (this.userApplicationService.checkIfExistsByUsername(userApplicationDto.getUsername())) {
+            modelAndView.getModel().put("error", "User application with this username already exists!");
+            modelAndView.setViewName("/apply");
+            return modelAndView;
+        }
         try {
-            this.userApplicationService.create(userApplicationDto);
+            UserTrainingDetails userTrainingDetails = this.getUserTrainingDetails(userApplicationDto.getUsername());
+            this.userDetailsController.createUserTrainingDetails(userTrainingDetails, userApplicationDto.getUsername());
+            this.userApplicationService.create(userApplicationDto, userTrainingDetails);
             modelAndView.getModel().put("info", "Вие успешно кандидатствахте за стажантската програма на СофтУни! Очаквайте отговор съвсем скоро!");
         } catch (Exception e) {
             modelAndView.getModel().put("error", e.getMessage());
             view = "/apply";
         }
         modelAndView.setViewName(view);
-            this.userInfoController.getUserInfo(userApplicationDto.getUsername());
         return modelAndView;
+    }
+
+    private UserTrainingDetails getUserTrainingDetails(String username) throws IOException {
+        UserTrainingDetails userTrainingDetails = this.userDetailsController.getUserTrainingDetails(username);
+        return userTrainingDetails;
     }
 }

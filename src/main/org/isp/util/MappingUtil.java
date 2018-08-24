@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public final class MappingUtil {
+public class MappingUtil {
     public static <S, D> D convert(S source, Class<D> destinationClass){
         ModelMapper mapper = new ModelMapper();
         D result = mapper.map(source, destinationClass);

@@ -9,7 +9,6 @@ import org.isp.users.models.entities.Role;
 import org.isp.users.models.entities.User;
 import org.isp.users.repositories.RoleRepository;
 import org.isp.users.repositories.UserRepository;
-import org.isp.base.services.api.ImageService;
 import org.isp.util.MappingUtil;
 import org.isp.util.PasswordEncoder;
 import org.modelmapper.ModelMapper;
