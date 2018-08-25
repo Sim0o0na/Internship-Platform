@@ -6,6 +6,10 @@ import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class UserApplicationServiceImpl implements UserApplicationService {
     private UserApplicationRepository userApplicationRepository;
@@ -46,5 +50,13 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     public boolean checkIfExists(UserApplicationDto dto) {
         return this.userApplicationRepository.findByUsername(dto.getUsername()) != null &&
                 this.userApplicationRepository.findByEmail(dto.getEmail()) != null;
+    }
+
+    @Override
+    public List<UserApplication> getAllNotApproved() {
+        return this.userApplicationRepository.findAll()
+                .stream()
+                .filter(ua -> !ua.getStatus().toString().equals("APPROVED"))
+                .collect(Collectors.toList());
     }
 }

@@ -10,7 +10,7 @@ public class PasswordEncoder {
 
     @Autowired
     public PasswordEncoder(BCryptPasswordEncoder bCryptPasswordEncoder) {
-        bCryptPasswordEncoder = bCryptPasswordEncoder;
+        PasswordEncoder.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     public static String encodePassword(String pass) {

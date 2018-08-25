@@ -18,7 +18,7 @@ import javax.validation.Valid;
 import java.io.IOException;
 
 @Controller
-@RequestMapping("/user-applications")
+@RequestMapping("/users/applications")
 public class UserApplicationController {
     private UserRepository userRepository;
     private UserApplicationService userApplicationService;
@@ -31,11 +31,6 @@ public class UserApplicationController {
         this.userRepository = userRepository;
         this.userApplicationService = userApplicationService;
         this.userDetailsController = userDetailsController;
-    }
-
-    @RequestMapping(value = "/approve/{id}", method = RequestMethod.POST)
-    public void approve(@PathVariable Long id) {
-        this.userApplicationService.approve(id);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)

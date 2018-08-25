@@ -12,6 +12,7 @@
     <link rel="stylesheet" th:href="@{/css/tables.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <link rel="stylesheet" th:href="@{/css/forms.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
     <link rel="stylesheet" th:href="@{/css/tables.css}"/>
     <link rel="stylesheet" th:href="@{/css/modals.css}">
     <link rel="stylesheet" th:href="@{/css/admin-tasks.css}">
@@ -27,6 +28,9 @@
             <li><a href="/dashboard">Dashboard</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-center">
+            <li class="active" data-toggle="collapse">
+                <a id="applications" onclick="loadUserApplicationsPanel()"><i class="far fa-file-alt"></i>Applications</a>
+            </li>
             <li class="active" data-toggle="collapse">
                 <a id="users" onclick="loadUsersPanel()"><i class="fa fa-user"></i>Users</a>
             </li>

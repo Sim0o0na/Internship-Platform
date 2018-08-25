@@ -30,9 +30,7 @@ import java.util.List;
 @Transactional
 public class UserServiceImpl<T extends UserDto> implements UserService<T> {
     private UserRepository userRepository;
-
     private ModelMapper modelMapper;
-
     private RoleRepository roleRepository;
 
     @Autowired

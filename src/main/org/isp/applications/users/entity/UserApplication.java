@@ -3,6 +3,8 @@ package org.isp.applications.users.entity;
 import org.isp.applications.training_details.entity.UserTrainingDetails;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "user_applications")
@@ -30,10 +32,14 @@ public class UserApplication {
     @OneToOne(targetEntity = UserTrainingDetails.class)
     private UserTrainingDetails userTrainingDetails;
 
+    @Column(name = "applied_on")
+    private LocalDateTime appliedOn;
+
     public UserApplication() {}
 
     public UserApplication(String username) {
         this.username = username;
+        this.appliedOn = LocalDateTime.now();
     }
 
     public String getUsername() {
@@ -92,5 +98,11 @@ public class UserApplication {
         this.userTrainingDetails = userTrainingDetails;
     }
 
+    public LocalDateTime getAppliedOn() {
+        return appliedOn;
+    }
 
+    public void setAppliedOn(LocalDateTime appliedOn) {
+        this.appliedOn = appliedOn;
+    }
 }
