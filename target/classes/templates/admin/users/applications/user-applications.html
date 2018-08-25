@@ -13,10 +13,11 @@
             <tbody>
             <tr class="row" th:each="a: ${applications}">
                 <td class="block" th:text="${a.getAppliedOn()}"></td>
-                <td class="block" th:text="${a.getUsername()}"></td>
+                <td class="block" id="user-application-username" th:text="${a.getUsername()}"></td>
                 <td class="block" th:text="${a.getEmail()}"></td>
                 <td>
-                    <a class="btn form-btn btn-edit" th:href="@{'/admin/users/applications/view-more/' + ${a.getUsername()}}">View More</a>
+                    <a class="btn form-btn btn-edit" onclick="loadFullApplicationByUsername()"
+                       id="view-more" data-toggle="modal" data-target="#viewMoreModal">View More</a>
                     <a class="btn form-btn btn-green" th:href="@{/admin/users/applications/approve/${a.getUsername()}}">Approve</a>
                     <a class="btn form-btn btn-delete" th:href="@{/admin/users/applications/reject/${a.getUsername()}}">Reject</a>
                 </td>

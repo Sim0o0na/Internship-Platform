@@ -12,4 +12,5 @@ public interface UserApplicationService {
     void create(UserApplicationDto userApplicationDto, UserTrainingDetails dto);
     boolean checkIfExists(UserApplicationDto userApplicationDto);
     List<UserApplication> getAllNotApproved();
+    UserApplication getByUsername(String username);
 }

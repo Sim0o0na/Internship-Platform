@@ -15,7 +15,7 @@ public class UserTrainingDetails {
     @Column(name = "username")
     private String username;
 
-    @OneToMany(mappedBy = "userTrainingDetails", targetEntity = UserTrainingCourseDetails.class)
+    @OneToMany(mappedBy = "userTrainingDetails", targetEntity = UserTrainingCourseDetails.class, fetch = FetchType.EAGER)
     private List<UserTrainingCourseDetails> userCoursesDetails;
 
     private double averageGrade;

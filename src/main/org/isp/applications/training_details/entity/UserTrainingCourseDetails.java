@@ -18,6 +18,8 @@ public class UserTrainingCourseDetails {
     @ManyToOne(targetEntity = UserTrainingDetails.class)
     private UserTrainingDetails userTrainingDetails;
 
+    public UserTrainingCourseDetails() {}
+
     public UserTrainingCourseDetails(TrainingCourse course, Double userGrade, UserTrainingDetails userTrainingDetails) {
         this.trainingCourse = course;
         this.grade = userGrade;

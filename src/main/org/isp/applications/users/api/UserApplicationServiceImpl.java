@@ -56,7 +56,16 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     public List<UserApplication> getAllNotApproved() {
         return this.userApplicationRepository.findAll()
                 .stream()
-                .filter(ua -> !ua.getStatus().toString().equals("APPROVED"))
+                .filter(ua -> ua.getStatus().toString().equals("WAITING"))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public UserApplication getByUsername(String username) {
+        UserApplication userApplication = this.userApplicationRepository.findByUsername(username);
+        if (userApplication == null) {
+            throw new IllegalArgumentException("Application with this username does not exist!");
+        }
+        return userApplication;
     }
 }

@@ -15,3 +15,10 @@
 .modal-con {
     margin: 0 auto;
 }
+
+#viewMoreModal{
+    background: white;
+    height: 80%;
+    width: 80%;
+}
+

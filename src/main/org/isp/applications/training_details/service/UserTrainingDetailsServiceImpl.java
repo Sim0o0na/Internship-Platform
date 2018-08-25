@@ -27,6 +27,7 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
     public void create(UserTrainingDetails userTrainingDetails, String username) {
         // Create course instances with grades for user
         userTrainingDetails.setUsername(username);
+        userTrainingDetails.setAverageGrade(this.calculateAverageTrainingResult(userTrainingDetails.getUserCoursesDetails()));
         this.trainingDetailsRepository.save(userTrainingDetails);
         this.createCourseDetailsForUser(userTrainingDetails, username);
     }
@@ -44,5 +45,11 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
 
     private boolean checkIfCourseExists(String courseName) {
         return this.trainingCourseRepository.findByCourseName(courseName) != null;
+    }
+
+    private double calculateAverageTrainingResult(List<UserTrainingCourseDetails> userTrainingCourseDetails) {
+        double sum = userTrainingCourseDetails.stream().mapToDouble(UserTrainingCourseDetails::getGrade).sum();
+        sum /= userTrainingCourseDetails.size();
+        return sum;
     }
 }
