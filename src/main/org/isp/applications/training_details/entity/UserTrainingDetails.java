@@ -15,13 +15,10 @@ public class UserTrainingDetails {
     @Column(name = "username", unique = true, nullable = false)
     private String username;
 
-//    @OneToMany(mappedBy = "userTrainingDetails",
-//            targetEntity = UserTrainingCourseDetails.class,
-//            fetch = FetchType.EAGER,
-//            cascade = CascadeType.PERSIST)
-//    private List<UserTrainingCourseDetails> userCoursesDetails;
-
     private double averageGrade;
+
+    @OneToOne(mappedBy = "userTrainingDetails")
+    private UserApplication userApplication;
 
     public UserTrainingDetails() {
     }
@@ -48,5 +45,13 @@ public class UserTrainingDetails {
 
     public void setAverageGrade(double averageGrade) {
         this.averageGrade = averageGrade;
+    }
+
+    public UserApplication getUserApplication() {
+        return userApplication;
+    }
+
+    public void setUserApplication(UserApplication userApplication) {
+        this.userApplication = userApplication;
     }
 }
