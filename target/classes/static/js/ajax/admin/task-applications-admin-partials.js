@@ -1,6 +1,5 @@
 $("#taskApplications").click(loadTaskApplicationsPanel);
 function loadTaskApplicationsPanel() {
-    console.log("task app panel");
     $.ajax({
         type: 'GET',
         url: '/admin/tasks/applications',

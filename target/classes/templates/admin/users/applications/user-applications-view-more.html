@@ -1,7 +1,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div class="row" id="view-more-dialog" th:object="${userApplication}">
     <div class="col-md-6">
-       <p>Basic Info</p>
+       <h1>Basic Info</h1>
         <div class="col-md-6">
             <label>First name:</label>
             <p th:text="${userApplication.firstName}"></p>
@@ -20,12 +20,12 @@
         </div>
     </div>
     <div class="col-md-6">
+        <h1>Training Info</h1>
         <label>Average Grade:</label><p th:text="${averageGrade}"></p>
         <div class="row" th:each="cd: ${coursesDetails}">
             <p th:text="${cd.key}"></p>
             <p th:text="${cd.value}"></p>
         </div>
-        <p>Training Info</p>
         <p></p>
     </div>
 </div>

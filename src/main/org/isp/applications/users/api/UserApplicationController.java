@@ -16,15 +16,12 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/users/applications")
 public class UserApplicationController {
-    private UserRepository userRepository;
     private UserApplicationService userApplicationService;
     private UserTrainingDetailsController userDetailsController;
 
     @Autowired
-    public UserApplicationController(UserRepository userRepository,
-                                     UserApplicationService userApplicationService,
+    public UserApplicationController(UserApplicationService userApplicationService,
                                      UserTrainingDetailsController userDetailsController) {
-        this.userRepository = userRepository;
         this.userApplicationService = userApplicationService;
         this.userDetailsController = userDetailsController;
     }

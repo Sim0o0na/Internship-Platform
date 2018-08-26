@@ -18,16 +18,12 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     }
 
     @Override
-    public void approve(Long id) {
-        UserApplication userApplication = this.userApplicationRepository.findById(id).get();
-        userApplication.setStatus(UserApplicationStatus.APPROVED);
-        this.userApplicationRepository.saveAndFlush(userApplication);
-    }
-
-    @Override
-    public void reject(Long id) {
-        UserApplication userApplication = this.userApplicationRepository.findById(id).get();
-        userApplication.setStatus(UserApplicationStatus.REJECTED);
+    public void setStatus(String username, UserApplicationStatus status) {
+        UserApplication userApplication = this.userApplicationRepository.findByUsername(username);
+        if (userApplication == null) {
+            throw new IllegalArgumentException("User application does not exist for this username!");
+        }
+        userApplication.setStatus(status);
         this.userApplicationRepository.saveAndFlush(userApplication);
     }
 

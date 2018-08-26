@@ -1,14 +1,3 @@
-$("#applications").click(loadUserApplicationsPanel);
-function loadUserApplicationsPanel() {
-    $.ajax({
-        type: 'GET',
-        url: '/admin/users/applications/all',
-        success: function (data) {
-            $("#dynamic").html("").append(data);
-        }
-    });
-}
-
 $("#users").click(loadUsersPanel);
 function loadUsersPanel() {
     $.ajax({
