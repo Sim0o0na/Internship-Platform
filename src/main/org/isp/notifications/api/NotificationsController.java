@@ -15,10 +15,10 @@ public class NotificationsController {
         this.notificationService = notificationService;
     }
 
-//    public void create(String notificationMessage, String username) {
+//    public void createUserTrainingDetails(String notificationMessage, String username) {
 //        if (notificationMessage.isEmpty()) {
 //            throw new IllegalArgumentException("Notification message cannot be empty!");
 //        }
-//        this.notificationService.create(notificationMessage, username, );
+//        this.notificationService.createUserTrainingDetails(notificationMessage, username, );
 //    }
 }

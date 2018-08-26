@@ -5,7 +5,6 @@ import org.isp.applications.training_details.parser.UserInfoParser;
 import org.isp.applications.training_details.entity.UserTrainingCourseDetails;
 import org.isp.applications.training_details.entity.UserTrainingDetails;
 import org.isp.applications.training_details.service.UserTrainingDetailsService;
-import org.isp.applications.training_details.service.UserTrainingDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -25,21 +24,20 @@ public class UserTrainingDetailsController {
         this.userTrainingDetailsService = userTrainingDetailsService;
     }
 
-    public UserTrainingDetails getUserTrainingDetails(String username) throws IOException {
+    public void createUserTrainingDetails(String username) throws IOException {
         UserTrainingDetails userTrainingDetails = new UserTrainingDetails();
-        userTrainingDetails.setUserCoursesDetails(this.getCoursesDetailsForUser(username, userTrainingDetails));
-        return userTrainingDetails;
+        userTrainingDetails.setUsername(username);
+        List<UserTrainingCourseDetails> utcdList = this.getCoursesDetailsForUser(username);
+        this.userTrainingDetailsService.createUserTrainingDetails(userTrainingDetails, utcdList,  username);
+        this.userTrainingDetailsService.createCourseDetailsForUser(utcdList, username);
     }
 
-    public void createUserTrainingDetails(UserTrainingDetails userTrainingDetails, String username) {
-        this.userTrainingDetailsService.create(userTrainingDetails, username);
-    }
-
-    private List<UserTrainingCourseDetails> getCoursesDetailsForUser(String username, UserTrainingDetails userTrainingDetails) throws IOException {
+    private List<UserTrainingCourseDetails> getCoursesDetailsForUser(String username) throws IOException {
         List<UserTrainingCourseDetails> coursesDetails = new ArrayList<>();
         HashMap<String, Double> info = this.userInfoParser.getInfo(username);
         for (String course : info.keySet()) {
-            coursesDetails.add(new UserTrainingCourseDetails(new TrainingCourse(course), info.get(course), userTrainingDetails));
+            UserTrainingCourseDetails utcd = new UserTrainingCourseDetails(new TrainingCourse(course), info.get(course), username);
+            coursesDetails.add(utcd);
         }
         return coursesDetails;
     }

@@ -43,9 +43,8 @@ public class UserApplicationController {
             return modelAndView;
         }
         try {
-            UserTrainingDetails userTrainingDetails = this.getUserTrainingDetails(userApplicationDto.getUsername());
-            this.userDetailsController.createUserTrainingDetails(userTrainingDetails, userApplicationDto.getUsername());
-            this.userApplicationService.create(userApplicationDto, userTrainingDetails);
+            this.userApplicationService.create(userApplicationDto);
+            this.userDetailsController.createUserTrainingDetails(userApplicationDto.getUsername());
             modelAndView.getModel().put("info", "Вие успешно кандидатствахте за стажантската програма на СофтУни! Очаквайте отговор съвсем скоро!");
         } catch (Exception e) {
             modelAndView.getModel().put("error", e.getMessage());
@@ -53,10 +52,5 @@ public class UserApplicationController {
         }
         modelAndView.setViewName(view);
         return modelAndView;
-    }
-
-    private UserTrainingDetails getUserTrainingDetails(String username) throws IOException {
-        UserTrainingDetails userTrainingDetails = this.userDetailsController.getUserTrainingDetails(username);
-        return userTrainingDetails;
     }
 }

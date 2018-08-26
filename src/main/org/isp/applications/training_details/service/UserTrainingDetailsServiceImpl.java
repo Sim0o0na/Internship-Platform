@@ -24,23 +24,32 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
     }
 
     @Override
-    public void create(UserTrainingDetails userTrainingDetails, String username) {
+    @Transactional
+    public boolean createUserTrainingDetails(UserTrainingDetails userTrainingDetails,
+                                             List<UserTrainingCourseDetails> utcdList,
+                                             String username) {
         // Create course instances with grades for user
         userTrainingDetails.setUsername(username);
-        userTrainingDetails.setAverageGrade(this.calculateAverageTrainingResult(userTrainingDetails.getUserCoursesDetails()));
-        this.trainingDetailsRepository.save(userTrainingDetails);
-        this.createCourseDetailsForUser(userTrainingDetails, username);
+        userTrainingDetails.setAverageGrade(this.calculateAverageTrainingResult(utcdList));
+        this.trainingDetailsRepository.saveAndFlush(userTrainingDetails);
+        return true;
     }
 
-    public void createCourseDetailsForUser(UserTrainingDetails  userTrainingCourseDetails, String username) {
+    @Override
+    @Transactional
+    public boolean createCourseDetailsForUser(List<UserTrainingCourseDetails> userTrainingCourseDetails, String username) {
         // Create course instances in db
-        userTrainingCourseDetails.getUserCoursesDetails().forEach(uc -> {
+        userTrainingCourseDetails.forEach(uc -> {
             TrainingCourse currTrainingCourse = uc.getTrainingCourse();
             if (!checkIfCourseExists(currTrainingCourse.getCourseName())) {
-                this.trainingCourseRepository.save(currTrainingCourse);
+                this.trainingCourseRepository.saveAndFlush(currTrainingCourse);
+            } else {
+                currTrainingCourse = this.trainingCourseRepository.findByCourseName(currTrainingCourse.getCourseName());
+                uc.setTrainingCourse(currTrainingCourse);
             }
-            this.courseDetailsRepository.save(uc);
+            this.courseDetailsRepository.saveAndFlush(uc);
         });
+        return true;
     }
 
     private boolean checkIfCourseExists(String courseName) {

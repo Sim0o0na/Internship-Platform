@@ -34,14 +34,13 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     }
 
     @Override
-    public void create(UserApplicationDto dto, UserTrainingDetails userTrainingDetails) {
+    public void create(UserApplicationDto dto) {
         if (this.userApplicationRepository.findByEmail(dto.getEmail()) != null) {
             throw new IllegalArgumentException("Application with this email already exists!");
         } else if (this.userApplicationRepository.findByUsername(dto.getUsername()) != null) {
             throw new IllegalArgumentException("Application with this username already exists!");
         }
         UserApplication userApplication = MappingUtil.convert(dto, UserApplication.class);
-        userApplication.setUserTrainingDetails(userTrainingDetails);
         userApplication.setStatus(UserApplicationStatus.WAITING);
         this.userApplicationRepository.saveAndFlush(userApplication);
     }

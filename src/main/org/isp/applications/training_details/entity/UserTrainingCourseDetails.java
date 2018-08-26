@@ -12,18 +12,18 @@ public class UserTrainingCourseDetails {
     @Column(name = "user_grade")
     private Double grade;
 
-    @ManyToOne(targetEntity = TrainingCourse.class)
+    @ManyToOne(targetEntity = TrainingCourse.class, cascade = CascadeType.PERSIST)
     private TrainingCourse trainingCourse;
 
-    @ManyToOne(targetEntity = UserTrainingDetails.class)
-    private UserTrainingDetails userTrainingDetails;
+    @Column(name = "softuni_username", nullable = false)
+    private String username;
 
     public UserTrainingCourseDetails() {}
 
-    public UserTrainingCourseDetails(TrainingCourse course, Double userGrade, UserTrainingDetails userTrainingDetails) {
+    public UserTrainingCourseDetails(TrainingCourse course, Double userGrade, String username) {
         this.trainingCourse = course;
         this.grade = userGrade;
-        this.userTrainingDetails = userTrainingDetails;
+        this.username = username;
     }
 
     public Integer getId() {
@@ -50,11 +50,11 @@ public class UserTrainingCourseDetails {
         this.grade = grade;
     }
 
-    public UserTrainingDetails getUserTrainingDetails() {
-        return userTrainingDetails;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserTrainingDetails(UserTrainingDetails userTrainingDetails) {
-        this.userTrainingDetails = userTrainingDetails;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

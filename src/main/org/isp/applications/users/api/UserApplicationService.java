@@ -9,7 +9,7 @@ import java.util.List;
 public interface UserApplicationService {
     void approve(Long id);
     void reject(Long id);
-    void create(UserApplicationDto userApplicationDto, UserTrainingDetails dto);
+    void create(UserApplicationDto userApplicationDto);
     boolean checkIfExists(UserApplicationDto userApplicationDto);
     List<UserApplication> getAllNotApproved();
     UserApplication getByUsername(String username);

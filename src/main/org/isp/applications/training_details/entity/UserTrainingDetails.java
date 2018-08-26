@@ -12,11 +12,14 @@ public class UserTrainingDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "username")
+    @Column(name = "username", unique = true, nullable = false)
     private String username;
 
-    @OneToMany(mappedBy = "userTrainingDetails", targetEntity = UserTrainingCourseDetails.class, fetch = FetchType.EAGER)
-    private List<UserTrainingCourseDetails> userCoursesDetails;
+//    @OneToMany(mappedBy = "userTrainingDetails",
+//            targetEntity = UserTrainingCourseDetails.class,
+//            fetch = FetchType.EAGER,
+//            cascade = CascadeType.PERSIST)
+//    private List<UserTrainingCourseDetails> userCoursesDetails;
 
     private double averageGrade;
 
@@ -37,14 +40,6 @@ public class UserTrainingDetails {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public List<UserTrainingCourseDetails> getUserCoursesDetails() {
-        return userCoursesDetails;
-    }
-
-    public void setUserCoursesDetails(List<UserTrainingCourseDetails> userCoursesDetails) {
-        this.userCoursesDetails = userCoursesDetails;
     }
 
     public double getAverageGrade() {

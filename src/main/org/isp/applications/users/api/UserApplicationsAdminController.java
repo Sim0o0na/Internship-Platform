@@ -37,8 +37,8 @@ public class UserApplicationsAdminController {
         UserApplication userApplication = this.userApplicationService.getByUsername(username);
         model.addAttribute("userApplication", userApplication);
         model.addAttribute("averageGrade", userApplication.getUserTrainingDetails().getAverageGrade());
-        model.addAttribute("coursesDetails",
-                this.getCoursesAndGrades(userApplication.getUserTrainingDetails().getUserCoursesDetails()));
+        //this.getCoursesAndGrades(userApplication.getUserTrainingDetails().getUserCoursesDetails())
+        model.addAttribute("coursesDetails", new HashMap<>());
         return "/admin/users/applications/user-applications-view-more";
     }
 

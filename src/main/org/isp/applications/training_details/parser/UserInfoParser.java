@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 @Component
 public class UserInfoParser {
-    private static final String USER_ID_PATTERN = "showavatar/([a-zA-Z0-9\\-]+)";
+    private static final String USER_ID_PATTERN = "for=\"Id\">Id<\\/label>\\s*([a-zA-Z0-9-]+)\\s*<\\/div>";
     private static final String ENROLLED_MODULES_PATTERN = "aria-controls=\"#module-([1-9]+)\">\\s*([a-zA-Z\\s(]+)";
     private static final String COURSES_IN_ENROLLED_MODULE_PATTERN = "aria-controls=\"#course-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
     private static final String COURSE_ISTANCES_IN_ENROLLED_COURSE_PATTERN = "aria-controls=\"#course-instance-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
