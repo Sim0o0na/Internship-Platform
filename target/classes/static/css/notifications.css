@@ -87,3 +87,31 @@
     height: 100%;
     padding-top: 14px;
 }
+
+/* Define how each icon button should look like */
+.notification-button {
+    color: darkblue;
+    font-size: 20pt;
+    padding: 2px 5px; /* Add some padding so it looks nice */
+}
+
+/* Make the badge float in the top right corner of the button */
+.button__badge {
+    background-color: #ec971f;
+    border-radius: 2px;
+    color: white;
+    padding: 2px 3px;
+    font-size: 15px;
+
+    position: absolute; /* Position the badge within the relatively positioned button */
+    top: 0;
+    right: 0;
+}
+
+.notifications {
+    display: none;
+}
+
+.notification-button:hover{
+    color: #ec971f;
+}

@@ -38,6 +38,10 @@ public class UserApplicationAdminController {
         return modelAndView;
     }
 
+    public int getAllWaitingCount() {
+        return this.userApplicationService.getAllNotApproved().size();
+    }
+
     @RequestMapping(value = "/approve", method = RequestMethod.GET)
     public String approve(@RequestParam(value="username", required=true) String username, Model model) {
         try {

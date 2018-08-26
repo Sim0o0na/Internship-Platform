@@ -1,23 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
-<head>
-    <title>Index</title>
-    <meta charset="utf-8">
-    <meta title="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script th:src="@{/js/ajax/user/user-forms.js}"></script>
-    <script th:src="@{/js/home.js}"></script>
-    <script th:src="@{/js/lib/float-panel.js}"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/dashboard.css}"/>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" th:href="@{/css/forms.css}">
-    <link rel="stylesheet" th:href="@{/css/modals.css}">
-    <link rel="stylesheet" th:href="@{/css/home.css}">
-
-</head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
     <div id="home-nav" class="container-fluid">
         <div class="float-panel" data-top="0" data-scroll="200">
@@ -26,97 +9,106 @@
                 <div th:include="~{fragments/information-partials :: info}"></div>
             </div>
         </div>
-        <img id="home-softuni-logo" class="img-responsive" src="/img/softunilogo-color.png">
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="home-title text-center"><b>Какво представлява стажантската програма на СофтУни?</b></h1>
-            </div>
-            <div class="col-12">
-                <p class="home-description text-center">
-                    Стажантската програма е план за <b>кариерно</b> развитие на студентите в Софтуерен Университет.
-                    В нея те могат да допълнят своите умения и да поемат по желания от тях професионален път.
-                    Тя цели да уголеми <b>потенциала им</b>, предоставяйки им възможността да участват пряко в изпълнението на
-                    различни задачи, които развиват както техните <b>технически знания</b>, така и <b>личностни качества и умения</b>.
-                    Могат да надникнат в един различен свят на програмирането,
-                    <b>прилагайки</b> и <b>развивайки</b> знанията си.
-                </p>
-            </div>
-            <img id="internship-flow-img" class="img-responsive" src="/img/internship-flow.png">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1 class="home-title text-right">Какво целим да изградим в студентите?</h1>
-                    <p class="home-description text-left"><b>Основните качества и умения, които желаем да развием са:</b></p>
-                    <ul id="skills" class="text-left">
-                        <li>Организираност и отговорност</li>
-                        <li>Работа в екип</li>
-                        <li>Комуникативност и инициативност</li>
-                        <li>Презентационни умения</li>
-                        <li>Справяне с проблеми и изграждане на концепции</li>
-                        <li>Подобряване и обогатяване на уменията по програмиране</li>
-                    </ul>
+            <div class="container-fluid home-container">
+                <div class="container" id="home-carousel">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="carousel-img" src="/img/carousel/students.jpg">
+                                <div class="carousel-caption">
+                                    <h1>Become a member of our internship program!</h1>
+                                    <h2 class="text-center"><a class="carousel-link" id="carousel-learn-more" href="#">Learn more</a></h2>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img class="carousel-img" src="/img/carousel/bojo-projects.jpg" >
+                                <div class="carousel-caption">
+                                    <h1 class="text-center">Take part in interesting projects!</h1>
+                                    <h2 class="text-center"><a class="carousel-link" href="/projects">See oportunities</a></h2>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img class="carousel-img" src="/img/carousel/lecturers.jpg" >
+                                <div class="carousel-caption">
+                                    <h1 class="text-center">Develop yourself and others!</h1>
+                                    <h2 class="text-center"><a class="carousel-link" href="/apply">Apply now!</a></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-2">
-                    <img id="wizard" class="img-responsive" src="/img/wizard-coding.png">
+                <div class="arrow bounce"><a class="fa fa-arrow-down fa-2x" href="#"></a></div>
+                <div class="row" id="main-description">
+                    <div class="row-12">
+                        <div class="col-12" id="about-paragraph">
+                            <h1 class="home-title text-center"><b>What is the internship program?</b></h1>
+                            <p class="home-description text-center">
+                                Lorem ipsum text here... Lorem ipsum text here...Lorem ipsum text here...Lorem ipsum text here...Lorem ipsum text here...Lorem ipsum text here...
+                            </p>
+                        </div>
+                    </div>
+                    <img id="internship-flow-img" class="img-responsive" src="/img/internship-flow.png">
+                    <div class="row" id="skills-and-qualities">
+                        <div class="col-md-8">
+                            <h1 class="home-title text-center"><b>What we want to develop?</b></h1>
+                            <ul id="skills" class="text-left">
+                                <li>Organization and responsibility</li>
+                                <li>Teamwork</li>
+                                <li>Communication and initiative</li>
+                                <li>Presentation skills</li>
+                                <li>Problem solving</li>
+                                <li>Coding skills</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-2">
+                            <img id="wizard" class="img-responsive" src="/img/wizard-coding.png">
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-lg-4 col-md-4 col-sm-2">
+                            <i class="home-icon fas fa-question"></i>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-10">
+                            <h1 class="home-title text-right">Who it is intended for?</h1>
+                            <p class="home-description text-right">Every Software University student who graduated the <b>Programming Fundamentals</b>
+                                course successfully <b>6.00</b> can <a href="/apply">apply</a>.
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h1 class="home-title text-center"><b>How can i apply?</b></h1>
+                        <p class="home-description text-center">You can fill in our apply form from <a href="/apply">here</a>.
+                            You will receive an email if you've been approved or not!
+                    </div>
                 </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-lg-4 col-md-4 col-sm-2">
-                    <i class="home-icon fas fa-question"></i>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-10">
-                    <h1 class="home-title text-right">За кого е предназначена програмата?</h1>
-                    <p class="home-description text-right">Всеки студент, преминал успешно курса <b>Programming Basics</b>
-                        с резултат <b>6.00</b> може да участва в стажантската програма.
-                        Важни качества за бъдещите стажанти са <b>мотивацията за развитие</b>, <b>желанието да помагат</b> на
-                        другите и да работят в <b>екип.</b></p>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <h1 class="home-title text-center"><b>Как мога да кандидатствам?</b></h1>
-                <p class="home-description text-center">Периодът за кандидатстване стартира <b>след всеки прием на
-                    курса Programming Basics</b>. Можете да подадете кандидатурата си чрез имейл на
-                    <b>internship@softuni.bg</b>, в който да приложите <b>мотивационно писмо</b> и <b>автобиография</b>.
-                    Вашата кандидатура ще бъде разгледана и ще получите обратна връзка когато бъдете одобрени,
-                    след срока упоменат в имейла.</p>
             </div>
         </div>
-    </div>
-    <div class="row row-md-12">
-        <div class="col-md-4 text-center">
-            <i class="home-icon fas fa-rocket"></i>
-            <p class="home-title text-center home-action">Кандидатствай!</p>
-        </div>
-        <div class="col-md-4 text-center">
-            <i class="home-icon far fa-envelope"></i>
-            <p class="home-title text-center home-action" >Свържи се с нас</p>
-        </div>
-        <div class="col-md-4 text-center">
-            <i class="home-icon fas fa-ellipsis-h"></i>
-            <p class="home-title text-center home-action">Научи повече</p>
-        </div>
-    </div>
-    <footer th:include="~{fragments/footer :: footer}"></footer>
-    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-con" id="modalContent">
-                <a id="register" onclick="loadRegisterForm()">REGISTER</a>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-con row" id="modalContent">
-                <div class="col-md-6">
-                    <h1>Поздравления!</h1>
-                    <h3>Ти успешно кандидатства за стажантската програма на СофтУни. Съвсем скоро ще получиш отговор дали си одобрен и ще имаш възможност да изпълниш първата си задача!</h3>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="/img/wizard-waiting.png">
+        <footer th:include="~{fragments/footer :: footer}"></footer>
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-con" id="modalContent">
+                    <a id="register" onclick="loadRegisterForm()">REGISTER</a>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 </html>

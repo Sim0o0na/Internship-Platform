@@ -1,5 +1,7 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+
 *{
     font-family: 'Lato', sans-serif;
 }
@@ -120,12 +122,16 @@ ul {
     color: orange;
 }
 
-/*input[type=text], input[type=password] {*/
-    /*text-align: center;*/
-    /*transition: ease-in-out, width .35s ease-in-out;*/
-/*}*/
+.header-image {
+    display: block;
+}
 
-/*input[type=text], input[type=password]:focus {*/
-    /*text-align: left;*/
-    /*border: darkblue solid 3px;*/
-/*}*/
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}

@@ -1,7 +1,25 @@
 #internship-flow-img {
     margin: 0 auto;
-    width: 120em;
-    height: 50em;
+    width: 80em;
+    height: 15em;
+}
+
+#skills-and-qualities {
+    background: #162b40;
+}
+
+#skills-and-qualities>h1 {
+    text-decoration-color: white;
+}
+
+#skills>li {
+    font-size: 25pt;
+    color: white;
+    height: 50px;
+    margin: 10px 0;
+    list-style: none;
+    padding-left: 70px;
+    line-height: 30px;
 }
 
 .h-icon {
@@ -27,16 +45,15 @@
 }
 
 .home-title {
-    font-size: 70pt;
-    color: rgb(35, 67, 100);
+    font-size: 25pt;
     font-weight: 300;
     font-style: normal;
 }
 
 .home-description {
-    color: rgb(89, 39, 7);
-    font-size: 25pt;
+    font-size: 15pt;
 }
+
 #home-softuni-logo{
     margin: 0 auto;
     width: 80em;
@@ -50,17 +67,6 @@
     margin: 0 auto;
 }
 
-#skills>li {
-    font-size: 25pt;
-    color: rgb(35, 67, 100);
-    height: 50px;
-    margin: 10px 0;
-    background: url(/img/softuni-logo-hat.png) no-repeat left center;
-    list-style: none;
-    padding-left: 70px;
-    line-height: 30px;
-}
-
 .home-icon {
     text-align: center;
     font-size: 20em;
@@ -70,9 +76,6 @@
     width: 100%;
     left:0;
     right:0;
-    background:url(/img/softuni-students.jpg);
-    background-size: cover;
-    height: 500px;
     z-index:-1;
 }
 
@@ -91,6 +94,7 @@
     max-width:900px;
     margin:10px auto;
 }
+
 .float-panel a {
     font-size:16px;
     text-decoration:none;
@@ -98,6 +102,7 @@
     display:inline-block;
     padding:10px 20px;
 }
+
 .float-panel .fa-gg {
     color: #eaa400;
     font-size:30px;
@@ -129,3 +134,27 @@
     z-index: 1000;
 }
 
+a { color: orange; text-decoration: none; }
+
+.arrow {
+    text-align: center;
+    text-decoration: none;
+    margin: 2% 0;
+}
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

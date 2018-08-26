@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head>
-    <title>Admin</title>
-    <meta charset="utf-8">
-    <meta title="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/tables.css}"/>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" th:href="@{/css/forms.css}">
-    <link rel="stylesheet" th:href="@{/css/buttons.css}">
-    <link rel="stylesheet" th:href="@{/css/tables.css}"/>
-    <link rel="stylesheet" th:href="@{/css/modals.css}">
-    <link rel="stylesheet" th:href="@{/css/admin-tasks.css}">
-    <script th:src="@{/js/ajax/admin/users-admin-partials.js}"></script>
-    <script th:src="@{/js/tasks-search-admin.js}"></script>
-    <script th:src="@{/js/ajax/admin/tasks-admin-partials.js}"></script>
-    <script th:src="@{/js/ajax/admin/payments-admin-partials.js}"></script>
-    <script th:src="@{/js/ajax/admin/task-applications-admin-partials.js}"></script>
-    <script th:src="@{/js/ajax/admin/user-applications-partials.js}"></script>
-</head>
+<div th:include="~{fragments/head-elements :: admin-head}"></div>
 <body>
     <nav class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-left">
@@ -31,6 +10,7 @@
         <ul class="nav navbar-nav navbar-center">
             <li class="active" data-toggle="collapse">
                 <a id="applications" onclick="loadUserApplicationsPanel()"><i class="far fa-file-alt"></i>Applications</a>
+                <span class="button__badge" th:if="${applicationsCount > 0} "th:text="${applicationsCount}"></span>
             </li>
             <li class="active" data-toggle="collapse">
                 <a id="users" onclick="loadUsersPanel()"><i class="fa fa-user"></i>Users</a>
