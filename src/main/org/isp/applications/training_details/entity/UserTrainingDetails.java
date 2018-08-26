@@ -3,7 +3,6 @@ package org.isp.applications.training_details.entity;
 import org.isp.applications.users.entity.UserApplication;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "user_training_details")

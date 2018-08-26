@@ -1,13 +1,13 @@
 package org.isp.applications.training_details.service;
 
 import org.isp.applications.training_details.entity.*;
-import org.isp.applications.users.api.UserApplicationService;
 import org.isp.applications.users.entity.UserApplication;
 import org.isp.applications.users.entity.UserApplicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -60,6 +60,16 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
             this.courseDetailsRepository.saveAndFlush(uc);
         });
         return true;
+    }
+
+    @Override
+    public List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username) {
+        List<UserTrainingCourseDetails> result = new ArrayList<>();
+        result = this.courseDetailsRepository.findAllByUsername(username);
+        if (result.size() == 0) {
+            throw new IllegalArgumentException("No course details for this username!");
+        }
+        return result;
     }
 
     private boolean checkIfCourseExists(String courseName) {

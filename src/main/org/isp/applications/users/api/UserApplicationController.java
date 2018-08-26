@@ -1,21 +1,17 @@
 package org.isp.applications.users.api;
 
 import org.isp.applications.training_details.controller.UserTrainingDetailsController;
-import org.isp.applications.users.entity.UserApplication;
 import org.isp.applications.users.entity.UserApplicationDto;
-import org.isp.applications.training_details.entity.UserTrainingDetails;
 import org.isp.users.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
-import java.io.IOException;
 
 @Controller
 @RequestMapping("/users/applications")

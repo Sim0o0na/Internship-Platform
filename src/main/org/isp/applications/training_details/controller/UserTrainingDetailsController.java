@@ -27,12 +27,16 @@ public class UserTrainingDetailsController {
     public void createUserTrainingDetails(String username) throws IOException {
         UserTrainingDetails userTrainingDetails = new UserTrainingDetails();
         userTrainingDetails.setUsername(username);
-        List<UserTrainingCourseDetails> utcdList = this.getCoursesDetailsForUser(username);
+        List<UserTrainingCourseDetails> utcdList = this.parseCourseDetailsForUsername(username);
         this.userTrainingDetailsService.createUserTrainingDetails(userTrainingDetails, utcdList,  username);
         this.userTrainingDetailsService.createCourseDetailsForUser(utcdList, username);
     }
 
-    private List<UserTrainingCourseDetails> getCoursesDetailsForUser(String username) throws IOException {
+    public List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username) {
+        return this.userTrainingDetailsService.getCourseDetailsForUsername(username);
+    }
+
+    public List<UserTrainingCourseDetails> parseCourseDetailsForUsername(String username) throws IOException {
         List<UserTrainingCourseDetails> coursesDetails = new ArrayList<>();
         HashMap<String, Double> info = this.userInfoParser.getInfo(username);
         for (String course : info.keySet()) {

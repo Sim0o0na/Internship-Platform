@@ -13,4 +13,6 @@ public interface UserTrainingDetailsService {
 
     @Transactional
     boolean createCourseDetailsForUser(List<UserTrainingCourseDetails> userTrainingCourseDetails, String username);
+
+    List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username);
 }

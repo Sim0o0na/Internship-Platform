@@ -2,7 +2,6 @@ package org.isp.applications.users.api;
 
 import org.isp.applications.users.entity.UserApplication;
 import org.isp.applications.users.entity.UserApplicationDto;
-import org.isp.applications.training_details.entity.UserTrainingDetails;
 
 import java.util.List;
 

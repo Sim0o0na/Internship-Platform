@@ -4,7 +4,6 @@ import org.isp.applications.training_details.entity.UserTrainingDetails;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Table(name = "user_applications")

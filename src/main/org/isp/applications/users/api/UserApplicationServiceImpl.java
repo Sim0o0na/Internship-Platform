@@ -1,12 +1,10 @@
 package org.isp.applications.users.api;
 
-import org.isp.applications.training_details.entity.UserTrainingDetails;
 import org.isp.applications.users.entity.*;
 import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

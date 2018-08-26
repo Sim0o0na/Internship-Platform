@@ -1,6 +1,6 @@
 $("#view-more").click(loadFullApplicationByUsername);
-function loadFullApplicationByUsername() {
-    var username = $("#user-application-username").text();
+function loadFullApplicationByUsername(username) {
+    console.log(username);
     $.ajax({
         type: 'GET',
         url: '/admin/users/applications/' + username,

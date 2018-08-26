@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" description="if (this.userApplicationRepository.findByEmail(dto..." line="37" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" description="throw new IllegalArgumentException(&quot;Application wi..." line="40" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" description="for (String course : info.keySet()) {" line="37" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" description="if (this.userApplicationRepository.findByEmail(dto..." line="35" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" description="throw new IllegalArgumentException(&quot;Application wi..." line="38" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" description="for (String course : info.keySet()) {" line="41" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0a0ba93-423e-4f57-91df-dafc38459f2b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/controller/UserTrainingDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/controller/UserTrainingDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/service/UserTrainingDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/service/UserTrainingDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationsAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationsAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/entity/UserApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/applications/users/entity/UserApplication.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,44 +43,11 @@
       <file leaf-file-name="UserApplicationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="532">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTrainingDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1143#1144#0" expanded="true" />
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTrainingCourseDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrainingCourse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/TrainingCourse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -68,20 +55,11 @@
       <file leaf-file-name="UserTrainingDetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
+            <state relative-caret-position="482">
+              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -89,20 +67,8 @@
       <file leaf-file-name="UserTrainingDetailsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTrainingDetailsServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+            <state relative-caret-position="256">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,8 +79,8 @@
       <file leaf-file-name="UserApplicationsAdminController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="39" column="100" selection-start-line="39" selection-start-column="100" selection-end-line="39" selection-end-column="100" />
+            <state relative-caret-position="287">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,11 +88,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CglibAopProxy.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <file leaf-file-name="UserInfoParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserInfoParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="512" selection-start-line="512" selection-end-line="512" />
+            <state relative-caret-position="-869">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-applications-view-more.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-applications.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPRequestSender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/HTTPRequestSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-applications-partials.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -179,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserCourseDetails.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationRepository.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserCourseDetailsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetailsRepository.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" />
         <option value="$PROJECT_DIR$/src/main/org/isp/users/services/UserServiceImpl.java" />
@@ -188,10 +204,8 @@
         <option value="$PROJECT_DIR$/src/resources/templates/apply.html" />
         <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/users-admin-partials.js" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/users/user-applications.html" />
-        <option value="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/admin-base.html" />
         <option value="$PROJECT_DIR$/src/resources/static/css/modals.css" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplication.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserInfoParser.java" />
@@ -200,11 +214,14 @@
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/TrainingCourse.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java" />
+        <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js" />
+        <option value="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" />
       </list>
     </option>
   </component>
@@ -285,66 +302,41 @@
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="training_details" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="training_details" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="training_details" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ajax" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ajax" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -512,15 +504,15 @@
       <workItem from="1532507629993" duration="16062000" />
       <workItem from="1532627038740" duration="601000" />
       <workItem from="1532628492473" duration="20049000" />
-      <workItem from="1535001037155" duration="42199000" />
+      <workItem from="1535001037155" duration="45018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78911000" />
+    <option name="totallyTimeSpent" value="81730000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1688" y="19" width="1417" height="851" extended-state="7" />
+    <frame x="-1688" y="19" width="1417" height="851" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="10" />
@@ -529,7 +521,7 @@
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Designer" order="8" />
-      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32847896" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32839838" />
       <window_info anchor="right" id="Database" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -542,10 +534,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993758" visible="true" weight="0.5181696" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993758" visible="true" weight="0.28129205" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1891506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15917201" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899868" />
@@ -569,13 +561,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java</url>
-          <line>45</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java</url>
-          <line>38</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
@@ -587,7 +579,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java</url>
-          <line>46</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
@@ -727,27 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/all-users-partial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -769,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -783,37 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/webresources/TomcatURLStreamHandlerFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/HTTPRequestSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserInfoParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,46 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="100" selection-start-line="39" selection-start-column="100" selection-end-line="39" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
@@ -957,7 +854,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
-          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1143#1144#0" expanded="true" />
@@ -970,17 +867,112 @@
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+        <state relative-caret-position="370">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationsAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/HTTPRequestSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserInfoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-869">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>

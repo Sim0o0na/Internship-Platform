@@ -1,5 +1,6 @@
 package org.isp.applications.users.api;
 
+import org.isp.applications.training_details.controller.UserTrainingDetailsController;
 import org.isp.applications.training_details.entity.UserTrainingCourseDetails;
 import org.isp.applications.users.entity.UserApplication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +12,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(path = "/admin/users/applications")
 public class UserApplicationsAdminController {
     private UserApplicationService userApplicationService;
+    private UserTrainingDetailsController userTrainingDetailsController;
 
     @Autowired
-    public UserApplicationsAdminController(UserApplicationService userApplicationService) {
+    public UserApplicationsAdminController(UserApplicationService userApplicationService,
+                                           UserTrainingDetailsController userTrainingDetailsController) {
         this.userApplicationService = userApplicationService;
+        this.userTrainingDetailsController = userTrainingDetailsController;
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
@@ -33,12 +37,12 @@ public class UserApplicationsAdminController {
     }
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
-    public String getApplicationForUser(@PathVariable(value = "username") String username, Model model) {
+    public String getApplicationForUser(@PathVariable(value = "username") String username, Model model) throws IOException {
         UserApplication userApplication = this.userApplicationService.getByUsername(username);
         model.addAttribute("userApplication", userApplication);
         model.addAttribute("averageGrade", userApplication.getUserTrainingDetails().getAverageGrade());
-        //this.getCoursesAndGrades(userApplication.getUserTrainingDetails().getUserCoursesDetails())
-        model.addAttribute("coursesDetails", new HashMap<>());
+        model.addAttribute("coursesDetails",
+                this.getCoursesAndGrades(this.userTrainingDetailsController.getCourseDetailsForUsername(username)));
         return "/admin/users/applications/user-applications-view-more";
     }
 
