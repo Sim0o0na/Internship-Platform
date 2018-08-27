@@ -66,7 +66,7 @@ nav {
     text-align:center;
 }
 
-.fa, .fas, .far {
+.fa, .fas, .far, .fab {
     margin-left: 10px;
     margin-right: 10px;
 
@@ -102,8 +102,8 @@ footer {
 }
 
 .nav-footer > li, a, img:hover {
-    background: none;
-    color: orange;
+    color: darkblue;
+    text-decoration: none;
 }
 
 #footer-softuni-logo {
@@ -162,13 +162,8 @@ ul {
 .container {
     padding: 0;
     margin: 0;
-<<<<<<< HEAD
 }
 
 .float-panel {
     margin: 0px;
 }
-
-=======
-}
->>>>>>> parent of 196ac3a... Improvements on the home page and front-end structure

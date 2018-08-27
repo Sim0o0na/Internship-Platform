@@ -11,6 +11,9 @@
 #skills-and-qualities>h1 {
     text-decoration-color: white;
 }
+#skills {
+    margin: 3em 1em;
+}
 
 #skills>li {
     font-size: 25pt;
@@ -60,8 +63,8 @@
 }
 
 #wizard {
-    width: 500px;
-    height: 600px;
+    width: 30em;
+    height: 30em;
 }
 .img-responsive {
     margin: 0 auto;

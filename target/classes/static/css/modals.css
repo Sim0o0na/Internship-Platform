@@ -16,9 +16,11 @@
     margin: 0 auto;
 }
 
-#viewMoreModal{
+#view-more-dialog{
     background: white;
     height: 80%;
     width: 80%;
+    overflow: scroll;
+    margin: 0 auto;
 }
 

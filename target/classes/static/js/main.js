@@ -3,3 +3,8 @@ window.setTimeout(function() {
         $(this).remove();
     });
 }, 4000);
+
+$('#close-modal-btn').onclick(closeModal);
+function closeModal(){
+    $("#modalContent").parent().fadeOut();
+}

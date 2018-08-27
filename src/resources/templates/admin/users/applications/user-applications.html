@@ -17,7 +17,7 @@
                 <td class="block" th:text="${a.getEmail()}"></td>
                 <td>
                     <a class="btn form-btn btn-edit" th:onclick="'loadFullApplicationByUsername(\'' + ${a.getUsername()} + '\')'"
-                       id="view-more" data-toggle="modal" data-target="#viewMoreModal">View More</a>
+                       id="view-more" data-toggle="modal" data-target="#modalContent">View More</a>
                     <a class="btn form-btn btn-green" th:href="@{/admin/users/applications/approve(username=${a.getUsername()})}">Approve</a>
                     <a class="btn form-btn btn-delete" th:href="@{/admin/users/applications/reject(username=${a.getUsername()})}">Reject</a>
                 </td>

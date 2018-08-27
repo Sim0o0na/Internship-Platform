@@ -74,7 +74,7 @@ public class UserApplicationAdminController {
     public String getApplicationForUsername(@PathVariable(value = "username") String username, Model model) throws IOException {
         UserApplication userApplication = this.userApplicationService.getByUsername(username);
         model.addAttribute("userApplication", userApplication);
-        model.addAttribute("averageGrade", userApplication.getUserTrainingDetails().getAverageGrade());
+        model.addAttribute("averageGrade", String.format("%.2f",userApplication.getUserTrainingDetails().getAverageGrade()));
         model.addAttribute("coursesDetails",
                 this.getCoursesAndGrades(this.userTrainingDetailsController.getCourseDetailsForUsername(username)));
         return "/admin/users/applications/user-applications-view-more";
@@ -87,6 +87,4 @@ public class UserApplicationAdminController {
         }
         return result;
     }
-
-
 }

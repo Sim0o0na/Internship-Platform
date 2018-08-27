@@ -16,7 +16,6 @@ function loadLoginForm() {
         url: '/login',
         success: function (data) {
             $("#modalContent").html("").append(data);
-            console.log(data);
         }
     });
 }
