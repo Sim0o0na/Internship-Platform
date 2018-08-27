@@ -3,37 +3,8 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
+    <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
     <div class="container-fluid">
-        <nav class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="#">Smth</a></li>
-                <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li id="showNotifications" onclick="showNotificationBar()">
-                    <div class="notification-button">
-                        <i class="fa fa-flag"></i>
-                        <span class="button__badge" th:if="${notifications.size() > 0} "th:text="${notifications.size()}"></span>
-                    </div>
-                </li>
-                <li class="active">
-                    <a th:href="@{/tasks/all(user=null, partial=false)}"><i class="fas fa-tasks"></i>Available Tasks</a>
-                </li>
-                <li class="active">
-                    <a th:href="@{/tasks/all/(user=${user}, partial=false)}"><i class="fas fa-cogs"></i>My Tasks</a>
-                </li>
-                <li class="active">
-                    <a th:href="@{/payments/all}"><i class="far fa-money-bill-alt"></i>My Payments</a>
-                </li>
-                <li class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" th:text="'Hello, ' + ${user} + '!'"><span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
-                        <li><a href="/logout">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
         <div class="row notifications" id="notifications" th:object="${notifications}">
             <div class="notifications-container">
                 <div class="row notification mark-all">

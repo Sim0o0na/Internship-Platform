@@ -1,10 +1,7 @@
 package org.isp.users.services;
 
 import org.isp.applications.users.entity.UserApplication;
-import org.isp.users.models.dtos.UserAdminViewDto;
-import org.isp.users.models.dtos.UserDto;
-import org.isp.users.models.dtos.UserEditDto;
-import org.isp.users.models.dtos.UserRegisterDto;
+import org.isp.users.models.dtos.*;
 import org.isp.users.models.entities.Privilege;
 import org.isp.users.models.entities.Role;
 import org.isp.users.models.entities.User;
@@ -18,6 +15,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -141,6 +139,16 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
 
         Role role = this.roleRepository.findByName("ROLE_USER");
         user.getRoles().add(role);
+        this.userRepository.saveAndFlush(user);
+    }
+
+    @Override
+    public void changeUserPassword(String username, UserChangePasswordDto dto) {
+        User user = this.userRepository.findByUsername(username);
+        if (!dto.getNewPassword().equals(dto.getConfirmPassword())) {
+            throw new IllegalArgumentException("New password does not match confirm password!");
+        }
+        user.setPassword(PasswordEncoder.encodePassword(dto.getConfirmPassword()));
         this.userRepository.saveAndFlush(user);
     }
 }

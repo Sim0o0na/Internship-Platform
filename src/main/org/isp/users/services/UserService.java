@@ -1,10 +1,7 @@
 package org.isp.users.services;
 
 import org.isp.applications.users.entity.UserApplication;
-import org.isp.users.models.dtos.UserAdminViewDto;
-import org.isp.users.models.dtos.UserDto;
-import org.isp.users.models.dtos.UserEditDto;
-import org.isp.users.models.dtos.UserRegisterDto;
+import org.isp.users.models.dtos.*;
 import org.isp.users.models.entities.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -22,4 +19,6 @@ public interface UserService<T extends UserDto> extends UserDetailsService {
     List<UserAdminViewDto> fetchAllUsers();
 
     void createUser(UserApplication userApplication);
+
+    void changeUserPassword(String username, UserChangePasswordDto dto);
 }

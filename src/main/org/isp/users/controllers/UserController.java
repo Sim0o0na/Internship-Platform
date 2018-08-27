@@ -8,8 +8,10 @@ import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.util.UUID;
@@ -62,6 +64,18 @@ public class UserController {
     @GetMapping("/profile/changepassword")
     public String changePassword(Model model) throws Exception {
         return "/users/password-change-form";
+    }
+
+    @PostMapping("/profile/changepassword")
+    public ModelAndView changePassword(Principal principal, UserChangePasswordDto dto) throws Exception {
+        ModelAndView modelAndView = new ModelAndView("/users/profile", new ModelMap());
+        try {
+            this.userService.changeUserPassword(principal.getName(), dto);
+        } catch (Exception e) {
+            modelAndView.getModel().put("error", e.getMessage());
+        }
+        modelAndView.getModel().put("info", "Successfully changed password!");
+        return modelAndView;
     }
 
     @PostMapping("/edit/{username}")
