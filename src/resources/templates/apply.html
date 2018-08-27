@@ -2,21 +2,21 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
 <div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
-<div class="container-fluid">
     <div class="container-fluid">
-        <div class="float-panel" data-top="0" data-scroll="200">
-            <div class="content-area">
-                <nav class="header" id="header" th:include="~{fragments/navbar :: navbar}"></nav>
+        <div class="container-fluid">
+            <div class="float-panel" data-top="0" data-scroll="200">
+                <div class="content-area">
+                    <nav class="header" id="header" th:include="~{fragments/navbar :: navbar}"></nav>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <div class="container">
         <div th:include="~{fragments/information-partials :: info}"></div>
         <div class="row">
             <div class="col-md-6" id="wizard">
-                <img class="img-fluid" src="/img/wizard-with-wand.png"  width="600px" height="750px">
-            </div>
+            <img class="img-fluid" src="/img/wizard-with-wand.png"  width="600px" height="750px">
+        </div>
             <div class="col-md-6">
                 <form class="form-layout" id="apply-form" method="post" action="/users/applications/create">
                     <fieldset>
@@ -53,6 +53,10 @@
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
+    <div class="container-fluid">
+        <footer class="footer" th:include="~{fragments/footer :: footer}"></footer>
+    </div>
+    <div th:include="~{fragments/modal :: modal}"></div>
 </body>
 </html>

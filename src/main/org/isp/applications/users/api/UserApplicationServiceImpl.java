@@ -5,6 +5,7 @@ import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,6 +37,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
         }
         UserApplication userApplication = MappingUtil.convert(dto, UserApplication.class);
         userApplication.setStatus(UserApplicationStatus.WAITING);
+        userApplication.setAppliedOn(LocalDateTime.now());
         this.userApplicationRepository.saveAndFlush(userApplication);
     }
 

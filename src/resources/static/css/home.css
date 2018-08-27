@@ -13,7 +13,7 @@
 }
 
 #skills>li {
-    font-size: 25pt;
+    font-size: 20pt;
     color: white;
     height: 50px;
     margin: 10px 0;
@@ -44,10 +44,18 @@
     font-weight: 500;
 }
 
-.home-title {
+.home-title-white {
     font-size: 25pt;
     font-weight: 300;
     font-style: normal;
+    color:white;
+}
+
+home-title-blue {
+    font-size: 25pt;
+    font-weight: 300;
+    font-style: normal;
+    color:#162b40;
 }
 
 .home-description {
@@ -60,8 +68,8 @@
 }
 
 #wizard {
-    width: 500px;
-    height: 600px;
+    width: 30em;
+    height: 30em;
 }
 .img-responsive {
     margin: 0 auto;
