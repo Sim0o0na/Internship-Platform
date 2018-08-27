@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 @Component(value = "personalInfoParser")
 public class UserPersonalInfoParser implements UserInfoParser<String, String> {
-    private static final String EMAIL_PATTERN = "class=\"email lighter\">\\s*([a-zA-Z0-9]+@([a-zA-Z0-9.]+)+)\\s*<a";
+    private static final String EMAIL_PATTERN = "class=\"email lighter\">\\s*([a-zA-Z0-9_]+@([a-zA-Z0-9.]+)+)\\s*<";
 
     @Override
     public HashMap<String, String> getInfo(String username, String targetInfo) throws IOException {
@@ -29,8 +29,12 @@ public class UserPersonalInfoParser implements UserInfoParser<String, String> {
         Pattern pattern = Pattern.compile(patternType);
         Matcher matcher = pattern.matcher(userDetailsHtml);
         String parsedResult = "";
-        if (matcher.find()) {
-            parsedResult = matcher.group(1);
+        int counter = 0;
+        while (counter < 2) {
+            if (matcher.find()) {
+                parsedResult = matcher.group(1);
+            }
+            counter++;
         }
         HashMap<String, String> result = new HashMap<>();
         result.put(targetInfo, parsedResult);
