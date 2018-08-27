@@ -1,5 +1,6 @@
 package org.isp.users.services;
 
+import org.isp.applications.users.entity.UserApplication;
 import org.isp.users.models.dtos.UserAdminViewDto;
 import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.dtos.UserEditDto;
@@ -19,4 +20,6 @@ public interface UserService<T extends UserDto> extends UserDetailsService {
     void edit(String username, UserEditDto userEditDto);
 
     List<UserAdminViewDto> fetchAllUsers();
+
+    void createUser(UserApplication userApplication);
 }

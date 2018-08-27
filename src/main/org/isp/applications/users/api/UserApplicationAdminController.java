@@ -4,6 +4,8 @@ import org.isp.applications.training_details.controller.UserTrainingDetailsContr
 import org.isp.applications.training_details.entity.UserTrainingCourseDetails;
 import org.isp.applications.users.entity.UserApplication;
 import org.isp.applications.users.entity.UserApplicationStatus;
+import org.isp.users.controllers.UserController;
+import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,12 +25,15 @@ import java.util.List;
 public class UserApplicationAdminController {
     private UserApplicationService userApplicationService;
     private UserTrainingDetailsController userTrainingDetailsController;
+    private UserService userService;
 
     @Autowired
     public UserApplicationAdminController(UserApplicationService userApplicationService,
-                                          UserTrainingDetailsController userTrainingDetailsController) {
+                                          UserTrainingDetailsController userTrainingDetailsController,
+                                          UserService userService) {
         this.userApplicationService = userApplicationService;
         this.userTrainingDetailsController = userTrainingDetailsController;
+        this.userService = userService;
     }
 
     @RequestMapping(value = "/allwaiting", method = RequestMethod.GET)
@@ -49,6 +54,7 @@ public class UserApplicationAdminController {
         } catch (Exception e) {
             model.addAttribute("error", e.getMessage());
         }
+        this.userService.createUser(this.userApplicationService.getByUsername(username));
         model.addAttribute("info", String.format("User application for username \"%s\" approved!", username));
         return "/admin/admin-base";
     }

@@ -1,5 +1,6 @@
 package org.isp.users.services;
 
+import org.isp.applications.users.entity.UserApplication;
 import org.isp.users.models.dtos.UserAdminViewDto;
 import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.dtos.UserEditDto;
@@ -45,7 +46,7 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
     @Transactional
     public void register(UserRegisterDto userDto) {
         if (!userDto.getPassword().equals(userDto.getConfirmPassword())) {
-            return;
+            throw new IllegalArgumentException("Passwords don't match!");
         }
         User user = this.modelMapper.map(userDto, User.class);
         String encryptedPassword = PasswordEncoder.encodePassword(userDto.getPassword());
@@ -126,5 +127,20 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
         List<User> allUsers = this.userRepository.findAll();
         List<UserAdminViewDto> dtos = MappingUtil.convert(allUsers, UserAdminViewDto.class);
         return dtos;
+    }
+
+    @Override
+    public void createUser(UserApplication userApplication) {
+        User user = MappingUtil.convert(userApplication, User.class);
+        String encryptedPassword = PasswordEncoder.encodePassword(userApplication.getUsername());
+        user.setPassword(encryptedPassword);
+        user.setAccountNonExpired(true);
+        user.setAccountNonLocked(true);
+        user.setEnabled(true);
+        user.setCredentialsNonExpired(true);
+
+        Role role = this.roleRepository.findByName("ROLE_USER");
+        user.getRoles().add(role);
+        this.userRepository.saveAndFlush(user);
     }
 }

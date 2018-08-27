@@ -6,6 +6,7 @@ import org.isp.applications.training_details.entity.UserTrainingCourseDetails;
 import org.isp.applications.training_details.entity.UserTrainingDetails;
 import org.isp.applications.training_details.service.UserTrainingDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class UserTrainingDetailsController {
     private UserTrainingDetailsService userTrainingDetailsService;
 
     @Autowired
-    public UserTrainingDetailsController(UserInfoParser userInfoParser, UserTrainingDetailsService userTrainingDetailsService) {
+    public UserTrainingDetailsController(@Qualifier(value = "trainingInfoParser") UserInfoParser userInfoParser, UserTrainingDetailsService userTrainingDetailsService) {
         this.userInfoParser = userInfoParser;
         this.userTrainingDetailsService = userTrainingDetailsService;
     }

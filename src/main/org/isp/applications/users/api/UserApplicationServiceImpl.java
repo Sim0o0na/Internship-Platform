@@ -1,10 +1,13 @@
 package org.isp.applications.users.api;
 
+import org.isp.applications.training_details.parser.UserPersonalInfoParser;
 import org.isp.applications.users.entity.*;
 import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,10 +15,13 @@ import java.util.stream.Collectors;
 @Service
 public class UserApplicationServiceImpl implements UserApplicationService {
     private UserApplicationRepository userApplicationRepository;
+    private UserPersonalInfoParser userPersonalInfoParser;
 
     @Autowired
-    public UserApplicationServiceImpl(UserApplicationRepository userApplicationRepository) {
+    public UserApplicationServiceImpl(UserApplicationRepository userApplicationRepository,
+                                      @Qualifier(value = "personalInfoParser") UserPersonalInfoParser userPersonalInfoParser) {
         this.userApplicationRepository = userApplicationRepository;
+        this.userPersonalInfoParser = userPersonalInfoParser;
     }
 
     @Override
@@ -29,13 +35,14 @@ public class UserApplicationServiceImpl implements UserApplicationService {
     }
 
     @Override
-    public void create(UserApplicationDto dto) {
+    public void create(UserApplicationDto dto) throws IOException {
         if (this.userApplicationRepository.findByEmail(dto.getEmail()) != null) {
             throw new IllegalArgumentException("Application with this email already exists!");
         } else if (this.userApplicationRepository.findByUsername(dto.getUsername()) != null) {
             throw new IllegalArgumentException("Application with this username already exists!");
         }
         UserApplication userApplication = MappingUtil.convert(dto, UserApplication.class);
+        userApplication.setEmail(this.userPersonalInfoParser.getInfo(dto.getUsername()).get("email"));
         userApplication.setStatus(UserApplicationStatus.WAITING);
         userApplication.setAppliedOn(LocalDateTime.now());
         this.userApplicationRepository.saveAndFlush(userApplication);

@@ -1,9 +1,12 @@
 package org.isp.users.controllers;
 
+import org.isp.applications.users.entity.UserApplication;
+import org.isp.users.models.dtos.UserDto;
 import org.isp.users.models.dtos.UserEditDto;
 import org.isp.users.models.dtos.UserRegisterDto;
 import org.isp.base.services.api.ImageService;
 import org.isp.users.services.UserService;
+import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +18,7 @@ import java.security.Principal;
 import java.util.UUID;
 
 @Controller
-public class UsersController {
+public class UserController {
     @Autowired
     private UserService userService;
 
@@ -28,20 +31,20 @@ public class UsersController {
         return "users/login";
     }
 
-    @GetMapping("/register")
-    public String getRegisterPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
-        return "users/register";
-    }
-
-    @PostMapping("/register")
-    public String registerUser(@Valid @ModelAttribute UserRegisterDto userDto, BindingResult bindingResult){
-        if(bindingResult.hasErrors()){
-            return "/users/register";
-        }
-
-        this.userService.register(userDto);
-        return "redirect:/login";
-    }
+//    @GetMapping("/register")
+//    public String getRegisterPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
+//        return "users/register";
+//    }
+//
+//    @PostMapping("/register")
+//    public String registerUser(@Valid @ModelAttribute UserRegisterDto userDto, BindingResult bindingResult){
+//        if(bindingResult.hasErrors()){
+//            return "/users/register";
+//        }
+//
+//        this.userService.register(userDto);
+//        return "redirect:/login";
+//    }
 
     @GetMapping("/profile/{username}")
     public String profile(@PathVariable(name = "username") String username, Model model, Principal principal)

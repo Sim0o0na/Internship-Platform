@@ -13,11 +13,11 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin/users")
-public class UsersAdminController {
+public class UserAdminController {
     private UserService userService;
 
     @Autowired
-    public UsersAdminController(UserService userService) {
+    public UserAdminController(UserService userService) {
         this.userService = userService;
     }
 
