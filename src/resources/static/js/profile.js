@@ -1,5 +1,10 @@
-function label_value()
-{
-    var src = document.getElementById('in1').value;
-    document.getElementById('label1').innerHTML = "<span class='glyphicon glyphicon-upload'></span>"+src;
+$("#change-password-btn").click(loadChangePasswordForm);
+function loadChangePasswordForm() {
+    $.ajax({
+        type: 'GET',
+        url: '/profile/changepassword',
+        success: function (data) {
+            $("#modalContent").html("").append(data);
+        }
+    });
 }

@@ -35,9 +35,7 @@
                             <a th:href="${userDto.instagram}"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                    <div class="col-6" id="profile">
-                        <h1>Educational Information</h1>
-                    </div>
+                    <div class="col-6" id="kur"><h1>Educational Information</h1></div>
                 </div>
             </div>
         </div>
@@ -48,9 +46,6 @@
                   th:object="${userDto}" th:action="@{'/edit/' + ${user}}">
                 <fieldset>
                     <div class="row" id="edit-modal-content" align="center">
-                        <!--<div class="col-md-12 col-xs-12">-->
-                            <!--<img th:src="@{'/profile-pictures/' + ${userDto.getProfilePhotoLocation()}}" class="image-circle"/>-->
-                        <!--</div>-->
                         <div class="col-md-6 col-xs-6 form-field">
                             <h1>Personal Info</h1>
 
@@ -94,6 +89,7 @@
         </div>
     </div>
     <footer th:include="~{fragments/footer :: footer}" class="fixed-bottom"></footer>
+    <div th:include="~{fragments/modal :: modal}"></div>
 </div>
 </body>
 </html>

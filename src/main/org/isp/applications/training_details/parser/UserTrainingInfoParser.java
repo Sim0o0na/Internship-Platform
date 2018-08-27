@@ -1,8 +1,10 @@
 package org.isp.applications.training_details.parser;
 
 import javafx.util.Pair;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Component;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component(value = "trainingInfoParser")
-public class UserTrainingInfoParser implements UserInfoParser<String, Double> {
+public class UserTrainingInfoParser implements UserInfoParser {
     private static final String USER_ID_PATTERN = "for=\"Id\">Id<\\/label>\\s*([a-zA-Z0-9-]+)\\s*<\\/div>";
     private static final String ENROLLED_MODULES_PATTERN = "aria-controls=\"#module-([1-9]+)\">\\s*([a-zA-Z\\s(]+)";
     private static final String COURSES_IN_ENROLLED_MODULE_PATTERN = "aria-controls=\"#course-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
@@ -20,7 +22,8 @@ public class UserTrainingInfoParser implements UserInfoParser<String, Double> {
 
 
     @Override
-    public HashMap<String, Double> getInfo(String username) throws IOException {
+    public HashMap<String, Double> getInfo(String username, String targetInfo) throws IOException {
+        // TODO: Implement method corresponding to targetInfo
         String userId = this.getUserId(username);
         HashMap<String, Integer> enrolledModulesIdsForUser = this.getEnrolledModulesIdsForUser(username);
         HashMap<String, Integer> coursesIdsInEnrolledModules = this.getCoursesIdsInEnrolledModules(userId, enrolledModulesIdsForUser);

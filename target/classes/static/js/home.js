@@ -12,4 +12,3 @@ $(window).scroll(function() {
         $('.arrow').fadeIn(1000);
     }
 });
-

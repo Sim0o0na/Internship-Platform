@@ -10,22 +10,30 @@ import java.util.regex.Pattern;
 @Component(value = "personalInfoParser")
 public class UserPersonalInfoParser implements UserInfoParser<String, String> {
     private static final String EMAIL_PATTERN = "class=\"email lighter\">\\s*([a-zA-Z0-9]+@([a-zA-Z0-9.]+)+)\\s*<a";
+
     @Override
-    public HashMap<String, String> getInfo(String username) throws IOException {
+    public HashMap<String, String> getInfo(String username, String targetInfo) throws IOException {
         String userDetailsHtml;
         try {
             userDetailsHtml = HTTPRequestSender.sendRequest("https://softuni.bg/users/profile/show/" + username);
         } catch (Exception e) {
             throw new IllegalArgumentException("Username does not exist!");
         }
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+
+        String patternType = "";
+        switch (targetInfo.toLowerCase()) {
+            case "email":;
+                patternType = EMAIL_PATTERN;
+            break;
+        }
+        Pattern pattern = Pattern.compile(patternType);
         Matcher matcher = pattern.matcher(userDetailsHtml);
-        String userEmail = "";
+        String parsedResult = "";
         if (matcher.find()) {
-            userEmail = matcher.group(1);
+            parsedResult = matcher.group(1);
         }
         HashMap<String, String> result = new HashMap<>();
-        result.put("email", userEmail);
+        result.put(targetInfo, parsedResult);
         return result;
     }
 }

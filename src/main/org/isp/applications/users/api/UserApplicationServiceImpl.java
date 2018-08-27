@@ -42,7 +42,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
             throw new IllegalArgumentException("Application with this username already exists!");
         }
         UserApplication userApplication = MappingUtil.convert(dto, UserApplication.class);
-        userApplication.setEmail(this.userPersonalInfoParser.getInfo(dto.getUsername()).get("email"));
+        userApplication.setEmail(this.userPersonalInfoParser.getInfo(dto.getUsername(), "email").get("email"));
         userApplication.setStatus(UserApplicationStatus.WAITING);
         userApplication.setAppliedOn(LocalDateTime.now());
         this.userApplicationRepository.saveAndFlush(userApplication);

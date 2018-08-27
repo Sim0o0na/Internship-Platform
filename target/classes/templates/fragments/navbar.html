@@ -1,14 +1,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
 <nav th:fragment="navbar" class="navbar navbar-default navbar-fixed-top">
     <div id="navbar" class="collapse navbar-collapse">
-        <a href="/" class="header-image"><img src="/img/foundation.png" class="img-responsive" width="200px" height="100px"></a>
+        <img src="/img/foundation.png" class="img-responsive header-image" width="200px" height="100px">
         <ul class="nav navbar-nav navbar-left"><li><a href="/apply" id="apply">Кандидатствай</a></li></ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a data-toggle="modal" data-target="#formModal" onclick="loadLoginForm()">Вход</a></li>
+            <li><a data-toggle="modal" data-target="#modalContent" onclick="loadLoginForm()">Вход</a></li>
         </ul>
-        <!--<ul class="nav navbar-nav navbar-right">-->
-            <!--<li><a data-toggle="modal" data-target="#formModal" onclick="loadRegisterForm()">Регистрация</a></li>-->
-        <!--</ul>-->
     </div>
 </nav>
 
@@ -24,6 +21,8 @@
                 <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!<span class="caret"></span></button>
                 <ul class="dropdown-menu">
                     <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
+                    <li><a th:href="@{'/profile/changepassword'}" id="change-password-btn" onclick="loadChangePasswordForm()" data-toggle="modal" data-target="#modalContent"
+                    >Change Password</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>
             </li>

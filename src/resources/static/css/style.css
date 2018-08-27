@@ -66,7 +66,7 @@ nav {
     text-align:center;
 }
 
-.fa, .fas, .far, .fab {
+.fa, .fas, .far {
     margin-left: 10px;
     margin-right: 10px;
 
@@ -152,7 +152,6 @@ ul {
 
 .header-image {
     display: block;
-    float: left;
 }
 
 .container-fluid {
@@ -163,9 +162,13 @@ ul {
 .container {
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
 }
 
 .float-panel {
     margin: 0px;
 }
 
+=======
+}
+>>>>>>> parent of 196ac3a... Improvements on the home page and front-end structure

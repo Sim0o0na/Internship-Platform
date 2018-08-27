@@ -1,34 +1,34 @@
 package org.isp.users.controllers;
 
-import org.isp.applications.users.entity.UserApplication;
-import org.isp.users.models.dtos.UserDto;
+import org.isp.users.models.dtos.UserChangePasswordDto;
 import org.isp.users.models.dtos.UserEditDto;
 import org.isp.users.models.dtos.UserRegisterDto;
 import org.isp.base.services.api.ImageService;
 import org.isp.users.services.UserService;
-import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.security.Principal;
 import java.util.UUID;
 
 @Controller
 public class UserController {
-    @Autowired
     private UserService userService;
+    private ImageService imageService;
 
     @Autowired
-    private ImageService imageService;
+    public UserController(UserService userService, ImageService imageService) {
+        this.userService = userService;
+        this.imageService = imageService;
+    }
 
     @GetMapping("/login")
     public String getLoginPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
         model.addAttribute("userDto" , new UserRegisterDto());
-        return "users/login";
+        return "/users/login-form";
     }
 
 //    @GetMapping("/register")
@@ -59,12 +59,17 @@ public class UserController {
         return "users/profile";
     }
 
+    @GetMapping("/profile/changepassword")
+    public String changePassword(Model model) throws Exception {
+        return "/users/password-change-form";
+    }
+
     @PostMapping("/edit/{username}")
     public String editProfile(UserEditDto userEditDto,
                               @PathVariable(value="username") String username,
                               BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
-            return "users/register";
+            return "/users/register-form";
         }
 
         try {

@@ -39,7 +39,7 @@ public class UserTrainingDetailsController {
 
     public List<UserTrainingCourseDetails> parseCourseDetailsForUsername(String username) throws IOException {
         List<UserTrainingCourseDetails> coursesDetails = new ArrayList<>();
-        HashMap<String, Double> info = this.userInfoParser.getInfo(username);
+        HashMap<String, Double> info = this.userInfoParser.getInfo(username, "");
         for (String course : info.keySet()) {
             UserTrainingCourseDetails utcd = new UserTrainingCourseDetails(new TrainingCourse(course), info.get(course), username);
             coursesDetails.add(utcd);
