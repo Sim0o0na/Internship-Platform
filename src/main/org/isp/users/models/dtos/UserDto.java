@@ -18,6 +18,9 @@ public abstract class UserDto {
     @NotNull
     private String password;
 
+    @NotNull
+    public boolean isPasswordChanged;
+
     @Email
     @NotNull
     public String email;
@@ -122,5 +125,13 @@ public abstract class UserDto {
 
     public void setProfilePhotoLocation(String profilePhotoLocation) {
         this.profilePhotoLocation = profilePhotoLocation;
+    }
+
+    public boolean isPasswordChanged() {
+        return isPasswordChanged;
+    }
+
+    public void setIsPasswordChanged(boolean passwordChanged) {
+        isPasswordChanged = passwordChanged;
     }
 }

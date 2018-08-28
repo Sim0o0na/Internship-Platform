@@ -1,4 +1,4 @@
-$("#change-password-btn").click(loadChangePasswordForm);
+$(".change-password-btn").click(loadChangePasswordForm);
 function loadChangePasswordForm() {
     $.ajax({
         type: 'GET',

@@ -27,6 +27,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
+    @Column(name = "is_password_changed")
+    private boolean isPasswordChanged;
+
     private String firstName;
 
     private String lastName;
@@ -61,6 +64,7 @@ public class User implements UserDetails {
 
     public User() {
         this.roles = new HashSet<>();
+        this.isPasswordChanged = false;
     }
 
     public String getId() {
@@ -77,6 +81,14 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean getIsPasswordChanged() {
+        return isPasswordChanged;
+    }
+
+    public void setIsPasswordChanged(boolean passwordChanged) {
+        isPasswordChanged = passwordChanged;
     }
 
     public String getEmail() {

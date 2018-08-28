@@ -148,6 +148,7 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
             throw new IllegalArgumentException("New password does not match confirm password!");
         }
         user.setPassword(PasswordEncoder.encodePassword(dto.getConfirmPassword()));
+        user.setIsPasswordChanged(true);
         this.userRepository.saveAndFlush(user);
     }
 }

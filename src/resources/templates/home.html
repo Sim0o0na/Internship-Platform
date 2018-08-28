@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div th:include="~{fragments/head-elements :: base-head}"></div>
-<body>
+<body onload="checkForLogin()">
     <div id="container">
         <div id="header" >
             <div class="float-panel" data-top="0" data-scroll="200">

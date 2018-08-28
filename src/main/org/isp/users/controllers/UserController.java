@@ -53,9 +53,14 @@ public class UserController {
     @GetMapping("/profile/{username}")
     public String profile(@PathVariable(name = "username") String username,
                           @RequestParam(value = "info", defaultValue = "") String info,
-                          Model model, Principal principal)
+                          Model model, Principal principal,
+                          RedirectAttributes redirectAttributes)
             throws Exception {
-        if(!username.equals(principal.getName())) {
+        if (principal == null) {
+            redirectAttributes.addAttribute("showloginform", true);
+            return "redirect:/";
+        }
+        else if(!username.equals(principal.getName())) {
             return "redirect:/dashboard";
         }
         UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserEditDto.class);
