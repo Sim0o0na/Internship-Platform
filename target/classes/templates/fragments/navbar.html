@@ -57,17 +57,15 @@
             <li class="dropdown">
                 <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!<span class="caret"></span></button>
             </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
             <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
             <li></li>
-            <li class="active-change-password" th:if="${user.getIsPasswordChanged() == false}">
-                <div class="arrow bounce"><a class="fas fa-arrow-right fas-2x" href="#"></a></div>
-                <a th:href="@{'/profile/changepassword'}" class="btn change-password-btn btn-edit" onclick="loadChangePasswordForm()"
+            <li class="active-change-password" th:if="${userDto.isPasswordChanged == false}">
+                <!--<div class="arrow bounce"><a class="fas fa-arrow-right fas-2x" href="#"></a></div>-->
+                <a th:href="@{'/profile/changepassword'}" class="change-password-btn" style="color: orange;" onclick="loadChangePasswordForm()"
                    data-toggle="modal" data-target="#modalContent">Change Password</a>
             </li>
-            <li class="change-password" th:if="${user.getIsPasswordChanged() == true}">
-                <a th:href="@{'/profile/changepassword'}" class="btn change-password-btn btn-grey"
+            <li class="change-password" th:if="${userDto.isPasswordChanged == true}">
+                <a th:href="@{'/profile/changepassword'}" class="change-password-btn"
                    onclick="loadChangePasswordForm()"
                    data-toggle="modal" data-target="#modalContent">Change Password</a>
             </li>

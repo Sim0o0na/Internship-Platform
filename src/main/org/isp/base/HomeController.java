@@ -9,22 +9,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
 import java.security.Principal;
 
 @Controller
 public class HomeController {
-    private TaskService taskService;
     private NotificationService notificationService;
 
     @Autowired
-    public HomeController(TaskService taskService, NotificationService notificationService) {
-        this.taskService = taskService;
+    public HomeController(NotificationService notificationService) {
         this.notificationService = notificationService;
     }
 
     @GetMapping("/")
-    public String index(Model model, Principal principal) throws IOException {
+    public String index(Principal principal) {
         if (principal != null) {
            return "redirect:/dashboard";
         }
@@ -32,12 +29,12 @@ public class HomeController {
     }
 
     @GetMapping("/projects")
-    public String projectsPage(Model model) throws IOException {
+    public String projectsPage() {
         return "projects";
     }
 
     @GetMapping("/dashboard")
-    public ModelAndView dashboard(Principal principal, Model model) throws IOException {
+    public ModelAndView dashboard(Principal principal, Model model) {
         ModelAndView modelAndView = new ModelAndView("dashboard");
         try {
             modelAndView.getModel().putIfAbsent("user", principal.getName());

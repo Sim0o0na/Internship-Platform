@@ -25,7 +25,6 @@ function checkForLogin() {
     }
 }
 
-
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');

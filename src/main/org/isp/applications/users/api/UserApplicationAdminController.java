@@ -4,7 +4,6 @@ import org.isp.applications.training_details.controller.UserTrainingDetailsContr
 import org.isp.applications.training_details.entity.UserTrainingCourseDetails;
 import org.isp.applications.users.entity.UserApplication;
 import org.isp.applications.users.entity.UserApplicationStatus;
-import org.isp.users.controllers.UserController;
 import org.isp.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

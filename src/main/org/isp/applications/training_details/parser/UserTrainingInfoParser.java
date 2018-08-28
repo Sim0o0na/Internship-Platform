@@ -1,10 +1,8 @@
 package org.isp.applications.training_details.parser;
 
 import javafx.util.Pair;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Component;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
