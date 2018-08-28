@@ -2,22 +2,34 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
-    <div id="container">
+    <div class="container">
         <div id="header">
-            <nav class="header"  th:include="~{fragments/navbar :: navbar}"></nav>
+            <nav class="header" th:include="~{fragments/navbar :: navbar}"></nav>
         </div>
         <div id="body">
             <div class="row-12">
-                <div class="col-md-6">
+                <div class="col-md-6" id="information-text">
                     <h1>Projects will be announced soon!</h1>
-                    <h2>Stay in touch</h2>
                 </div>
                 <div class="col-md-6">
-                    <img src="/img/gifs/coming-soon-dinosaur.gif">
+                    <div id="mount"></div>
+                </div>
+                <div class="col-md-12 go-home">
+                    <div class="arrow bounce"><a class="fa fa-arrow-down fa-2x" href="#"></a></div>
+                    <div class="center go-home-btn"><a href="/" class="btn btn-edit center">Go Home</a></div>
                 </div>
             </div>
             <div th:include="~{fragments/modal :: modal}"></div>
         </div>
     </div>
 </body>
+<script src="https://code.haiku.ai/scripts/core/HaikuCore.3.2.16.min.js"></script>
+<script src="https://cdn.haiku.ai/e28364e7-e882-4230-a504-d245344d06b4/dcb6f00a4a46e8561c2c37771aa7dd84584bf4b9/index.embed.js"></script>
+<script>
+    var component = HaikuComponentEmbed_nflores823_TypingCat(
+        document.getElementById('mount'),
+        {loop: true}
+    );
+    var timeline = component.getDefaultTimeline();
+</script>
 </html>

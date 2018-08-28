@@ -172,3 +172,21 @@ ul {
 .float-panel {
     margin: 0px;
 }
+
+
+/* error, not finished or whitelabel pages */
+
+#information-text {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.go-home {
+    text-align:center;
+}
+
+.go-home-btn {
+    margin:auto;
+}

@@ -68,15 +68,12 @@ public class UserController {
     }
 
     @GetMapping("/profile/changepassword")
-    public String changePassword(Model model) throws Exception {
+    public String changePassword() {
         return "/users/password-change-form";
     }
 
     @PostMapping("/profile/changepassword")
-    public String changePassword(Principal principal,
-                                 UserChangePasswordDto dto,
-                                 RedirectAttributes redirectAttrs,
-                                 Model model) throws Exception {
+    public String changePassword(Principal principal, UserChangePasswordDto dto, RedirectAttributes redirectAttrs) {
         try {
             this.userService.changeUserPassword(principal.getName(), dto);
         } catch (Exception e) {

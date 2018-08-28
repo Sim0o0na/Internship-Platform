@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div th:include="~{fragments/head-elements :: base-head}"></div>
-<style>
-    #something-wrong-h {
-        height: 10em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .go-home {
-        text-align:center;
-    }
-
-    .go-home-btn {
-        margin:auto;
-    }
-</style>
 <body>
     <div class="container">
         <div id="header">
-            <nav class="header"  th:include="~{fragments/navbar :: navbar}"></nav>
+            <nav class="header" th:include="~{fragments/navbar :: navbar}"></nav>
         </div>
         <div id="body">
             <div class="row-12">
-                <div class="col-md-6"><h1 id="something-wrong-h"><b>Something went wrong!</b></h1></div>
+                <div class="col-md-6"><h1 id="information-text"><b>Something went wrong!</b></h1></div>
                 <div class="col-md-6">
                     <img src="/img/gifs/404-cat.gif">
                 </div>

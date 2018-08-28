@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 
@@ -27,23 +28,20 @@ public class UserApplicationController {
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public ModelAndView create(@Valid @ModelAttribute UserApplicationDto userApplicationDto) throws Exception {
-        String view = "home";
-        ModelAndView modelAndView = new ModelAndView(view, new ModelMap());
+    public String create(@Valid @ModelAttribute UserApplicationDto userApplicationDto,
+                         RedirectAttributes redirectAttributes) {
         if (this.userApplicationService.checkIfExists(userApplicationDto)) {
-            modelAndView.getModel().put("error", "User application with this username or email already exists!");
-            modelAndView.setViewName("apply");
-            return modelAndView;
+            redirectAttributes.addFlashAttribute("info", "User application with this username or email already exists!");
+            return "redirect:/apply";
         }
         try {
             this.userApplicationService.create(userApplicationDto);
             this.userDetailsController.createUserTrainingDetails(userApplicationDto.getUsername());
-            modelAndView.getModel().put("info", "Вие успешно кандидатствахте за стажантската програма на СофтУни! Очаквайте отговор съвсем скоро!");
         } catch (Exception e) {
-            modelAndView.getModel().put("error", e.getMessage());
-            view = "apply";
+            redirectAttributes.addFlashAttribute("info", e.getMessage());
+            return "redirect:/apply";
         }
-        modelAndView.setViewName(view);
-        return modelAndView;
+        redirectAttributes.addFlashAttribute("info", "You have successfully applied for the internship program!");
+        return "redirect:/";
     }
 }
