@@ -12,6 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.security.Principal;
 import java.util.UUID;
@@ -49,13 +51,17 @@ public class UserController {
 //    }
 
     @GetMapping("/profile/{username}")
-    public String profile(@PathVariable(name = "username") String username, Model model, Principal principal)
+    public String profile(@PathVariable(name = "username") String username,
+                          @RequestParam(value = "info", defaultValue = "") String info,
+                          Model model, Principal principal)
             throws Exception {
-
         if(!username.equals(principal.getName())) {
             return "redirect:/dashboard";
         }
         UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserEditDto.class);
+        if (!info.equals("")) {
+            model.addAttribute("info", info);
+        }
         model.addAttribute("userDto", userDto);
         model.addAttribute("user", principal.getName());
         return "users/profile";
@@ -67,15 +73,17 @@ public class UserController {
     }
 
     @PostMapping("/profile/changepassword")
-    public ModelAndView changePassword(Principal principal, UserChangePasswordDto dto) throws Exception {
-        ModelAndView modelAndView = new ModelAndView("/users/profile", new ModelMap());
+    public String changePassword(Principal principal,
+                                 UserChangePasswordDto dto,
+                                 RedirectAttributes redirectAttrs,
+                                 Model model) throws Exception {
         try {
             this.userService.changeUserPassword(principal.getName(), dto);
         } catch (Exception e) {
-            modelAndView.getModel().put("error", e.getMessage());
+            redirectAttrs.addAttribute("error", e.getMessage());
         }
-        modelAndView.getModel().put("info", "Successfully changed password!");
-        return modelAndView;
+        redirectAttrs.addFlashAttribute("info", "Successfully changed password!");
+        return "redirect:/profile/" + principal.getName();
     }
 
     @PostMapping("/edit/{username}")

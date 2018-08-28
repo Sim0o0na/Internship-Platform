@@ -52,7 +52,6 @@
                 <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!<span class="caret"></span></button>
                 <ul class="dropdown-menu">
                     <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
-                    <li><p>KUR</p></li>
                     <li><a th:href="@{'/profile/changepassword'}" id="change-password-btn" onclick="loadChangePasswordForm()" data-toggle="modal" data-target="#modalContent">Change Password</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>

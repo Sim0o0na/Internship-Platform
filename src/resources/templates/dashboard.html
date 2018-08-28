@@ -1,53 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
-    <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
-    <div class="container-fluid">
-        <div class="row notifications" id="notifications" th:object="${notifications}">
-            <div class="notifications-container">
-                <div class="row notification mark-all">
-                    <div class="col-md-6 text-left" ><a href="#" class="text-right">Mark All Read</a></div>
-                    <div class="col-md-6 text-right"><i class="fas fa-times" id="hideNotificationBar" onclick="hideNotificationBar()"></i></div>
-                </div>
-            </div>
-            <div class="row" th:each="n : ${notifications}">
-                <div th:switch="${notifcation.getType()}">
-                    <div th:case="'NEW_TASK'" th:include="~{fragments/notifications :: new-task}"></div>
-                    <div th:case="'INFO'" th:include="~{fragments/notifications :: info}"></div>
-                    <div th:case="'ALERT'" th:include="~{fragments/notifications :: alert}"></div>
-                    <div th:case="'PAYMENT'" th:include="~{fragments/notifications :: payment}"></div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="row-12">
-                <div class="col-md-6 d-main-element">
-                    <div class="row-6" th:if="${mostRecentTask == null}">
-                        <div class="col-md-12 task-info">
-                            <h1>There are currently no active tasks.</h1>
-                            <a th:href="@{/tasks/all(user=null, partial=false)}" class="form-btn btn-edit pull-right">See All</a>
+<div id="container">
+    <div id="header">
+        <nav th:include="~{fragments/navbar :: navbar-logged-in}"></nav>
+        <div th:include="~{fragments/notifications :: notifications-bar}"></div>
+    </div>
+    <div id="body">
+        <div class="body-container">
+            <div class="container">
+                <div class="row-12">
+                    <div class="col-md-6 d-main-element">
+                        <div class="row-6" th:if="${mostRecentTask == null}">
+                            <div class="col-md-12 task-info">
+                                <h1>There are currently no active tasks.</h1>
+                                <a th:href="@{/tasks/all(user=null, partial=false)}" class="form-btn btn-edit pull-right">See All</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row-6" th:if="${mostRecentTask}">
-                        <h3>Most recent task</h3>
-                        <img src="/img/task.png" class="col-md-3 img-responsive d-icon">
-                        <div class="col-md-3 task-info">
-                            <h3>Assignment</h3><p th:text="${mostRecentTask.title}"></p>
-                            <h4>Due Date</h4><p th:text="${#dates.format(mostRecentTask.dueDate, 'dd-MM-yyyy')}"></p>
-                            <a th:href="@{/tasks/all/(user=${user}, partial=false)}">See All</a>
+                        <div class="row-6" th:if="${mostRecentTask}">
+                            <h3>Most recent task</h3>
+                            <div class="col-md-6 task-info">
+                                <h3>Assignment</h3><p th:text="${mostRecentTask.title}"></p>
+                                <h4>Due Date</h4><p th:text="${#dates.format(mostRecentTask.dueDate, 'dd-MM-yyyy')}"></p>
+                                <a th:href="@{/tasks/all/(user=${user}, partial=false)}">See All</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-main-element">
                     <h3>My payments</h3>
-                    <div class="row-md-6 d-main-element">
-                        <img src="/img/money-flat.png" class="col-md-3 img-responsive d-icon">
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="footer">
+        <footer th:include="~{fragments/footer :: footer}"></footer>
+    </div>
+</div>
 </body>
 </html>

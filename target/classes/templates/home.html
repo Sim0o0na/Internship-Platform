@@ -2,14 +2,18 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
-    <div id="home-nav" class="container-fluid">
-        <div class="float-panel" data-top="0" data-scroll="200">
-            <div class="content-area">
-                <nav class="header" id="header" th:include="~{fragments/navbar :: navbar}"></nav>
-                <div th:include="~{fragments/information-partials :: info}"></div>
+    <div id="container">
+        <div id="header" >
+            <div class="float-panel" data-top="0" data-scroll="200">
+                <div class="content-area">
+                    <nav class="header"  th:include="~{fragments/navbar :: navbar}"></nav>
+                    <div th:include="~{fragments/information-partials :: info}"></div>
+                </div>
             </div>
-        </div>
-            <div class="container-fluid home-container">
+
+                </div>
+        <div id="body">
+            <div class="body-container">
                 <div class="container" id="home-carousel">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
@@ -84,10 +88,7 @@
                         </div>
                     </div>
                     <div class="row text-center">
-                        <div class="col-lg-4 col-md-4 col-sm-2">
-                            <i class="home-icon fas fa-question"></i>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-sm-10">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
                             <h1 class="home-title text-right">Who it is intended for?</h1>
                             <p class="home-description text-right">Every Software University student who graduated the <b>Programming Fundamentals</b>
                                 course successfully <b>6.00</b> can <a href="/apply">apply</a>.</p>
@@ -98,8 +99,11 @@
                     </div>
                 </div>
             </div>
+            <div th:include="~{fragments/modal :: modal}"></div>
+    </div>
+        <div id="footer">
+            <footer th:include="~{fragments/footer :: footer}"></footer>
         </div>
-        <footer th:include="~{fragments/footer :: footer}"></footer>
-        <div th:include="~{fragments/modal :: modal}"></div>
+    </div>
 </body>
 </html>

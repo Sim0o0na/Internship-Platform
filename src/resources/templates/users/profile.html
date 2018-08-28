@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script th:src="@{/js/profile.js}"></script>
-    <link rel="stylesheet" href="../../static/css/style.css" th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" href="../../static/css/forms.css" th:href="@{/css/forms.css}"/>
-    <link rel="stylesheet" href="../../static/css/profile.css" th:href="@{/css/profile.css}"/>
-    <link rel="stylesheet" th:href="@{/css/modals.css}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
-</head>
+<div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
 <div>
     <nav th:include="~{fragments/navbar :: navbar-user-profile}"></nav>
+    <div th:include="~{fragments/information-partials :: info}"></div>
     <div class="container" th:object="${userDto}">
         <div class="row justify-content-center">
             <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center">
@@ -87,7 +76,7 @@
             </form>
         </div>
     </div>
-    <footer th:include="~{fragments/footer :: footer}" class="fixed-bottom"></footer>
+    <footer th:include="~{fragments/footer :: footer}" class="footer"></footer>
     <div th:include="~{fragments/modal :: modal}"></div>
 </div>
 </body>

@@ -18,3 +18,20 @@
     <div class="col-md-2 notification-icon notification-new-task text-center"><i class="fas fa-plus"></i></div>
     <div class="col-md-8 notification-new-task-body">This is an example payment message <a href="$" class="mark-read">Mark Read</a></div>
 </div>
+
+<div class="row notifications" id="notifications" th:fragment="notifications-bar" th:object="${notifications}">
+    <div class="notifications-container">
+        <div class="row notification mark-all">
+            <div class="col-md-6 text-left" ><a href="#" class="text-right">Mark All Read</a></div>
+            <div class="col-md-6 text-right"><i class="fas fa-times" id="hideNotificationBar" onclick="hideNotificationBar()"></i></div>
+        </div>
+    </div>
+    <div class="row" th:each="n : ${notifications}">
+        <div th:switch="${notifcation.getType()}">
+            <div th:case="'NEW_TASK'" th:include="~{fragments/notifications :: new-task}"></div>
+            <div th:case="'INFO'" th:include="~{fragments/notifications :: info}"></div>
+            <div th:case="'ALERT'" th:include="~{fragments/notifications :: alert}"></div>
+            <div th:case="'PAYMENT'" th:include="~{fragments/notifications :: payment}"></div>
+        </div>
+    </div>
+</div>

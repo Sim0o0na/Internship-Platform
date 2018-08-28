@@ -62,7 +62,6 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
     @Override
     public T findByUsername(String username, Class<T> dtoClass) throws Exception {
         User user = this.userRepository.findByUsername(username);
-        System.out.println(dtoClass);
         Constructor<?> constructor = Arrays.stream(dtoClass.getConstructors()).filter(c -> c.getParameterCount() == 0).findFirst().get();
         T dto = (T) constructor.newInstance();
         dto = MappingUtil.convert(user, dtoClass);

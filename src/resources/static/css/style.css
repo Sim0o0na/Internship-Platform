@@ -1,9 +1,39 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
-
 *{
     font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin:0;
+    height:100%;
+}
+
+#container {
+    width: 100%;
+    min-height:100%;
+    position:relative;
+}
+
+.body-container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+#body {
+    padding-bottom:20em;   /* Height of the footer */
+}
+#footer {
+    bottom:0;
+    width:100%;
+}
+
+footer {
+    background:url(/img/softuni-nakov-inspiration-lab.jpg);
+    background-size: cover;
+    height: 20em;
 }
 
 .error {
@@ -17,6 +47,10 @@
 
 button {
     border:none;
+}
+
+.header-image {
+    display: block;
 }
 
 nav {
@@ -66,36 +100,18 @@ nav {
     text-align:center;
 }
 
-.fa, .fas, .far, .fab {
-    margin-left: 10px;
-    margin-right: 10px;
-
-}
-.nav-img {
-    width: 200px;
-    height: 50px;
-}
-
-.container-dashboard {
-    margin-top: 10px;
-}
-.dashboard-row {
-    text-align: center;
-    color: white;
-}
-
-footer {
-    background:url(/img/softuni-nakov-inspiration-lab.jpg);
-    background-size: cover;
-    height: 20em;
-}
-
 .nav-footer {
     background-color:rgba(0, 0, 0, 0.1);
     border: none;
     z-index: 100;
     height: 100%;
 }
+
+.nav-img {
+    width: 200px;
+    height: 50px;
+}
+
 .nav-footer > li > a {
     font-size: 20pt;
     color: white;
@@ -106,16 +122,19 @@ footer {
     text-decoration: none;
 }
 
-#footer-softuni-logo {
-    width: 8em;
-    height: 3em;
-    background: none;
-    margin-right: 1em;
-    margin-left: 1em;
+.fa, .fas, .far, .fab {
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
-#footer-softuni-logo:hover {
-    background: none;
+.container-dashboard {
+    margin-top: 10px;
+}
+
+.dashboard-row {
+    text-align: center;
+    color: white;
 }
 
 ul {
@@ -148,20 +167,6 @@ ul {
 
 .dropdown-menu>li>a:hover{
     color: orange;
-}
-
-.header-image {
-    display: block;
-}
-
-.container-fluid {
-    padding: 0;
-    margin: 0;
-}
-
-.container {
-    padding: 0;
-    margin: 0;
 }
 
 .float-panel {
