@@ -91,14 +91,21 @@ nav {
 .navbar-light .nav > li {
     float:none;
     display:inline-block;
-    *display:inline; /* ie7 fix */
-    *zoom:1; /* hasLayout ie7 trigger */
     vertical-align: top;
 }
 
 .navbar-inner {
-    text-align:center;
+    text-align: center;
 }
+
+.navbar-left {
+    margin-left: 10em;
+}
+
+.navbar-right {
+    margin-right: 10em;
+}
+
 
 .nav-footer {
     background-color:rgba(0, 0, 0, 0.1);
@@ -123,9 +130,7 @@ nav {
 }
 
 .fa, .fas, .far, .fab {
-    margin-left: 10px;
-    margin-right: 10px;
-
+    margin-right: 0.5em;
 }
 
 .container-dashboard {

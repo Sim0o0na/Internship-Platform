@@ -8,3 +8,11 @@ $('#close-modal-btn').onclick(closeModal);
 function closeModal(){
     $("#modalContent").parent().fadeOut();
 }
+
+
+$('#login-btn').on('click', validateLoginUrl);
+function validateLoginUrl() {
+    var currentRequestUrl = $(location).attr('href');
+    console.log(currentRequestUrl)
+}
+
