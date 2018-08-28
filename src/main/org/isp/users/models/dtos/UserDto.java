@@ -29,6 +29,8 @@ public abstract class UserDto {
 
     public String instagram;
 
+    public String linkedIn;
+
     public String skype;
 
     public MultipartFile profilePhoto;
@@ -133,5 +135,17 @@ public abstract class UserDto {
 
     public void setIsPasswordChanged(boolean passwordChanged) {
         isPasswordChanged = passwordChanged;
+    }
+
+    public void setPasswordChanged(boolean passwordChanged) {
+        isPasswordChanged = passwordChanged;
+    }
+
+    public String getLinkedIn() {
+        return linkedIn;
+    }
+
+    public void setLinkedIn(String linkedIn) {
+        this.linkedIn = linkedIn;
     }
 }

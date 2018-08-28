@@ -39,6 +39,14 @@ form > a:hover {
     padding:10px;
 }
 
+.modal-form > fieldset {
+    background: white;
+}
+
+.control > input:focus {
+    border-bottom: #025aa5 2px solid;
+}
+
 .form-control {
     color: #000000 !important;
     font-size: 25px;

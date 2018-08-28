@@ -47,6 +47,15 @@ public class UserController {
 //        return "redirect:/login";
 //    }
 
+    @GetMapping("/profile")
+    public String profile(Principal principal, RedirectAttributes redirectAttributes, Model model) throws Exception {
+        if (principal == null) {
+            redirectAttributes.addAttribute("showloginform", true);
+            return "redirect:/";
+        }
+        return "redirect:/profile/" + principal.getName();
+    }
+
     @GetMapping("/profile/{username}")
     public String profile(@PathVariable(name = "username") String username,
                           @RequestParam(value = "info", defaultValue = "") String info,
@@ -84,9 +93,16 @@ public class UserController {
         return "redirect:/profile/" + principal.getName();
     }
 
-    @PostMapping("/edit/{username}")
+    @GetMapping("/profile/edit")
+    public String editForm(Model model, Principal principal) throws Exception {
+        UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserEditDto.class);
+        model.addAttribute("userDto", userDto);
+        return "/users/user-edit-form";
+    }
+
+    @PostMapping("/edit")
     public String editProfile(UserEditDto userEditDto,
-                              @PathVariable(value="username") String username,
+                              Principal principal,
                               BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
             return "/users/register-form";
@@ -99,7 +115,7 @@ public class UserController {
         } catch (Exception e) {
             System.out.println("could not upload profile photo");
         }
-        this.userService.edit(username, userEditDto);
-        return "redirect:/profile/" + username;
+        this.userService.edit(principal.getName(), userEditDto);
+        return "redirect:/profile/" + principal.getName();
     }
 }

@@ -8,3 +8,14 @@ function loadChangePasswordForm() {
         }
     });
 }
+
+$("#load-edit-form-btn").click(loadUserEditForm);
+function loadUserEditForm() {
+    $.ajax({
+        type: 'GET',
+        url: '/profile/edit',
+        success: function (data) {
+            $("#modalContent").html("").append(data);
+        }
+    });
+}

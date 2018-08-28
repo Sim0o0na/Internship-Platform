@@ -13,67 +13,19 @@
                         <h1>Personal Information</h1>
                         <h5 th:text="${userDto.firstName} + ' ' + ${userDto.lastName}"></h5>
                         <h3 th:text="${userDto.email}"></h3>
-
                         <hr>
-                        <button type="button" class="btn form-btn" data-toggle="modal" data-target="#editModal">Edit</button>
+                        <button type="button" class="btn form-btn" data-toggle="modal" data-target="#modalContent"
+                                id="load-edit-form-btn" onclick="loadUserEditForm()">Edit</button>
                         <hr>
                         <span>User description</span>
                         <div class="social">
-                            <a th:href="${userDto.facebook}"><i class="fab fa-facebook"></i></a>
-                            <a th:href="${userDto.instagram}"><i class="fab fa-instagram"></i></a>
+                            <a th:if="${userDto.facebook != ''}" th:href="'facebook.com/' + ${userDto.facebook}"><i class="fab fa-facebook"></i></a>
+                            <a th:if="${userDto.instagram != ''}" th:href="'instagram.com/' + ${userDto.instagram}"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-6" id="kur"><h1>Educational Information</h1></div>
                 </div>
             </div>
-        </div>
-
-        <div class="modal fade"  id="editModal" role="dialog">
-            <p>Edit your profile</p>
-            <form class="modal-form" method="post" autocomplete="off" enctype="multipart/form-data"
-                  th:object="${userDto}" th:action="@{'/edit/' + ${user}}">
-                <fieldset>
-                    <div class="row" id="edit-modal-content" align="center">
-                        <div class="col-md-6 col-xs-6 form-field">
-                            <h1>Personal Info</h1>
-
-                            <div class="control">
-                                <input type="file" name="file" id="file" class="input-file" />
-                                <label for="file" class="btn form-btn">Choose a file</label>
-                            </div>
-
-                            <div class="control">
-                                <input type="text" title="email" placeholder="Email" th:field="*{email}" class="form-control"/>
-                            </div>
-
-                            <div class="control">
-                                <input type="text" title="firstName" placeholder="First Name" th:field="*{firstName}" class="form-control"/>
-                            </div>
-
-                            <div class="control">
-                                <input type="text" title="lastName" placeholder="Last Name" th:field="*{lastName}" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xs-6 form-field">
-                            <h1>Social Media Info</h1>
-                            <div class="control">
-                                <input type="text" title="facebook" th:field="*{facebook}" placeholder="Facebook" class="form-control"/>
-                            </div>
-
-                            <div class="control">
-                                <input type="text" title="instagram" th:field="*{instagram}"  placeholder="Instagram" class="form-control"/>
-                            </div>
-
-                            <div class="control">
-                                <input type="text" title="skype" th:field="*{skype}" placeholder="Skype" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-xs-12">
-                            <button class="btn form-btn" type="submit">SAVE CHANGES</button>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
         </div>
     </div>
     <footer th:include="~{fragments/footer :: footer}" class="footer"></footer>

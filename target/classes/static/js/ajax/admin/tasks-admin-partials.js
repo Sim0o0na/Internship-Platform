@@ -27,7 +27,7 @@ function loadCreateTaskForm() {
         type: 'GET',
         url: '/admin/tasks/create',
         success: function (data) {
-            $("#taskPanel").html("").append(data);
+            $("#modalContent").html("").append(data);
         }
     });
 }

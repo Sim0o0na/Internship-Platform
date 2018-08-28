@@ -61,19 +61,19 @@ public class TasksAdminController {
         return "redirect:/admin/tasks/all";
     }
 
-    @RequestMapping(value = "/createUserTrainingDetails", method = RequestMethod.GET)
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
     private String createPanel(Model model) {
         model.addAttribute("taskTypes", TaskType.types(TaskType.class));
         model.addAttribute("taskDto", new TaskCreateDto());
-        return "/admin/tasks/createUserTrainingDetails-task-form";
+        return "/admin/tasks/create-task-form";
     }
 
-    @RequestMapping(value = "/createUserTrainingDetails", method = RequestMethod.POST)
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
     private String createTask(@Valid @ModelAttribute TaskCreateDto taskCreateDto,
                               BindingResult bindingResult,
                               Model model) throws ParseException {
         if (bindingResult.hasErrors()) {
-            model.addAttribute("error", "Kur tate banica");
+            model.addAttribute("error", "There was an error creating this task!");
         } else {
             this.taskService.create(taskCreateDto);
         }

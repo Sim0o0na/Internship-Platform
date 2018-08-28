@@ -1,21 +1,17 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<nav class="navbar-light">
-    <div class="navbar-inner">
-        <div class="container">
-            <ul class="nav navbar-center">
-                <li class="active" data-toggle="collapse">
-                    <a id="allTasks" onclick="loadAllTasksInPanel()"><i class="fa fa-th-list"></i>See all tasks</a>
-                </li>
-                <li class="active" data-toggle="collapse">
-                    <a id="taskApplications" onclick="loadTaskApplicationsPanel()"><i class="fa fa-th-list"></i>Tasks Applications</a>
-                </li>
-                <li class="active" data-toggle="collapse">
-                    <a id="createTask" onclick="loadCreateTaskForm()"><i class="fa fa-plus"></i>Create a task</a>
-                </li>
-                <li><a class="active" id="tasksSearchPanelBtn" onclick="showSearchBar()">Search Tasks</a></li>
-            </ul>
-        </div>
-    </div>
+<nav class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-center">
+        <li class="active" data-toggle="collapse">
+            <a id="allTasks" onclick="loadAllTasksInPanel()"><i class="fa fa-th-list"></i>See all tasks</a>
+        </li>
+        <li class="active" data-toggle="collapse">
+            <a id="taskApplications" onclick="loadTaskApplicationsPanel()"><i class="fa fa-th-list"></i>Tasks Applications</a>
+        </li>
+        <li class="active" data-toggle="collapse">
+            <a id="createTask" data-toggle="modal" data-target="#modalContent" onclick="loadCreateTaskForm()"><i class="fa fa-plus"></i>Create a task</a>
+        </li>
+        <li><a class="active" id="tasksSearchPanelBtn" onclick="showSearchBar()">Search Tasks</a></li>
+    </ul>
 </nav>
 <div id="taskPanel">
     <div id="tasksSearchBar" class="row">

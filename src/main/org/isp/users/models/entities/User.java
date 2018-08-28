@@ -38,6 +38,8 @@ public class User implements UserDetails {
 
     private String instagram;
 
+    private String linkedIn;
+
     private String skype;
 
     private String profilePhotoLocation;
@@ -73,6 +75,16 @@ public class User implements UserDetails {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
     }
 
     public void setUsername(String username) {
@@ -139,14 +151,12 @@ public class User implements UserDetails {
         this.skype = skype;
     }
 
-    @Override
-    public String getPassword() {
-        return password;
+    public String getLinkedIn() {
+        return linkedIn;
     }
 
-    @Override
-    public String getUsername() {
-        return username;
+    public void setLinkedIn(String linkedIn) {
+        this.linkedIn = linkedIn;
     }
 
     public String getProfilePhotoLocation() {
