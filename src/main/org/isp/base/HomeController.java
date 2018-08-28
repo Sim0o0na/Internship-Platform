@@ -30,6 +30,11 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/projects")
+    public String projectsPage(Model model) throws IOException {
+        return "projects";
+    }
+
     @GetMapping("/dashboard")
     public ModelAndView dashboard(Principal principal, Model model) throws IOException {
         ModelAndView modelAndView = new ModelAndView("dashboard");
