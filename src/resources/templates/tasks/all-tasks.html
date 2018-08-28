@@ -1,81 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head>
-    <title>Dashboard</title>
-    <meta charset="utf-8">
-    <meta title="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script th:src="@{/js/ajax/user/tasks-partials.js}"></script>
-    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-    <link rel="stylesheet" th:href="@{/css/forms.css}">
-</head>
+<div th:include="~{fragments/head-elements :: base-head}"></div>
 <body>
-<div class="container-fluid">
-    <nav class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-left">
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="fa fa-flag"></i></a></li>
-            <li class="dropdown">
-                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Hello, User!<span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <div class="wrapper">
-        <div class="row dynamicPanel" th:object="${tasks}">
-            <div class="row">
-                <div class="col-md-6 task-panel" th:each="task: ${tasks}" th:style="${#dates.createNow() > task.dueDate} ? 'background: lightyellow'">
-                    <div class="panel-group">
-                        <div class="panel-heading">
-                            <div class="col-md-6">
-                                <div th:if="${task.type == 'EXAM'}">
-                                    <img src="/img/tasks/exam.png" class="img-responsive task-image">
+    <div id="container">
+        <div id="navbar">
+            <nav class="header"  th:include="~{fragments/navbar :: navbar}"></nav>
+            <!--<div th:include="~{fragments/information-partials :: info}"></div>-->
+        </div>
+        <div id="body">
+            <div class="row dynamicPanel" th:object="${tasks}">
+                <div class="row">
+                    <div class="col-md-6 task-panel" th:each="task: ${tasks}" th:style="${#dates.createNow() > task.dueDate} ? 'background: lightyellow'">
+                        <div class="panel-group">
+                            <div class="panel-heading">
+                                <div class="col-md-6">
+                                    <div th:if="${task.type == 'EXAM'}">
+                                        <img src="/img/tasks/exam.png" class="img-responsive task-image">
+                                    </div>
+                                    <div th:if="${task.type == 'MENTOR'}">
+                                        <img src="/img/tasks/mentor.png" class="img-responsive task-image">
+                                    </div>
+                                    <div th:if="${task.type == 'ASSESSMENT'}">
+                                        <img src="/img/tasks/assessment.png" class="img-responsive task-image">
+                                    </div>
                                 </div>
-                                <div th:if="${task.type == 'MENTOR'}">
-                                    <img src="/img/tasks/mentor.png" class="img-responsive task-image">
+                                <div class="col-md-6">
+                                    <p th:text="${task.title}"></p>
+                                    <p th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></p>
                                 </div>
-                                <div th:if="${task.type == 'ASSESSMENT'}">
-                                    <img src="/img/tasks/assessment.png" class="img-responsive task-image">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <p th:text="${task.title}"></p>
-                                <p th:text="${#dates.format(task.dueDate, 'dd-MM-yyyy')}"></p>
-                            </div>
-                            <h4 class="col-md-6">
-                                <h4 class="panel-title">
-                                    <a class="btn form-btn btn-edit" data-toggle="collapse" th:href="@{'#collapse' + ${task.id}}">See more<i class="fas fa-caret-down"></i></a>
+                                <h4 class="col-md-6">
+                                    <h4 class="panel-title">
+                                        <a class="btn form-btn btn-edit" data-toggle="collapse" th:href="@{'#collapse' + ${task.id}}">See more<i class="fas fa-caret-down"></i></a>
+                                    </h4>
+                                    <div th:id="'collapse' + ${task.id}" id="collapse1" class="panel-collapse collapse">
+                                        <ul class="list-group">
+                                            <p><i class="fas fa-dollar-sign"></i>Cost:</p>
+                                            <li class="list-group-item" th:text="${task.paymentCost}"></li>
+                                            <p><i class="fab fa-earlybirds"></i>Requirements:</p>
+                                            <li th:if="${task.taskRequirements.size() != 0}" th:each ="tr : ${task.taskRequirements}" th:text="${tr.title}"></li>
+                                            <li th:if="${task.taskRequirements.size() == 0}">None</li>
+                                        </ul>
+                                    </div>
+                                    <h4 class="panel-title">
+                                        <a class="btn form-btn btn-green" th:href="@{'/tasks/apply/' + ${task.id}}">Apply</a>
+                                    </h4>
                                 </h4>
-                                <div th:id="'collapse' + ${task.id}" id="collapse1" class="panel-collapse collapse">
-                                    <ul class="list-group">
-                                        <p><i class="fas fa-dollar-sign"></i>Cost:</p>
-                                        <li class="list-group-item" th:text="${task.paymentCost}"></li>
-                                        <p><i class="fab fa-earlybirds"></i>Requirements:</p>
-                                        <li th:if="${task.taskRequirements.size() != 0}" th:each ="tr : ${task.taskRequirements}" th:text="${tr.title}"></li>
-                                        <li th:if="${task.taskRequirements.size() == 0}">None</li>
-                                    </ul>
-                                </div>
-                                <h4 class="panel-title">
-                                    <a class="btn form-btn btn-green" th:href="@{'/tasks/apply/' + ${task.id}}">Apply</a>
-                                </h4>
-                            </h4>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row" th:include="~{fragments/pagination-panels :: all-tasks-pagination}"></div>
+            <div class="row" th:include="~{fragments/pagination-panels :: all-tasks-pagination}"></div>
+            </div>
+        <div id="footer">
+
         </div>
     </div>
-</div>
 </body>
 </html>

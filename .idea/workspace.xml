@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2795be29-5a82-4850-a21e-3729493a84e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/users/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/admin-base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/admin-base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/tasks/all-tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/tasks/all-tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/tasks/apply-task.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/tasks/apply-task.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,23 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/navbar.html">
+      <file leaf-file-name="tasks-panel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="39" column="50" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#1;n#div#0;n#nav#1;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks-panel.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="280">
+              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -72,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin-base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+            <state relative-caret-position="272">
+              <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -84,47 +66,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head-elements.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html">
+      <file leaf-file-name="all-tasks.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/tasks/all-tasks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+            <state relative-caret-position="32">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks-admin-partials.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apply-task.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/tasks/apply-task.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="22" column="87" lean-forward="true" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login-form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/users/login-form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasks-admin-partials.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/users/controllers/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/static/css/forms.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TasksAdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksAdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="75" column="49" lean-forward="true" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+            <state relative-caret-position="92">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -219,6 +205,8 @@
         <option value="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html" />
         <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js" />
+        <option value="$PROJECT_DIR$/src/resources/templates/tasks/all-tasks.html" />
+        <option value="$PROJECT_DIR$/src/resources/templates/tasks/apply-task.html" />
       </list>
     </option>
   </component>
@@ -363,6 +351,30 @@
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="errors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -461,15 +473,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535357133148</updated>
-      <workItem from="1535357134572" duration="38117000" />
+      <workItem from="1535357134572" duration="40075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38117000" />
+    <option name="totallyTimeSpent" value="40075000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1351" height="726" extended-state="6" />
+    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
@@ -491,11 +503,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.62459546" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.6215865" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32976446" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2247191" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.18726592" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" />
@@ -534,20 +546,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/coyote/http11/Http11Processor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="429" selection-start-line="429" selection-end-line="429" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/css/tables.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -682,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/login-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/users/controllers/UserAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -791,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/templates/users/user-edit-form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -809,13 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -871,23 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/js/profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -895,10 +855,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/tasks/tasks-panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="92">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/login-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/tasks/all-tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/tasks/apply-task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="87" lean-forward="true" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
