@@ -1,3 +1,4 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <nav class="navbar-light">
     <div class="navbar-inner">
         <div class="container">
@@ -33,6 +34,9 @@
                     <tbody>
                     <tr class="row" th:each="user: ${users}">
                         <td class="block" th:text="${user.getFullName()}"></td>
+                        <td class="block">
+                            <span th:each="role: ${user.privileges}" th:text="${role.name}"></span>
+                        </td>
                         <td class="block" th:text="${user.email}"></td>
                         <td>
                             <a class="btn form-btn btn-edit" th:href="@{'/admin/users/edit/' + ${user.username}}">Edit</a>

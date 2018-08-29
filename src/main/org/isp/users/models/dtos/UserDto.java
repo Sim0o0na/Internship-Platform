@@ -65,6 +65,10 @@ public abstract class UserDto {
         this.privileges = privileges;
     }
 
+    public boolean isAdmin() {
+        return this.getPrivileges().stream().anyMatch(role -> role.getName().equals("ADMIN"));
+    }
+
     public String getFirstName() {
         return firstName;
     }
