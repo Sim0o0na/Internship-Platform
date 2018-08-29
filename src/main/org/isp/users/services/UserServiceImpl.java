@@ -1,6 +1,7 @@
 package org.isp.users.services;
 
 import org.isp.applications.users.entity.UserApplication;
+import org.isp.emails.EmailService;
 import org.isp.users.models.dtos.*;
 import org.isp.users.models.entities.Privilege;
 import org.isp.users.models.entities.Role;
@@ -30,13 +31,16 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
     private UserRepository userRepository;
     private ModelMapper modelMapper;
     private RoleRepository roleRepository;
+    private EmailService emailService;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository,
-                           RoleRepository roleRepository) {
+                           RoleRepository roleRepository,
+                           EmailService emailService) {
         this.modelMapper = new ModelMapper();
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
+        this.emailService = emailService;
     }
 
     @Override
@@ -138,6 +142,10 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
         Role role = this.roleRepository.findByName("ROLE_USER");
         user.getRoles().add(role);
         this.userRepository.saveAndFlush(user);
+        this.emailService.sendMessage(user.getEmail(), "SoftUni internship approvement",
+                "You have been approved for the SoftUni internship program! " +
+                        "Your login password is currently your username. " +
+                        "Please, change the password immediately after first login!");
     }
 
     @Override
