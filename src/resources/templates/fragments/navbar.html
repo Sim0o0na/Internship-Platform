@@ -37,10 +37,13 @@
     <div sec:authorize="isAnonymous()">
         <div id="navbar" class="collapse navbar-collapse">
             <img src="/img/foundation.png" class="img-responsive header-image" width="200px" height="100px">
-            <ul class="nav navbar-nav navbar-left"><li><a href="/apply" id="apply">Кандидатствай</a></li></ul>
+            <ul class="nav navbar-nav navbar-left"><li><a href="/apply" id="apply">Apply</a></li></ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#modalContent" onclick="loadLoginForm()">Вход</a></li>
+                <li><a data-toggle="modal" data-target="#modalContent" onclick="loadLoginForm()">Login</a></li>
             </ul>
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a data-toggle="modal" data-target="#modalContent" onclick="loadRegisterForm()">Register</a></li>-->
+            <!--</ul>-->
         </div>
     </div>
 
@@ -60,7 +63,6 @@
             <li><a th:href="@{'/profile/' + ${user}}">Profile</a></li>
             <li></li>
             <li class="active-change-password" th:if="${userDto.isPasswordChanged == false}">
-                <!--<div class="arrow bounce"><a class="fas fa-arrow-right fas-2x" href="#"></a></div>-->
                 <a th:href="@{'/profile/changepassword'}" class="change-password-btn" style="color: orange;" onclick="loadChangePasswordForm()"
                    data-toggle="modal" data-target="#modalContent">Change Password</a>
             </li>

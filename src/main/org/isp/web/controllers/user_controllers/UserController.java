@@ -16,6 +16,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.security.Principal;
 import java.util.UUID;
 
@@ -42,13 +43,13 @@ public class UserController {
 
 //    @GetMapping("/register")
 //    public String getRegisterPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
-//        return "users/register";
+//        return "users/register-form";
 //    }
 //
 //    @PostMapping("/register")
 //    public String registerUser(@Valid @ModelAttribute UserRegisterDto userDto, BindingResult bindingResult){
 //        if(bindingResult.hasErrors()){
-//            return "/users/register";
+//            return "/users/register-form";
 //        }
 //
 //        this.userService.register(userDto);
@@ -61,7 +62,6 @@ public class UserController {
             this.userService.findByUsername(username);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println("not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
    }
