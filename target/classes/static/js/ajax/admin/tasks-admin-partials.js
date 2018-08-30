@@ -1,8 +1,8 @@
-$("#tasks").click(loadTasksPanel);
+$("#tasks_repositories").click(loadTasksPanel);
 function loadTasksPanel() {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks',
+        url: '/admin/tasks_repositories',
         success: function (data) {
             $("#dynamic").html("").append(data);
         }
@@ -14,7 +14,7 @@ $(".adminTasksPageBtn").click(loadTasksByPageForAdmin);
 function loadTasksByPageForAdmin(page) {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks/all' + '?page=' + page + '&size=4&partial=true',
+        url: '/admin/tasks_repositories/all' + '?page=' + page + '&size=4&partial=true',
         success: function (data) {
             $(".dynamicPanel").html("").append(data);
         }
@@ -25,7 +25,7 @@ $("#createTask").click(loadCreateTaskForm);
 function loadCreateTaskForm() {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks/create',
+        url: '/admin/tasks_repositories/create',
         success: function (data) {
             $("#modalContent").html("").append(data);
         }
@@ -36,7 +36,7 @@ $("#allTasks").click(loadAllTasksInPanel);
 function loadAllTasksInPanel() {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks/all',
+        url: '/admin/tasks_repositories/all',
         success: function (data) {
             $("#taskPanel").html("").append(data);
         }
@@ -47,7 +47,7 @@ $(".taskPageBtn").click(loadTasksByPage);
 function loadTasksByPage(page) {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks/all?page=' + page + '&size=4',
+        url: '/admin/tasks_repositories/all?page=' + page + '&size=4',
         success: function (data) {
             $("#taskPanel").html("").append(data);
         }
@@ -58,7 +58,7 @@ $(".edit-btn").click(loadEditTaskForm);
 function loadEditTaskForm(taskId) {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks/edit/' + taskId,
+        url: '/admin/tasks_repositories/edit/' + taskId,
         success: function (data) {
             $("#modalContent").html("").append(data);
         }

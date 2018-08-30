@@ -1,28 +1,31 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <div class="row">
     <div class="col-md-12">
-        <table class="table table-hover" th:object="${applications}">
-            <thead>
+        <div th:if="${applications.size() == 0}"><h2>There are currently no waiting applications!</h2></div>
+        <div th:if="${applications.size() > 0}">
+            <table class="table table-hover" th:object="${applications}">
+                <thead>
                 <tr class="row">
                     <th scope="col">Applied On</th>
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Actions</th>
                 </tr>
-            </thead>
-            <tbody>
-            <tr class="row" th:each="a: ${applications}">
-                <td class="block" th:text="${a.getAppliedOn()}"></td>
-                <td class="block" id="user-application-username" th:text="${a.getUsername()}"></td>
-                <td class="block" th:text="${a.getEmail()}"></td>
-                <td>
-                    <a class="btn form-btn btn-edit" th:onclick="'loadFullApplicationByUsername(\'' + ${a.getUsername()} + '\')'"
-                       id="view-more" data-toggle="modal" data-target="#modalContent">View More</a>
-                    <a class="btn form-btn btn-green" th:href="@{/admin/users/applications/approve(username=${a.getUsername()})}">Approve</a>
-                    <a class="btn form-btn btn-delete" th:href="@{/admin/users/applications/reject(username=${a.getUsername()})}">Reject</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <tr class="row" th:each="a: ${applications}">
+                    <td class="block" th:text="${a.getAppliedOn()}"></td>
+                    <td class="block" id="user-application-username" th:text="${a.getUsername()}"></td>
+                    <td class="block" th:text="${a.getEmail()}"></td>
+                    <td>
+                        <a class="btn form-btn btn-edit" th:onclick="'loadFullApplicationByUsername(\'' + ${a.getUsername()} + '\')'"
+                           id="view-more" data-toggle="modal" data-target="#modalContent">View More</a>
+                        <a class="btn form-btn btn-green" th:href="@{/admin/users/applications/approve(username=${a.getUsername()})}">Approve</a>
+                        <a class="btn form-btn btn-delete" th:href="@{/admin/users/applications/reject(username=${a.getUsername()})}">Reject</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

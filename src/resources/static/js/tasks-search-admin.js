@@ -15,7 +15,7 @@ function searchTasks() {
     var assigneeUsername = $("input[name=assignee]").val();
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks/search?dateFrom=' + dateFrom + '&dateTo=' + dateTo + '&assignee=' + assigneeUsername,
+        url: '/admin/tasks_repositories/search?dateFrom=' + dateFrom + '&dateTo=' + dateTo + '&assignee=' + assigneeUsername,
         success: function (data) {
             $("#dynamic").html("").append(data);
         }

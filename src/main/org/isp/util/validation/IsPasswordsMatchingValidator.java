@@ -1,6 +1,6 @@
 package org.isp.util.validation;
 
-import org.isp.users.models.dtos.UserRegisterDto;
+import org.isp.domain.users.dtos.UserRegisterDto;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
