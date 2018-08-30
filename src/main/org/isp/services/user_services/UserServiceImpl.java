@@ -144,7 +144,7 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
         Role role = this.roleRepository.findByName("ROLE_USER");
         user.getRoles().add(role);
         this.userRepository.saveAndFlush(user);
-        this.emailService.sendMessage(user.getEmail(), "Zdr Nase", "Ananasi, tozi meil ti go pratih kato testvah izprashtaneto na email-i. :)");
+//        this.emailService.sendMessage(user.getEmail(), "Zdr Nase", "Ananasi, tozi meil ti go pratih kato testvah izprashtaneto na email-i. :)");
 //        this.emailService.sendMessage(user.getEmail(),
 //                String.format("SoftUni Internship Program Approval %s" ,
 //                        LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).toLowerCase()),

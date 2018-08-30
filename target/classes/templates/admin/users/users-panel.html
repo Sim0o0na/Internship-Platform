@@ -12,6 +12,7 @@
                     <input type="text" class="form-control form-control-search" id="searchUserInput" placeholder="Username...">
                     <span class="input-group-btn">
                         <button onclick="searchUser()" type="submit" class="btn btn-search"><i class="fa fa-search"></i>Search</button>
+                        <button onclick="loadUsersPanel()" type="submit" class="btn btn-search"><i class="far fa-trash-alt"></i>Clear</button>
                     </span>
                 </div>
             </div>
@@ -39,6 +40,8 @@
                         </td>
                         <td class="block" th:text="${user.email}"></td>
                         <td>
+                            <a class="btn form-btn btn-edit" th:onclick="'loadFullApplicationByUsername(\'' + ${user.getUsername()} + '\')'"
+                               id="view-more" data-toggle="modal" data-target="#modalContent">View More</a>
                             <a class="btn form-btn btn-edit" th:href="@{'/admin/users/edit/' + ${user.username}}">Edit</a>
                             <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/delete/${user.username}}">Delete</a>
                         </td>
