@@ -33,9 +33,9 @@ public class UserTrainingDetailsController {
         this.userTrainingDetailsService.createCourseDetailsForUser(utcdList, username);
     }
 
-    public List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username) {
-        return this.userTrainingDetailsService.getCourseDetailsForUsername(username);
-    }
+//    public List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username) {
+//        return this.userTrainingDetailsService.getCourseDetailsForUsername(username);
+//    }
 
     public List<UserTrainingCourseDetails> parseCourseDetailsForUsername(String username) throws IOException {
         List<UserTrainingCourseDetails> coursesDetails = new ArrayList<>();

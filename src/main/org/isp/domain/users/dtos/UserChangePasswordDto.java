@@ -1,7 +1,6 @@
 package org.isp.domain.users.dtos;
 
 public class UserChangePasswordDto extends UserDto {
-    private String oldPassword;
     private String newPassword;
     private String confirmPassword;
 
@@ -10,14 +9,6 @@ public class UserChangePasswordDto extends UserDto {
     public UserChangePasswordDto(String password, String confirmPassword) {
         this.setPassword(password);
         this.setConfirmPassword(confirmPassword);
-    }
-
-    public String getOldPassword() {
-        return oldPassword;
-    }
-
-    public void setOldPassword(String oldPassword) {
-        this.oldPassword = oldPassword;
     }
 
     public String getNewPassword() {

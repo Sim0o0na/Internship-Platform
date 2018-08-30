@@ -1,9 +1,11 @@
 package org.isp.web.controllers.user_controllers;
 
+import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.users.dtos.UserChangePasswordDto;
 import org.isp.domain.users.dtos.UserEditDto;
 import org.isp.domain.users.dtos.UserRegisterDto;
 import org.isp.services.images_services.api.ImageService;
+import org.isp.services.training_details_services.UserTrainingDetailsService;
 import org.isp.services.user_services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,11 +21,15 @@ import java.util.UUID;
 public class UserController {
     private UserService userService;
     private ImageService imageService;
+    private UserTrainingDetailsService userTrainingDetailsService;
 
     @Autowired
-    public UserController(UserService userService, ImageService imageService) {
+    public UserController(UserService userService,
+                          ImageService imageService,
+                          UserTrainingDetailsService userTrainingDetailsService) {
         this.userService = userService;
         this.imageService = imageService;
+        this.userTrainingDetailsService = userTrainingDetailsService;
     }
 
     @GetMapping("/login")
@@ -65,7 +71,7 @@ public class UserController {
         if (principal == null) {
             redirectAttributes.addAttribute("showloginform", true);
             return "redirect:/";
-        }  else if(!username.equals(principal.getName())) {
+        } else if (!username.equals(principal.getName())) {
             return "redirect:/dashboard";
         }
         UserEditDto userDto = (UserEditDto) this.userService.findByUsername(principal.getName(), UserEditDto.class);
@@ -73,8 +79,9 @@ public class UserController {
             model.addAttribute("info", info);
         }
         model.addAttribute("userDto", userDto);
-        model.addAttribute("user", principal.getName());
-        return "users/profile";
+        model.addAttribute("userCourses", this.userTrainingDetailsService.getCourseDetailsForUsername(username));
+        model.addAttribute("averageGrade", String.format("%.2f", this.userTrainingDetailsService.getAverageGradeForUsername(username)));
+        return "/users/profile";
     }
 
     @GetMapping("/profile/changepassword")

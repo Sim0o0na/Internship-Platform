@@ -1,5 +1,6 @@
 package org.isp.web.controllers.applications_controllers;
 
+import org.isp.services.training_details_services.UserTrainingDetailsService;
 import org.isp.services.user_services.user_application_services.UserApplicationService;
 import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.applications.user_applications.UserApplication;
@@ -23,15 +24,15 @@ import java.util.List;
 @RequestMapping(path = "/admin/users/applications")
 public class UserApplicationAdminController {
     private UserApplicationService userApplicationService;
-    private UserTrainingDetailsController userTrainingDetailsController;
+    private UserTrainingDetailsService userTrainingDetailsService;
     private UserService userService;
 
     @Autowired
     public UserApplicationAdminController(UserApplicationService userApplicationService,
-                                          UserTrainingDetailsController userTrainingDetailsController,
+                                          UserTrainingDetailsService userTrainingDetailsService,
                                           UserService userService) {
         this.userApplicationService = userApplicationService;
-        this.userTrainingDetailsController = userTrainingDetailsController;
+        this.userTrainingDetailsService = userTrainingDetailsService;
         this.userService = userService;
     }
 
@@ -74,16 +75,15 @@ public class UserApplicationAdminController {
         UserApplication userApplication = this.userApplicationService.getByUsername(username);
         model.addAttribute("userApplication", userApplication);
         model.addAttribute("averageGrade", String.format("%.2f",userApplication.getUserTrainingDetails().getAverageGrade()));
-        model.addAttribute("coursesDetails",
-                this.getCoursesAndGrades(this.userTrainingDetailsController.getCourseDetailsForUsername(username)));
+        model.addAttribute("coursesDetails", this.userTrainingDetailsService.getCourseDetailsForUsername(username));
         return "/admin/users/applications/user-applications-view-more";
     }
 
-    private HashMap<String, Double> getCoursesAndGrades(List<UserTrainingCourseDetails> coursesDetails) {
-        HashMap<String, Double> result = new HashMap<>();
-        for (UserTrainingCourseDetails courseDetails : coursesDetails) {
-            result.put(courseDetails.getTrainingCourse().getCourseName(), courseDetails.getGrade());
-        }
-        return result;
-    }
+//    private HashMap<String, Double> getCoursesAndGrades(List<UserTrainingCourseDetails> coursesDetails) {
+//        HashMap<String, Double> result = new HashMap<>();
+//        for (UserTrainingCourseDetails courseDetails : coursesDetails) {
+//            result.put(courseDetails.getTrainingCourse().getCourseName(), courseDetails.getGrade());
+//        }
+//        return result;
+//    }
 }

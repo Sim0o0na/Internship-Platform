@@ -1,5 +1,6 @@
 package org.isp.services.training_details_services;
 
+import org.isp.domain.applications.training_details.TrainingCourseDto;
 import org.isp.domain.applications.user_applications.UserApplication;
 import org.isp.repositories.applications_repositories.UserApplicationRepository;
 import org.isp.domain.applications.training_details.TrainingCourse;
@@ -8,6 +9,7 @@ import org.isp.domain.applications.training_details.UserTrainingDetails;
 import org.isp.repositories.applications_repositories.TrainingCourseRepository;
 import org.isp.repositories.applications_repositories.UserTrainingCourseDetailsRepository;
 import org.isp.repositories.applications_repositories.UserTrainingDetailsRepository;
+import org.isp.util.MappingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,13 +70,19 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
     }
 
     @Override
-    public List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username) {
-        List<UserTrainingCourseDetails> result = new ArrayList<>();
-        result = this.courseDetailsRepository.findAllByUsername(username);
-        if (result.size() == 0) {
+    public List<TrainingCourseDto> getCourseDetailsForUsername(String username) {
+        List<UserTrainingCourseDetails> allCoursesForUser = new ArrayList<>();
+        allCoursesForUser = this.courseDetailsRepository.findAllByUsername(username);
+        List<TrainingCourseDto> result = MappingUtil.convert(allCoursesForUser, TrainingCourseDto.class);
+        if (allCoursesForUser.size() == 0) {
             throw new IllegalArgumentException("No course details for this username!");
         }
         return result;
+    }
+
+    @Override
+    public double getAverageGradeForUsername(String usenname) {
+        return this.trainingDetailsRepository.findByUsername(usenname).getAverageGrade();
     }
 
     private boolean checkIfCourseExists(String courseName) {

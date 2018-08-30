@@ -1,7 +1,9 @@
 package org.isp.services.training_details_services;
 
+import org.isp.domain.applications.training_details.TrainingCourseDto;
 import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.applications.training_details.UserTrainingDetails;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -14,5 +16,7 @@ public interface UserTrainingDetailsService {
     @Transactional
     boolean createCourseDetailsForUser(List<UserTrainingCourseDetails> userTrainingCourseDetails, String username);
 
-    List<UserTrainingCourseDetails> getCourseDetailsForUsername(String username);
+    List<TrainingCourseDto> getCourseDetailsForUsername(String username);
+
+    double getAverageGradeForUsername(String usenname);
 }

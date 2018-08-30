@@ -28,7 +28,7 @@
         <h1>Training Info</h1>
         <label>Average Grade:</label><p th:text="${averageGrade}"></p>
         <div class="row" th:each="cd: ${coursesDetails}">
-            <p th:text="${cd.key} + ' ' + ${cd.value}">
+            <p th:text="${cd.courseName} + ' ' + ${cd.grade}">
         </div>
         <p></p>
     </div>

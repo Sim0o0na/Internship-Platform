@@ -1,182 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" description="model.addAttribute(&quot;userCourses&quot;, this.userTrainin..." line="81" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2795be29-5a82-4850-a21e-3729493a84e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/InitialRoleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/configuration/InitialRoleLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/tasks/TaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/TaskApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/tasks/TaskApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/task_applications_services/TaskApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/tasks/TaskApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/task_applications_services/TaskApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/tasks/TaskApplicationsAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/TaskApplicationsAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/controller/UserTrainingDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/TrainingCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/TrainingCourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/applications_repositories/TrainingCourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/applications_repositories/UserTrainingCourseDetailsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/entity/UserTrainingDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/applications_repositories/UserTrainingDetailsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/HTTPRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserInfoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserPersonalInfoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/parser/UserTrainingInfoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/user_services/user_application_services/UserApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/api/UserApplicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/user_services/user_application_services/UserApplicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplicationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/applications_repositories/UserApplicationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/applications/users/entity/UserApplicationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplicationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/AppErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/AppErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/services/api/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/images_services/api/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/services/api/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/images_services/api/StorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/services/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/images_services/impl/ImageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/base/services/impl/StorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/images_services/impl/StorageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/emails/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/emails_services/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/emails/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/emails_services/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/emails/MailConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/configuration/MailConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/api/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/NotificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/api/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/api/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/api/NotificationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/entity/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/entity/NotificationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/notifications/entity/NotificationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/controllers/PaymentsAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/payments_controllers/PaymentsAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/controllers/PaymentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/payments_controllers/PaymentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/models/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/services/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/payment_services/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/payments/services/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/payment_services/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/TaskPaymentListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/controllers/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/TaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/tasks/TaskType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/dtos/TaskCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/tasks/dtos/TaskCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/dtos/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/tasks/dtos/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/dtos/TaskRequirementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/tasks/dtos/TaskRequirementDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/entities/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/tasks/entities/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/models/entities/TaskRequirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/tasks/entities/TaskRequirement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/repositories/TaskApplicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/tasks_repositories/TaskApplicationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/tasks_repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/tasks/services/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/controllers/UserAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserAdminViewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserAdminViewDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserChangePasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserChangePasswordDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserEditDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserEditDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/dtos/UserRegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserRegisterDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/Privilege.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/entities/Privilege.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/models/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/repositories/PrivilegeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/PrivilegeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/users/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/validation/IsPasswordsMatchingValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/validation/IsPasswordsMatchingValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/task-applications-admin-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/task-applications-admin-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/ajax/user/tasks-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/ajax/user/tasks-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/lib/chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/lib/chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/tasks-search-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/tasks-search-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/users/all-users-partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/users/all-users-partial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/tasks/all-tasks-partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/tasks/all-tasks-partial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/InitialRoleLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/tasks/TaskApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/tasks/TaskApplicationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/tasks/TaskApplicationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/tasks/TaskApplicationsAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/controller/UserTrainingDetailsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/TrainingCourse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/TrainingCourseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingCourseDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingCourseDetailsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/entity/UserTrainingDetailsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/parser/HTTPRequestSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/parser/UserInfoParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/parser/UserPersonalInfoParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/parser/UserTrainingInfoParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/service/UserTrainingDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/training_details/service/UserTrainingDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/api/UserApplicationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/entity/UserApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/entity/UserApplicationDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/entity/UserApplicationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/applications/users/entity/UserApplicationStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/AppErrorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/configuration/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/services/api/ImageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/services/api/StorageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/services/impl/ImageServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/base/services/impl/StorageServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/emails/EmailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/emails/EmailServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/emails/MailConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/api/NotificationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/api/NotificationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/api/NotificationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/api/NotificationsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/entity/Notification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/entity/NotificationDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/notifications/entity/NotificationType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/PaymentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/controllers/PaymentsAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/controllers/PaymentsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/models/Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/services/PaymentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/payments/services/PaymentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/TaskPaymentListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/controllers/TasksAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/controllers/TasksController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/TaskType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/dtos/TaskCreateDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/dtos/TaskDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/dtos/TaskRequirementDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/entities/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/models/entities/TaskRequirement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/repositories/TaskApplicationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/repositories/TaskRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/tasks/services/TaskServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/controllers/UserAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/controllers/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserAdminViewDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserChangePasswordDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserEditDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/dtos/UserRegisterDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/Privilege.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/models/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/repositories/PrivilegeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/repositories/RoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/services/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/users/services/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/validation/IsPasswordsMatchingValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/util/validation/IsPasswordsMatchingValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/ajax/admin/task-applications-admin-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/ajax/admin/task-applications-admin-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/ajax/admin/tasks-admin-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/ajax/admin/tasks-admin-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/ajax/user/tasks-partials.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/ajax/user/tasks-partials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/lib/chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/lib/chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/tasks-search-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/tasks-search-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/users/all-users-partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/users/all-users-partial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/users/applications/user-applications.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/users/applications/user-applications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/tasks/all-tasks-partial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/tasks/all-tasks-partial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserChangePasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserChangePasswordDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/password-change-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/password-change-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -191,82 +30,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user-applications.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html">
+      <file leaf-file-name="UserTrainingDetailsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="494">
+              <caret line="84" column="89" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/TaskApplication.java">
+      <file leaf-file-name="UserTrainingDetailsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="208">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/tasks/entities/Task.java">
+      <file leaf-file-name="CglibAopProxy.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="96">
+              <caret line="468" selection-start-line="468" selection-end-line="468" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java">
+      <file leaf-file-name="ReflectiveMethodInvocation.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="112">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TasksController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksController.java">
+      <file leaf-file-name="TransactionAspectSupport.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.4.RELEASE/spring-tx-5.0.4.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1024">
-              <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+            <state relative-caret-position="192">
+              <caret line="181" selection-start-line="181" selection-end-line="181" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/emails_services/EmailServiceImpl.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="155">
+              <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3681#3682#0" expanded="true" />
+                <element signature="e#3733#3734#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all-task-applications-partial.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/tasks/all-task-applications-partial.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java">
+      <file leaf-file-name="TrainingCourseDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourseDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="146" column="141" selection-start-line="146" selection-start-column="141" selection-end-line="146" selection-end-column="141" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all-users-partial.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/all-users-partial.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="352">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -274,8 +100,29 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="64" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="64" />
+            <state relative-caret-position="208">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrainingCourse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-applications-view-more.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -325,19 +172,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/org/isp/base/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/base/AppErrorController.java" />
-        <option value="$PROJECT_DIR$/src/resources/templates/errors/error-500.html" />
-        <option value="$PROJECT_DIR$/src/resources/templates/errors/error-404.html" />
-        <option value="$PROJECT_DIR$/src/resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/main.js" />
-        <option value="$PROJECT_DIR$/src/resources/templates/users/login-form.html" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/base/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/base/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/users/models/entities/User.java" />
         <option value="$PROJECT_DIR$/src/resources/static/js/profile.js" />
         <option value="$PROJECT_DIR$/src/resources/templates/users/user-edit-form.html" />
-        <option value="$PROJECT_DIR$/src/resources/templates/users/profile.html" />
         <option value="$PROJECT_DIR$/src/resources/static/css/profile.css" />
         <option value="$PROJECT_DIR$/src/main/org/isp/users/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/resources/static/css/forms.css" />
@@ -376,6 +212,17 @@
         <option value="$PROJECT_DIR$/src/resources/templates/admin/users/all-users-partial.html" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/tasks/entities/Task.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html" />
+        <option value="$PROJECT_DIR$/src/resources/templates/users/password-change-form.html" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserChangePasswordDto.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java" />
+        <option value="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourseDto.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/resources/templates/users/profile.html" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" />
       </list>
     </option>
   </component>
@@ -461,30 +308,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="dtos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -499,14 +323,28 @@
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="isp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="isp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="user_controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -521,26 +359,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="applications" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -650,12 +469,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535357133148</updated>
-      <workItem from="1535357134572" duration="51514000" />
+      <workItem from="1535357134572" duration="54451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51514000" />
+    <option name="totallyTimeSpent" value="54451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
@@ -674,7 +493,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.5240572" />
       <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32639793" />
+      <window_info active="true" anchor="bottom" id="Messages" order="3" visible="true" weight="0.32639793" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
@@ -684,7 +503,7 @@
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32976446" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.17790262" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.22908863" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32769832" />
@@ -718,6 +537,18 @@
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html</url>
           <line>16</line>
@@ -725,149 +556,10 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserAdminViewDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/tasks/TaskType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/repositories/PaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/repositories/NotificationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/configuration/MailConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/AppErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/DateFormatUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/TaskApplicationsAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -921,20 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1039,27 +717,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/emails_services/EmailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="146" column="141" selection-start-line="146" selection-start-column="141" selection-end-line="146" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1087,10 +748,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/users/dtos/UserChangePasswordDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/users-panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/password-change-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+          <folding>
+            <marker date="1535600933107" expanded="true" signature="1684:1865" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/emails_services/EmailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        <state relative-caret-position="48">
+          <caret line="3" column="97" selection-start-line="3" selection-start-column="97" selection-end-line="3" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/META-INF/additional-spring-configuration-metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.4.RELEASE/spring-tx-5.0.4.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="56" lean-forward="true" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="468" selection-start-line="468" selection-end-line="468" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.4.RELEASE/spring-tx-5.0.4.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourseDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="84" column="89" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+          <folding>
+            <element signature="e#3681#3682#0" expanded="true" />
+            <element signature="e#3733#3734#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
