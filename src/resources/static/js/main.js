@@ -4,21 +4,8 @@ window.setTimeout(function() {
     });
 }, 4000);
 
-$('#close-modal-btn').onclick(closeModal);
-function closeModal(){
-    $("#modalContent").parent().fadeOut();
-}
-
-
-$('#login-btn').on('click', validateLoginUrl);
-function validateLoginUrl() {
-    var currentRequestUrl = $(location).attr('href');
-    console.log(currentRequestUrl)
-}
-
 function checkForLogin() {
     var param = getParameterByName('showloginform', window.location.href);
-    console.log(param);
     if (param === "true") {
         $(".modal").modal('show');
         loadLoginForm();

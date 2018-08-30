@@ -8,6 +8,8 @@ import org.isp.services.images_services.api.ImageService;
 import org.isp.services.training_details_services.UserTrainingDetailsService;
 import org.isp.services.user_services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -52,6 +54,17 @@ public class UserController {
 //        this.userService.register(userDto);
 //        return "redirect:/login";
 //    }
+
+    @GetMapping(value = "/checkifuserexists/{username}")
+    public ResponseEntity<String> checkIfUserExists(@PathVariable(value = "username") String username) {
+        try {
+            this.userService.findByUsername(username);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            System.out.println("not found!");
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+   }
 
     @GetMapping("/profile")
     public String profile(Principal principal, RedirectAttributes redirectAttributes, Model model) throws Exception {

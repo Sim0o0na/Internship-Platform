@@ -1,10 +1,10 @@
-<form class="form-layout" method="post" action="/" id="login-form">
+<form class="form-layout" method="post" action="/"
+      id="login-form">
     <fieldset>
-        <div class="col-md-12 col-xs-12 form-group line" align="center"></div>
-
         <div class="col-md-12 col-xs-12 form-group form-field">
             <h1>Login</h1>
             <div class="control">
+                <p id="error-p">Username doesn't exist!</p>
                 <input id="usernameFld" type="text" name="username" title="username" placeholder="Username" class="form-control"/>
             </div>
 
@@ -12,8 +12,12 @@
                 <input type="password" title="password" name="password" placeholder="Password" class="form-control" value="123456"/>
             </div>
 
+            <div class="control">
+                <input type="hidden" id="validation-field" name="validation-field" value="false" class="form-control"/>
+            </div>
+
             <div align="center">
-                <button type="submit" class="form-btn" id="login-btn" onclick="validateLoginUrl()">LOGIN</button>
+                <button type="submit" class="form-btn" id="login-btn" onclick="checkIfUsernameExists()">LOGIN</button>
             </div>
         </div>
     </fieldset>
