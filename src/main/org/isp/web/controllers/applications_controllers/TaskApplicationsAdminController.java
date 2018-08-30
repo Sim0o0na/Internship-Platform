@@ -26,14 +26,14 @@ public class TaskApplicationsAdminController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     private String taskApplicationsPanel(Model model){
-        return "admin/tasks_repositories/task-applications-panel-partial";
+        return "admin/tasks/task-applications-panel-partial";
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     private String allTaskApplications(Model model){
         List<TaskApplication> allTaskApplications = this.taskApplicationService.fetchAllNonAssigned();
         model.addAttribute("taskApplications", allTaskApplications);
-        return "admin/tasks_repositories/all-task-applications-partial";
+        return "admin/tasks/all-task-applications-partial";
     }
 
     @RequestMapping(value = "/approve", method = RequestMethod.GET)

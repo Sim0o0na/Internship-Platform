@@ -4,7 +4,7 @@
         <li class="page-item disabled">
             <a class="page-link" href="#" tabindex="-1">Previous</a>
         </li>
-        <th:block th:each="i: ${#numbers.sequence(0, pagesCount - 1)}">
+        <th:block th:if="${pagesCount > 0} "th:each="i: ${#numbers.sequence(0, pagesCount - 1)}">
             <li class="page-item"><a class="allTasksPageBtn page-link" ]
                                      th:onclick="'loadAllTasksByPage(' + ${i} + ');'"
                                      th:text="${i + 1}"></a></li>

@@ -31,7 +31,7 @@ public class TasksAdminController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     private String tasksPanel(Model model){
-        return "admin/tasks_repositories/tasks_repositories-panel";
+        return "admin/tasks/tasks-panel";
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
@@ -39,7 +39,7 @@ public class TasksAdminController {
         Page<TaskDto> allTasks = this.taskService.fetchAllTasks(pageable);
         model.addAttribute("tasks", allTasks.getContent());
         model.addAttribute("pagesCount", allTasks.getTotalPages());
-        return "admin/tasks_repositories/all-tasks_repositories-partial";
+        return "admin/tasks/all-tasks-partial";
     }
 
     @RequestMapping(value = "/edit/{taskId}", method = RequestMethod.GET)
@@ -47,7 +47,7 @@ public class TasksAdminController {
         TaskDto dto = this.taskService.findById(taskId);
         model.addAttribute("task", dto);
         model.addAttribute("taskId", dto.getId());
-        return "admin/tasks_repositories/edit-task";
+        return "admin/tasks/edit-task";
     }
 
     @RequestMapping(value = "/edit/{taskId}", method = RequestMethod.POST)
@@ -55,17 +55,17 @@ public class TasksAdminController {
                         BindingResult bindingResult,
                         @PathVariable(value = "taskId") String taskId) throws ParseException, IllegalAccessException {
         if (bindingResult.hasErrors()) {
-            return "/admin/tasks_repositories/all";
+            return "/admin/tasks/all";
         }
         this.taskService.edit(taskId, taskEditDto);
-        return "redirect:/admin/tasks_repositories/all";
+        return "redirect:/admin/tasks/all";
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     private String createPanel(Model model) {
         model.addAttribute("taskTypes", TaskType.types(TaskType.class));
         model.addAttribute("taskDto", new TaskCreateDto());
-        return "/admin/tasks_repositories/create-task-form";
+        return "/admin/tasks/create-task-form";
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -91,11 +91,11 @@ public class TasksAdminController {
             foundTasks = this.taskService.searchTasks(dateFrom, dateTo, assigneeUsername, pageable);
         } catch (IllegalArgumentException iae) {
             ControllerUtil.addErrorToModel(iae.getMessage(), model);
-            return "admin/tasks_repositories/all-tasks_repositories-partial";
+            return "admin/tasks/all-tasks-partial";
         }
 
         model.addAttribute("tasks", foundTasks);
         model.addAttribute("pagesCount", foundTasks.getTotalPages());
-        return "admin/tasks_repositories/all-tasks_repositories-partial";
+        return "admin/tasks/all-tasks-partial";
     }
 }

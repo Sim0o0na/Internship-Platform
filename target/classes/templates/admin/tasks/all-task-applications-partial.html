@@ -16,7 +16,7 @@
                 <!--<td class="block" th:text="${ta.task.dueDate.toString()}"></td>-->
                 <td class="block" th:text="${ta.user.username}"></td>
                 <td>
-                    <a class="btn form-btn btn-edit" th:href="@{/admin/tasks/applications/approve(taskId=${ta.id},user=${ta.user.username})}">Approve</a>
+                    <a class="btn form-btn btn-edit" th:href="@{/admin/tasks/applications/approve(taskId=${ta.task.id},user=${ta.user.username})}">Approve</a>
                     <a class="btn form-btn btn-delete" th:href="@{/admin/tasks/applications/decline(taskId=${ta.id},user=${ta.user.username})}">Decline</a>
                 </td>
             </tr>

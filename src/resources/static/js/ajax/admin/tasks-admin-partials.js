@@ -2,7 +2,7 @@ $("#tasks_repositories").click(loadTasksPanel);
 function loadTasksPanel() {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks_repositories',
+        url: '/admin/tasks',
         success: function (data) {
             $("#dynamic").html("").append(data);
         }
@@ -14,7 +14,7 @@ $(".adminTasksPageBtn").click(loadTasksByPageForAdmin);
 function loadTasksByPageForAdmin(page) {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks_repositories/all' + '?page=' + page + '&size=4&partial=true',
+        url: '/admin/tasks/all' + '?page=' + page + '&size=4&partial=true',
         success: function (data) {
             $(".dynamicPanel").html("").append(data);
         }
@@ -25,7 +25,7 @@ $("#createTask").click(loadCreateTaskForm);
 function loadCreateTaskForm() {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks_repositories/create',
+        url: '/admin/tasks/create',
         success: function (data) {
             $("#modalContent").html("").append(data);
         }
@@ -36,7 +36,7 @@ $("#allTasks").click(loadAllTasksInPanel);
 function loadAllTasksInPanel() {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks_repositories/all',
+        url: '/admin/tasks/all',
         success: function (data) {
             $("#taskPanel").html("").append(data);
         }
@@ -47,7 +47,7 @@ $(".taskPageBtn").click(loadTasksByPage);
 function loadTasksByPage(page) {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks_repositories/all?page=' + page + '&size=4',
+        url: '/admin/tasks/all?page=' + page + '&size=4',
         success: function (data) {
             $("#taskPanel").html("").append(data);
         }
@@ -58,7 +58,7 @@ $(".edit-btn").click(loadEditTaskForm);
 function loadEditTaskForm(taskId) {
     $.ajax({
         type: 'GET',
-        url: '/admin/tasks_repositories/edit/' + taskId,
+        url: '/admin/tasks/edit/' + taskId,
         success: function (data) {
             $("#modalContent").html("").append(data);
         }

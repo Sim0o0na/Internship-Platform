@@ -82,8 +82,8 @@ public class TasksController {
     }
 
     @RequestMapping(value = "/complete/{taskId}", method = RequestMethod.GET)
-    private ModelAndView complete(@PathVariable(name = "taskId") String taskId) {
+    private String complete(@PathVariable(name = "taskId") String taskId, Principal principal) {
         this.taskService.completeTask(taskId);
-        return new ModelAndView("/users/user-tasks");
+        return "redirect:/tasks/all?user=" + principal.getName() +  "&page=0&size=4&partial=false";
     }
 }
