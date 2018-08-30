@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2795be29-5a82-4850-a21e-3729493a84e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/login-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/login-form.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +85,8 @@
       <file leaf-file-name="user-forms.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="24" column="567572" lean-forward="true" selection-start-line="24" selection-start-column="567572" selection-end-line="24" selection-end-column="567572" />
+            <state relative-caret-position="358">
+              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -471,12 +467,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535357133148</updated>
-      <workItem from="1535357134572" duration="62665000" />
+      <workItem from="1535357134572" duration="62934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62665000" />
+    <option name="totallyTimeSpent" value="62934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
@@ -501,7 +497,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4993758" weight="0.28088427" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.4993758" visible="true" weight="0.28088427" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32976446" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -963,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="24" column="567572" lean-forward="true" selection-start-line="24" selection-start-column="567572" selection-end-line="24" selection-end-column="567572" />
+        <state relative-caret-position="358">
+          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
         </state>
       </provider>
     </entry>
