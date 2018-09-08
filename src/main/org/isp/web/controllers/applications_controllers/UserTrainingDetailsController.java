@@ -5,6 +5,7 @@ import org.isp.util.user_info_parser.UserInfoParser;
 import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.applications.training_details.UserTrainingDetails;
 import org.isp.services.training_details_services.UserTrainingDetailsService;
+import org.isp.util.user_info_parser.UserTrainingInfoParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -39,7 +40,7 @@ public class UserTrainingDetailsController {
 
     public List<UserTrainingCourseDetails> parseCourseDetailsForUsername(String username) throws IOException {
         List<UserTrainingCourseDetails> coursesDetails = new ArrayList<>();
-        HashMap<String, Double> info = this.userInfoParser.getInfo(username, "");
+        HashMap<String, String> info = this.userInfoParser.getInfo(username, "");
         for (String course : info.keySet()) {
             UserTrainingCourseDetails utcd = new UserTrainingCourseDetails(new TrainingCourse(course), info.get(course), username);
             coursesDetails.add(utcd);

@@ -20,9 +20,9 @@ public class UserTrainingCourseDetails {
 
     public UserTrainingCourseDetails() {}
 
-    public UserTrainingCourseDetails(TrainingCourse course, Double userGrade, String username) {
+    public UserTrainingCourseDetails(TrainingCourse course, String userGrade, String username) {
         this.trainingCourse = course;
-        this.grade = userGrade;
+        this.grade = Double.parseDouble(userGrade);
         this.username = username;
     }
 
