@@ -19,4 +19,6 @@ public interface UserTrainingDetailsService {
     List<TrainingCourseDto> getCourseDetailsForUsername(String username);
 
     double getAverageGradeForUsername(String usenname);
+
+    void linkTrainingDetailsToUserApplication(String applicationUsername);
 }

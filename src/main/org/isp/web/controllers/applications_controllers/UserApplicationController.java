@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
 
 @Controller
 @RequestMapping("/users/applications")
@@ -28,14 +30,17 @@ public class UserApplicationController {
     public String create(@Valid @ModelAttribute UserApplicationDto userApplicationDto,
                          RedirectAttributes redirectAttributes) {
         if (this.userApplicationService.checkIfExists(userApplicationDto)) {
-            redirectAttributes.addFlashAttribute("info", "User application with this username or email already exists!");
+            redirectAttributes.addFlashAttribute("error", "User application with this username or email already exists!");
             return "redirect:/apply";
         }
         try {
             this.userApplicationService.create(userApplicationDto);
-            this.userDetailsController.createUserTrainingDetails(userApplicationDto.getUsername());
+            CompletableFuture result = this.userDetailsController.createUserTrainingDetails(userApplicationDto.getUsername());
+            if (result.isDone()) {
+                this.userDetailsController.addTrainingDetailsToUserApplication(userApplicationDto.getUsername());
+            }
         } catch (Exception e) {
-            redirectAttributes.addFlashAttribute("info", e.getMessage());
+            redirectAttributes.addFlashAttribute("error", e.getMessage());
             return "redirect:/apply";
         }
         redirectAttributes.addFlashAttribute("info", "You have successfully applied for the internship program!");

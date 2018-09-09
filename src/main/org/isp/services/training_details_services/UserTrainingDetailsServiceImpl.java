@@ -85,6 +85,14 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
         return this.trainingDetailsRepository.findByUsername(usenname).getAverageGrade();
     }
 
+    @Override
+    public void linkTrainingDetailsToUserApplication(String applicationUsername) {
+        UserApplication userApplication = this.userApplicationRepository.findByUsername(applicationUsername);
+        UserTrainingDetails userTrainingDetails = this.trainingDetailsRepository.findByUsername(applicationUsername);
+        userApplication.setUserTrainingDetails(userTrainingDetails);
+        this.userApplicationRepository.saveAndFlush(userApplication);
+    }
+
     private boolean checkIfCourseExists(String courseName) {
         return this.trainingCourseRepository.findByCourseName(courseName) != null;
     }

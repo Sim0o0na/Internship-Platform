@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2795be29-5a82-4850-a21e-3729493a84e3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/UserTrainingInfoParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/HTTPRequestSender.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +30,8 @@
       <file leaf-file-name="UserTrainingInfoParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+            <state relative-caret-position="103">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="method#parseTrainingWebPage#0;class#UserTrainingInfoParser#0" />
                 <element signature="method#getUserId#0;class#UserTrainingInfoParser#0" />
@@ -45,8 +48,8 @@
       <file leaf-file-name="UserApplicationController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="520">
+              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -54,29 +57,44 @@
       <file leaf-file-name="UserTrainingDetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="567">
+              <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInfoParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java">
+      <file leaf-file-name="UserTrainingDetailsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="256">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserApplicationDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplicationDto.java">
+      <file leaf-file-name="UserApplicationAdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#340#341#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="517">
+              <caret line="81" column="52" lean-forward="true" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTrainingCourseDetails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -90,29 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPersonalInfoParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HTTPRequestSender.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="12" column="3010" selection-start-line="12" selection-start-column="3010" selection-end-line="12" selection-end-column="3010" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="2977" />
+              <caret line="12" column="3069" selection-start-line="12" selection-start-column="3069" selection-end-line="12" selection-end-column="3069" />
             </state>
           </provider>
         </entry>
@@ -120,8 +120,8 @@
       <file leaf-file-name="UserTrainingDetailsServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="609">
+              <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -176,9 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/emails/MailSender.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/emails/EmailService.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/emails/EmailServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/emails/MailConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/users/services/UserServiceImpl.java" />
@@ -199,8 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourseDto.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/users/profile.html" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/users/all-users-partial.html" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/users/users-panel.html" />
@@ -223,10 +218,15 @@
         <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" />
         <option value="$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" />
         <option value="$PROJECT_DIR$/src/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -310,7 +310,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="training_details_services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -320,7 +321,6 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="isp" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="user_info_parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -477,12 +477,12 @@
       <updated>1535357133148</updated>
       <workItem from="1535357134572" duration="67941000" />
       <workItem from="1535643605595" duration="119000" />
-      <workItem from="1536426177336" duration="6869000" />
+      <workItem from="1536426177336" duration="13197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74929000" />
+    <option name="totallyTimeSpent" value="81257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
@@ -498,7 +498,7 @@
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="10" visible="true" weight="0.5292588" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.5292588" />
       <window_info anchor="bottom" id="TODO" order="13" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.32639793" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
@@ -506,10 +506,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4993758" weight="0.24577373" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4993758" weight="0.8361508" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2059925" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2059925" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -588,12 +588,6 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java</url>
           <line>32</line>
           <properties />
@@ -601,9 +595,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java</url>
-          <line>43</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html</url>
@@ -611,24 +611,10 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.4.RELEASE/spring-tx-5.0.4.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -640,13 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -894,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -925,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="12" column="3010" selection-start-line="12" selection-start-column="3010" selection-end-line="12" selection-end-column="3010" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -946,17 +911,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="158">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+        <state relative-caret-position="103">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="method#parseTrainingWebPage#0;class#UserTrainingInfoParser#0" />
             <element signature="method#getUserId#0;class#UserTrainingInfoParser#0" />
@@ -969,17 +934,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="12" column="3069" selection-start-line="12" selection-start-column="3069" selection-end-line="12" selection-end-column="3069" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="81" column="52" lean-forward="true" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="567">
+          <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="520">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
         </state>
       </provider>
     </entry>
