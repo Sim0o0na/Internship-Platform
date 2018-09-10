@@ -17,6 +17,7 @@ public class UserTrainingInfoParser implements UserInfoParser {
     private static final String COURSES_IN_ENROLLED_MODULE_PATTERN = "aria-controls=\"#course-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
     private static final String COURSE_ISTANCES_IN_ENROLLED_COURSE_PATTERN = "aria-controls=\"#course-instance-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
     private static final String ENROLLED_TRAINING_DETAILS_PATTERN = "ОЦЕНКА:\\s*<strong>(.*)[(]([0-9.]+)[)](.*)<\\/strong>";
+    private static final String NO_ENROLLED_TRAININGS_BG_STRING = "НЯМА ЗАПИСАНИ МОДУЛИ.";
 
     private static final String TRAININGS_BASE_URL = "https://softuni.bg/users/profile/trainings/%s";
     private static final String USER_PROFILE_PAGE_URL = "https://softuni.bg/users/profile/show/%s";
@@ -42,6 +43,13 @@ public class UserTrainingInfoParser implements UserInfoParser {
             result.add(new Pair(matcher.group(2).trim(), Integer.parseInt(matcher.group(1))));
         }
         return result;
+    }
+
+    @Override
+    public boolean isInfoAvailable(String username) throws IOException {
+        String userId = this.getUserId(username);
+        String trainingsPageHtml = HTTPRequestSender.sendRequest(String.format(TRAININGS_BASE_URL, username));
+        return trainingsPageHtml.contains(NO_ENROLLED_TRAININGS_BG_STRING);
     }
 
     private Pair parseSingleDataInTrainingWebPage(String matchPattern, String pageUrl) throws IOException {

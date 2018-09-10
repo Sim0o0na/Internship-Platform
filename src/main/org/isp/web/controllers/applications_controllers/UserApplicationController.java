@@ -11,19 +11,18 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Future;
 
 @Controller
 @RequestMapping("/users/applications")
 public class UserApplicationController {
     private UserApplicationService userApplicationService;
-    private UserTrainingDetailsController userDetailsController;
+    private UserTrainingDetailsController userTrainingDetailsController;
 
     @Autowired
     public UserApplicationController(UserApplicationService userApplicationService,
                                      UserTrainingDetailsController userDetailsController) {
         this.userApplicationService = userApplicationService;
-        this.userDetailsController = userDetailsController;
+        this.userTrainingDetailsController = userDetailsController;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -35,9 +34,13 @@ public class UserApplicationController {
         }
         try {
             this.userApplicationService.create(userApplicationDto);
-            CompletableFuture result = this.userDetailsController.createUserTrainingDetails(userApplicationDto.getUsername());
-            if (result.isDone()) {
-                this.userDetailsController.addTrainingDetailsToUserApplication(userApplicationDto.getUsername());
+            if (this.userTrainingDetailsController.checkIfUserHasTrainingsInfo(userApplicationDto.getUsername())) {
+                CompletableFuture result = this.userTrainingDetailsController.createUserTrainingDetails(userApplicationDto.getUsername());
+                if (result.isDone()) {
+                    this.userTrainingDetailsController.addTrainingDetailsToUserApplication(userApplicationDto.getUsername());
+                }
+            } else {
+                System.out.println("User has no enrolled trainings!");
             }
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", e.getMessage());

@@ -41,6 +41,10 @@ public class UserTrainingDetailsController {
         return CompletableFuture.completedFuture(true);
     }
 
+    public boolean checkIfUserHasTrainingsInfo(String username) throws IOException {
+        return this.userInfoParser.isInfoAvailable(username);
+    }
+
     @Async
     public void addTrainingDetailsToUserApplication(String username) {
         this.userTrainingDetailsService.linkTrainingDetailsToUserApplication(username);

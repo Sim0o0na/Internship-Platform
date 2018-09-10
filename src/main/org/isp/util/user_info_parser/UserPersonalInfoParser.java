@@ -40,4 +40,9 @@ public class UserPersonalInfoParser implements UserInfoParser<String, String> {
         result.put(targetInfo, parsedResult);
         return result;
     }
+
+    @Override
+    public boolean isInfoAvailable(String username) throws IOException {
+        return false;
+    }
 }
