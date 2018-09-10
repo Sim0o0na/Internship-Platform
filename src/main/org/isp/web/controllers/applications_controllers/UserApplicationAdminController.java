@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -48,7 +49,9 @@ public class UserApplicationAdminController {
     }
 
     @RequestMapping(value = "/approve", method = RequestMethod.GET)
-    public String approve(@RequestParam(value="username", required=true) String username, Model model) {
+    public String approve(@RequestParam(value="username", required=true) String username,
+                          Model model,
+                          RedirectAttributes redirectAttributes) {
         try {
             this.userApplicationService.setStatus(username, UserApplicationStatus.APPROVED);
         } catch (Exception e) {
@@ -56,7 +59,8 @@ public class UserApplicationAdminController {
         }
         this.userService.createUser(this.userApplicationService.getByUsername(username));
         model.addAttribute("info", String.format("User application for username \"%s\" approved!", username));
-        return "/admin/admin-base";
+        redirectAttributes.addAttribute("showpanel", "user-applications");
+        return "redirect:/admin";
     }
 
     @RequestMapping(value = "/reject", method = RequestMethod.GET)
@@ -78,12 +82,4 @@ public class UserApplicationAdminController {
         model.addAttribute("coursesDetails", this.userTrainingDetailsService.getCourseDetailsForUsername(username));
         return "/admin/users/applications/user-applications-view-more";
     }
-
-//    private HashMap<String, Double> getCoursesAndGrades(List<UserTrainingCourseDetails> coursesDetails) {
-//        HashMap<String, Double> result = new HashMap<>();
-//        for (UserTrainingCourseDetails courseDetails : coursesDetails) {
-//            result.put(courseDetails.getTrainingCourse().getCourseName(), courseDetails.getGrade());
-//        }
-//        return result;
-//    }
 }

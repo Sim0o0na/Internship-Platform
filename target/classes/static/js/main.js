@@ -4,7 +4,7 @@ window.setTimeout(function() {
     });
 }, 4000);
 
-function checkForLogin() {
+function checkIfLoginFormHasToBeShown() {
     var param = getParameterByName('showloginform', window.location.href);
     if (param === "true") {
         $(".modal").modal('show');

@@ -1,6 +1,7 @@
 package org.isp.domain.applications.user_applications;
 
 import org.isp.domain.applications.training_details.UserTrainingDetails;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -27,6 +28,8 @@ public class UserApplication {
     @Column(name = "is_approved")
     @Enumerated(EnumType.STRING)
     private UserApplicationStatus status;
+
+    private String motivation;
 
     @OneToOne(targetEntity = UserTrainingDetails.class)
     private UserTrainingDetails userTrainingDetails;
@@ -87,6 +90,14 @@ public class UserApplication {
 
     public void setStatus(UserApplicationStatus status) {
         this.status = status;
+    }
+
+    public String getMotivation() {
+        return motivation;
+    }
+
+    public void setMotivation(String motivation) {
+        this.motivation = motivation;
     }
 
     public UserTrainingDetails getUserTrainingDetails() {

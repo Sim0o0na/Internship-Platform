@@ -18,6 +18,10 @@
             <label>Email:</label>
             <p th:text="${userApplication.email}"></p>
         </div>
+        <div class="col-md-6">
+            <label>Motivation:</label>
+            <p th:text="${userApplication.motivation}"></p>
+        </div>
         <div th:if="${userApplication.status == 'WAITING'}" class="col-md-6 center">
             <a class="btn form-btn btn-green" th:href="@{/admin/users/applications/approve(username=${userApplication.getUsername()})}">Approve</a>
             <a class="btn form-btn btn-delete" th:href="@{/admin/users/applications/reject(username=${userApplication.getUsername()})}">Reject</a>
