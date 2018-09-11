@@ -30,10 +30,15 @@
     </div>
     <div class="col-md-6">
         <h1>Training Info</h1>
-        <label>Average Grade:</label><b><p th:text="${averageGrade}"></b></p>
-        <div class="row" th:each="cd: ${coursesDetails}">
-            <p th:text="${cd.courseName} + ' ' + ${cd.grade}">
+        <div th:if="${coursesDetails.size() == 0}">
+            <h2>This candidate has no available training info!</h2>
         </div>
-        <p></p>
+        <div th:if="${coursesDetails.size() != 0}">
+            <label>Average Grade:</label><b><p th:text="${averageGrade}"></b>
+            <div class="row" th:each="cd: ${coursesDetails}">
+                <p th:text="${cd.courseName} + ' ' + ${cd.grade}">
+            </div>
+            <p></p>
+        </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 package org.isp.web.controllers.applications_controllers;
 
+import org.isp.domain.applications.training_details.TrainingCourseDto;
 import org.isp.services.training_details_services.UserTrainingDetailsService;
 import org.isp.services.user_services.user_application_services.UserApplicationService;
 import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
@@ -18,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -78,8 +80,14 @@ public class UserApplicationAdminController {
     public String getApplicationForUsername(@PathVariable(value = "username") String username, Model model) throws IOException {
         UserApplication userApplication = this.userApplicationService.getByUsername(username);
         model.addAttribute("userApplication", userApplication);
-        model.addAttribute("averageGrade", String.format("%.2f",userApplication.getUserTrainingDetails().getAverageGrade()));
-        model.addAttribute("coursesDetails", this.userTrainingDetailsService.getCourseDetailsForUsername(username));
+        List<TrainingCourseDto> courseDetails = this.userTrainingDetailsService.getCourseDetailsForUsername(username);
+        if (courseDetails.size() == 0) {
+            courseDetails = new ArrayList<>();
+        }
+        if (userApplication.getUserTrainingDetails() != null) {
+            model.addAttribute("averageGrade", String.format("%.2f",userApplication.getUserTrainingDetails().getAverageGrade()));
+        }
+        model.addAttribute("coursesDetails", courseDetails);
         return "/admin/users/applications/user-applications-view-more";
     }
 }

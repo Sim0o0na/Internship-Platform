@@ -73,11 +73,10 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
     public List<TrainingCourseDto> getCourseDetailsForUsername(String username) {
         List<UserTrainingCourseDetails> allCoursesForUser = new ArrayList<>();
         allCoursesForUser = this.courseDetailsRepository.findAllByUsername(username);
-        List<TrainingCourseDto> result = MappingUtil.convert(allCoursesForUser, TrainingCourseDto.class);
         if (allCoursesForUser.size() == 0) {
-            throw new IllegalArgumentException("No course details for this username!");
+            return new ArrayList<>();
         }
-        return result;
+        return MappingUtil.convert(allCoursesForUser, TrainingCourseDto.class);
     }
 
     @Override

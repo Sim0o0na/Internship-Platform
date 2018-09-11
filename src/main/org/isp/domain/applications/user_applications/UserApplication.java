@@ -1,7 +1,6 @@
 package org.isp.domain.applications.user_applications;
 
 import org.isp.domain.applications.training_details.UserTrainingDetails;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

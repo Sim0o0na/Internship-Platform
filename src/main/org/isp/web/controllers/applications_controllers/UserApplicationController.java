@@ -39,8 +39,6 @@ public class UserApplicationController {
                 if (result.isDone()) {
                     this.userTrainingDetailsController.addTrainingDetailsToUserApplication(userApplicationDto.getUsername());
                 }
-            } else {
-                System.out.println("User has no enrolled trainings!");
             }
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", e.getMessage());

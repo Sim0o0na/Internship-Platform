@@ -13,9 +13,9 @@ import java.util.regex.Pattern;
 @Component(value = "trainingInfoParser")
 public class UserTrainingInfoParser implements UserInfoParser {
     private static final String USER_ID_PATTERN = "for=\"Id\">Id<\\/label>\\s*([a-zA-Z0-9-]+)\\s*<\\/div>";
-    private static final String ENROLLED_MODULES_PATTERN = "aria-controls=\"#module-([1-9]+)\">\\s*([a-zA-Z\\s(]+)";
-    private static final String COURSES_IN_ENROLLED_MODULE_PATTERN = "aria-controls=\"#course-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
-    private static final String COURSE_ISTANCES_IN_ENROLLED_COURSE_PATTERN = "aria-controls=\"#course-instance-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s+]+)";
+    private static final String ENROLLED_MODULES_PATTERN = "aria-controls=\"#module-([0-9]+)\">\\s*([a-zA-Z\\#\\s(]+)";
+    private static final String COURSES_IN_ENROLLED_MODULE_PATTERN = "aria-controls=\"#course-([0-9]+)\">\\s*([a-zA-Z\\-0-9\\s\\#+]+)";
+    private static final String COURSE_ISTANCES_IN_ENROLLED_COURSE_PATTERN = "aria-controls=\"#course-instance-([0-9]+)\">\\s*([a-zA-Z\\#\\-0-9\\s+]+)";
     private static final String ENROLLED_TRAINING_DETAILS_PATTERN = "ОЦЕНКА:\\s*<strong>(.*)[(]([0-9.]+)[)](.*)<\\/strong>";
     private static final String NO_ENROLLED_TRAININGS_BG_STRING = "НЯМА ЗАПИСАНИ МОДУЛИ.";
 
@@ -49,7 +49,7 @@ public class UserTrainingInfoParser implements UserInfoParser {
     public boolean isInfoAvailable(String username) throws IOException {
         String userId = this.getUserId(username);
         String trainingsPageHtml = HTTPRequestSender.sendRequest(String.format(TRAININGS_BASE_URL, username));
-        return trainingsPageHtml.contains(NO_ENROLLED_TRAININGS_BG_STRING);
+        return !trainingsPageHtml.contains(NO_ENROLLED_TRAININGS_BG_STRING);
     }
 
     private Pair parseSingleDataInTrainingWebPage(String matchPattern, String pageUrl) throws IOException {
