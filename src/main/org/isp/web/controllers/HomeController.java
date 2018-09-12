@@ -1,14 +1,17 @@
 package org.isp.web.controllers;
 
+import org.isp.domain.notifications.NotificationDto;
 import org.isp.services.notifications_services.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -20,7 +23,7 @@ public class HomeController {
     }
 
     @GetMapping("/")
-    public String index(Principal principal) {
+    public String index(Principal principal, Model model) {
         if (principal != null) {
            return "redirect:/dashboard";
         }
@@ -34,10 +37,11 @@ public class HomeController {
 
     @GetMapping("/dashboard")
     public ModelAndView dashboard(Principal principal, Model model) {
-        ModelAndView modelAndView = new ModelAndView("dashboard");
+        ModelAndView modelAndView = new ModelAndView("dashboard", new ModelMap());
         try {
-            modelAndView.getModel().putIfAbsent("user", principal.getName());
-            modelAndView.getModel().putIfAbsent("notifications", this.notificationService.getAllNotReadForUser(principal.getName()));
+            modelAndView.getModel().put("user", principal.getName());
+            List<NotificationDto> notificationsList =  this.notificationService.getAllNotReadForUser(principal.getName());
+            modelAndView.getModel().put("notifications", notificationsList);
         } catch (IllegalArgumentException iae) {
             model.addAttribute("error", iae.getMessage());
         }

@@ -1,8 +1,10 @@
 package org.isp.web.controllers.tasks_controllers;
 
+import org.isp.domain.notifications.NotificationType;
 import org.isp.domain.tasks.TaskType;
 import org.isp.domain.tasks.dtos.TaskCreateDto;
 import org.isp.domain.tasks.dtos.TaskDto;
+import org.isp.services.notifications_services.NotificationService;
 import org.isp.services.payment_services.PaymentService;
 import org.isp.services.tasks_services.TaskService;
 import org.isp.services.user_services.UserService;
@@ -23,10 +25,13 @@ import java.text.ParseException;
 @RequestMapping("/admin/tasks")
 public class TasksAdminController {
     private TaskService taskService;
+    private NotificationService notificationService;
 
     @Autowired
-    public TasksAdminController(TaskService taskService, UserService userService, PaymentService paymentService) {
+    public TasksAdminController(TaskService taskService,
+                                NotificationService notificationService) {
         this.taskService = taskService;
+        this.notificationService = notificationService;
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
@@ -76,6 +81,8 @@ public class TasksAdminController {
             model.addAttribute("error", "There was an error creating this task!");
         } else {
             this.taskService.create(taskCreateDto);
+            this.notificationService.createForAllUsers(String.format("A new task \"%s\" is opened", taskCreateDto.getTitle()),
+                    NotificationType.INFO);
         }
         return "admin/admin-base";
     }

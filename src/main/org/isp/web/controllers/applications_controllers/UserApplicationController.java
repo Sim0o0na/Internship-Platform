@@ -1,5 +1,6 @@
 package org.isp.web.controllers.applications_controllers;
 
+import org.isp.services.user_services.UserService;
 import org.isp.services.user_services.user_application_services.UserApplicationService;
 import org.isp.domain.applications.user_applications.UserApplicationDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,16 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping("/users/applications")
 public class UserApplicationController {
     private UserApplicationService userApplicationService;
+    private UserService userService;
     private UserTrainingDetailsController userTrainingDetailsController;
 
     @Autowired
     public UserApplicationController(UserApplicationService userApplicationService,
-                                     UserTrainingDetailsController userDetailsController) {
+                                     UserTrainingDetailsController userDetailsController,
+                                     UserService userService) {
         this.userApplicationService = userApplicationService;
         this.userTrainingDetailsController = userDetailsController;
+        this.userService = userService;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -30,6 +34,10 @@ public class UserApplicationController {
                          RedirectAttributes redirectAttributes) {
         if (this.userApplicationService.checkIfExists(userApplicationDto)) {
             redirectAttributes.addFlashAttribute("error", "User application with this username or email already exists!");
+            return "redirect:/apply";
+        }
+        if (this.userService.findByUsername(userApplicationDto.getUsername()) != null) {
+            redirectAttributes.addFlashAttribute("error", "User with this username already exists!");
             return "redirect:/apply";
         }
         try {

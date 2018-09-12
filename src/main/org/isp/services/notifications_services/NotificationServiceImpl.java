@@ -45,7 +45,7 @@ public class NotificationServiceImpl implements NotificationService {
         return this.notificationRepository
                 .findAllByIsReadFalseAndUserUsername(username)
                 .stream()
-                .map(n -> new NotificationDto(n.getMessage()))
+                .map(n -> new NotificationDto(n.getMessage(), n.getType().toString()))
                 .collect(Collectors.toList());
     }
 }

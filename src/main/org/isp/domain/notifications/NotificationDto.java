@@ -8,8 +8,9 @@ public class NotificationDto {
     public NotificationDto() {
     }
 
-    public NotificationDto(String message) {
+    public NotificationDto(String message, String type) {
         this.message = message;
+        this.type = type;
     }
 
 

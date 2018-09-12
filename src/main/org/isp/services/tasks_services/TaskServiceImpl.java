@@ -44,7 +44,7 @@ public class TaskServiceImpl implements TaskService {
         task.getPayment().setCost(taskDto.getPaymentCost());
         task.setType(taskDto.getType());
         this.taskRepository.saveAndFlush(task);
-        this.notificationService.createForAllUsers(String.format("A new task has been opened: \"%s\"!", task.getTitle()), NotificationType.NEW_TASK);
+        this.notificationService.createForAllUsers(String.format("A new task has been opened: \"%s\"!", task.getTitle()), NotificationType.INFO);
     }
 
     @Override

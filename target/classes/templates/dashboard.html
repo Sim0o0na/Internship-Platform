@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<div th:include="~{fragments/head-elements :: base-head}"></div>
+<div th:include="~{fragments/head-elements :: logged-in-head}"></div>
 <body>
 <div id="container">
     <div id="header">
         <nav th:include="~{fragments/navbar :: navbar}"></nav>
-        <!--<div th:include="~{fragments/notifications :: notifications-bar}"></div>-->
     </div>
     <div id="body">
         <div class="body-container">
-            <div class="container">
+            <div class="container row-12">
                 <div class="row-12">
                     <div class="col-md-6 d-main-element">
                         <div class="row-6" th:if="${mostRecentTask == null}">

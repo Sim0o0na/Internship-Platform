@@ -23,6 +23,26 @@
     <link rel="stylesheet" th:href="@{/css/buttons.css}">
 </head>
 
+<head th:fragment="logged-in-head">
+    <meta charset="utf-8">
+    <meta title="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script th:src="@{/js/dashboard.js}"></script>
+    <script th:src="@{/js/lib/float-panel.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/profile.js}"></script>
+    <script th:src="@{/js/notifications.js}"></script>
+    <script th:src="@{/js/lib/notify.min.js}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}"/>
+    <link rel="stylesheet" th:href="@{/css/modals.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <link rel="stylesheet" th:href="@{/css/notifications.css}">
+</head>
+
 <head th:fragment="admin-head">
     <title>Admin</title>
     <meta charset="utf-8">

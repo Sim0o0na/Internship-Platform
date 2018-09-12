@@ -14,6 +14,8 @@ public interface UserService<T extends UserDto> extends UserDetailsService {
 
     User findByUsername(String username);
 
+    User findByEmail(String email);
+
     void edit(String username, UserEditDto userEditDto);
 
     List<UserAdminViewDto> fetchAllUsers();

@@ -81,6 +81,12 @@ public class UserServiceImpl<T extends UserDto> implements UserService<T> {
         }
         return user;
     }
+
+    @Override
+    public User findByEmail(String email) {
+        return this.userRepository.findByEmail(email);
+    }
+
     @Override
     public UserDetails loadUserByUsername(String username) {
         User user = userRepository.findByUsername(username);
