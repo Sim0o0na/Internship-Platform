@@ -13,4 +13,8 @@ public interface NotificationService {
     List<NotificationDto> getAllNotReadForUser(String username);
 
     boolean checkIfUserHasUnreadNotifications(String username);
+
+    void markReadById(String notificationId);
+
+    void markReadByMessage(String notificationMessage, String user);
 }

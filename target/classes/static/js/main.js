@@ -12,13 +12,21 @@ $(function() {
     });
 
     var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function (data) {
-        $.notify(data.message,
-            {
-                className : 'info',
-                globalPosition: 'bottom right',
-                autoHide: false
-            });
+    channel.bind('my-event', function (notification) {
+        new Noty({
+            text: notification.message,
+            type: 'info',
+            layout: "bottomRight",
+            theme: 'relax',
+            callbacks: {
+                onClose: function () {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/notifications/markreadbyid/' + result.id
+                    })
+                }
+            }
+        }).show();
     });
 });
 

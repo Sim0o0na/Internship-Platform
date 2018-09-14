@@ -1,3 +1,4 @@
+
 $(function(){
     $.ajax({
         type: 'GET',
@@ -16,12 +17,22 @@ function getAllNonReadNotifications() {
         url: '/notifications/allnonreadnotifications',
         success: function (jsonData) {
             jsonData.forEach(function (result) {
-                $.notify(result.message,
-                    {
-                        className : result.type.toLowerCase(),
-                        globalPosition: 'bottom right',
-                        autoHide: false
-                    });
+                console.log(result);
+                new Noty({
+                    id: result.id,
+                    text: result.message,
+                    type: result.type.toLowerCase(),
+                    layout: "bottomRight",
+                    theme: 'relax',
+                    callbacks: {
+                        onClose: function () {
+                            $.ajax({
+                                type: 'POST',
+                                url: '/notifications/markreadbyid/' + result.id
+                            })
+                        }
+                    }
+                }).show();
             })
         }
     });

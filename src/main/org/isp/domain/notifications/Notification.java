@@ -69,14 +69,13 @@ public class Notification {
         this.createdOn = createdOn;
     }
 
-    public boolean isRead() {
+    public boolean getIsRead() {
         return isRead;
     }
 
-    private void setRead(boolean read) {
+    public void setIsRead(boolean read) {
         isRead = read;
     }
-
 
     public NotificationType getType() {
         return type;

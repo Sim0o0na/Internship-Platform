@@ -8,7 +8,8 @@ public class NotificationDto {
     public NotificationDto() {
     }
 
-    public NotificationDto(String message, String type) {
+    public NotificationDto(Long id, String message, String type) {
+        this.id = id;
         this.message = message;
         this.type = type;
     }

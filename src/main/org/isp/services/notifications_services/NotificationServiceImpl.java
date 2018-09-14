@@ -45,12 +45,26 @@ public class NotificationServiceImpl implements NotificationService {
         return this.notificationRepository
                 .findAllByIsReadFalseAndUserUsername(username)
                 .stream()
-                .map(n -> new NotificationDto(n.getMessage(), n.getType().toString()))
+                .map(n -> new NotificationDto(n.getId(), n.getMessage(), n.getType().toString()))
                 .collect(Collectors.toList());
     }
 
     @Override
     public boolean checkIfUserHasUnreadNotifications(String username) {
         return this.notificationRepository.findAllByIsReadFalseAndUserUsername(username).size() > 0;
+    }
+
+    @Override
+    public void markReadById(String notificationId) {
+        Notification notification = this.notificationRepository.getOne(Long.parseLong(notificationId));
+        notification.setIsRead(true);
+        this.notificationRepository.saveAndFlush(notification);
+    }
+
+    @Override
+    public void markReadByMessage(String notificationMessage, String user) {
+        Notification notification = this.notificationRepository.findByMessageAndUserUsername(notificationMessage, user);
+        notification.setIsRead(true);
+        this.notificationRepository.saveAndFlush(notification);
     }
 }
