@@ -1,26 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" description="model.addAttribute(&quot;userCourses&quot;, this.userTrainin..." line="94" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="2795be29-5a82-4850-a21e-3729493a84e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/static/css/noty/noty.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/static/js/lib/noty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/static/js/lib/noty.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationsConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserInfoURLConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserPersonalInfoPatternConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserTrainingInfoPatternConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationsActionsConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/repositories/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/NotificationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/SoftUniHTTPRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/static/js/notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/notifications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/notifications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/notifications.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/domain/notifications/NotificationType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/domain/notifications/NotificationType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/services/training_details_services/UserTrainingDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/services/training_details_services/UserTrainingDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/HTTPRequestSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/UserPersonalInfoParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/UserPersonalInfoParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/UserTrainingInfoParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/util/user_info_parser/UserTrainingInfoParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/NotificationsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/NotificationsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/tasks_controllers/TasksAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/tasks_controllers/TasksAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/tasks_controllers/TasksController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/tasks_controllers/TasksController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/user_controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/user_controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head-elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/notifications.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users/profile.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,97 +68,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NotificationServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java">
+      <file leaf-file-name="UserApplicationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="497">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/repositories/NotificationRepository.java">
+      <file leaf-file-name="UserInfoParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+            <state relative-caret-position="64">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Notification.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java">
+      <file leaf-file-name="UserPersonalInfoParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
-              <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+            <state relative-caret-position="208">
+              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserPersonalInfoPatternConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserPersonalInfoPatternConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoftUniHTTPRequestSender.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/SoftUniHTTPRequestSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTrainingInfoPatternConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserTrainingInfoPatternConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTrainingInfoParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
               <folding>
-                <element signature="e#1417#1418#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="method#getInfo#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#parseTrainingWebPage#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#parseSingleDataInTrainingWebPage#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#getUserId#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#getCoursesIdsInEnrolledModules#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#getCoursesIdsInEnrolledModule#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#getAllEnrolledCourseInstances#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#getAllCourseInstancesInCourse#0;class#UserTrainingInfoParser#0" />
+                <element signature="method#getEnrolledTrainingsDetails#0;class#UserTrainingInfoParser#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java">
+      <file leaf-file-name="UserInfoURLConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserInfoURLConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="32">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
+      <file leaf-file-name="UserTrainingDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" column="83" lean-forward="true" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="134">
+              <caret line="31" column="92" lean-forward="true" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/projects.html">
+      <file leaf-file-name="UserApplicationsActionsConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationsActionsConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="notifications.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/static/js/notifications.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="33" column="21" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="33" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotificationService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/static/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="80">
+              <caret line="5" column="50" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -149,7 +188,6 @@
       <find>fas</find>
       <find>wizard</find>
       <find>skills</find>
-      <find>footer</find>
       <find>nav-footer</find>
       <find>carousel-caption</find>
       <find>view-more</find>
@@ -170,6 +208,7 @@
       <find>active</find>
       <find>tasks_repositories</find>
       <find>err</find>
+      <find>footer</find>
     </findStrings>
     <replaceStrings>
       <replace>tasks</replace>
@@ -185,38 +224,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js" />
-        <option value="$PROJECT_DIR$/src/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplicationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/domain/users/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/admin.js" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" />
-        <option value="$PROJECT_DIR$/src/resources/templates/admin/users/applications/user-applications-view-more.html" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/repositories/applications_repositories/UserApplicationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/user_services/user_application_services/UserApplicationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/HTTPRequestSender.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/apply.html" />
         <option value="$PROJECT_DIR$/src/resources/templates/fragments/notifications.html" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/org/isp/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/web/PublisherEventSubscriber.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/src/resources/static/css/noty/relax.css" />
@@ -227,15 +239,42 @@
         <option value="$PROJECT_DIR$/src/resources/static/css/noty/metroui.css" />
         <option value="$PROJECT_DIR$/src/resources/static/css/noty/light.css" />
         <option value="$PROJECT_DIR$/src/resources/static/css/noty/noty.css" />
-        <option value="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/repositories/NotificationRepository.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" />
         <option value="$PROJECT_DIR$/src/resources/static/js/notifications.js" />
         <option value="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" />
         <option value="$PROJECT_DIR$/src/resources/static/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationsConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/resources/templates/users/profile.html" />
+        <option value="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" />
+        <option value="$PROJECT_DIR$/src/resources/templates/fragments/navbar.html" />
+        <option value="$PROJECT_DIR$/src/resources/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/resources/templates/fragments/footer.html" />
+        <option value="$PROJECT_DIR$/src/resources/static/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/SoftUniTrainingsInfoParserConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/SoftUniHTTPRequestSender.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationsActionsConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoPatternConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoURLConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/TrainingsInfoParserPatternConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingsInfoParserPatternConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParserPatternConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoPatternConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserTrainingInfoPatternConstants.java" />
       </list>
     </option>
   </component>
@@ -320,16 +359,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="notifications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,91 +368,13 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks_services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="isp" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks_controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="noty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -544,12 +495,12 @@
       <workItem from="1536426177336" duration="14896000" />
       <workItem from="1536596079285" duration="13729000" />
       <workItem from="1536759120582" duration="7699000" />
-      <workItem from="1536916695413" duration="12118000" />
+      <workItem from="1536916695413" duration="18163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116502000" />
+    <option name="totallyTimeSpent" value="122547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="19" width="1417" height="851" extended-state="6" />
@@ -561,6 +512,7 @@
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="0" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32974428" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
@@ -573,10 +525,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.4993758" visible="true" weight="0.25302827" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4993758" weight="0.5208614" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.19129193" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.289793" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32769832" />
@@ -585,7 +537,6 @@
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32974428" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.1610487" />
@@ -593,7 +544,7 @@
     <layout-to-restore>
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.4993758" visible="true" weight="0.25302827" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4993758" weight="0.5208614" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
@@ -609,19 +560,19 @@
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3257066" />
       <window_info anchor="bottom" id="TODO" order="13" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24768023" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="right" id="Maven Projects" order="2" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32769832" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.21556032" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.1610487" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.36473754" />
       <window_info anchor="right" id="Bean Validation" order="6" />
@@ -638,51 +589,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java</url>
-          <line>64</line>
+          <line>67</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java</url>
-          <line>55</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java</url>
-          <line>43</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java</url>
-          <line>44</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java</url>
@@ -690,282 +617,21 @@
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html</url>
           <line>16</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="63" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.4.RELEASE/spring-aop-5.0.4.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="505" selection-start-line="505" selection-end-line="505" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="method#getUserId#0;class#UserTrainingInfoParser#0" />
-            <element signature="method#getCoursesIdsInEnrolledModules#0;class#UserTrainingInfoParser#0" />
-            <element signature="method#getCoursesIdsInEnrolledModule#0;class#UserTrainingInfoParser#0" />
-            <element signature="method#getAllEnrolledCourseInstances#0;class#UserTrainingInfoParser#0" />
-            <element signature="method#getAllCourseInstancesInCourse#0;class#UserTrainingInfoParser#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="39" column="82" selection-start-line="39" selection-start-column="82" selection-end-line="39" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/apply.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="86" column="97" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="976">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/css/notifications.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/payments-admin-partials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/payment-charts.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/notifications.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/information-partials.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="45" selection-start-line="44" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/tasks/dtos/TaskCreateDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#492#493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="87" column="37" lean-forward="true" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/PublisherEventSubscriber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/lib/noty.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/lib/noty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1392">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/relax.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/semanticui.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/sunset.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/nest.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/mint.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/metroui.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/css/noty/light.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="101" column="64" lean-forward="true" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="64" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1025,16 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="83" lean-forward="true" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/static/js/notifications.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1046,6 +702,299 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationsConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/payments_controllers/PaymentsAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/payments_controllers/PaymentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="78" column="66" lean-forward="true" selection-start-line="78" selection-start-column="66" selection-end-line="78" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/AppErrorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="106" column="79" selection-start-line="106" selection-start-column="79" selection-end-line="106" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/user_controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/users/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/apply.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/information-partials.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="28" column="92" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="108" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#nav#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#div#0;n#nav#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#div#0;n#nav#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="119" column="1" lean-forward="true" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/validation/TaskCreation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/validation/IsPasswordsMatching.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/TrainingCourseDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/TaskApplicationsAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="method#getAllWaiting#0;class#UserApplicationAdminController#0" />
+            <element signature="method#approve#0;class#UserApplicationAdminController#0" />
+            <element signature="method#reject#0;class#UserApplicationAdminController#0" />
+            <element signature="method#getApplicationForUsername#0;class#UserApplicationAdminController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationsActionsConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserTrainingDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="31" column="92" lean-forward="true" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserTrainingInfoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+          <folding>
+            <element signature="method#getInfo#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#parseTrainingWebPage#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#parseSingleDataInTrainingWebPage#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#getUserId#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#getCoursesIdsInEnrolledModules#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#getCoursesIdsInEnrolledModule#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#getAllEnrolledCourseInstances#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#getAllCourseInstancesInCourse#0;class#UserTrainingInfoParser#0" />
+            <element signature="method#getEnrolledTrainingsDetails#0;class#UserTrainingInfoParser#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserInfoURLConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserPersonalInfoPatternConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/constants/UserTrainingInfoPatternConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/SoftUniHTTPRequestSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>

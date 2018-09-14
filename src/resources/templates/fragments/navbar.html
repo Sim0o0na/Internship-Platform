@@ -1,21 +1,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
-<!--<nav th:fragment="navbar" class="navbar navbar-default navbar-fixed-top">-->
-    <!---->
-<!--</nav>-->
 
 <nav th:fragment="navbar" class="navbar navbar-default navbar-fixed-top col-md-12">
-    <!--class="collapse navbar-collapse"-->
     <div sec:authorize="isAuthenticated()">
         <ul class="nav navbar-nav navbar-left">
             <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/admin">Admin</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-center">
-            <!--<li id="showNotifications" onclick="showNotificationBar()">-->
-                <!--<div class="notification-button">-->
-                    <!--<i class="fa fa-flag"></i>-->
-                    <!--<span class="button__badge" th:if="${notifications.size() > 0} "th:text="${notifications.size()}"></span>-->
-                <!--</div>-->
-            <!--</li>-->
             <li class="active">
                 <a th:href="@{/tasks/all(user=null, partial=false)}"><i class="fas fa-tasks"></i>Available Tasks</a>
             </li>
@@ -41,12 +31,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a data-toggle="modal" data-target="#modalContent" onclick="loadLoginForm()">Login</a></li>
             </ul>
-            <!--<ul class="nav navbar-nav navbar-right">-->
-                <!--<li><a data-toggle="modal" data-target="#modalContent" onclick="loadRegisterForm()">Register</a></li>-->
-            <!--</ul>-->
         </div>
     </div>
-
 </nav>
 
 <nav th:fragment="navbar-user-profile" class="navbar navbar-default">

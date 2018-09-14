@@ -42,12 +42,6 @@ public class NotificationsController {
         this.notificationService.markReadById(id);
     }
 
-    @RequestMapping(value="/markreadbymessageanduser/{message}",
-            method = RequestMethod.POST)
-    public void markReadByMessage(@PathVariable(value = "message") String message, Principal principal) {
-        this.notificationService.markReadByMessage(message, principal.getName());
-    }
-
     @RequestMapping(value="/createnotification",
             method = RequestMethod.POST)
     public void markReadByMessage(@PathVariable(value = "message") String message) {

@@ -25,16 +25,6 @@ body {
 #body {
     padding-bottom:20em;   /* Height of the footer */
 }
-#footer {
-    bottom:0;
-    width:100%;
-}
-
-footer {
-    background:url(/img/softuni-nakov-inspiration-lab.jpg);
-    background-size: cover;
-    height: 20em;
-}
 
 .error {
     background: tomato;
@@ -127,6 +117,10 @@ nav {
 .nav-footer > li, a, img:hover {
     color: darkblue;
     text-decoration: none;
+}
+
+.footer-nav > li {
+    margin: 5em;
 }
 
 .fa, .fas, .far, .fab {

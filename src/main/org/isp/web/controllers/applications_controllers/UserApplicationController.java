@@ -33,11 +33,11 @@ public class UserApplicationController {
     public String create(@Valid @ModelAttribute UserApplicationDto userApplicationDto,
                          RedirectAttributes redirectAttributes) {
         if (this.userApplicationService.checkIfExists(userApplicationDto)) {
-            redirectAttributes.addFlashAttribute("error", "User application with this username or email already exists!");
+            redirectAttributes.addFlashAttribute("error", UserApplicationsActionsConstants.APLLICATION_EXISTS_BY_EMAIL);
             return "redirect:/apply";
         }
         if (this.userService.findByUsername(userApplicationDto.getUsername()) != null) {
-            redirectAttributes.addFlashAttribute("error", "User with this username already exists!");
+            redirectAttributes.addFlashAttribute("error", UserApplicationsActionsConstants.USER_EXISTS_BY_USERNAME);
             return "redirect:/apply";
         }
         try {
@@ -52,7 +52,7 @@ public class UserApplicationController {
             redirectAttributes.addFlashAttribute("error", e.getMessage());
             return "redirect:/apply";
         }
-        redirectAttributes.addFlashAttribute("info", "You have successfully applied for the internship program!");
+        redirectAttributes.addFlashAttribute("info", UserApplicationsActionsConstants.APPLICATION_SUCCESS);
         return "redirect:/";
     }
 }

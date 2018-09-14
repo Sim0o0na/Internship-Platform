@@ -1,6 +1,5 @@
 package org.isp.web.controllers.user_controllers;
 
-import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.users.dtos.UserChangePasswordDto;
 import org.isp.domain.users.dtos.UserEditDto;
 import org.isp.domain.users.dtos.UserRegisterDto;
@@ -16,11 +15,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.validation.Valid;
 import java.security.Principal;
+import java.util.List;
 import java.util.UUID;
 
 @Controller
+@RequestMapping
 public class UserController {
     private UserService userService;
     private ImageService imageService;
@@ -35,8 +35,11 @@ public class UserController {
         this.userTrainingDetailsService = userTrainingDetailsService;
     }
 
-    @GetMapping("/login")
-    public String getLoginPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model) {
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String getLoginPage(@ModelAttribute UserRegisterDto userRegisterDto, Model model, Principal principal) {
+        if (principal != null) {
+            return "redirect:/dashboard";
+        }
         model.addAttribute("userDto" , new UserRegisterDto());
         return "/users/login-form";
     }
@@ -56,7 +59,7 @@ public class UserController {
 //        return "redirect:/login";
 //    }
 
-    @GetMapping(value = "/checkifuserexists/{username}")
+    @RequestMapping(value = "/checkifuserexists/{username}", method = RequestMethod.GET)
     public ResponseEntity<String> checkIfUserExists(@PathVariable(value = "username") String username) {
         try {
             this.userService.findByUsername(username);
@@ -91,9 +94,12 @@ public class UserController {
         if (!info.equals("")) {
             model.addAttribute("info", info);
         }
+
+        if (this.userTrainingDetailsService.checkIfUserHasTrainingDetails(username)) {
+            model.addAttribute("userCourses", this.userTrainingDetailsService.getCourseDetailsForUsername(username));
+            model.addAttribute("averageGrade", String.format("%.2f", this.userTrainingDetailsService.getAverageGradeForUsername(username)));
+        }
         model.addAttribute("userDto", userDto);
-        model.addAttribute("userCourses", this.userTrainingDetailsService.getCourseDetailsForUsername(username));
-        model.addAttribute("averageGrade", String.format("%.2f", this.userTrainingDetailsService.getAverageGradeForUsername(username)));
         return "/users/profile";
     }
 

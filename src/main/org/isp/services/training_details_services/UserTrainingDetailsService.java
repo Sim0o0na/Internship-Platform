@@ -3,7 +3,6 @@ package org.isp.services.training_details_services;
 import org.isp.domain.applications.training_details.TrainingCourseDto;
 import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.applications.training_details.UserTrainingDetails;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -21,4 +20,6 @@ public interface UserTrainingDetailsService {
     double getAverageGradeForUsername(String usenname);
 
     void linkTrainingDetailsToUserApplication(String applicationUsername);
+
+    boolean checkIfUserHasTrainingDetails(String username);
 }

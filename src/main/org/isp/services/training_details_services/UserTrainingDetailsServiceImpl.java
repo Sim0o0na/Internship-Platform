@@ -101,4 +101,9 @@ public class UserTrainingDetailsServiceImpl implements UserTrainingDetailsServic
         sum /= userTrainingCourseDetails.size();
         return sum;
     }
+
+    @Override
+    public boolean checkIfUserHasTrainingDetails(String username) {
+        return this.trainingDetailsRepository.findByUsername(username) != null;
+    }
 }

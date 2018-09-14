@@ -1,6 +1,5 @@
 package org.isp.web.controllers;
 
-import org.isp.domain.notifications.NotificationDto;
 import org.isp.services.notifications_services.NotificationService;
 import org.isp.web.PublisherEventSubscriber;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpSession;
 import java.security.Principal;
-import java.util.List;
 
 @Controller
 public class HomeController {

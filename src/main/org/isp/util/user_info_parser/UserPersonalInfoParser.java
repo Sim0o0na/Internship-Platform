@@ -1,5 +1,6 @@
 package org.isp.util.user_info_parser;
 
+import org.isp.util.user_info_parser.constants.UserInfoURLConstants;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -15,19 +16,24 @@ public class UserPersonalInfoParser implements UserInfoParser<String, String> {
     public HashMap<String, String> getInfo(String username, String targetInfo) throws IOException {
         String userDetailsHtml;
         try {
-            userDetailsHtml = HTTPRequestSender.sendRequest("https://softuni.bg/users/profile/show/" + username);
+            userDetailsHtml = SoftUniHTTPRequestSender.sendRequest(String.format(UserInfoURLConstants.USER_PROFILE_URL));
         } catch (Exception e) {
             throw new IllegalArgumentException("Username does not exist!");
         }
 
-        String patternType = "";
+        HashMap<String, String> result = new HashMap<>();
         switch (targetInfo.toLowerCase()) {
             case "email":;
-                patternType = EMAIL_PATTERN;
+                result = this.getUserEmail(userDetailsHtml);
             break;
         }
-        Pattern pattern = Pattern.compile(patternType);
-        Matcher matcher = pattern.matcher(userDetailsHtml);
+
+        return result;
+    }
+
+    private HashMap<String, String> getUserEmail(String html) {
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(html);
         String parsedResult = "";
         int counter = 0;
         while (counter < 2) {
@@ -37,7 +43,7 @@ public class UserPersonalInfoParser implements UserInfoParser<String, String> {
             counter++;
         }
         HashMap<String, String> result = new HashMap<>();
-        result.put(targetInfo, parsedResult);
+        result.put("email", parsedResult);
         return result;
     }
 

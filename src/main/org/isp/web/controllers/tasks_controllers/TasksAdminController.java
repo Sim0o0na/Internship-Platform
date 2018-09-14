@@ -1,13 +1,12 @@
 package org.isp.web.controllers.tasks_controllers;
 
 import org.isp.domain.notifications.NotificationType;
+import org.isp.domain.notifications.NotificationsConstants;
 import org.isp.domain.tasks.TaskType;
 import org.isp.domain.tasks.dtos.TaskCreateDto;
 import org.isp.domain.tasks.dtos.TaskDto;
 import org.isp.services.notifications_services.NotificationService;
-import org.isp.services.payment_services.PaymentService;
 import org.isp.services.tasks_services.TaskService;
-import org.isp.services.user_services.UserService;
 import org.isp.util.ControllerUtil;
 import org.isp.web.PublisherEventSubscriber;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,10 +81,10 @@ public class TasksAdminController {
             model.addAttribute("error", "There was an error creating this task!");
         } else {
             this.taskService.create(taskCreateDto);
-            this.notificationService.createForAllUsers(String.format("A new task \"%s\" is opened", taskCreateDto.getTitle()),
+            this.notificationService.createForAllUsers(String.format(NotificationsConstants.NEW_TASK_INFO, taskCreateDto.getTitle()),
                     NotificationType.INFO);
         }
-        PublisherEventSubscriber.triggerEvent(String.format("A new task \"%s\" is opened", taskCreateDto.getTitle()));
+        PublisherEventSubscriber.triggerEvent(String.format(NotificationsConstants.NEW_TASK_INFO, taskCreateDto.getTitle()));
         return "admin/admin-base";
     }
 

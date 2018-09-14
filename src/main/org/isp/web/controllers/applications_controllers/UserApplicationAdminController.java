@@ -3,7 +3,6 @@ package org.isp.web.controllers.applications_controllers;
 import org.isp.domain.applications.training_details.TrainingCourseDto;
 import org.isp.services.training_details_services.UserTrainingDetailsService;
 import org.isp.services.user_services.user_application_services.UserApplicationService;
-import org.isp.domain.applications.training_details.UserTrainingCourseDetails;
 import org.isp.domain.applications.user_applications.UserApplication;
 import org.isp.domain.applications.user_applications.UserApplicationStatus;
 import org.isp.services.user_services.UserService;
@@ -20,12 +19,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @Controller
 @RequestMapping(path = "/admin/users/applications")
 public class UserApplicationAdminController {
+    private static final String APPROVED_USER_APPLICATION_STRING = "User application for username \"%s\" approved!";
+    private static final String REJECTED_USER_APPLICATION_STRING = "User application for username \"%s\" rejected!";
+
     private UserApplicationService userApplicationService;
     private UserTrainingDetailsService userTrainingDetailsService;
     private UserService userService;
@@ -46,10 +47,6 @@ public class UserApplicationAdminController {
         return modelAndView;
     }
 
-    public int getAllWaitingCount() {
-        return this.userApplicationService.getAllNotApproved().size();
-    }
-
     @RequestMapping(value = "/approve", method = RequestMethod.GET)
     public String approve(@RequestParam(value="username", required=true) String username,
                           Model model,
@@ -60,7 +57,7 @@ public class UserApplicationAdminController {
             model.addAttribute("error", e.getMessage());
         }
         this.userService.createUser(this.userApplicationService.getByUsername(username));
-        model.addAttribute("info", String.format("User application for username \"%s\" approved!", username));
+        model.addAttribute("info", String.format(APPROVED_USER_APPLICATION_STRING, username));
         redirectAttributes.addAttribute("showpanel", "user-applications");
         return "redirect:/admin";
     }
@@ -72,7 +69,7 @@ public class UserApplicationAdminController {
         } catch (Exception e) {
             model.addAttribute("error", e.getMessage());
         }
-        model.addAttribute("info", String.format("User application for username \"%s\" rejected!", username));
+        model.addAttribute("info", String.format(REJECTED_USER_APPLICATION_STRING, username));
         return "/admin/admin-base";
     }
 
