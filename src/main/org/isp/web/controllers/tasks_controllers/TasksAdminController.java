@@ -9,6 +9,7 @@ import org.isp.services.payment_services.PaymentService;
 import org.isp.services.tasks_services.TaskService;
 import org.isp.services.user_services.UserService;
 import org.isp.util.ControllerUtil;
+import org.isp.web.PublisherEventSubscriber;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -84,6 +85,7 @@ public class TasksAdminController {
             this.notificationService.createForAllUsers(String.format("A new task \"%s\" is opened", taskCreateDto.getTitle()),
                     NotificationType.INFO);
         }
+        PublisherEventSubscriber.triggerEvent(String.format("A new task \"%s\" is opened", taskCreateDto.getTitle()));
         return "admin/admin-base";
     }
 

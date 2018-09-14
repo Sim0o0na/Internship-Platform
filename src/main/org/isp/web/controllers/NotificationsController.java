@@ -20,9 +20,18 @@ public class NotificationsController {
         this.notificationService = notificationService;
     }
 
-    @RequestMapping(value="/allnonreadnotifications", method=RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value="/allnonreadnotifications",
+            method = RequestMethod.GET,
+            produces = "application/json")
     public List<NotificationDto> getAllNotApproved(Principal principal) {
-        List<NotificationDto> allNonReadNotificationsByUser = this.notificationService.getAllNotReadForUser(principal.getName());
+        List<NotificationDto> allNonReadNotificationsByUser =
+                this.notificationService.getAllNotReadForUser(principal.getName());
         return allNonReadNotificationsByUser;
+    }
+
+    @RequestMapping(value="/hasunreadnotifications",
+            method = RequestMethod.GET)
+    public boolean checkIfUserHasUnreadNotifications(Principal principal) {
+        return this.notificationService.checkIfUserHasUnreadNotifications(principal.getName());
     }
 }

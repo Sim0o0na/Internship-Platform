@@ -48,4 +48,9 @@ public class NotificationServiceImpl implements NotificationService {
                 .map(n -> new NotificationDto(n.getMessage(), n.getType().toString()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public boolean checkIfUserHasUnreadNotifications(String username) {
+        return this.notificationRepository.findAllByIsReadFalseAndUserUsername(username).size() > 0;
+    }
 }

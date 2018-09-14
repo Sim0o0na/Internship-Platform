@@ -4,6 +4,24 @@ window.setTimeout(function() {
     });
 }, 4000);
 
+// Pusher notifications
+$(function() {
+    var pusher = new Pusher('8ced822414ccc92c355c', {
+        cluster: 'eu',
+        forceTLS: true
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function (data) {
+        $.notify(data.message,
+            {
+                className : 'info',
+                globalPosition: 'bottom right',
+                autoHide: false
+            });
+    });
+});
+
 function checkIfLoginFormHasToBeShown() {
     var param = getParameterByName('showloginform', window.location.href);
     if (param === "true") {

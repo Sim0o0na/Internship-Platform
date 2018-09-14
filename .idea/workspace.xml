@@ -6,33 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="2795be29-5a82-4850-a21e-3729493a84e3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/repositories/user_repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/apply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/static/js/notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/static/js/notifications.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/templates/fragments/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/templates/fragments/notifications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/domain/notifications/NotificationDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/domain/notifications/NotificationDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/repositories/user_repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/repositories/user_repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/services/notifications_services/NotificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/services/notifications_services/NotificationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/isp/services/notifications_services/NotificationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/services/notifications_services/NotificationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/services/user_services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/services/user_services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/services/user_services/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/services/user_services/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/applications_controllers/UserApplicationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/NotificationsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/NotificationsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/tasks_controllers/TasksAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/isp/web/controllers/tasks_controllers/TasksAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/apply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/notifications.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head-elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/notifications.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,29 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="notifications.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/notifications.html">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head-elements.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+            <state relative-caret-position="196">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -77,8 +52,8 @@
       <file leaf-file-name="NotificationsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+            <state relative-caret-position="240">
+              <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,11 +61,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notifications.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Notification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notifications.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/static/js/notifications.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+            <state relative-caret-position="368">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="101" column="64" lean-forward="true" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -98,38 +109,34 @@
       <file leaf-file-name="TasksAdminController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+            <state relative-caret-position="228">
+              <caret line="87" column="37" lean-forward="true" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java">
+      <file leaf-file-name="TaskCreateDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/tasks/dtos/TaskCreateDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="46" column="143" selection-start-line="46" selection-start-column="143" selection-end-line="46" selection-end-column="143" />
+            <state relative-caret-position="336">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#492#493#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java">
+      <file leaf-file-name="PublisherEventSubscriber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/PublisherEventSubscriber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="252">
+              <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="information-partials.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/information-partials.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="payment-charts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/static/js/payment-charts.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -141,8 +148,8 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -174,7 +181,11 @@
     </findStrings>
     <replaceStrings>
       <replace>tasks</replace>
+      <replace />
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\User\Documents\Internship-Platform\Internship-Platform\src\resources\static\js</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -182,10 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/static/css/buttons.css" />
-        <option value="$PROJECT_DIR$/src/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/resources/templates/users/login-form.html" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/task-applications-admin-partials.js" />
         <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/tasks-admin-partials.js" />
         <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/TaskApplicationsAdminController.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/admin/tasks/all-task-applications-partial.html" />
@@ -198,12 +205,10 @@
         <option value="$PROJECT_DIR$/src/resources/static/js/ajax/user/user-forms.js" />
         <option value="$PROJECT_DIR$/src/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/training_details/UserTrainingCourseDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/Application.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/services/training_details_services/UserTrainingDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/applications/user_applications/UserApplicationDto.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/users/entities/User.java" />
         <option value="$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/main.js" />
         <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java" />
         <option value="$PROJECT_DIR$/src/resources/static/js/admin.js" />
         <option value="$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserInfoParser.java" />
@@ -222,17 +227,23 @@
         <option value="$PROJECT_DIR$/src/main/org/isp/services/user_services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/applications_controllers/UserApplicationController.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/apply.html" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationDto.java" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/resources/templates/fragments/notifications.html" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" />
-        <option value="$PROJECT_DIR$/src/resources/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" />
         <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java" />
-        <option value="$PROJECT_DIR$/src/resources/static/js/notifications.js" />
-        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" />
         <option value="$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/Application.java" />
+        <option value="$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/web/PublisherEventSubscriber.java" />
+        <option value="$PROJECT_DIR$/src/resources/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/resources/static/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java" />
+        <option value="$PROJECT_DIR$/src/resources/static/js/notifications.js" />
       </list>
     </option>
   </component>
@@ -253,10 +264,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1527" />
-    <option name="y" value="125" />
-    <option name="width" value="1110" />
-    <option name="height" value="865" />
+    <option name="x" value="-1528" />
+    <option name="y" value="124" />
+    <option name="width" value="1111" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -266,6 +277,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,6 +354,36 @@
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="isp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="isp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="isp" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks_controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -349,14 +392,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -371,41 +406,7 @@
               <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="ajax" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Internship-Platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Internship-Platform" type="b2602c69:ProjectViewProjectNode" />
@@ -416,8 +417,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -523,15 +522,17 @@
       <workItem from="1535643605595" duration="119000" />
       <workItem from="1536426177336" duration="14896000" />
       <workItem from="1536596079285" duration="13729000" />
-      <workItem from="1536759120582" duration="2744000" />
+      <workItem from="1536759120582" duration="7699000" />
+      <workItem from="1536916695413" duration="4351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99429000" />
+    <option name="totallyTimeSpent" value="108735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="19" width="1417" height="851" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50062424" side_tool="true" weight="0.6150845" />
@@ -543,7 +544,7 @@
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.3654096" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.36473754" />
       <window_info anchor="bottom" id="TODO" order="13" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3257066" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
@@ -551,21 +552,21 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4993758" visible="true" weight="0.25302827" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.4993758" visible="true" weight="0.25302827" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.19842969" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.23554604" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info id="Web" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32769832" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32769832" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32974428" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32974428" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.1610487" />
     </layout>
     <layout-to-restore>
@@ -663,16 +664,16 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java</url>
-          <line>24</line>
+          <line>26</line>
           <properties />
           <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html</url>
@@ -680,38 +681,10 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="61" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/ajax/admin/user-applications-partials.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/util/user_info_parser/UserPersonalInfoParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
@@ -737,13 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -880,24 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="101" column="64" lean-forward="true" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/templates/apply.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -910,27 +862,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/templates/admin/admin-base.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -984,32 +915,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/information-partials.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/NotificationType.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1018,24 +925,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/static/js/notifications.js">
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        <state relative-caret-position="432">
+          <caret line="45" selection-start-line="44" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/notifications_services/NotificationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="53" column="100" selection-start-line="53" selection-start-column="100" selection-end-line="53" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/fragments/head-elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/tasks/dtos/TaskCreateDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="101" column="64" lean-forward="true" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/domain/notifications/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/tasks_controllers/TasksAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+        <state relative-caret-position="228">
+          <caret line="87" column="37" lean-forward="true" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/org/isp/services/tasks_services/TaskServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/PublisherEventSubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="143" selection-start-line="46" selection-start-column="143" selection-end-line="46" selection-end-column="143" />
+        <state relative-caret-position="252">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/org/isp/web/controllers/NotificationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/static/js/notifications.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>

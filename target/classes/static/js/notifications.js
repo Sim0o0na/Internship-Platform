@@ -1,6 +1,15 @@
 $(function(){
-    getAllNonReadNotifications();
+    $.ajax({
+        type: 'GET',
+        url: '/notifications/hasunreadnotifications',
+        success: function (ajaxResult) {
+            if (ajaxResult === true) {
+                getAllNonReadNotifications();
+            }
+        }
+    });
 });
+
 function getAllNonReadNotifications() {
     $.ajax({
         type: 'GET',
@@ -13,7 +22,6 @@ function getAllNonReadNotifications() {
                         globalPosition: 'bottom right',
                         autoHide: false
                     });
-                console.log(result.message)
             })
         }
     });

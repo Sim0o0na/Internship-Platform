@@ -11,4 +11,6 @@ public interface NotificationService {
     void createForAllUsers(String notificationMessage, NotificationType type);
 
     List<NotificationDto> getAllNotReadForUser(String username);
+
+    boolean checkIfUserHasUnreadNotifications(String username);
 }

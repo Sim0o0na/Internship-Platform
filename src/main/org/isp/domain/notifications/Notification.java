@@ -24,7 +24,6 @@ public class Notification {
     @Column(name = "is_read")
     private boolean isRead;
 
-
     @Enumerated(EnumType.STRING)
     private NotificationType type;
 
@@ -77,6 +76,7 @@ public class Notification {
     private void setRead(boolean read) {
         isRead = read;
     }
+
 
     public NotificationType getType() {
         return type;
