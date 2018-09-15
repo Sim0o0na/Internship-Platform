@@ -1,0 +1,274 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<div th:include="~{fragments/head-elements :: base-head}"></div>
+	<body>
+		  <header id="header">
+			<div class="container">
+				<div class="row align-items-center justify-content-between d-flex">
+				  <div id="logo">
+					<a href="index.html"><img src="img/softuni-logo-white.png" width="200px" height="60px" alt="" title="" /></a>
+				  </div>
+				  <nav id="nav-menu-container">
+					<ul class="nav-menu">
+					  <li class="menu-active"><a href="#home">Home</a></li>
+					  <li><a href="/projects">Projects</a></li>
+					  <li><a href="/about">About</a></li>
+					  <li><a class="genric-btn warning small" href="/apply">Apply</a></li>
+					</ul>
+				  </nav><!-- #nav-menu-container -->
+					<div class="login-container">
+						<form action="/" method="post">
+							<input class="single-input-primary" type="text" placeholder="Username" name="username">
+							<input class="single-input-primary" type="password" placeholder="Password" name="password">
+							<button class="genric-btn primary" type="submit">Login</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		  </header><!-- #header -->
+
+		  <div th:include="~{fragments/modal :: modal}"></div>
+		<!-- start banner Area -->
+		<section class="banner-area relative" id="home">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row fullscreen d-flex align-items-center justify-content-center">
+					<div class="banner-content col-lg-8">
+						<h1 class="text-white">
+							Get Started with the SoftUni Internship Program!
+						</h1>
+						<p class="pt-20 pb-20 text-white">
+							Develop your teamwork and coding skills!
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End banner Area -->
+
+		<!-- Start feature Area -->
+		<section class="feature-area pb-100" id="service">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="menu-content pt-100 pb-60 col-lg-10">
+						<div class="title text-center">
+							<h1 class="mb-10">Develop yourself</h1>
+							<p>The program is designed to help interns aquire several skills</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="single-feature">
+							<span class="lnr lnr-rocket"></span>
+							<h4>
+								Teamwork
+							</h4>
+							<p>
+								Be a team leader and work towards a common goal
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="single-feature">
+							<span class="lnr lnr-code"></span>
+							<h4>
+								Code
+							</h4>
+							<p>
+								Develop projects who help real initiatives
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="single-feature">
+							<span class="lnr lnr-clock"></span>
+							<h4>
+								Punctuality
+							</h4>
+							<p>
+								Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End feature Area -->
+
+		<!-- Start service Area -->
+		<section class="service-area section-gap" id="feature">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="menu-content pb-60 col-lg-10">
+						<div class="title text-center">
+							<h1 class="mb-10">Features That make us Unique</h1>
+							<p>Who are in extremely love with eco friendly system.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 secvice-left">
+						<div class="single-service d-flex flex-row pb-30">
+							<div class="icon">
+								<h1>01</h1>
+							</div>
+							<div class="desc">
+								<h4>User Research</h4>
+								<p>
+									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								</p>
+							</div>
+						</div>
+						<div class="single-service d-flex flex-row pb-30">
+							<div class="icon">
+								<h1>03</h1>
+							</div>
+							<div class="desc">
+								<h4>Sketch & Wireframes</h4>
+								<p>
+									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								</p>
+							</div>
+						</div>
+						<div class="single-service d-flex flex-row pb-30">
+							<div class="icon">
+								<h1>05</h1>
+							</div>
+							<div class="desc">
+								<h4>User Research</h4>
+								<p>
+									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 secvice-right">
+						<div class="single-service d-flex flex-row pb-30">
+							<div class="icon">
+								<h1>02</h1>
+							</div>
+							<div class="desc">
+								<h4>User Interface</h4>
+								<p>
+									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								</p>
+							</div>
+						</div>
+						<div class="single-service d-flex flex-row pb-30">
+							<div class="icon">
+								<h1>04</h1>
+							</div>
+							<div class="desc">
+								<h4>User Experience</h4>
+								<p>
+									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								</p>
+							</div>
+						</div>
+						<div class="single-service d-flex flex-row pb-30">
+							<div class="icon">
+								<h1>06</h1>
+							</div>
+							<div class="desc">
+								<h4>User Interface</h4>
+								<p>
+									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End service Area -->
+
+
+		<!-- Start callto-action Area -->
+		<section class="callto-action-area relative section-gap">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="menu-content col-lg-9">
+						<div class="title text-center">
+							<h1 class="mb-10 text-white">Got Impressed to our features</h1>
+							<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+							<a class="primary-btn" href="#">Request Free Demo</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End calto-action Area -->
+
+		<!-- start footer Area -->
+		<footer class="footer-area section-gap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h6>About Us</h6>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+							</p>
+							<p class="footer-text">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-5  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h6>Newsletter</h6>
+							<p>Stay update with our latest</p>
+							<div class="" id="mc_embed_signup">
+								<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+										<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+										<div style="position: absolute; left: -5000px;">
+											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+										</div>
+
+									<div class="info"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+						<div class="single-footer-widget">
+							<h6>Follow Us</h6>
+							<p>Let us be social</p>
+							<div class="footer-social d-flex align-items-center">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<a href="#"><i class="fa fa-behance"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End footer Area -->
+
+		<script src="js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<script src="js/easing.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/superfish.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.sticky.js"></script>
+		<script src="js/jquery.nice-select.min.js"></script>
+		<script src="js/parallax.min.js"></script>
+		<script src="js/mail-script.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+
+
+

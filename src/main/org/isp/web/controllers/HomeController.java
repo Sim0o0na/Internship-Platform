@@ -29,7 +29,7 @@ public class HomeController {
         if (principal != null) {
            return "redirect:/dashboard";
         }
-        return "home";
+        return "index";
     }
 
     @GetMapping("/projects")
